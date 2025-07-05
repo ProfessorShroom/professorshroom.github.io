@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://professorshroom.com/al-folio/sitemap.xml
+Sitemap: https://professorshroom.github.io/al-folio/sitemap.xml
