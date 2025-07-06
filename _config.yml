@@ -27,7 +27,7 @@ back_to_top: true # set to false to disable the back to top button
 
 giscus:
   repo: professorshroom/professorshroom-comments
-  repo-id: your-repo-id
+  repo-id: 1014929308
   category: General
   category-id: your-category-id
   mapping: pathname

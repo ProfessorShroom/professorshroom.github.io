@@ -5,7 +5,7 @@ description:
 img: assets/img/megane.jpeg
 importance: 2
 category: Car
-related_publications: true
+comments: true
 ---
 
 Every project has a beautiful feature showcase page.
@@ -81,22 +81,3 @@ Here's the code for the last row of images above:
 {% endraw %}
 
 ---
-
-<!-- Giscus comment box -->
-<div id="giscus-container" style="margin-top: 40px;">
-  <script src="https://giscus.app/client.js"
-      data-repo="professorshroom/professorshroom-comments"
-      data-repo-id="R_kgDOPH6XnA"
-      data-category="Announcements"
-      data-category-id="DIC_kwDOPH6XnM4Csjos"
-      data-mapping="url"
-      data-strict="0"
-      data-reactions-enabled="1"
-      data-emit-metadata="0"
-      data-input-position="bottom"
-      data-theme="preferred_color_scheme"
-      data-lang="en"
-      crossorigin="anonymous"
-      async>
-  </script>
-</div>
