@@ -5,7 +5,7 @@ permalink: /projects/
 description: All of my past, future and present projects.
 nav: true
 nav_order: 3
-display_categories: []
+display_categories: [car]
 horizontal: false
 ---
 
