@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Renault Megane RS 250 (RS 400)
-description: 
+description:
 img: assets/img/1.jpg
 importance: 1
 category: car
