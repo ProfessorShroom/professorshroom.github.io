@@ -34,11 +34,26 @@ ninja.data = [{
             window.location.href = "/posts/2025/Test/";
           
         },
-      },{id: "projects-renault-megane-rs-250-rs-400",
+      },{id: "projects-bmw-rear-view-mirror-lin-decoder",
+          title: 'BMW Rear View Mirror LIN Decoder',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/LIN_Decoder/";
+            },},{id: "projects-northpoint-automatic-software-installer-deprecated-by-plutopoint",
+          title: 'NorthPoint Automatic Software Installer (Deprecated by PlutoPoint)',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/NorthPoint_Installer/";
+            },},{id: "projects-plutopoint-automatic-software-installer",
+          title: 'PlutoPoint Automatic Software Installer',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/PlutoPoint_Installer/";
+            },},{id: "projects-renault-megane-rs-250-rs-400",
           title: 'Renault Megane RS 250 (RS 400)',
           description: "",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
+              window.location.href = "/projects/Renault_Megane/";
             },},{
         id: 'social-email',
         title: 'email',
