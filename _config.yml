@@ -22,6 +22,24 @@ impressum_path: # set to path to include impressum link in the footer, use the s
 back_to_top: true # set to false to disable the back to top button
 
 # -----------------------------------------------------------------------------
+# Giscus
+# -----------------------------------------------------------------------------
+
+giscus:
+  repo: professorshroom/professorshroom-comments
+  repo-id: your-repo-id
+  category: General
+  category-id: your-category-id
+  mapping: pathname
+  reactions-enabled: true
+  emit-metadata: true
+  input-position: bottom
+  theme: light
+  dark-theme: dark
+  theme-border-color: '#000000'
+
+
+# -----------------------------------------------------------------------------
 # Theme
 # -----------------------------------------------------------------------------
 
