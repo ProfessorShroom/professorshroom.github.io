@@ -5,7 +5,7 @@ description:
 img: assets/img/installerOld.png
 importance: 10
 category: IT
-related_publications: true
+comments: true
 ---
 
 Every project has a beautiful feature showcase page.

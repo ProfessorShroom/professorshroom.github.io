@@ -68,6 +68,10 @@ layout: default
     <div id="markdown-content">
       {{ content }}
       {% if page.comments %}
+{% endif %}
+    </div>
+  </article>
+
   <div id="giscus-container" style="margin-top: 40px;">
     <script src="https://giscus.app/client.js"
         data-repo="professorshroom/professorshroom-comments"
@@ -85,9 +89,6 @@ layout: default
         async>
     </script>
   </div>
-{% endif %}
-    </div>
-  </article>
 
   {% if page.citation %}
     {% include citation.liquid %}
