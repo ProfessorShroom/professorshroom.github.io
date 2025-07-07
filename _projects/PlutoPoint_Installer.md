@@ -2,80 +2,35 @@
 layout: page
 title: PlutoPoint Automatic Software Installer
 description:
-img: assets/img/installer.png
+img: assets/img/installer/installer.png
 importance: 1
 category: IT
 comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Back in 2014 I wanted to streamline installing software on new installs of Windows, which at the time we did multiple times a day. The process at the time was having all of the installers (Firefox, Chrome, Office, etc.) on a USB stick and installing them one by one. Someone then had to update the stick weekly, or monthly to make sure we were installing a current version.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+I then made a PowerShell based installer which you can see the story of [here](/projects/NorthPoint_Installer/).
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/installer.png
-    ---
+But as I explained in that post, being based on PowerShell, it was clunky, slow and often just broke for no obvious reason. So I decided to rewrite the entire thing using a better language, I chose C# as it didn't look too difficult. But I had never written anything in C, aside from the 10 lines or so for the original exe on the PowerShell installer.
+
+It only took about 2 days to get pretty much everything from the PowerShell installer running in C#, I did miss out a few features that just weren't needed anymore but did include some new features that PowerShell just was capable of.
+
+We were amazed how fast the new installer was, about 4-5x faster than the old one. And for the most part much more stable, it did have a few bugs but they are mostly ironed out now.
+
+The major plus of this over something like [Ninite](https://ninite.com/) is that if we want a new piece of software adding, I can just add it instantly.
+
+For example, the installer will check if the system it's running on has an Nvidia GPU, and it does it will download and installer the latest version of the Nvidia app. Along with a few OS tweaks depending on if it's being run on Windows 10 vs 11 etc. I also added some easter eggs for employee's birthdays, holidays and stuff like that.
+
+I will continue to update this post and repo as I add more features.
+
+[C# Based PlutoPoint Installer Repository](https://github.com/ProfessorShroom/PlutoPoint-Installer)
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/installer.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/installer.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/installer.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/installer/installer.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    This is what the current version of the C# installer looks like.
 </div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/installer.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/installer.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/installer.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/installer.png" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/installer.png" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
