@@ -36,8 +36,7 @@ giscus:
   input-position: bottom
   theme: light
   dark-theme: dark
-  theme-border-color: '#000000'
-
+  theme-border-color: "#000000"
 
 # -----------------------------------------------------------------------------
 # Theme
