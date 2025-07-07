@@ -23,19 +23,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "post-test",
+        },{id: "post-bypass-windows-11-microsoft-account-requirement",
         
-          title: "Test",
+          title: "Bypass Windows 11 Microsoft Account Requirement",
         
-        description: "Test post",
+        description: "Bypass the need for a Microsoft account during Windows 11 installation",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/posts/2025/Test/";
+            window.location.href = "/posts/2025/Windows-11-Local/";
           
         },
-      },{id: "projects-bmw-rear-view-mirror-lin-decoder",
-          title: 'BMW Rear View Mirror LIN Decoder',
+      },{id: "projects-bmw-rear-view-mirror-lin-decoder-wip",
+          title: 'BMW Rear View Mirror LIN Decoder (WIP)',
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/LIN_Decoder/";
