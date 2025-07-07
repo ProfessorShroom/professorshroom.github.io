@@ -9,19 +9,19 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-posts",
-          title: "Posts",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/posts/index.html";
-          },
-        },{id: "nav-projects",
+  },{id: "nav-projects",
           title: "Projects",
           description: "All of my past, future and present projects.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
+          },
+        },{id: "nav-posts",
+          title: "Posts",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/posts/index.html";
           },
         },{id: "post-bypass-windows-11-microsoft-account-requirement",
         
