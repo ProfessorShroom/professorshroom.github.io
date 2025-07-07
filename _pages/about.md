@@ -46,4 +46,9 @@ If you enjoy what I do and want to support me -
     data-font-color="#000000"
     data-coffee-color="#ffffff">
   </script>
+
+<br>
+
+The best way to contact me is via email which you can find below.
+
 </div>
