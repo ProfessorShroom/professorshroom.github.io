@@ -55,6 +55,13 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/Renault_Megane/";
             },},{
+        id: 'social-discord',
+        title: 'Discord',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://discord.com/users/133267005619961856", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
