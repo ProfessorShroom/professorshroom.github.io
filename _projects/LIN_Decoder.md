@@ -8,7 +8,7 @@ category: Car
 comments: true
 ---
 
-This project is currently a WIP.
+This project is currently a WIP and on hold as I've run into a roadblock.
 
 I was watching one of my favourite YouTubers, [M539 Restorations](https://www.youtube.com/channel/UCLLpxcworT8275nBXODXyqw), and noticed in one of his E92 M3 videos that the rear view mirror had a completely pointless yet very cool feature of a compass.
 
@@ -36,7 +36,7 @@ The mirror only has 4 pins, which threw me as the older E46 mirror has a lot mor
 
 I applied 12v and the compass lit up! If this is all you need then you actually don't need to do anything else, but my car has a autodim mirror and I didn't want to lose this. The autodim feature however, did not work, I initially thought the mirror was faulty. I did some more research on the new mirror and found that the LIN bus line is what controlls the autodim, basically the ECU will tell the autodim feature to activate and then it uses the 12v line to power it. This isn't just a case of applying 12v to that line too, which I tried, it needs a LIN signal pulsed at a specific interval.
 
-I've found threads of other people trying to get this working and failing, but I won't, mostly retrofitting it into BMW's that didn't come with the autodim feature from the factory.
+I've found threads of other people trying to get this working and failing, mostly retrofitting it into BMW's that didn't come with the autodim feature from the factory.
 
 So I started designing a PCB that will two 12v lines, one always live, one only live with the ignition/car is running, and a ground. The idea is this can be put in any car and work. The reason there's two 12v lines is that these BMW mirrors have a LED that flashes when the car is locked to deter theives.
 
@@ -52,7 +52,7 @@ This PCB will be in a 3D printed case with a plug on either side, 3 input wires 
 
 To mount it to the windscreen I cut both mounts in half, took the windscreen section from the Megane the ball from the BMW and got a local garage to weld them together which they did for a tenner.
 
-I will continue to update this as the parts come in!
+The 3.0 boards came in but had some issues, when both 5v lines were powered the Arduino was getting about 6.8v for some reason. The LIN chip also got extremely hot almost instantly. I'm putting this project on hold for now to work on other things, but if anyone has any ideas or wants to help please email me at [info@professorshroom](mailto:info@professorshroom).
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -63,5 +63,5 @@ I will continue to update this as the parts come in!
     </div>
 </div>
 <div class="caption">
-    On the left, the current PCB design which is on it's way to me and on the right the mirror mount made from the original Renault and BMW mount welded together.
+    On the left, the current PCB design which has a few issues and on the right the mirror mount made from the original Renault and BMW mount welded together.
 </div>
