@@ -32,23 +32,6 @@ latest_posts:
 <br>
 <br>
 
-If you enjoy what I do and want to support me -
-
-<div style="margin-top: 20px;">
-  <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-    data-name="bmc-button"
-    data-slug="professorshroom"
-    data-color="#8103ff"
-    data-emoji="🍺"
-    data-font="Cookie"
-    data-text="Buy me a beer"
-    data-outline-color="#000000"
-    data-font-color="#000000"
-    data-coffee-color="#ffffff">
-  </script>
-
-<br>
-
 The best way to contact me is via email which you can find below.
 
 </div>
