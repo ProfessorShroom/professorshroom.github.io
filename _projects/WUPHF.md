@@ -16,5 +16,5 @@ Just had a bit of fun making a WUPHF site, as whoever owns WUPHF.com never did a
     </div>
 </div>
 <div class="caption">
-    Link to [WUPHF.co.uk](https://wuphf.co.uk)
+    Link to WUPHF.co.uk
 </div>
