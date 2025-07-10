@@ -54,6 +54,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Renault_Megane/";
+            },},{id: "projects-wuphf-co-uk",
+          title: 'WUPHF.co.uk',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/WUPHF/";
             },},{
         id: 'social-discord',
         title: 'Discord',
