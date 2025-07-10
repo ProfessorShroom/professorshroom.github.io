@@ -4,7 +4,7 @@ title: PlutoPoint Automatic Software Installer
 description:
 img: assets/img/installer/installer.png
 importance: 1
-category: IT
+category: IT Projects
 comments: true
 ---
 
