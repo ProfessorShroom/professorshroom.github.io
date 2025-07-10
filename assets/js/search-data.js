@@ -49,6 +49,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/PlutoPoint_Installer/";
+            },},{id: "projects-plutospantry-co-uk",
+          title: 'PlutosPantry.co.uk',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Plutos-Pantry/";
             },},{id: "projects-renault-megane-rs-250-rs-400",
           title: 'Renault Megane RS 250 (RS 400)',
           description: "",
