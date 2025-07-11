@@ -39,6 +39,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/LIN_Decoder/";
+            },},{id: "projects-merecedes-w211-shifter-repair-wip",
+          title: 'Merecedes W211 Shifter Repair (WIP)',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Mercedes_W211_Shifter_Repair/";
             },},{id: "projects-northpoint-automatic-software-installer-deprecated-by-plutopoint",
           title: 'NorthPoint Automatic Software Installer (Deprecated by PlutoPoint)',
           description: "",
@@ -53,7 +58,7 @@ ninja.data = [{
           title: 'PlutosPantry.co.uk',
           description: "",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/Plutos-Pantry/";
+              window.location.href = "/projects/Plutos_Pantry/";
             },},{id: "projects-renault-megane-rs-250-rs-400",
           title: 'Renault Megane RS 250 (RS 400)',
           description: "",
