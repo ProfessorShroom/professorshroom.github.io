@@ -305,7 +305,7 @@ DEPENDENCIES
   jekyll-paginate-v2
   jekyll-regex-replace
   jekyll-scholar
-  jekyll-seo-tag
+  jekyll-seo-tag (~> 2.8)
   jekyll-sitemap
   jekyll-tabs
   jekyll-terser!

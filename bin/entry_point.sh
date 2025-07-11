@@ -5,7 +5,7 @@ echo "Entry point script running"
 
 CONFIG_FILE=_config.yml
 
-# Function to manage Gemfile.lock
+# Function to manage Gemfile.lock (keep your existing code)
 manage_gemfile_lock() {
     git config --global --add safe.directory '*'
     if command -v git &> /dev/null && [ -f Gemfile.lock ]; then
@@ -21,6 +21,13 @@ manage_gemfile_lock() {
 
 start_jekyll() {
     manage_gemfile_lock
+
+    echo "Checking gems..."
+    bundle check || {
+        echo "Some gems are missing, running bundle install..."
+        bundle install --jobs=4 --retry=3
+    }
+
     bundle exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace --force_polling &
 }
 
