@@ -3,7 +3,7 @@ layout: about
 title: About
 permalink: /
 hide_title: true
-
+social: true
 profile:
   align: right
   image: prof_pic_color.png
