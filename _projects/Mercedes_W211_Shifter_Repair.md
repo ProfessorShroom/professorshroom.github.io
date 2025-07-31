@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Merecedes W211 Shifter Repair (WIP)
+title: Merecedes W211 Shifter Repair
 description:
 img: assets/img/car/w211_cluster.jpg
 importance: 3
@@ -13,8 +13,6 @@ For daily driving and for my wifes business, [PlutosPantry](/projects/Plutos_Pan
 This is caused by faulty optical switches in the mechanism. You can replace them with [TCPT1300](https://uk.rs-online.com/web/p/slotted-optical-switches/7103816?gb=s) or [TCPT1350](https://uk.rs-online.com/web/p/slotted-optical-switches/8187512?gb=s), TCPT1300 is a like for like sensor but 1350 also work.
 
 You can either just replace the shifter with a used one on eBay which at the time of writing range from about £80-£150 but as these are used the fault could just occur again, tomorrow, next week, etc. so really the best option is repairing your one.
-
-I'll be offering this as a service for £90 including the return postage to you, just get it to me and I will fix it for you. If you're interested then leave a comment or email me at [info@professorshroom.com](mailto:info@professorshroom.com).
 
 If you'd like to try this yourself I will try to explain below the process, but it does require quite advanced soldering knowledge and ability.
 
@@ -37,4 +35,40 @@ First you have to remove the shifter itself from the car, there's plenty of vide
 
 Once the shifter is out the actual repair can begin.
 
-(WIP)
+To get the housing open you will most likely have to cut the four tabs holding it down, two eitherside. Unless you have a pre-2004 model which are just help together with 4 screws. Mine is a 2006 so I had to cut it, but this easy with a dremel.
+
+Once you have the housing open you will see a black box with a plug going into it, this is what we need to remove and repair. The best way is to put the shifter into D, then remove the two large T screws holding the box to the shifter. Then pull the box along the shaft as far as it will go, once its as far as it can go wiggle it very careful up and away from the shifter.
+
+When you have it off you can undo the 4 screws holding the plastic case together and remove the board.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/car/w211_shifter_board.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/car/w211_shifter_board_cleaned.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/car/w211_shifter_board_tape.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    On the left, the shifter board removed from the housing. Middle, the shifter board after removing the 4 optical sensors. Right, the shifter board after cleaning and applying kapton tape.
+</div>
+
+Above you see what the board looks like before and after removing the optical sensors. I found hot air to be the best way to remove them, just be mindful of the small components around them and also the backside of the board.
+
+The new sensors have anchoring pins in the middle unlike the originals so you need to apply a very small strip of kapton tape to prevent shorting, I found this to be the most awkward part of the job.
+
+Once the new sensors are in just do the reverse, put it all back together and I used some self tapping screws to keep the shifter housing together, a bit like what they did for the pre-2004 models. The holes and threads are already there.
+
+There are actually 2 more of these sensors in the top part of the housing that handle the side to side movement, but I didn't feel the need to replace these, as even if they do stop working it will only affect manual mode, which I never use.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/car/w211_shifter_repaired.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    The shifter back together after the optical sensor replacement.
+</div>
