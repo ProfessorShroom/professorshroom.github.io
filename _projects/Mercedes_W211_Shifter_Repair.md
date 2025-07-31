@@ -3,7 +3,7 @@ layout: page
 title: Merecedes W211 Shifter Repair
 description:
 img: assets/img/car/w211_cluster.jpg
-importance: 3
+importance: 5
 category: Car
 comments: true
 ---
