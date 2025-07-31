@@ -34,13 +34,13 @@ ninja.data = [{
             window.location.href = "/posts/2025/Windows-11-Local/";
           
         },
-      },{id: "projects-bmw-rear-view-mirror-lin-decoder-wip",
-          title: 'BMW Rear View Mirror LIN Decoder (WIP)',
+      },{id: "projects-bmw-rear-view-mirror-lin-decoder-wip-on-hold",
+          title: 'BMW Rear View Mirror LIN Decoder (WIP) (On Hold)',
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/LIN_Decoder/";
-            },},{id: "projects-merecedes-w211-shifter-repair-wip",
-          title: 'Merecedes W211 Shifter Repair (WIP)',
+            },},{id: "projects-merecedes-w211-shifter-repair",
+          title: 'Merecedes W211 Shifter Repair',
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Mercedes_W211_Shifter_Repair/";
@@ -69,6 +69,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/WUPHF/";
+            },},{id: "projects-imac-studio-display-wip",
+          title: 'iMac Studio Display (WIP)',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/iMac_Studio_Display/";
             },},{
         id: 'social-email',
         title: 'email',
