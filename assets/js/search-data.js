@@ -89,13 +89,6 @@ ninja.data = [{
           window.open("https://github.com/professorshroom", "_blank");
         },
       },{
-        id: 'social-youtube',
-        title: 'YouTube',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://youtube.com/@professorshroom", "_blank");
-        },
-      },{
         id: 'social-beer',
         title: 'Beer',
         section: 'Socials',
