@@ -9,8 +9,11 @@ comments: true
 ---
 
 I just obtained an ASUS Lamborghini VX2S, not because it's actually any good in today's age but it's cool and something I've always wanted to own.
+
 Mine looks like it's been upgraded to a T9300 CPU as I don't believe this was standard, 4GB of RAM and I installed a 240GB solid state drive. I might look at changing the CPU to a T9900, but I'm unsure how much difference I'd notice in XP/98 era games.
+
 I installed XP over the original Vista as I think this thing would struggle with any Vista/7 games and generally those will run on my modern gaming PC, so I might try some older XP/98 games.
+
 It's missing the hinge covers, and the battery has some plastic damage but I can't find replacements for either. So I'll need to keep looking for a battery unless anyone knows of a good repalcement, and maybe try to 3D print some hinge covers.
 
 <div class="row">
