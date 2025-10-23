@@ -64,6 +64,8 @@ Once the new sensors are in just do the reverse, put it all back together and I 
 
 There are actually 2 more of these sensors in the top part of the housing that handle the side to side movement, but I didn't feel the need to replace these, as even if they do stop working it will only affect manual mode, which I never use.
 
+This has now been good for over 4 months so I'd say this is the definitive fix.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/car/w211_shifter_repaired.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
