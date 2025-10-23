@@ -39,6 +39,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/LIN_Decoder/";
+            },},{id: "projects-asus-lamborghini-vx2s-laptop",
+          title: 'ASUS Lamborghini VX2S Laptop',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Lamborghini_VX2S/";
             },},{id: "projects-merecedes-w211-shifter-repair",
           title: 'Merecedes W211 Shifter Repair',
           description: "",
