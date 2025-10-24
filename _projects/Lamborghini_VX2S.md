@@ -35,6 +35,9 @@ It's missing the hinge covers, and the battery has some plastic damage but I can
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/lambo_vx2s/lambo_vx2s_post.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/lambo_vx2s/gpuz.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
 <div class="caption">
     This message appears during POST, I'm unsure if this indicates that this particular model is an engineering sample of some kind? Let me know if you know anything.
