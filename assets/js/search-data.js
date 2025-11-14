@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/posts/index.html";
           },
-        },{id: "post-bypass-windows-11-microsoft-account-requirement",
+        },{id: "post-docker-29-api-changes",
+        
+          title: "Docker 29 API Changes",
+        
+        description: "Docker 29 recently upgraded the minimum API version, which broke a lot of stuff",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2025/Docker-29/";
+          
+        },
+      },{id: "post-bypass-windows-11-microsoft-account-requirement",
         
           title: "Bypass Windows 11 Microsoft Account Requirement",
         
