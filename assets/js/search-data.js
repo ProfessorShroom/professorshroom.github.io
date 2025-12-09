@@ -45,7 +45,12 @@ ninja.data = [{
             window.location.href = "/posts/2025/Windows-11-Local/";
           
         },
-      },{id: "projects-bmw-rear-view-mirror-lin-decoder-wip-on-hold",
+      },{id: "projects-cardmarket-price-updater",
+          title: 'Cardmarket Price Updater',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Cardmarket_Price_Updater/";
+            },},{id: "projects-bmw-rear-view-mirror-lin-decoder-wip-on-hold",
           title: 'BMW Rear View Mirror LIN Decoder (WIP) (On Hold)',
           description: "",
           section: "Projects",handler: () => {
