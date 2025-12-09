@@ -3,7 +3,7 @@ layout: page
 title: iMac Studio Display (WIP)
 description:
 img: assets/img/imac/imac_open.png
-importance: 2
+importance: 3
 category: IT Projects
 comments: true
 ---
