@@ -14,7 +14,7 @@ I then made a PowerShell based installer which you can see the story of [here](/
 
 But as I explained in that post, being based on PowerShell, it was clunky, slow and often just broke for no obvious reason. So I decided to rewrite the entire thing using a better language, I chose C# as it didn't look too difficult. But I had never written anything in C, aside from the 10 lines or so for the original exe on the PowerShell installer.
 
-It only took about 2 days to get pretty much everything from the PowerShell installer running in C#, I did miss out a few features that just weren't needed anymore but did include some new features that PowerShell just was capable of.
+It only took about 2 days to get pretty much everything from the PowerShell installer running in C#, I did miss out a few features that just weren't needed anymore but did include some new features that PowerShell just wasn't capable of.
 
 We were amazed how fast the new installer was, about 4-5x faster than the old one. And for the most part much more stable, it did have a few bugs but they are mostly ironed out now.
 
