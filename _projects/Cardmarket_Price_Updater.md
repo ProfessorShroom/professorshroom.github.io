@@ -27,12 +27,17 @@ Here's the repo below.
         {% include figure.liquid loading="eager" path="assets/img/yugioh/cardmarket_price_updater.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/yugioh/cardmarket_excel_sheet.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/yugioh/nkc1.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    On the left, the GUI of my program. In the middle the Excel sheet that the program will write prices to. On the right, the Nike collaboration card NKC1-EN002 that made me want to complete the Red-Eyes collection.
+    On the left, the GUI of my program. On the right, the Nike collaboration card NKC1-EN002 that made me want to complete the Red-Eyes collection.
 </div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/yugioh/cardmarket_excel_sheet.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    The middle the Excel sheet that the program will get info from and write prices to.
