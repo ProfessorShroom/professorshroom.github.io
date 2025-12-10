@@ -2,7 +2,7 @@
 layout: page
 title: PlutoPoint Automatic Software Installer
 description:
-img: assets/img/installer/installer.png
+img: assets/img/installer/computer_repair_centre_installer_logo.png
 importance: 1
 category: IT Projects
 comments: true
