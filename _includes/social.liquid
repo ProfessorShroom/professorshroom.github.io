@@ -102,12 +102,8 @@
       <a href="https://coff.ee/{{ social[1] }}" title="Buy me a book"><i class="fa-solid fa-book"></i></a>
     {% when 'thingiverse' %}
       <a href="https://www.thingiverse.com/{{ social[1] }}/designs" title="Thingiverse"><i class="fa-solid fa-cube"></i></a>
-    {% else %}
-
     {% when 'makerverse' %}
       <a href="https://makerworld.com/en/@{{ social[1] }}/designs" title="Makerverse"><i class="fa-solid fa-cubes"></i></a>
-    {% else %}
-
     {% else %}
       <a href="{{ social[1].url }}" title="{{ social[1].title }}">
         {% assign file_ext = social[1].logo | split: '.' | last %}
