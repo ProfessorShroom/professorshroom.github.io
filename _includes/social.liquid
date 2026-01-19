@@ -103,7 +103,7 @@
     {% when 'thingiverse' %}
       <a href="https://www.thingiverse.com/{{ social[1] }}/designs" title="Thingiverse"><i class="fa-solid fa-cube"></i></a>
     {% when 'makerverse' %}
-      <a href="https://makerworld.com/en/@{{ social[1] }}/designs" title="Makerverse"><i class="fa-solid fa-cubes"></i></a>
+      <a href="https://makerworld.com/en/@{{ social[1] }}" title="Makerverse"><i class="fa-solid fa-cubes"></i></a>
     {% else %}
       <a href="{{ social[1].url }}" title="{{ social[1].title }}">
         {% assign file_ext = social[1].logo | split: '.' | last %}
