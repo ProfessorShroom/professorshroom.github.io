@@ -35,4 +35,5 @@ I will continue to update this post and repo as I add more features.
     This is what the current version of the C# installer looks like.
 </div>
 
+### Changelog
 {% include plutopoint-readme.md %}

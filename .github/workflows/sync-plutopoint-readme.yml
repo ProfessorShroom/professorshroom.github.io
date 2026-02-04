@@ -17,7 +17,11 @@ jobs:
         run: |
           curl -L https://raw.githubusercontent.com/ProfessorShroom/PlutoPoint-Installer/main/README.md \
             | iconv -f UTF-8 -t UTF-8 -c \
+            | awk '/^Changelog/{flag=1; next} flag' \
+            | awk 'BEGIN{RS=""; ORS="\n\n"} {gsub(/\n/," "); print}' \
             > _includes/plutopoint-readme.md
+
+
 
       - name: Commit changes
         run: |
