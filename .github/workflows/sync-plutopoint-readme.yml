@@ -13,11 +13,11 @@ jobs:
       - name: Checkout site repo
         uses: actions/checkout@v4
 
-      - name: Download README
+      - name: Download README as UTF-8
         run: |
-          curl -L \
-            https://raw.githubusercontent.com/ProfessorShroom/PlutoPoint-Installer/main/README.md \
-            -o _includes/plutopoint-readme.md
+          curl -L https://raw.githubusercontent.com/ProfessorShroom/PlutoPoint-Installer/main/README.md \
+            | iconv -f UTF-8 -t UTF-8 -c \
+            > _includes/plutopoint-readme.md
 
       - name: Commit changes
         run: |
