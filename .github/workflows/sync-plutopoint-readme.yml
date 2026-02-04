@@ -1,0 +1,28 @@
+name: Sync PlutoPoint README
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # every hour
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout site repo
+        uses: actions/checkout@v4
+
+      - name: Download README
+        run: |
+          curl -L \
+            https://raw.githubusercontent.com/ProfessorShroom/PlutoPoint-Installer/main/README.md \
+            -o _includes/plutopoint-readme.md
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add _includes/plutopoint-readme.md
+          git diff --cached --quiet || git commit -m "Auto-sync PlutoPoint README"
+          git push

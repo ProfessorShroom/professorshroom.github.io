@@ -34,3 +34,5 @@ I will continue to update this post and repo as I add more features.
 <div class="caption">
     This is what the current version of the C# installer looks like.
 </div>
+
+{% include plutopoint-readme.md %}
