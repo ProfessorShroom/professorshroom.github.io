@@ -4,6 +4,7 @@
 **Update 5.2026.02.04.0**
 
 - 2026 Copyright.
+- Moved Version/Readme link to [professorshroom.com](https://professorshroom.com)
 
 #### Older Updates
 

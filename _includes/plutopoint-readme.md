@@ -3,6 +3,7 @@
 Update 6.4.8.0
 
 - Added shutdown button.
+- Moved Version/Readme link to [professorshroom.com](https://professorshroom.com)
 
 #### Older Updates
 
