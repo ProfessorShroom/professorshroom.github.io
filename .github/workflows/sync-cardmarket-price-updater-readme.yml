@@ -1,4 +1,4 @@
-name: Sync PlutoPoint README
+name: Sync Cardmarket Price Updater README
 
 on:
   schedule:
@@ -15,22 +15,22 @@ jobs:
 
       - name: Download README as UTF-8 and extract changelog
         run: |
-          curl -L https://raw.githubusercontent.com/ProfessorShroom/PlutoPoint-Installer/main/README.md \
+          curl -L https://raw.githubusercontent.com/ProfessorShroom/Cardmarket-Price-Updater/main/README.md \
             | iconv -f UTF-8 -t UTF-8 -c \
             | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
-            > _includes/plutopoint-readme.md
+            > _includes/cardmarket-price-updater-readme.md
 
       - name: Commit and push if README changed
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add _includes/plutopoint-readme.md
+          git add _includes/cardmarket-price-updater-readme.md
 
           if ! git diff --cached --quiet; then
             # Force page rebuild by touching the page that includes the README
-            touch _projects/PlutoPoint_Installer.md
-            git add _projects/PlutoPoint_Installer.md
-            git commit -m "Auto-sync PlutoPoint README"
+            touch _projects/Cardmarket_Price_Updater.md
+            git add _projects/Cardmarket_Price_Updater.md
+            git commit -m "Auto-sync Cardmarket Price Updater README"
             git push
           else
             echo "README unchanged, skipping commit and push"

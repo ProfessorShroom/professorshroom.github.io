@@ -41,3 +41,7 @@ Here's the repo below.
 </div>
 <div class="caption">
     The middle the Excel sheet that the program will get info from and write prices to.
+
+### Changelog
+
+{% include cardmarket-price-updater-readme.md %}

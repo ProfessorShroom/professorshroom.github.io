@@ -15,17 +15,16 @@ jobs:
 
       - name: Download README as UTF-8 and extract changelog
         run: |
-          curl -L https://raw.githubusercontent.com/ProfessorShroom/NorthPoint-Installer/main/README.md \
+          curl -L https://raw.githubusercontent.com/ProfessorShroom/NorthPoint-Installer/master/README.md \
             | iconv -f UTF-8 -t UTF-8 -c \
-            | awk '/^Changelog/{flag=1; next} flag' \
-            | awk 'BEGIN{RS=""; ORS="\n\n"} {gsub(/\n/," "); print}' \
-            > _includes/plutopoint-readme.md
+            | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
+            > _includes/northpoint-readme.md
 
       - name: Commit and push if README changed
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add _includes/plutopoint-readme.md
+          git add _includes/northpoint-readme.md
 
           if ! git diff --cached --quiet; then
             # Force page rebuild by touching the page that includes the README
