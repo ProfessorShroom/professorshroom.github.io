@@ -70,6 +70,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/NorthPoint_Installer/";
+            },},{id: "projects-plutopoint-automatic-software-installer",
+          title: 'PlutoPoint Automatic Software Installer',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/PlutoPoint_Installer/";
             },},{id: "projects-plutospantry-co-uk",
           title: 'PlutosPantry.co.uk',
           description: "",
