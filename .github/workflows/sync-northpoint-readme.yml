@@ -23,7 +23,7 @@ jobs:
 
       - name: Download README changelog
         run: |
-          curl -L https://raw.githubusercontent.com/ProfessorShroom/NorthPoint-Installer/master/README.md \
+          curl -L https://raw.githubusercontent.com/ProfessorShroom/NorthPoint-Installer/main/README.md \
             | iconv -f UTF-8 -t UTF-8 -c \
             | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
             > _includes/northpoint-readme.md
@@ -40,7 +40,7 @@ jobs:
             git push
           else
             echo "README unchanged, skipping commit"
-
+          
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
