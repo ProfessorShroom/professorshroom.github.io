@@ -14,3 +14,4 @@ assets/js/distillpub/transforms.v2.js
 _includes/plutopoint-readme.md
 _includes/northpoint-readme.md
 _includes/cardmarket-price-updater-readme.md
+.github/workflows/*.yml
