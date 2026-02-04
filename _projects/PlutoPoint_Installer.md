@@ -1,4 +1,3 @@
-{% comment %} rebuild trigger 1770217884 {% endcomment %}
 ---
 layout: page
 title: PlutoPoint Automatic Software Installer
