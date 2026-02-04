@@ -1,5 +1,6 @@
 
 #### Latest Update
+
 **Update 5.2026.02.04.0**
 
 - 2026 Copyright.
@@ -633,8 +634,7 @@
 
 - Disabled Kaspersky for now until I can work out a silent install.
 
-<details>
-<summary>Version 4.x</summary>
+**Version 4.x**
 
 
 **Update 4.2022.12.19.0**
@@ -859,9 +859,7 @@
 
 - Updated EXE to run first time every time.
 
-</details>
-<details>
-<summary>Version 3.x</summary>
+**Version 3.x**
 
 **Update 3.2022.07.02.5**
 
@@ -1702,9 +1700,7 @@
 
 - Renamed to NorthPoint Installer and moved to GitLab. Modernised the GUI and improved performace.
 
-</details>
-<details>
-<summary>Version 2.x</summary>
+**Version 2.x**
 
 **Update 2.6.0**
 
@@ -1810,9 +1806,7 @@
 
 - Rewritten executable to work with Windows Defender and download quicker. Removed log file, Apache OpenOffice & WPSOffice.
 
-</details>
-<details>
-<summary>Version 1.x</summary>
+**Version 1.x**
 
 **Update 1.12.1**
 
