@@ -26,3 +26,8 @@ jobs:
           git add _includes/plutopoint-readme.md
           git diff --cached --quiet || git commit -m "Auto-sync PlutoPoint README"
           git push
+
+      - name: Force Pages rebuild
+        run: |
+          git commit --allow-empty -m "Trigger Pages rebuild"
+          git push
