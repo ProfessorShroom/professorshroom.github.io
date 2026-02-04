@@ -1,65 +1,71 @@
-name: Sync PlutoPoint README and Deploy Site
+name: Sync PlutoPoint README and Deploy
 
 on:
   push:
     branches:
       - main
+    paths:
+      - "_includes/plutopoint-readme.md"
+      - "_projects/PlutoPoint_Installer.md"
   schedule:
-    - cron: "0 * * * *" # every hour
+    - cron: "0 * * * *"
   workflow_dispatch:
 
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
+permissions:
+  contents: write
 
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
     steps:
-      # Checkout your site repo
-      - name: Checkout site repo
+      - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      # Set up Ruby & Jekyll
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.3
-          bundler-cache: true
-
-      # Install dependencies
-      - name: Install dependencies
-        run: bundle install
-
-      # Download README changelog into _includes
-      - name: Download README as UTF-8 and extract changelog
+      - name: Download README changelog
         run: |
           curl -L https://raw.githubusercontent.com/ProfessorShroom/PlutoPoint-Installer/main/README.md \
             | iconv -f UTF-8 -t UTF-8 -c \
             | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
             > _includes/plutopoint-readme.md
 
-      # Commit _includes if changed
-      - name: Commit README if changed
+      - name: Commit if changed
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-
           git add _includes/plutopoint-readme.md
-
           if ! git diff --cached --quiet; then
-            echo "README changed, committing..."
+            touch _projects/PlutoPoint_Installer.md
+            git add _projects/PlutoPoint_Installer.md
             git commit -m "Auto-sync PlutoPoint README"
             git push
           else
             echo "README unchanged, skipping commit"
-          fi
 
-      # Build the site with Jekyll
-      - name: Build site
-        run: bundle exec jekyll build
-
-      # Deploy _site to GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v6
+      - name: Setup Ruby 💎
+        uses: ruby/setup-ruby@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          keep_files: true
+          ruby-version: "3.3.5"
+          bundler-cache: true
+
+      - name: Setup Python 🐍
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip"
+
+      - name: Install and Build 🔧
+        run: |
+          sudo apt-get update && sudo apt-get install -y imagemagick
+          pip3 install --upgrade nbconvert
+          export JEKYLL_ENV=production
+          bundle exec jekyll build
+
+      - name: Purge unused CSS 🧹
+        run: |
+          npm install -g purgecss
+          purgecss -c purgecss.config.js
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
