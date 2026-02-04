@@ -32,3 +32,7 @@ The installer still works in its current form and I will likely continue to keep
 <div class="caption">
     This is what the final version of the PowerShell installer looked like.
 </div>
+
+### Changelog
+
+{% include northpoint-readme.md %}

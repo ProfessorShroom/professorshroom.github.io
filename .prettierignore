@@ -12,3 +12,4 @@ _sass/tabler-icons/*.scss
 _scripts/*
 assets/js/distillpub/transforms.v2.js
 _includes/plutopoint-readme.md
+_includes/northpoint-readme.md

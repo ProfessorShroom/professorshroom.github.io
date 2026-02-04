@@ -1,4 +1,4 @@
-name: Sync PlutoPoint README
+name: Sync NorthPoint README
 
 on:
   schedule:
@@ -15,7 +15,7 @@ jobs:
 
       - name: Download README as UTF-8 and extract changelog
         run: |
-          curl -L https://raw.githubusercontent.com/ProfessorShroom/PlutoPoint-Installer/main/README.md \
+          curl -L https://raw.githubusercontent.com/ProfessorShroom/NorthPoint-Installer/main/README.md \
             | iconv -f UTF-8 -t UTF-8 -c \
             | awk '/^Changelog/{flag=1; next} flag' \
             | awk 'BEGIN{RS=""; ORS="\n\n"} {gsub(/\n/," "); print}' \
@@ -29,9 +29,9 @@ jobs:
 
           if ! git diff --cached --quiet; then
             # Force page rebuild by touching the page that includes the README
-            touch _projects/PlutoPoint_Installer.md
-            git add _projects/PlutoPoint_Installer.md
-            git commit -m "Auto-sync PlutoPoint README"
+            touch _projects/NorthPoint_Installer.md
+            git add _projects/NorthPoint_Installer.md
+            git commit -m "Auto-sync NorthPoint README"
             git push
           else
             echo "README unchanged, skipping commit and push"
