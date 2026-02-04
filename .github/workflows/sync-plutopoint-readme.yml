@@ -1,4 +1,4 @@
-name: Sync PlutoPoint README
+name: Sync PlutoPoint README and Deploy Site
 
 on:
   push:
@@ -9,13 +9,26 @@ on:
   workflow_dispatch:
 
 jobs:
-  sync:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout your site repo
       - name: Checkout site repo
         uses: actions/checkout@v4
 
+      # Set up Ruby & Jekyll
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3
+          bundler-cache: true
+
+      # Install dependencies
+      - name: Install dependencies
+        run: bundle install
+
+      # Download README changelog into _includes
       - name: Download README as UTF-8 and extract changelog
         run: |
           curl -L https://raw.githubusercontent.com/ProfessorShroom/PlutoPoint-Installer/main/README.md \
@@ -23,7 +36,8 @@ jobs:
             | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
             > _includes/plutopoint-readme.md
 
-      - name: Commit and push if README changed
+      # Commit _includes if changed
+      - name: Commit README if changed
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
@@ -31,17 +45,21 @@ jobs:
           git add _includes/plutopoint-readme.md
 
           if ! git diff --cached --quiet; then
-            echo "README changed, forcing page rebuild"
-
-            # Update a Liquid comment in the page to trigger rebuild
-            COMMENT="{% comment %} rebuild trigger $(date +%s) {% endcomment %}"
-            # Remove old comment if exists and append new one at the top
-            sed -i '/{% comment %} rebuild trigger/d' _projects/PlutoPoint_Installer.md
-            sed -i "1i $COMMENT" _projects/PlutoPoint_Installer.md
-
-            git add _projects/PlutoPoint_Installer.md
-            git commit -m "Auto-sync PlutoPoint README and trigger rebuild"
+            echo "README changed, committing..."
+            git commit -m "Auto-sync PlutoPoint README"
             git push
           else
-            echo "README unchanged, skipping commit and push"
+            echo "README unchanged, skipping commit"
           fi
+
+      # Build the site with Jekyll
+      - name: Build site
+        run: bundle exec jekyll build
+
+      # Deploy _site to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          keep_files: true
