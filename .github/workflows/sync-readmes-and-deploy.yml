@@ -1,0 +1,106 @@
+name: Sync Project READMEs and Deploy
+
+concurrency:
+  group: readme-sync-main
+  cancel-in-progress: true
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "_includes/*.md"
+      - "_projects/*.md"
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ---------------- PlutoPoint ----------------
+      - name: Sync PlutoPoint README
+        run: |
+          curl -L https://raw.githubusercontent.com/ProfessorShroom/PlutoPoint-Installer/main/README.md \
+            | iconv -f UTF-8 -t UTF-8 -c \
+            | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
+            > _includes/plutopoint-readme.md
+
+      # ---------------- NorthPoint ----------------
+      - name: Sync NorthPoint README
+        run: |
+          curl -L https://raw.githubusercontent.com/ProfessorShroom/NorthPoint-Installer/master/README.md \
+            | iconv -f UTF-8 -t UTF-8 -c \
+            | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
+            > _includes/northpoint-readme.md
+
+      # -------- Cardmarket Price Updater ----------
+      - name: Sync Cardmarket Price Updater README
+        run: |
+          curl -L https://raw.githubusercontent.com/ProfessorShroom/Cardmarket-Price-Updater/main/README.md \
+            | iconv -f UTF-8 -t UTF-8 -c \
+            | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
+            > _includes/cardmarket-price-updater-readme.md
+
+      # ---------------- Commit once ----------------
+      - name: Commit changes if needed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add _includes/*.md
+
+          if ! git diff --cached --quiet; then
+            touch \
+              _projects/PlutoPoint_Installer.md \
+              _projects/NorthPoint_Installer.md \
+              _projects/Cardmarket_Price_Updater.md
+
+            git add _projects/*.md
+            git commit -m "Auto-sync project READMEs"
+
+            git pull --rebase origin main
+            git push origin main
+          else
+            echo "No README changes detected"
+          fi
+
+      # ---------------- Build ----------------
+      - name: Setup Ruby 💎
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+
+      - name: Setup Python 🐍
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip"
+
+      - name: Install and Build 🔧
+        run: |
+          sudo apt-get update && sudo apt-get install -y imagemagick
+          pip3 install --upgrade nbconvert
+          export JEKYLL_ENV=production
+          bundle exec jekyll build
+
+      - name: Purge unused CSS 🧹
+        run: |
+          npm install -g purgecss
+          purgecss -c purgecss.config.js
+
+      # ---------------- Deploy ----------------
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
