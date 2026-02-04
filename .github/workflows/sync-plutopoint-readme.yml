@@ -21,8 +21,6 @@ jobs:
             | awk 'BEGIN{RS=""; ORS="\n\n"} {gsub(/\n/," "); print}' \
             > _includes/plutopoint-readme.md
 
-
-
       - name: Commit changes
         run: |
           git config user.name "github-actions"
