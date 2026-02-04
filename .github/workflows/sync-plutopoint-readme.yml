@@ -37,3 +37,4 @@ jobs:
             git push
           else
             echo "README unchanged, skipping commit and push"
+          fi
