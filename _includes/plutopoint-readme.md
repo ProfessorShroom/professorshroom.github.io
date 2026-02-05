@@ -1,11 +1,18 @@
 
 #### Latest Update
-Update 6.4.8.0
+
+**Update 6.5.0.0**
+
+- Moved all URL's to my OwnCloud as FTP was a pain.
+- Changed the way IP's are stored. They are now stored in a json file, hashed for security; this makes changing them a lot easier.
+- Movoed location text to run rather than install.
+
+#### Older Updates
+
+**Update 6.4.8.0**
 
 - Added shutdown button.
 - Moved Version/Readme link to [professorshroom.com](https://professorshroom.com)
-
-#### Older Updates
 
 **Update 6.4.7.2**
 
