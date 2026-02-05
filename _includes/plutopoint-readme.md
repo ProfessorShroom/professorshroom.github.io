@@ -3,9 +3,9 @@
 
 **Update 6.5.0.0**
 
-- Moved all URL's to my OwnCloud as FTP was a pain.
+- Moved all URL's to my NextCloud as FTP was a pain.
 - Changed the way IP's are stored. They are now stored in a json file, hashed for security; this makes changing them a lot easier.
-- Movoed location text to run rather than install.
+- Moved location text to run rather than install.
 
 #### Older Updates
 
