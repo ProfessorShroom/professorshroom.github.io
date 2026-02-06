@@ -1,13 +1,19 @@
 
 #### Latest Update
 
+**Update 6.5.1.0**
+
+- The installer will now pin Google Chrome, Mozilla Firefox and Mozilla Thunderbird to the taskbar if installed.
+- If Google Chrome or Mozilla Firefox are installed then Microsoft Edge will be unpinned from the taskbar.
+- Added test button for easier testing of new features.
+
+#### Older Updates
+
 **Update 6.5.0.0**
 
 - Moved all URL's to my NextCloud as FTP was a pain.
 - Changed the way IP's are stored. They are now stored in a json file, hashed for security; this makes changing them a lot easier.
 - Moved location text to run rather than install.
-
-#### Older Updates
 
 **Update 6.4.8.0**
 
