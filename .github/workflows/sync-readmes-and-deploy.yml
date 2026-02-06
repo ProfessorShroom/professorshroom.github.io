@@ -51,27 +51,41 @@ jobs:
             | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
             > _includes/cardmarket-price-updater-readme.md
 
-      # ---------------- Commit once ----------------
+      # ---------------- Commit changes if needed ----------------
       - name: Commit changes if needed
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
+          # Stage all synced READMEs
           git add _includes/*.md
 
+          # Only proceed if a README actually changed
           if ! git diff --cached --quiet; then
-            touch \
-              _projects/PlutoPoint_Installer.md \
-              _projects/NorthPoint_Installer.md \
-              _projects/Cardmarket_Price_Updater.md
+            # Determine which README files changed
+            changed=$(git diff --name-only --cached _includes/*.md)
 
+            # Touch corresponding _projects/*.md files to trigger Jekyll rebuild
+            for file in $changed; do
+              case "$file" in
+                *_plutopoint-readme.md)
+                  touch _projects/PlutoPoint_Installer.md ;;
+                *_northpoint-readme.md)
+                  touch _projects/NorthPoint_Installer.md ;;
+                *_cardmarket-price-updater-readme.md)
+                  touch _projects/Cardmarket_Price_Updater.md ;;
+              esac
+            done
+
+            # Stage touched project files
             git add _projects/*.md
-            git commit -m "Auto-sync project READMEs"
 
+            # Commit and push
+            git commit -m "Auto-sync project READMEs"
             git pull --rebase origin main
             git push origin main
           else
-            echo "No README changes detected"
+            echo "No README changes detected – skipping deploy"
           fi
 
       # ---------------- Build ----------------
