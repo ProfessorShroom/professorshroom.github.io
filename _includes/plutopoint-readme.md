@@ -1,13 +1,18 @@
 
 #### Latest Update
 
+**Update 6.5.2.0**
+
+- Removed taskbar pinning feature as it just wasn't reliable.
+- Slightly increased Install button size.
+
+#### Older Updates
+
 **Update 6.5.1.0**
 
 - The installer will now pin Google Chrome, Mozilla Firefox and Mozilla Thunderbird to the taskbar if installed.
 - If Google Chrome or Mozilla Firefox are installed then Microsoft Edge will be unpinned from the taskbar.
 - Added test button for easier testing of new features.
-
-#### Older Updates
 
 **Update 6.5.0.0**
 
