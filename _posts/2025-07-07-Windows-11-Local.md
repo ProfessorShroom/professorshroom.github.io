@@ -18,9 +18,9 @@ You used to be able open command prompt by using Shift+F10 (Shift+Fn+F10 on some
 taskkill /F /IM oobenetworkconnectionflow.exe
 ```
 
-Since 24H2 this no longer works, strangely I've found it works very occasionally, not sure what the logic is there.
+Since 24H2 this no longer works, strangely I've found it works very occasionally.
 
-The new method is as follows, don't connect to any wireless network, if you have ethernet then just plug the cable. When you get to the stage of being asked for a Microsoft account, open command, press Shift+F10 (Shift+Fn+F10 on some laptops) and type the following
+The new method is as follows, don't connect to any wireless network, if you have ethernet then just unplug the cable. When you get to the stage of being asked for a Microsoft account, open command, press Shift+F10 (Shift+Fn+F10 on some laptops) and type the following
 
 ```
 start ms-cxh:localonly

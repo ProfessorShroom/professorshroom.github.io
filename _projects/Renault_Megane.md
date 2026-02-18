@@ -47,7 +47,7 @@ Some of the cosmetic mods I've done are a complete custom interior done by [Kolo
 
 I've also retrofitted a R-Link system from the facelift model which required some coding and a custom loom as this option was never offered on the pre-facelift. This gives me Android Auto, Apple CarPlay, the RS monitor (which shows temps, boost, 0-60 times, lap times, service info, BHP etc.). All of the features are working including the reverse camera, parking sensors and apps from the now defunk app store.
 
-All of this I think makes this on of if not the nicest Renault Megane RS in the country.
+All of this I think makes this on of if not the nicest Renault Megane RS MK3 in the country.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
