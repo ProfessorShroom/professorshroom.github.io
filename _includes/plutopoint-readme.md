@@ -1,11 +1,17 @@
 
 #### Latest Update
 
+**Update 6.5.4.0**
+
+- Restructured birthday control so its easier to add and remove.
+- Restructured holiday/event images so its easier to scale and simpler to add and remove.
+- Did someone say duck?
+
+#### Older Updates
+
 **Update 6.5.3.0**
 
 - Added a checkbox for aligning the taskbar to the left on Windows 11 like previous versions, instead of just doing it automatically. This box is checked by default.
-
-#### Older Updates
 
 **Update 6.5.2.0**
 
