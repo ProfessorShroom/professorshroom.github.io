@@ -1,13 +1,17 @@
 
 #### Latest Update
 
+**Update 6.5.4.1**
+
+- Corrected minor typo.
+
+#### Older Updates
+
 **Update 6.5.4.0**
 
 - Restructured birthday control so its easier to add and remove.
 - Restructured holiday/event images so its easier to scale and simpler to add and remove.
 - Did someone say duck?
-
-#### Older Updates
 
 **Update 6.5.3.0**
 
