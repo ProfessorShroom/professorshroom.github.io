@@ -90,6 +90,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/WUPHF/";
+            },},{id: "projects-custom-yu-gi-oh-binders",
+          title: 'Custom Yu-Gi-Oh! Binders',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Yu-Gi-Oh_Binders/";
             },},{id: "projects-imac-studio-display-wip",
           title: 'iMac Studio Display (WIP)',
           description: "",
