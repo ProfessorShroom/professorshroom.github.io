@@ -4,7 +4,7 @@ title: Renault Megane RS 250 (RS 400)
 description:
 img: assets/img/car/250.jpeg
 importance: 1
-category: Car
+category: Car Projects
 comments: true
 ---
 
