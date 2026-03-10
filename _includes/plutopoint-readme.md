@@ -1,17 +1,21 @@
 
 #### Latest Update
 
+**Update 6.6.1.0**
+
+- Added gradient support to the rounded boxes
+
+#### Older Updates
+
 **Update 6.6.0.0**
 
 - The Gradient Update.
 - Added gradient background.
 - Changed RichTextBox to a label within a panel to allow transparency.
-- Make all objects transparent.
-- Reconfigured AppendText to support label.
+- Made all objects transparent.
+- Reconfigured AppendText to support label and panel.
 - Added a custom rounded progress bar with gradient support.
 - Moved the rounded group box to its own cs file.
-
-#### Older Updates
 
 **Update 6.5.4.1**
 
