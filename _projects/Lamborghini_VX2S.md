@@ -4,7 +4,7 @@ title: ASUS Lamborghini VX2S Laptop
 description:
 img: assets/img/lambo_vx2s/lambo_vx2s_top.png
 importance: 2
-category: IT Projects
+category: Tech Projects
 comments: true
 ---
 

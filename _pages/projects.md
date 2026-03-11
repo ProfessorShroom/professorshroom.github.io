@@ -2,17 +2,17 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: All of my past, future and present projects.
+description: All of my past, future and present projects!
 nav: true
 nav_order: 3
-display_categories: [Car Projects, IT Projects, Web Projects, Misc Projects]
+display_categories: [Car Projects, Misc Projects, Software, Tech Projects, Web Projects]
 horizontal: false
 ---
 
 {% if site.enable_project_categories and page.display_categories %}
 
   <div class="projects-board">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-5 g-4">
       {% for category in page.display_categories %}
         {% assign categorized_projects = site.projects | where: "category", category | sort: "importance" %}
 

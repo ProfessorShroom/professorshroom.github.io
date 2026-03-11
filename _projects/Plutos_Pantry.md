@@ -8,7 +8,7 @@ category: Web Projects
 comments: true
 ---
 
-This isn't actually my site, but my wifes.
+This isn't actually my site, but my wifes, I just wanted to advertise it here for her!
 
 My wife runs a pet treat and enrichment business, which is run online from Shopify and TikTok, and also at local markets so say hello if you see her!
 

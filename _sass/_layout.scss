@@ -5,7 +5,7 @@
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);
-  background: linear-gradient(135deg, #2563eb 0%, #9333ea 100%);
+  background: linear-gradient(135deg, rgba(30, 200, 255) 0%, rgba(140, 0, 255) 100%);
   background-attachment: fixed;
 
   h1,
@@ -54,7 +54,7 @@ body.sticky-bottom-footer {
  *****************************************************************************/
 
 .projects-board {
-  width: min(70vw);
+  width: min(80vw);
   max-width: 1600px;
   margin-left: 50%;
   transform: translateX(-50%);
