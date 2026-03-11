@@ -4,7 +4,7 @@ title: Cardmarket Price Updater
 description:
 img: assets/img/yugioh/cardmarket_price_updater_logo.png
 importance: 2
-category: IT Projects
+category: Software
 comments: true
 ---
 

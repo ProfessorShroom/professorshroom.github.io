@@ -4,7 +4,7 @@ title: NorthPoint Automatic Software Installer (Deprecated by PlutoPoint)
 description:
 img: assets/img/installer/installer_old.png
 importance: 10
-category: IT Projects
+category: Software
 comments: false
 ---
 
