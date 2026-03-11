@@ -1,34 +1,35 @@
-<div class="col">
-  <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
-    <div class="card h-100 hoverable">
+<div class="project-list-item">
+  <a
+    href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}"
+    class="project-list-link"
+  >
+    <div class="project-hover-shell">
       {% if project.img %}
         {%
           include figure.liquid
           loading="eager"
           path=project.img
-          sizes = "250px"
+          sizes="220px"
           alt="project thumbnail"
-          class="card-img-top"
+          class="project-list-thumb"
         %}
       {% endif %}
-      <div class="card-body">
-        <h2 class="card-title">{{ project.title }}</h2>
-        <p class="card-text">{{ project.description }}</p>
-        <div class="row ml-1 mr-1 p-0">
-          {% if project.github %}
-            <div class="github-icon">
-              <div class="icon" data-toggle="tooltip" title="Code Repository">
-                <a href="{{ project.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
-              </div>
-              {% if project.github_stars %}
-                <span class="stars" data-toggle="tooltip" title="GitHub Stars">
-                  <i class="fa-solid fa-star"></i>
-                  <span id="{{ project.github_stars }}-stars"></span>
-                </span>
-              {% endif %}
-            </div>
-          {% endif %}
-        </div>
+
+      <div class="project-list-content">
+        <h3 class="project-list-title">{{ project.title }}</h3>
+        <p class="project-list-description">{{ project.description }}</p>
+
+        {% if project.github %}
+          <div class="project-list-meta">
+            <i class="fa-brands fa-github gh-icon"></i>
+            {% if project.github_stars %}
+              <span class="stars">
+                <i class="fa-solid fa-star"></i>
+                <span id="{{ project.github_stars }}-stars"></span>
+              </span>
+            {% endif %}
+          </div>
+        {% endif %}
       </div>
     </div>
   </a>

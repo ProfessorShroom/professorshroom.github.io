@@ -4,6 +4,20 @@
 
 // Typography
 
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+}
+
 p,
 h1,
 h2,
@@ -241,18 +255,27 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+.highlight-name {
+  color: var(--global-theme-color);
+}
+
 // Navbar customization
 
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
+  background: linear-gradient(135deg, #1e5ee7 0%, #8d29eb 100%);
+}
+
+.navbar .container {
+  width: 70vw;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navbar .dropdown-menu {
-  background-color: var(--global-bg-color);
-  border: 1px solid var(--global-divider-color);
+  background: linear-gradient(135deg, #1e3a8a 0%, #6d28d9 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
   a:not(.active) {
     color: var(--global-text-color);
@@ -383,7 +406,6 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-#light-toggle,
 #search-toggle {
   padding: 0;
   border: 0;
@@ -393,6 +415,10 @@ ul.task-list input[type="checkbox"] {
   &:hover {
     color: var(--global-hover-color);
   }
+}
+
+#light-toggle {
+  display: none !important;
 }
 
 // Social (bottom)
@@ -642,6 +668,23 @@ footer.sticky-bottom {
       }
     }
   }
+}
+
+code {
+  color: #ffffff !important;
+}
+.highlighter-rouge,
+.highlighter-rouge .highlight,
+.highlight,
+figure.highlight {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px;
+}
+
+.highlight pre,
+.highlighter-rouge .highlight pre,
+figure.highlight pre {
+  background: transparent !important;
 }
 
 // Distill

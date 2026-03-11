@@ -4,7 +4,7 @@ title: WUPHF.co.uk
 description:
 img: assets/img/wuphf/wuphf.png
 importance: 2
-category: Websites
+category: Web Projects
 comments: false
 ---
 

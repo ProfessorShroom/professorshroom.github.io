@@ -10,7 +10,7 @@ profile:
   image_circular: true
 ---
 
-# **Hey, I'm <span style="color: #8103ff;">ProfessorShroom</span>**
+# **Hey, I'm <span class="highlight-name">ProfessorShroom</span>**
 
 <span style="font-size: 20px;">I'm a computer technician, gamer, car enthusiast, occasional coder and designer.</span>
 

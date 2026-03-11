@@ -5,7 +5,8 @@
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);
-  background-color: var(--global-bg-color);
+  background: linear-gradient(135deg, #2563eb 0%, #9333ea 100%);
+  background-attachment: fixed;
 
   h1,
   h2,
@@ -31,6 +32,16 @@ body.sticky-bottom-footer {
   max-width: $max-content-width;
 }
 
+.post-header,
+.header-bar {
+  text-align: center;
+}
+
+.post-header .desc,
+.header-bar .desc {
+  text-align: center;
+}
+
 // Profile
 .profile {
   img {
@@ -38,16 +49,86 @@ body.sticky-bottom-footer {
   }
 }
 
-// TODO: redefine content layout.
-
-/******************************************************************************
- * Publications
- ******************************************************************************/
-
-// TODO: redefine publications layout.
-
 /*****************************************************************************
-* Projects
-*****************************************************************************/
+ * Projects
+ *****************************************************************************/
 
-// TODO: redefine projects layout.
+.projects-board {
+  width: min(70vw);
+  max-width: 1600px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.projects-board .row {
+  align-items: flex-start;
+}
+
+.project-category-block {
+  display: block;
+  height: auto;
+  padding: 1rem;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.project-category-block .category {
+  text-align: center;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+}
+
+.project-list-thumb {
+  display: block;
+  margin: 0 auto 0.4rem auto;
+  border-radius: 8px;
+}
+
+.project-list-link {
+  display: block;
+  text-decoration: none !important;
+  color: inherit;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  padding-top: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.project-list-link {
+  display: block;
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.project-list-link:hover,
+.project-list-link:focus {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.project-hover-shell {
+  border-radius: 14px;
+  padding: 0.6rem 0.8rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.project-list-link:hover .project-hover-shell,
+.project-list-link:focus .project-hover-shell {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.04);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.28),
+    0 0 24px rgba(129, 3, 255, 0.18);
+}
+
+.project-list-thumb {
+  display: block;
+  margin: 0 auto 0.6rem auto;
+  border-radius: 10px;
+}
+
+.project-list-content {
+  text-align: center;
+}

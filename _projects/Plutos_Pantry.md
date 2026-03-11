@@ -4,9 +4,11 @@ title: PlutosPantry.co.uk
 description:
 img: assets/img/pluto/plutospantry.png
 importance: 1
-category: Websites
+category: Web Projects
 comments: true
 ---
+
+This isn't actually my site, but my wifes.
 
 My wife runs a pet treat and enrichment business, which is run online from Shopify and TikTok, and also at local markets so say hello if you see her!
 
