@@ -259,6 +259,10 @@ ul.task-list input[type="checkbox"] {
   color: var(--global-theme-color);
 }
 
+.profile img {
+  box-shadow: none !important;
+}
+
 // Navbar customization
 
 .navbar {

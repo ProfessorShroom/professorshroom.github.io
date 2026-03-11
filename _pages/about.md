@@ -12,16 +12,17 @@ profile:
 
 # **Hey, I'm <span class="highlight-name">ProfessorShroom</span>**
 
-<span style="font-size: 20px;">I'm a computer technician, gamer, car enthusiast, occasional coder and designer.</span>
+<span style="font-size: 20px;">I'm a computer technician, gamer, car enthusiast, designer and very occasional coder.</span>
 
 <span style="font-size: 20px;">I often start projects for my current needs in computers or my cars. So this a place for my current, future and past projects!</span>
 
 <br>
 <br>
 
-If you enjoy what I do and want to support me -
+<div style="display:flex; justify-content:left; align-items:center; gap:12px; flex-wrap:wrap;">
+  
+  <span>If you enjoy what I do and want to support me ➔</span>
 
-<div style="margin-top: 20px;">
   <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
     data-name="bmc-button"
     data-slug="professorshroom"
@@ -33,6 +34,9 @@ If you enjoy what I do and want to support me -
     data-font-color="#000000"
     data-coffee-color="#ffffff">
   </script>
+
+</div>
+<div>
 
 <br>
 
