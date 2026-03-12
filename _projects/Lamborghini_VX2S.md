@@ -6,6 +6,8 @@ img: assets/img/lambo_vx2s/lambo_vx2s_top.png
 importance: 2
 category: Tech Projects
 comments: true
+images:
+  lightbox2: true
 ---
 
 I just obtained an ASUS Lamborghini VX2S, not because it's actually any good in today's age but it's cool and something I've always wanted to own.

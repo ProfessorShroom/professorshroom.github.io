@@ -6,6 +6,8 @@ img: assets/img/car/250.jpeg
 importance: 1
 category: Car Projects
 comments: true
+images:
+  lightbox2: true
 ---
 
 In 2017 I bought a Renault Megane RS 225 (named Homer for his number plate) and loved it, but it only lasted 6 months before the engine failed, I think due to poor matienece across its life. [I do at least have this cool cinematic of it, as it was used in a film](https://www.youtube.com/watch?v=EjZ18XtUKZc).
@@ -47,7 +49,7 @@ Some of the cosmetic mods I've done are a complete custom interior done by [Kolo
 
 I've also retrofitted a R-Link system from the facelift model which required some coding and a custom loom as this option was never offered on the pre-facelift. This gives me Android Auto, Apple CarPlay, the RS monitor (which shows temps, boost, 0-60 times, lap times, service info, BHP etc.). All of the features are working including the reverse camera, parking sensors and apps from the now defunk app store.
 
-All of this I think makes this on of if not the nicest Renault Megane RS MK3 in the country.
+All of this I think makes this one of if not the nicest Renault Megane RS MK3 in the country.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -76,5 +78,5 @@ All of this I think makes this on of if not the nicest Renault Megane RS MK3 in 
     </div>
 </div>
 <div class="caption">
-    Pluto likes the seats.
+    Bonus Pluto!
 </div>

@@ -6,6 +6,8 @@ img: assets/img/car/w211_cluster.jpg
 importance: 5
 category: Car Projects
 comments: true
+images:
+  lightbox2: true
 ---
 
 For daily driving and for my wifes business, [PlutosPantry](/projects/Plutos_Pantry), we have a 2006 Mercedes-Benz E-Class E220 CDI. It has what is apparently a fairly common issue with the automatic shifter. On occasion when you start the car to the left of the mileage you should see P/R/N/D and to the right C/S. The fault will start by not displaying anything where P/R/N/D should be, and apparently can also not show C/S but mine hasn't done this. When this is missing you can shift to D but it will be quite clunky, and drive but the car will stuck in first gear, and you won't be able to select reverse or park without turning the car off first.

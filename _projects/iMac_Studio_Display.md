@@ -6,6 +6,8 @@ img: assets/img/imac/imac_open.png
 importance: 3
 category: Tech Projects
 comments: true
+images:
+  lightbox2: true
 ---
 
 I recently acquired a free 2014 iMac with a faulty motherboard, but the screen worked fine. I've seen a few people convert them into what is basically just a Apple Studio Display. These screens are 60Hz 5120x2880, and look amazing so for a second monitor/graphics monitor it's perfect.

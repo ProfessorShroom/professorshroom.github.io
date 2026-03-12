@@ -6,6 +6,8 @@ img: assets/img/bmw_lin/lin.png
 importance: 10
 category: Car Projects
 comments: true
+images:
+  lightbox2: true
 ---
 
 This project is currently a WIP and on hold as I've run into a roadblock.

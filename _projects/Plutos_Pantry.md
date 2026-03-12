@@ -6,6 +6,8 @@ img: assets/img/pluto/plutospantry.png
 importance: 1
 category: Web Projects
 comments: true
+images:
+  lightbox2: false
 ---
 
 This isn't actually my site, but my wifes, I just wanted to advertise it here for her!

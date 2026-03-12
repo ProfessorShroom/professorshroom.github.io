@@ -6,6 +6,8 @@ img: assets/img/wuphf/wuphf.png
 importance: 2
 category: Web Projects
 comments: false
+images:
+  lightbox2: false
 ---
 
 Just had a bit of fun making a WUPHF site, as whoever owns WUPHF.com never did anything with it. So I got [WUPHF.co.uk](https://wuphf.co.uk) and made a fan site.

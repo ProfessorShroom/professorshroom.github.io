@@ -6,6 +6,8 @@ img: assets/img/yugioh/cardmarket_price_updater_logo.png
 importance: 2
 category: Software
 comments: true
+images:
+  lightbox2: true
 ---
 
 I collect Yu-Gi-Oh! cards on and off, I have since I was a kid. I recently wanted to complete my set of every Red-Eyes Black Dragon card ever printed after getting the NKC1-EN002.
