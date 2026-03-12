@@ -14,7 +14,7 @@ profile:
 
 <span style="font-size: 20px;">I'm a computer technician, gamer, car enthusiast, designer and very occasional coder.</span>
 
-<span style="font-size: 20px;">I often start projects for my current needs in computers or my cars. So this a place for my current, future and past projects!</span>
+<span style="font-size: 20px;">I often start projects for my current needs in computers or my cars. So this is a place for my current, future and past projects!</span>
 
 <br>
 <br>

@@ -42,7 +42,7 @@ Here's the repo below.
     </div>
 </div>
 <div class="caption">
-    The middle the Excel sheet that the program will get info from and write prices to.
+    The Excel sheet that the program will get info from and write prices to.
 </div>
 
 ### Changelog
