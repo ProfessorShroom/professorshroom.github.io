@@ -10,7 +10,7 @@ profile:
   image_circular: true
 ---
 
-# **Hey, I'm <span class="highlight-name">ProfessorShroom</span>**
+# **Hey, I'm <span class="highlight-name">ProfessorShroom!</span> 🍄**
 
 <span style="font-size: 20px;">I'm a computer technician, gamer, car enthusiast, designer and very occasional coder.</span>
 
@@ -23,17 +23,9 @@ profile:
   
   <span>If you enjoy what I do and want to support me ➔</span>
 
-  <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-    data-name="bmc-button"
-    data-slug="professorshroom"
-    data-color="#8103ff"
-    data-emoji="🍺"
-    data-font="Cookie"
-    data-text="Buy me a beer"
-    data-outline-color="#000000"
-    data-font-color="#000000"
-    data-coffee-color="#ffffff">
-  </script>
+  <a href="https://www.buymeacoffee.com/professorshroom" target="_blank" rel="noopener">
+    <img src="/assets/img/buy-me-a-beer.png" alt="Buy me a beer" style="height:50px;">
+  </a>
 
 </div>
 <div>
