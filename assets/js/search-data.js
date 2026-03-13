@@ -3,8 +3,8 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-about",
-    title: "About",
+    id: "nav-about-me",
+    title: "About Me",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
@@ -65,13 +65,13 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Mercedes_W211_Shifter_Repair/";
-            },},{id: "projects-northpoint-automatic-software-installer-deprecated-by-plutopoint",
-          title: 'NorthPoint Automatic Software Installer (Deprecated by PlutoPoint)',
+            },},{id: "projects-northpoint-automatic-software-installer-computer-repair-centre-installer-deprecated-by-plutopoint",
+          title: 'NorthPoint Automatic Software Installer (Computer Repair Centre Installer) (Deprecated by PlutoPoint)',
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/NorthPoint_Installer/";
-            },},{id: "projects-plutopoint-automatic-software-installer",
-          title: 'PlutoPoint Automatic Software Installer',
+            },},{id: "projects-plutopoint-automatic-software-installer-computer-repair-centre-installer",
+          title: 'PlutoPoint Automatic Software Installer (Computer Repair Centre Installer)',
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/PlutoPoint_Installer/";
