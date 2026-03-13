@@ -26,10 +26,10 @@ Here's the repo below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/yugioh/cardmarket_price_updater.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/yugioh/cardmarket_price_updater.png" title="Cardmarket Price Updater" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/yugioh/nkc1.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/yugioh/nkc1.png" title="NKC1-EN002" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -38,7 +38,7 @@ Here's the repo below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/yugioh/cardmarket_excel_sheet.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/yugioh/cardmarket_excel_sheet.png" title="Cardmarket Price Updater Excel Sheet" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

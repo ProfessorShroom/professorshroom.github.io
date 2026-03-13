@@ -20,13 +20,13 @@ It's missing the hinge covers, and the battery has some plastic damage but I can
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/lambo_vx2s/lambo_vx2s_top.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/lambo_vx2s/lambo_vx2s_top.jpg" title="Lamborghini VX2s Lid" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/lambo_vx2s/lambo_vx2s.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/lambo_vx2s/lambo_vx2s.jpg" title="Lamborghini VX2s" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/lambo_vx2s/lambo_vx2s_bottom.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/lambo_vx2s/lambo_vx2s_bottom.jpg" title="Lamborghini VX2s Base" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -35,10 +35,10 @@ It's missing the hinge covers, and the battery has some plastic damage but I can
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/lambo_vx2s/lambo_vx2s_post.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/lambo_vx2s/lambo_vx2s_post.png" title="Lamborghini VX2s POST Screen" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/lambo_vx2s/gpuz.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/lambo_vx2s/gpuz.gif" title="Lamborghini VX2s GPU-Z" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

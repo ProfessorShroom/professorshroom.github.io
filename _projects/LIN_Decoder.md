@@ -24,10 +24,10 @@ I did some research and found that loads of E39 (one of my favourite BMW's) owne
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/bmw_lin/m539.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/bmw_lin/m539.jpg" title="M539 Restoration's E92 M3" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/bmw_lin/old_mirror.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/bmw_lin/old_mirror.jpg" title="BMW Compass Mirror" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -58,10 +58,10 @@ The 3.0 boards came in but had some issues, when both 5v lines were powered the 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/bmw_lin/lin.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/bmw_lin/lin.jpg" title="BMW LIN Decoder Board" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/bmw_lin/mirror_mount.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/bmw_lin/mirror_mount.jpg" title="Renault Mirror Mount" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

@@ -16,13 +16,13 @@ Despite this I decided to buy a 2010 Renault Megane RS 250, as after watching re
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/250.jpeg" title="Renault Megane RS 250 after 400 Turbo Kit Installation at K-Tec Racing" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/225.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/225.jpg" title="Renault Megane RS 225 (Homer)" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/225_engine.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/225_engine.jpg" title="Renault Megane RS 225 Engine Block with Hole" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -33,10 +33,10 @@ When I bought the car it was pretty much standard aside from a remap which took 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_build.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/250_build.jpg" title="Renault Megane RS 250 Build Sheet" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_dyno.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/250_dyno.jpg" title="Renault Megane RS 250 Dyno Sheet" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -53,19 +53,19 @@ All of this I think makes this one of if not the nicest Renault Megane RS MK3 in
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_interior_1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/250_interior_1.jpg" title="Renault Megane RS 250 Interior" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_interior_2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/250_interior_2.jpg" title="Renault Megane RS 250 Interior" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_engine_1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/250_engine_1.jpg" title="Renault Megane RS 250 Engine Bay" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_engine_2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/250_engine_2.jpg" title="Renault Megane RS 250 Garrett Turbo" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_rlink.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/250_rlink.jpg" title="Renault Megane RS 250 R-Link System" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -74,7 +74,7 @@ All of this I think makes this one of if not the nicest Renault Megane RS MK3 in
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_pluto.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/250_pluto.jpg" title="Pluto!" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
