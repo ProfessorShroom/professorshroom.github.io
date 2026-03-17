@@ -1,11 +1,15 @@
 
 #### Latest Update
 
-**Update 6.6.1.0**
+**Update 6.6.2.0**
 
-- Added gradient support to the rounded boxes
+- Added a fallback download for LibreOffice as their server is a bit flakey and the installer will sometimes hang if it cannot download the latest msi.
 
 #### Older Updates
+
+**Update 6.6.1.0**
+
+- Added gradient support to the rounded boxes.
 
 **Update 6.6.0.0**
 
