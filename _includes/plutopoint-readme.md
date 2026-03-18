@@ -1,6 +1,13 @@
 
 #### Latest Update
 
+**Update 6.6.3.1**
+
+- Small cleanup of code.
+- Tweaked GUI for neater layout.
+
+#### Older Updates
+
 **Update 6.6.3.0**
 
 - Added custom rounded buttons.
@@ -10,8 +17,6 @@
 - Moved password hash check to a json file for easier access.
 - Reworked the text box slightly to allow redrawing when GUI is resized.
 - Moved download URL's to a json to allow for easier changing of URL's if needed. 
-
-#### Older Updates
 
 **Update 6.6.2.0**
 
