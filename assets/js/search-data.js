@@ -80,8 +80,8 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Plutos_Pantry/";
-            },},{id: "projects-renault-megane-rs-250-rs-400",
-          title: 'Renault Megane RS 250 (RS 400)',
+            },},{id: "projects-renault-megane-rs-250-r-s-400",
+          title: 'Renault Megane RS 250 (R.S.400)',
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Renault_Megane/";
