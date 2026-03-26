@@ -1,12 +1,20 @@
 
 #### Latest Update
 
+**Update 6.6.3.3**
+
+- Moved NanaZip exe string out of the if statement, so it can be used across the installer.
+
+#### Older Updates
+
+**Update 6.6.3.2**
+
+- Updated NanaZip exe name due to new version.
+
 **Update 6.6.3.1**
 
 - Small cleanup of code.
 - Tweaked GUI for neater layout.
-
-#### Older Updates
 
 **Update 6.6.3.0**
 
