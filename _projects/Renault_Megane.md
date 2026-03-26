@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Renault Megane RS 250 (RS 400)
+title: Renault Megane RS 250 (R.S.400)
 description:
 img: assets/img/car/250.jpeg
 importance: 1
@@ -33,7 +33,7 @@ When I bought the car it was pretty much standard aside from a remap which took 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_build.jpg" title="Renault Megane RS 250 Build Sheet" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/250_build_sheet.png" title="Renault Megane RS 250 Build Sheet" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/car/250_dyno.jpg" title="Renault Megane RS 250 Dyno Sheet" class="img-fluid rounded z-depth-1" %}
@@ -45,7 +45,7 @@ When I bought the car it was pretty much standard aside from a remap which took 
 
 Some of the mods I've done include the turbo 400 kit from [K-Tec Racing](https://k-tecracing.com/) which consists of a Garrett GTX2867R Gen 2 Turbo, 630cc injectors, de-cat (plus a sports cat lower in the system due to heat) and more supporting mods. Previously I've already added a Wagner intercooler, K-Tec induction kit, oil catch can which required a battery relocation and a custom mount for the ECU.
 
-Some of the cosmetic mods I've done are a complete custom interior done by [KolourKoncept](https://www.kolourkoncept.co.uk/), lightweight Hyundai i30N alloys. Lots of carbon fibre trim bits on both the exterior and interior of the car made by [Carbon Skins](https://www.facebook.com/profile.php?id=100057058466032).
+Some of the cosmetic mods I've done are a complete custom interior done by [KolourKoncept](https://www.kolourkoncept.co.uk/), lightweight Hyundai i30N alloys. Lots of carbon fibre trim bits on both the exterior and interior of the car made by [Carbon Skins](https://www.facebook.com/profile.php?id=100057058466032). A completely custom R.S.400 rear badge which you can see a photo of below.
 
 I've also retrofitted a R-Link system from the facelift model which required some coding and a custom loom as this option was never offered on the pre-facelift. This gives me Android Auto, Apple CarPlay, the RS monitor (which shows temps, boost, 0-60 times, lap times, service info, BHP etc.). All of the features are working including the reverse camera, parking sensors and apps from the now defunk app store.
 
@@ -61,15 +61,24 @@ All of this I think makes this one of if not the nicest Renault Megane RS MK3 in
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/car/250_engine_1.jpg" title="Renault Megane RS 250 Engine Bay" class="img-fluid rounded z-depth-1" %}
     </div>
+</div>
+<div class="caption">
+    From left to right. Interior pictures of the custom interior done by KolourKoncept, the engine work mostly done by K-Tec Racing.
+</div>
+
+<div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_engine_2.jpg" title="Renault Megane RS 250 Garrett Turbo" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/250_garrett.jpeg" title="Renault Megane RS 250 Garrett Turbo" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/car/250_rlink.jpg" title="Renault Megane RS 250 R-Link System" class="img-fluid rounded z-depth-1" %}
     </div>
+        <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/car/rs400_badge.jpg" title="Renault Megane R.S.400 Rear Badge" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
 <div class="caption">
-    From left to right. Interior pictures of the custom interior done by KolourKoncept, the engine work mostly done by K-Tec Racing and the R-Link system from the facelift models.
+    From left to right. IThe engine work mostly done by K-Tec Racing, the R-Link system from the facelift models, and the custom R.S.400 rear badge.
 </div>
 
 <div class="row">
