@@ -78,7 +78,7 @@ All of this I think makes this one of if not the nicest Renault Megane RS MK3 in
     </div>
 </div>
 <div class="caption">
-    From left to right. IThe engine work mostly done by K-Tec Racing, the R-Link system from the facelift models, and the custom R.S.400 rear badge.
+    From left to right. The engine work mostly done by K-Tec Racing and myself, the R-Link system from the facelift models, and the custom R.S.400 rear badge.
 </div>
 
 <div class="row">
