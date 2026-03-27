@@ -1,11 +1,15 @@
 
 #### Latest Update
 
+**Update 6.6.3.4**
+
+- Forgot to remove one instance of NanaZipExe in Microsoft Office 2007.
+
+#### Older Updates
+
 **Update 6.6.3.3**
 
 - Moved NanaZip exe string out of the if statement, so it can be used across the installer.
-
-#### Older Updates
 
 **Update 6.6.3.2**
 
