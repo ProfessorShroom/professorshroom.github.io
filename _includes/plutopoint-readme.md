@@ -1,11 +1,15 @@
 
 #### Latest Update
 
+**Update 6.6.3.5**
+
+- Fixed progress bar not completing.
+
+#### Older Updates
+
 **Update 6.6.3.4**
 
 - Forgot to remove one instance of NanaZipExe in Microsoft Office 2007.
-
-#### Older Updates
 
 **Update 6.6.3.3**
 
