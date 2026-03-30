@@ -122,13 +122,6 @@ ninja.data = [{
           window.open("", "_blank");
         },
       },{
-        id: 'social-thingiverse',
-        title: 'Thingiverse',
-        section: 'Socials',
-        handler: () => {
-          window.open("", "_blank");
-        },
-      },{
         id: 'social-makerverse',
         title: 'Makerverse',
         section: 'Socials',
