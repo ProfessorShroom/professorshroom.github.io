@@ -1,11 +1,20 @@
 
 #### Latest Update
 
+**Update 1.2.0.0**
+
+- Added cmd/terminal support.
+- /f lets you specify a file.
+- /d lets you specify a directory.
+- /c lets you specify a currency.
+- /log lets you log to a file.
+- /q, /quiet, /s, /silent runs the exe silently.
+
+#### Older Updates
+
 **Update 1.1.2.0**
 
 - Updated EUR to GBP conversion link.
-
-#### Older Updates
 
 **Update 1.1.1.0**
 
