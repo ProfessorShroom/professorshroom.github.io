@@ -1,11 +1,15 @@
 
 #### Latest Update
 
+**Update 6.6.3.6**
+
+- Updated the way the installer gets the current LibreOffice version.
+
+#### Older Updates
+
 **Update 6.6.3.5**
 
 - Fixed progress bar not completing.
-
-#### Older Updates
 
 **Update 6.6.3.4**
 
