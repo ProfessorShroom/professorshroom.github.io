@@ -4,9 +4,9 @@ Just a useful collection of scripts for Linux and Windows.
 
 <h3>Docker</h3>
 
-- dockerInstallPi.sh - Install Docker on a Raspberry Pi
+- [dockerInstallPi.sh](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Docker/dockerInstallPi.sh) - Install Docker on a Raspberry Pi
 - dockerInstallPi.sh - Install Docker on Ubuntu
-- updateDockerContainers.sh - Update all docker containers, assuming all are held within the same directory <br>
+- updateDockerContainers.sh - Updates all Docker containers, assuming all are held within the same directory <br>
 For example if all containers are held within /mnt/docker/ you just add the name of the subfolder <br>
 Change the following line to your Docker directory `dockerDir="/path/to/docker/containers"` and then input your containers like below
 ```
