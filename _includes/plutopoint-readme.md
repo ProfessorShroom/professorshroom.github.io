@@ -1,12 +1,16 @@
 
 #### Latest Update
 
+**Update 6.6.4.1**
+
+- Fixed a typo with the VLC path causing a crash.
+
+#### Older Updates
+
 **Update 6.6.4.0**
 
 - Removed "Remove Windows AI & Copilot" as it's unreliable.
 - Removed Microsoft Office 2007, finally!
-
-#### Older Updates
 
 **Update 6.6.3.6**
 
