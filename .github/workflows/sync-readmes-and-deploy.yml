@@ -51,6 +51,14 @@ jobs:
             | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
             > _includes/cardmarket-price-updater-readme.md
 
+      # -------- Cardmarket Price Updater ----------
+      - name: Sync Useful Scripts README
+        run: |
+          curl -L https://raw.githubusercontent.com/ProfessorShroom/ProfessorShroom-Scripts/main/README.md \
+            | iconv -f UTF-8 -t UTF-8 -c \
+            | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
+            > _includes/useful-scripts-readme.md
+
       # ---------------- Commit changes if needed ----------------
       - name: Commit changes if needed
         run: |

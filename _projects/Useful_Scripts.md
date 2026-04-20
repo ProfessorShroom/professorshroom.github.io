@@ -10,4 +10,4 @@ images:
   lightbox2: true
 ---
 
-{% include useful-projects-readme.md %}
+{% include useful-scripts-readme.md %}
