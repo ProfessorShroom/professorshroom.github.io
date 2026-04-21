@@ -27,88 +27,89 @@ jobs:
         with:
           fetch-depth: 0
 
-      # ---------------- PlutoPoint ----------------
+      # ---------------- Sync READMEs ----------------
       - name: Sync PlutoPoint README
         run: |
-          curl -L https://raw.githubusercontent.com/ProfessorShroom/PlutoPoint-Installer/main/README.md \
+          curl -sL https://raw.githubusercontent.com/ProfessorShroom/PlutoPoint-Installer/main/README.md \
             | iconv -f UTF-8 -t UTF-8 -c \
             | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
             > _includes/plutopoint-readme.md
 
-      # ---------------- NorthPoint ----------------
       - name: Sync NorthPoint README
         run: |
-          curl -L https://raw.githubusercontent.com/ProfessorShroom/NorthPoint-Installer/master/README.md \
+          curl -sL https://raw.githubusercontent.com/ProfessorShroom/NorthPoint-Installer/master/README.md \
             | iconv -f UTF-8 -t UTF-8 -c \
             | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
             > _includes/northpoint-readme.md
 
-      # -------- Cardmarket Price Updater ----------
       - name: Sync Cardmarket Price Updater README
         run: |
-          curl -L https://raw.githubusercontent.com/ProfessorShroom/Cardmarket-Price-Updater/main/README.md \
+          curl -sL https://raw.githubusercontent.com/ProfessorShroom/Cardmarket-Price-Updater/main/README.md \
             | iconv -f UTF-8 -t UTF-8 -c \
             | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
             > _includes/cardmarket-price-updater-readme.md
 
-      # -------- Cardmarket Price Updater ----------
       - name: Sync Useful Scripts README
         run: |
-          curl -L https://raw.githubusercontent.com/ProfessorShroom/ProfessorShroom-Scripts/main/README.md \
+          curl -sL https://raw.githubusercontent.com/ProfessorShroom/ProfessorShroom-Scripts/main/README.md \
             | iconv -f UTF-8 -t UTF-8 -c \
             > _includes/useful-scripts-readme.md
 
-      # ---------------- Commit changes if needed ----------------
-      - name: Commit changes if needed
+      # ---------------- Detect + Commit ----------------
+      - name: Detect changes
+        id: changes
+        run: |
+          git add _includes/*.md
+
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit & push if changed
+        if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          # Stage all synced READMEs
-          git add _includes/*.md
+          # Find which READMEs changed
+          changed=$(git diff --name-only --cached _includes/*.md)
 
-          # Only proceed if a README actually changed
-          if ! git diff --cached --quiet; then
-            # Determine which README files changed
-            changed=$(git diff --name-only --cached _includes/*.md)
+          # Touch corresponding project files (force Jekyll rebuild only when needed)
+          for file in $changed; do
+            case "$file" in
+              *plutopoint-readme.md)
+                touch _projects/PlutoPoint_Installer.md ;;
+              *northpoint-readme.md)
+                touch _projects/NorthPoint_Installer.md ;;
+              *cardmarket-price-updater-readme.md)
+                touch _projects/Cardmarket_Price_Updater.md ;;
+            esac
+          done
 
-            # Touch corresponding _projects/*.md files to trigger Jekyll rebuild
-            for file in $changed; do
-              case "$file" in
-                *_plutopoint-readme.md)
-                  touch _projects/PlutoPoint_Installer.md ;;
-                *_northpoint-readme.md)
-                  touch _projects/NorthPoint_Installer.md ;;
-                *_cardmarket-price-updater-readme.md)
-                  touch _projects/Cardmarket_Price_Updater.md ;;
-              esac
-            done
+          git add _projects/*.md
+          git commit -m "Auto-sync project READMEs"
+          git pull --rebase origin main
+          git push origin main
 
-            # Stage touched project files
-            git add _projects/*.md
-
-            # Commit and push
-            git commit -m "Auto-sync project READMEs"
-            git pull --rebase origin main
-            git push origin main
-          else
-            echo "No README changes detected – skipping deploy"
-          fi
-
-      # ---------------- Build ----------------
+      # ---------------- Build (only if changed) ----------------
       - name: Setup Ruby 💎
+        if: steps.changes.outputs.changed == 'true'
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
 
       - name: Setup Python 🐍
+        if: steps.changes.outputs.changed == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
           cache: "pip"
 
       - name: Install and Build 🔧
+        if: steps.changes.outputs.changed == 'true'
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
@@ -116,12 +117,19 @@ jobs:
           bundle exec jekyll build
 
       - name: Purge unused CSS 🧹
+        if: steps.changes.outputs.changed == 'true'
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
 
-      # ---------------- Deploy ----------------
+      # ---------------- Deploy (only if changed) ----------------
       - name: Deploy 🚀
+        if: steps.changes.outputs.changed == 'true'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+
+      # ---------------- No-op log ----------------
+      - name: Skip notice
+        if: steps.changes.outputs.changed != 'true'
+        run: echo "No README changes – skipping build & deploy"
