@@ -8,8 +8,6 @@ categories: IT
 comments: true
 ---
 
-# Bypass Windows 11 Microsoft Account Requirement
-
 Since the introduction of Windows 11, Microsoft haave forced users to create or login to a Microsoft account during a new installation. This can be very annoying if you don't want a Microsoft account, or are setting up the computer for someone else, like we do everyday.
 
 You used to be able open command prompt by using Shift+F10 (Shift+Fn+F10 on some laptops) and type the following command.

@@ -4,7 +4,7 @@ title: iMac Studio Display (WIP)
 description:
 img: assets/img/imac/imac_open.png
 importance: 3
-category: Tech Projects
+category: IT Projects
 comments: true
 images:
   lightbox2: true
