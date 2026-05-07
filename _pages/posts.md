@@ -8,7 +8,7 @@ pagination:
   enabled: true
   collection: posts
   permalink: /page/:num/
-  per_page: 5
+  per_page: 10
   sort_field: date
   sort_reverse: true
   trail:
@@ -189,8 +189,97 @@ pagination:
 
   </ul>
 
-{% if page.pagination.enabled %}
-{% include pagination.liquid %}
-{% endif %}
+</ul>
+
+<div id="infinite-scroll-trigger"></div>
+
+<div id="loading-indicator" style="display:none; text-align:center; padding:20px;">
+  Loading...
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  let page = 1;
+  let loading = false;
+  let finished = false;
+
+  const trigger = document.getElementById("infinite-scroll-trigger");
+  const container = document.querySelector(".post-list");
+  const loader = document.getElementById("loading-indicator");
+
+  async function loadMore() {
+
+    if (loading || finished) return;
+
+    loading = true;
+    loader.style.display = "block";
+
+    page++;
+    const url = `/posts/page/${page}/`;
+
+    console.log("[Infinite Scroll] Fetching:", url);
+
+    try {
+      const res = await fetch(url);
+
+      if (!res.ok) {
+        console.log("[Infinite Scroll] No more pages (HTTP)", res.status);
+        finished = true;
+        observer.disconnect();
+        loader.style.display = "none";
+        return;
+      }
+
+      const text = await res.text();
+
+      const doc = new DOMParser().parseFromString(text, "text/html");
+
+      // DEBUG: confirm structure exists
+      const list = doc.querySelector(".post-list");
+
+      if (!list) {
+        console.error("[Infinite Scroll] .post-list NOT FOUND on page", page);
+        finished = true;
+        observer.disconnect();
+        loader.style.display = "none";
+        return;
+      }
+
+      const items = list.querySelectorAll("li");
+
+      console.log("[Infinite Scroll] items found:", items.length);
+
+      if (items.length === 0) {
+        console.log("[Infinite Scroll] No items → stopping");
+        finished = true;
+        observer.disconnect();
+        loader.style.display = "none";
+        return;
+      }
+
+      items.forEach(li => container.appendChild(li));
+
+    } catch (err) {
+      console.error("[Infinite Scroll] Error:", err);
+      finished = true;
+      observer.disconnect();
+    }
+
+    loading = false;
+    loader.style.display = "none";
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      loadMore();
+    }
+  }, {
+    rootMargin: "50px"
+  });
+
+  observer.observe(trigger);
+});
+</script>
 
 </div>
