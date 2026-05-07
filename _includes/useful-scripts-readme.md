@@ -33,16 +33,16 @@ Leave ```$BASE_DIR``` will run a relative path from the location of the script, 
 
 <h3>Nextcloud</h3>
 
-- [nextcloudSync.sh](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Nextcloud/nextcloudSync.sh) - Runs a two-way Nextcloud sync to a specified location. This runs every 10 minutes, or when it detects a change to a local file, but will not run if it's already running to avoid file conflicts <br>
+- [nextcloudSync.sh](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Nextcloud/nextcloudSync.sh) - Runs a two-way Nextcloud sync to a specified location.<br>
 Change ```WATCH_DIR="/path/to/Nextcloud"``` to change the location of Nextcloud on the local drive<br>
 Change ```REMOTE="https://username:password@nextclouddomain.com"``` to suit your username, password (app password if using MFA), and Nextcloud domain<br>
-Change ```LOCKFILE="/tmp/nextcloudsync.lock"``` to change the location of the lockfile, but /tmp/ is good as this is cleared on a reboot automatically, this prevents the script from running multiple instances as once a sync is complete, this file is deleted<br>
-As above, change ```BACKUPLOCKFILE="/tmp/backupnextcloudsync.lock"``` to change the location of an additional lockfile. I use this during a backup so nothing changes during that process, but it is optional; if you don't want to use it, then just leave it as is<br>
 
-- [nextcloudService.service](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Nextcloud/nextcloudService.service) - SystemD service file for the above script, this will wait 60 seconds after booting to start the service <br>
+- [nextcloudService.service](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Nextcloud/nextcloudService.service) - SystemD service file for the above script <br>
 Change ```RequiresMountsFor=/path/to/nextcloud``` to the drive that the Nextcloud folder is located in <br>
-Change ```ExecStart=/path/to/nextcloudSync.sh``` to wherever the script is located <br>
+Change ```/path/to/nextcloudSync.sh``` under ExecStart to wherever the script is located <br>
 Change ```User=user``` to your username
+
+- [nextcloudService.timer](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Nextcloud/nextcloudService.timer) - SystemD service timer file for the above script, this will run every 5 minutes unless an instance is already running
 
 <h3>Windows</h3>
 

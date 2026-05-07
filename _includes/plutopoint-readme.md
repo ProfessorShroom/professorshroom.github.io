@@ -1,11 +1,15 @@
 
 #### Latest Update
 
+**Update 6.6.5.0**
+
+- Added May the 4th.
+
+#### Older Updates
+
 **Update 6.6.4.1**
 
 - Fixed a typo with the VLC path causing a crash.
-
-#### Older Updates
 
 **Update 6.6.4.0**
 
