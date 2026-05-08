@@ -2,7 +2,7 @@
    BOARD LAYOUT
 ========================= */
 .projects-board {
-  width: min(80vw, 1600px);
+  width: min(88vw, 1750px);
   margin-left: 50%;
   transform: translateX(-50%);
 }
@@ -16,24 +16,17 @@
 ========================= */
 .project-category-block {
   width: 100%;
-  max-width: 380px;
-  padding: 0.85rem;
+  max-width: 450px;
+  padding: 1.15rem;
   border-radius: 14px;
   background: rgba(0, 0, 0, 0.08);
 }
 
-.project-list-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 0;
-  overflow: hidden;
-}
-
 .project-category-block .category {
   text-align: center;
-  margin-bottom: 0.6rem;
-  font-size: 0.9rem;
+  margin-bottom: 0.9rem;
+  font-size: 1.6rem !important;
+  font-weight: 400;
 }
 
 /* =========================
@@ -50,9 +43,9 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1.1rem;
 
-  padding: 0.5rem 0.6rem;
+  padding: 0.9rem 1rem;
   border-radius: 10px;
 
   transition: all 0.2s ease;
@@ -64,46 +57,35 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
+/* =========================
+   CONTENT WRAPPER
+========================= */
 .project-list-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-width: 0;
+  overflow: hidden;
+  overflow-wrap: break-word;
 }
 
 /* =========================
    IMAGE
 ========================= */
-
 .project-thumb {
   border-radius: 12px;
   overflow: hidden;
-  width: 175px;
+  width: 215px;
 }
 
-/* 🔥 THIS is the missing piece */
 .project-thumb figure {
   margin: 0;
   border-radius: 12px;
   overflow: hidden;
 }
 
-/* safety: remove weird spacing */
 .project-thumb picture {
   display: block;
-}
-
-/* =========================
- TEXT
-========================= */
-
-/* =========================
-   CATEGORY
-========================= */
-.project-category-block .category {
-  font-size: 1.5rem !important;
-  font-weight: 400;
-  margin-bottom: 0.8rem;
 }
 
 /* =========================
@@ -113,9 +95,9 @@
 .project-hover-shell .card-title,
 .project-list-link h3,
 .project-hover-shell h3 {
-  font-size: 0.95rem !important;
+  font-size: 1.15rem !important;
   font-weight: 400 !important;
-  line-height: 1.2;
+  line-height: 1.25;
   margin: 0;
 }
 
@@ -124,19 +106,18 @@
 ========================= */
 .project-list-link p,
 .project-hover-shell p,
-.project-list-link .card-text,
+.project-list-description p,
 .project-hover-shell .card-text {
-  font-size: 0.75rem !important;
+  font-size: 0.9rem !important;
   font-weight: 300;
-  line-height: 1.25;
-  opacity: 0.8;
-  margin: 0.25rem 0 0 0;
+  line-height: 1.35;
+  opacity: 0.85;
+  margin: 0.3rem 0 0 0;
 }
 
 /* =========================
-   RELATED POSTS
+   RELATED POSTS DATE
 ========================= */
-
 .post-date-inline {
   font-weight: 300;
   font-size: 0.9em;
@@ -145,9 +126,8 @@
 }
 
 /* =========================
-   LINKS
+   LINKS (CONTENT ONLY)
 ========================= */
-
 article a,
 .project-list-content a,
 .project-list-description a {
