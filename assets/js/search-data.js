@@ -91,57 +91,57 @@ ninja.data = [{
         },
       },{id: "projects-cardmarket-price-updater",
           title: 'Cardmarket Price Updater',
-          description: "",
+          description: "Automatically get prices for MTG, Pokemon and Yu-Gi-Oh! cards",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Cardmarket_Price_Updater/";
-            },},{id: "projects-bmw-rear-view-mirror-lin-decoder-wip-on-hold",
-          title: 'BMW Rear View Mirror LIN Decoder (WIP) (On Hold)',
-          description: "",
+            },},{id: "projects-bmw-rear-view-mirror-lin-decoder",
+          title: 'BMW Rear View Mirror LIN Decoder',
+          description: "Work in progress, on hold",
           section: "Projects",handler: () => {
               window.location.href = "/projects/LIN_Decoder/";
             },},{id: "projects-asus-lamborghini-vx2s-laptop",
           title: 'ASUS Lamborghini VX2S Laptop',
-          description: "",
+          description: "Restoring a Lamborghini laptop",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Lamborghini_VX2S/";
             },},{id: "projects-merecedes-w211-shifter-repair",
           title: 'Merecedes W211 Shifter Repair',
-          description: "",
+          description: "Repair no gear dispaly in Mercedes W211",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Mercedes_W211_Shifter_Repair/";
-            },},{id: "projects-northpoint-automatic-software-installer-computer-repair-centre-installer-deprecated-by-plutopoint",
-          title: 'NorthPoint Automatic Software Installer (Computer Repair Centre Installer) (Deprecated by PlutoPoint)',
-          description: "",
+            },},{id: "projects-northpoint-installer",
+          title: 'NorthPoint Installer',
+          description: "Computer Repair Centre Automatic Software Installer depreciated by PlutoPoint Installer",
           section: "Projects",handler: () => {
               window.location.href = "/projects/NorthPoint_Installer/";
-            },},{id: "projects-plutopoint-automatic-software-installer-computer-repair-centre-installer",
-          title: 'PlutoPoint Automatic Software Installer (Computer Repair Centre Installer)',
-          description: "",
+            },},{id: "projects-plutopoint-installer",
+          title: 'PlutoPoint Installer',
+          description: "Computer Repair Centre Automatic Software Installer",
           section: "Projects",handler: () => {
               window.location.href = "/projects/PlutoPoint_Installer/";
             },},{id: "projects-plutospantry-co-uk",
           title: 'PlutosPantry.co.uk',
-          description: "",
+          description: "Natural pet treats and enrichment",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Plutos_Pantry/";
             },},{id: "projects-renault-megane-rs-250-r-s-400",
           title: 'Renault Megane RS 250 (R.S.400)',
-          description: "",
+          description: "Modfied Renault Megane RS 250 build",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Renault_Megane/";
             },},{id: "projects-useful-scripts",
           title: 'Useful Scripts',
-          description: "",
+          description: "Collection of useful scripts for Windows and Linux",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Useful_Scripts/";
             },},{id: "projects-wuphf-co-uk",
           title: 'WUPHF.co.uk',
-          description: "",
+          description: "The Office fan site",
           section: "Projects",handler: () => {
               window.location.href = "/projects/WUPHF/";
-            },},{id: "projects-imac-studio-display-wip",
-          title: 'iMac Studio Display (WIP)',
-          description: "",
+            },},{id: "projects-imac-studio-display",
+          title: 'iMac Studio Display',
+          description: "Convert 27&quot; iMac into a monitor (work in progress)",
           section: "Projects",handler: () => {
               window.location.href = "/projects/iMac_Studio_Display/";
             },},{
