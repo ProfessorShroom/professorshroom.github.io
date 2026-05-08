@@ -12,12 +12,12 @@ horizontal: false
 {% if site.enable_project_categories and page.display_categories %}
 
   <div class="projects-board">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-5 g-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-5 g-4 justify-content-center">
       {% for category in page.display_categories %}
         {% assign categorized_projects = site.projects | where: "category", category | sort: "importance" %}
 
-        <div class="col">
-          <section class="project-category-block">
+        <div class="col-auto">
+          <section class="project-category-block mx-auto">
             <h2 class="category">{{ category }}</h2>
 
             <div class="project-category-list">

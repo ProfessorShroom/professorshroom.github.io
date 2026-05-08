@@ -1,7 +1,8 @@
 ---
 layout: page
-title: PlutoPoint Automatic Software Installer (Computer Repair Centre Installer)
-description:
+title: PlutoPoint Installer
+display_title: PlutoPoint Installer
+description: Computer Repair Centre Automatic Software Installer
 img: assets/img/installer/computer_repair_centre_installer_logo.png
 importance: 1
 category: Software

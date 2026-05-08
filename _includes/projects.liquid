@@ -5,18 +5,20 @@
   >
     <div class="project-hover-shell">
       {% if project.img %}
-        {%
-          include figure.liquid
-          loading="eager"
-          path=project.img
-          sizes="220px"
-          alt="project thumbnail"
-          class="project-list-thumb"
-        %}
+        <div class="project-thumb">
+          {%
+            include figure.liquid
+            loading="eager"
+            path=project.img
+            sizes="220px"
+            alt="project thumbnail"
+            class="project-list-thumb"
+          %}
+        </div>
       {% endif %}
 
       <div class="project-list-content">
-        <h3 class="project-list-title">{{ project.title }}</h3>
+        <h3 class="project-list-title">{{ project.display_title }}</h3>
         <p class="project-list-description">{{ project.description }}</p>
 
         {% if project.github %}

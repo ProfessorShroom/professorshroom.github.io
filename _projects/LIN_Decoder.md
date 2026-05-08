@@ -1,7 +1,8 @@
 ---
 layout: page
-title: BMW Rear View Mirror LIN Decoder (WIP) (On Hold)
-description:
+title: BMW Rear View Mirror LIN Decoder
+display_title: BMW Rear View Mirror LIN Decoder
+description: Work in progress, on hold
 img: assets/img/bmw_lin/lin.png
 importance: 10
 category: Car Projects

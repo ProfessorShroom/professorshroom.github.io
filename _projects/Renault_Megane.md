@@ -1,16 +1,18 @@
 ---
 layout: page
 title: Renault Megane RS 250 (R.S.400)
-description:
+display_title: Renault Megane RS 250 (R.S.400)
+description: Modfied Renault Megane RS 250 build
 img: assets/img/car/250.jpeg
 importance: 1
 category: Car Projects
+tags: [megane]
 comments: true
 images:
   lightbox2: true
 ---
 
-In 2017 I bought a Renault Megane RS 225 (named Homer for his number plate) and loved it, but it only lasted 6 months before the engine failed, I think due to poor matienece across its life. [I do at least have this cool cinematic of it, as it was used in a film](https://www.youtube.com/watch?v=EjZ18XtUKZc).
+Back in mid-2017 I bought a Renault Megane RS 225 (named Homer for his number plate) and loved it, but it only lasted 6 months before the engine failed, I think due to poor matienece across its life. [I do at least have this cool cinematic of it, as it was used in a film](https://www.youtube.com/watch?v=EjZ18XtUKZc).
 
 Despite this I decided to buy a 2010 Renault Megane RS 250, as after watching reviews this was pretty much the best hot hatch of all time, and I liked the looks of it.
 

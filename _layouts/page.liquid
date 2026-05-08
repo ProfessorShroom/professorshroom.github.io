@@ -16,6 +16,57 @@ layout: default
 
   <article>
     {{ content }}
+
+    {% if page.tags %}
+      <hr>
+
+      <h3>Related posts</h3>
+
+      <div class="related-posts">
+        {% assign found = false %}
+
+        {% for post in site.posts %}
+          {% assign match = false %}
+
+          {% for tag in post.tags %}
+            {% if page.tags contains tag %}
+              {% assign match = true %}
+            {% endif %}
+          {% endfor %}
+
+          {% if match %}
+            {% assign found = true %}
+
+            <div class="related-post-item">
+              <a href="{{ post.url | relative_url }}">
+                {{ post.title }}
+                <span class="related-post-date">
+                  — {{ post.date | date: '%-d' -}}
+                  <sup>
+                    {%- assign d = post.date | date: '%-d' -%}
+                    {%- case d -%}
+                      {%- when '1', '21', '31' -%}
+                        st
+                      {%- when '2', '22' -%}
+                        nd
+                      {%- when '3', '23' -%}
+                        rd
+                      {%- else -%}
+                        th
+                    {%- endcase -%}
+                  </sup>
+                  of {{ post.date | date: '%B %Y' }}
+                </span>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        {% if found == false %}
+          <p>No related posts found.</p>
+        {% endif %}
+      </div>
+    {% endif %}
     {% if page.comments %}
       <div id="giscus-container" style="margin-top: 40px;">
         <script

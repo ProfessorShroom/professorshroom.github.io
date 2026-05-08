@@ -1,7 +1,8 @@
 ---
 layout: page
 title: PlutosPantry.co.uk
-description:
+display_title: PlutosPantry .co.uk
+description: Natural pet treats and enrichment
 img: assets/img/pluto/plutospantry.png
 importance: 1
 category: Web Projects
