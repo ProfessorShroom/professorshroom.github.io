@@ -140,3 +140,11 @@ article a:hover,
   color: var(--global-theme-color);
   text-decoration: underline;
 }
+
+.projects-title {
+  text-align: center;
+  padding-top: 2rem;
+  color: white;
+  font-size: 3rem;
+  font-weight: 400;
+}
