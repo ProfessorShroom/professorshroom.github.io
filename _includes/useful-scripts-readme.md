@@ -35,14 +35,20 @@ Leave ```$BASE_DIR``` will run a relative path from the location of the script, 
 
 - [nextcloudSync.sh](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Nextcloud/nextcloudSync.sh) - Runs a two-way Nextcloud sync to a specified location.<br>
 Change ```WATCH_DIR="/path/to/Nextcloud"``` to change the location of Nextcloud on the local drive<br>
-Change ```REMOTE="https://username:password@nextclouddomain.com"``` to suit your username, password (app password if using MFA), and Nextcloud domain<br>
 
-- [nextcloudService.service](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Nextcloud/nextcloudService.service) - SystemD service file for the above script <br>
-Change ```RequiresMountsFor=/path/to/nextcloud``` to the drive that the Nextcloud folder is located in <br>
-Change ```/path/to/nextcloudSync.sh``` under ExecStart to wherever the script is located <br>
-Change ```User=user``` to your username
+- [nextcloudService.service](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Nextcloud/nextcloudService.service) - SystemD service file for the above script<br>
+Only errors are logged to avoid clogging up the log file <br>
+Change ```RequiresMountsFor=/path/to/nextcloud``` to the drive that the Nextcloud folder is located in<br>
+Change ```/path/to/nextcloudSync.sh``` under ExecStart to wherever the script is located<br>
+Change ```User=user``` to your username<br>
+Change ```EnvironmentFile=/home/user/nextcloud.env``` to the location of your env file<br>
 
-- [nextcloudService.timer](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Nextcloud/nextcloudService.timer) - SystemD service timer file for the above script, this will run every 5 minutes unless an instance is already running
+- [nextcloudService.timer](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Nextcloud/nextcloudService.timer) - SystemD service timer file for the above script, this is delayed for 2 minutes after booting and will run every 5 minutes unless an instance is already running
+
+- [nextcloud.env](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Nextcloud/nextcloud.env) - Environment file containing your credentials <br>
+Change ```REMOTE="https://username:password@nextcloud.domain.com"``` to suit your username, password (app password if using MFA), and Nextcloud domain<br>
+I'd suggest locking it by running ```sudo chmod 600``` and ``` sudo chown root:root``` on the file after entering your credentials<br>
+
 
 <h3>Windows</h3>
 
