@@ -19,15 +19,14 @@ profile:
 <br>
 <br>
 
-<div style="display:flex; justify-content:left; align-items:center; gap:12px; flex-wrap:wrap;">
-  
-  <span>If you enjoy what I do and want to support me ➔</span>
+<div class="buymeabeerhome" style="display:flex; flex-direction:column; justify-content:center; align-items:center; gap:12px; text-align:center;">
+    <span>🍺 If you enjoy what I do and want to support me I would really appriciate it! 🔽</span>
 
-  <a href="https://www.buymeacoffee.com/professorshroom" target="_blank" rel="noopener">
-    <img src="/assets/img/buy-me-a-beer.png" alt="Buy me a beer" style="height:50px;">
-  </a>
+    <a href="https://www.buymeacoffee.com/professorshroom" target="_blank" rel="noopener">
+      <img src="/assets/img/buy-me-a-beer.png" alt="Buy me a beer" style="height:50px;">
+    </a>
 
-</div>
+  </div>
 <div>
 
 <br>

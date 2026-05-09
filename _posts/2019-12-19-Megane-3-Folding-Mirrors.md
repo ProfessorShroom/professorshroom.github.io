@@ -78,4 +78,4 @@ Select the correct options for your car and then press send
 
 If you get an error that you need expert mode it's the second option along the top, the weird black and white face and make sure your ignition is on but the engine is not.
 
-I'm happy to help anyone if you can't get it working, just send me an [email at info@professorshroom.com](mailto:info@professorshroom).
+I'm happy to help anyone if you can't get it working, just send me an email at [info@professorshroom.com](mailto:info@professorshroom).
