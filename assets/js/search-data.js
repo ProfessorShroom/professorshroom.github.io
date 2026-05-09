@@ -23,29 +23,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/posts/index.html";
           },
-        },{id: "post-retrofit-sunvisor-lights-to-renault-megane-mk3",
-        
-          title: "Retrofit Sunvisor Lights to Renault Megane MK3",
-        
-        description: "Guide on retrofitting sunvisor lights to a Renault Megane MK3",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/posts/2026/Megane-3-Sunvisor-Lights/";
-          
-        },
-      },{id: "post-retrofit-facelift-drl-39-s-to-renault-megane-rs-250",
-        
-          title: "Retrofit Facelift DRL&#39;s to Renault Megane RS 250",
-        
-        description: "Guide on retrofitting Renault Megane RS 265/275 facelift day time running lights to the Renault Megane RS 250",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/posts/2026/Megane-265-DRL/";
-          
-        },
-      },{id: "post-docker-29-api-changes",
+        },{id: "post-docker-29-api-changes",
         
           title: "Docker 29 API Changes",
         
@@ -99,11 +77,6 @@ ninja.data = [{
           description: "Work in progress, on hold",
           section: "Projects",handler: () => {
               window.location.href = "/projects/LIN_Decoder/";
-            },},{id: "projects-asus-lamborghini-vx2s-laptop",
-          title: 'ASUS Lamborghini VX2S Laptop',
-          description: "Restoring a Lamborghini laptop",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Lamborghini_VX2S/";
             },},{id: "projects-merecedes-w211-shifter-repair",
           title: 'Merecedes W211 Shifter Repair',
           description: "Repair no gear dispaly in Mercedes W211",
