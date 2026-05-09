@@ -6,6 +6,7 @@ description: The Office fan site
 img: assets/img/wuphf/wuphf.png
 importance: 2
 category: Web Projects
+tags:
 comments: false
 images:
   lightbox2: false

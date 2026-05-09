@@ -6,6 +6,7 @@ description: Work in progress, on hold
 img: assets/img/bmw_lin/lin.png
 importance: 10
 category: Car Projects
+tags:
 comments: true
 images:
   lightbox2: true

@@ -6,6 +6,7 @@ description: Computer Repair Centre Automatic Software Installer
 img: assets/img/installer/computer_repair_centre_installer_logo.png
 importance: 1
 category: Software
+tags:
 comments: true
 images:
   lightbox2: true

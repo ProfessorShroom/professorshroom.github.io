@@ -6,6 +6,7 @@ description: Collection of useful scripts for Windows and Linux
 img: assets/img/professorshroom.png
 importance: 1
 category: IT Projects
+tags: [docker]
 comments: true
 images:
   lightbox2: true

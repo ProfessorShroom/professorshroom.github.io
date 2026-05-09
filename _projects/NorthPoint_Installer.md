@@ -6,6 +6,7 @@ description: Computer Repair Centre Automatic Software Installer depreciated by 
 img: assets/img/installer/computer_repair_centre_installer_logo_old.png
 importance: 10
 category: Software
+tags:
 comments: false
 images:
   lightbox2: true

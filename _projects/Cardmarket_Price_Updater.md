@@ -6,6 +6,7 @@ description: Automatically get prices for MTG, Pokemon and Yu-Gi-Oh! cards
 img: assets/img/yugioh/cardmarket_price_updater_logo.png
 importance: 2
 category: Software
+tags:
 comments: true
 images:
   lightbox2: true

@@ -6,6 +6,7 @@ description: Natural pet treats and enrichment
 img: assets/img/pluto/plutospantry.png
 importance: 1
 category: Web Projects
+tags:
 comments: true
 images:
   lightbox2: false

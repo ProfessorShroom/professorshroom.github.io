@@ -6,6 +6,7 @@ description: Restoring a Lamborghini laptop
 img: assets/img/lambo_vx2s/lambo_vx2s_top.png
 importance: 2
 category: IT Projects
+tags:
 comments: true
 images:
   lightbox2: true

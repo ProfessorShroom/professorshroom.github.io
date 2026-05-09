@@ -6,6 +6,7 @@ description: Repair no gear dispaly in Mercedes W211
 img: assets/img/car/w211_cluster.jpg
 importance: 5
 category: Car Projects
+tags:
 comments: true
 images:
   lightbox2: true
