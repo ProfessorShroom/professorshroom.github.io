@@ -1,23 +1,39 @@
 /* =========================
+   PAGE TITLE
+========================= */
+.projects-title {
+  text-align: center;
+  padding-top: 2rem;
+  color: white;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+/* =========================
    BOARD LAYOUT
 ========================= */
 .projects-board {
-  width: min(88vw, 1750px);
+  width: min(95vw, 2400px);
   margin-left: 50%;
   transform: translateX(-50%);
 }
 
 .projects-board .row {
-  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: -2.5rem;
 }
 
 /* =========================
    CATEGORY BLOCK
 ========================= */
 .project-category-block {
-  width: 100%;
-  max-width: 450px;
-  padding: 1.15rem;
+  width: 700px;
+  max-width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   border-radius: 14px;
   background: rgba(0, 0, 0, 0.08);
 }
@@ -44,10 +60,8 @@
   flex-wrap: nowrap;
   align-items: center;
   gap: 1.1rem;
-
-  padding: 0.9rem 1rem;
+  padding: 1.1rem 1.3rem;
   border-radius: 10px;
-
   transition: all 0.2s ease;
 }
 
@@ -75,7 +89,7 @@
 .project-thumb {
   border-radius: 12px;
   overflow: hidden;
-  width: 215px;
+  width: 300px;
 }
 
 .project-thumb figure {
@@ -116,8 +130,16 @@
 }
 
 /* =========================
-   RELATED POSTS DATE
+   RELATED POSTS
 ========================= */
+.related-posts-title {
+  margin-bottom: 20px;
+}
+
+.related-post-item {
+  margin-bottom: 10px;
+}
+
 .post-date-inline {
   font-weight: 300;
   font-size: 0.9em;
@@ -126,7 +148,7 @@
 }
 
 /* =========================
-   LINKS (CONTENT ONLY)
+   LINKS
 ========================= */
 article a,
 .project-list-content a,
@@ -139,12 +161,4 @@ article a:hover,
 .project-list-description a:hover {
   color: var(--global-theme-color);
   text-decoration: underline;
-}
-
-.projects-title {
-  text-align: center;
-  padding-top: 2rem;
-  color: white;
-  font-size: 3rem;
-  font-weight: 400;
 }

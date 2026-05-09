@@ -20,7 +20,9 @@ layout: default
     {% if page.tags %}
       <hr>
 
-      <h3>Related posts</h3>
+      <div class="related-posts-title">
+        <h3>Related posts</h3>
+      </div>
 
       <div class="related-posts">
         {% assign found = false %}
@@ -40,24 +42,24 @@ layout: default
             <div class="related-post-item">
               <a href="{{ post.url | relative_url }}">
                 {{ post.title }}
-                <span class="related-post-date">
-                  — {{ post.date | date: '%-d' -}}
-                  <sup>
-                    {%- assign d = post.date | date: '%-d' -%}
-                    {%- case d -%}
-                      {%- when '1', '21', '31' -%}
-                        st
-                      {%- when '2', '22' -%}
-                        nd
-                      {%- when '3', '23' -%}
-                        rd
-                      {%- else -%}
-                        th
-                    {%- endcase -%}
-                  </sup>
-                  of {{ post.date | date: '%B %Y' }}
-                </span>
               </a>
+              <span class="related-post-date">
+                — {{ post.date | date: '%-d' -}}
+                <sup>
+                  {%- assign d = post.date | date: '%-d' -%}
+                  {%- case d -%}
+                    {%- when '1', '21', '31' -%}
+                      st
+                    {%- when '2', '22' -%}
+                      nd
+                    {%- when '3', '23' -%}
+                      rd
+                    {%- else -%}
+                      th
+                  {%- endcase -%}
+                </sup>
+                of {{ post.date | date: '%B %Y' }}
+              </span>
             </div>
           {% endif %}
         {% endfor %}
