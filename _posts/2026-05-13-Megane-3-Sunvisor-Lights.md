@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Retrofit Sunvisor Lights to Renault Megane MK3
-date: 2099-01-01
+date: 2026-05-13
 description: Guide on retrofitting sunvisor lights to a Renault Megane MK3
 tags: [renault, megane, sunvisor, light, retrofit, renaultsport, car]
 categories: Car
@@ -37,47 +37,43 @@ I want this loom to be removable, so we're going to use these plugs which are re
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/placeholder.png" title="2 Pin Connector" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/250_sunvisor_4.jpg" title="2 Pin Connector" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
     2 pin connector from eBay, just search "2 pin connector", there are lots to pick from and it doesn't really matter which one you pick.
 </div>
 
-There are a few ways you could connect this, we just need power and ground, you could solder this directly to the dome power and ground pads, or splice it into
-the loom going to it, either way is fine.
+There are a few ways you could connect this, we just need power and ground, you could solder this directly to the dome power and ground pads, or splice it into the loom going to it, either way is fine.
 
 Here's the loom we've made, its 5 plugs in total. 2 go to each sun visor to tell the lights when to turn on and off, 2 go to the lights and then the other one is to connect this to our existing loom in the headliner where we're getting our power from.
 It's pretty simple, power comes from the dome light straight to the light, the ground wire runs through the sunvisor plug, that way it's only grounded when the sunvisor mirror is open, allowing the light to get power.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/placeholder.png" title="Renault Megane MK3 Custom Sunvisor Light Loom" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/250_sunvisor_5.jpg" title="Renault Megane MK3 Custom Sunvisor Light Loom" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Our custom sunvisor light loom.
+    Our custom sunvisor light loom connected to the centre dome light.
 </div>
 
-We've done most of the work now, all that's left is to fit it all which requires cutting a small hole in the headlining for our new light, you can see the hole I cut below. Below is a picture of a Megane 3 with no headliner in, so you see the holes where the sunvisor mounts to and also the hole for the light. I would trace around the light on a bit of paper and then cut that paper smaller than the tracing by about 5mm all the way around and then trace around that paper on the headliner. I'd use a new stanley blade so it's sharp and go slowly.
+We've done most of the work now, all that's left is to fit it all which requires cutting a small hole in the headlining for our new light, you can see the hole I cut below. Below is a picture of a Megane 3 with no headliner in, so you see the holes where the sunvisor mounts to and also the hole for the wiring the sunvisor light will come through, so although it doesn't really matte where you put it; as the light just mounts to the headliner and not the roof of the car, I would aim for around there. I would trace around the light on a bit of paper and then cut that paper smaller than the tracing by about 5mm all the way around and then trace around that paper on the headliner. I'd use a new stanley blade so it's sharp and go slowly.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/car/250_sunvisor_6.jpg" title="Renault Megane MK3 with no Headliner" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/placeholder.png" title="Renault Megane MK3 Headliner with Hole" class="img-fluid rounded z-depth-1" %}
-    </div>
 </div>
 <div class="caption">
-    On the left, a Megane MK3 without a headliner to show you the space. On the right, the hole in the headliner we've created for our new lights.
+    A Megane MK3 without a headliner to show you the space.
 </div>
 
 Now all there is to do is fit it all, I'd start with the loom, get it all into position and dangle the plugs through the holes needed, plug it into where ever you wired our 2 pin plug in, then plug in the light and clip it into place. Plug in the sunvisor and clip that back into place, and give it all a test by opening the sunvisor mirror cover.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/placeholder.png" title="Renault Megane MK3 Sunvisor Lights Installed" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/250_sunvisor_7.jpg" title="Renault Megane MK3 Sunvisor Lights Installed" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
