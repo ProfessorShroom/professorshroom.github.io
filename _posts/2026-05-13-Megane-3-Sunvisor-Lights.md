@@ -37,7 +37,7 @@ I want this loom to be removable, so we're going to use these plugs which are re
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/250_sunvisor_4.jpg" title="2 Pin Connector" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/250_sunvisor_4.jpg" title="2 Pin Connector" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -51,7 +51,7 @@ It's pretty simple, power comes from the dome light straight to the light, the g
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/250_sunvisor_5.jpg" title="Renault Megane MK3 Custom Sunvisor Light Loom" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/250_sunvisor_5.jpg" title="Renault Megane MK3 Custom Sunvisor Light Loom" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -73,7 +73,7 @@ Now all there is to do is fit it all, I'd start with the loom, get it all into p
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/250_sunvisor_7.jpg" title="Renault Megane MK3 Sunvisor Lights Installed" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/car/250_sunvisor_7.jpg" title="Renault Megane MK3 Sunvisor Lights Installed" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
