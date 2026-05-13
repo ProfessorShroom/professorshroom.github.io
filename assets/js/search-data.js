@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/posts/index.html";
           },
-        },{id: "post-docker-29-api-changes",
+        },{id: "post-retrofit-sunvisor-lights-to-renault-megane-mk3",
+        
+          title: "Retrofit Sunvisor Lights to Renault Megane MK3",
+        
+        description: "Guide on retrofitting sunvisor lights to a Renault Megane MK3",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/Megane-3-Sunvisor-Lights/";
+          
+        },
+      },{id: "post-docker-29-api-changes",
         
           title: "Docker 29 API Changes",
         
