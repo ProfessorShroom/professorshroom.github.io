@@ -8,7 +8,7 @@ categories: Car
 comments: true
 ---
 
-First you need to check if you have the correct sun visors, from my research it seems that some cars have them installed already even if you don't have the lights, but mine didn't so I needed to source a pair. You can identify this quite easily by removing the sunvisor from the headlining and looking for these two pins here.
+First you need to check if you have the correct sun visors, from my research it seems that some cars have them installed already even if you don't have the lights, my passenger side one was already correct but the drivers side was not. You can identify this quite easily by removing the sunvisor from the headlining and looking for these two pins here.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -55,7 +55,7 @@ It's pretty simple, power comes from the dome light straight to the light, the g
     </div>
 </div>
 <div class="caption">
-    Our custom sunvisor light loom connected to the centre dome light.
+    Our custom sunvisor light loom connected to the centre dome light, the 2 plugs not attached to anything are to plug into the sunvisors.
 </div>
 
 We've done most of the work now, all that's left is to fit it all which requires cutting a small hole in the headlining for our new light, you can see the hole I cut below. Below is a picture of a Megane 3 with no headliner in, so you see the holes where the sunvisor mounts to and also the hole for the wiring the sunvisor light will come through, so although it doesn't really matte where you put it; as the light just mounts to the headliner and not the roof of the car, I would aim for around there. I would trace around the light on a bit of paper and then cut that paper smaller than the tracing by about 5mm all the way around and then trace around that paper on the headliner. I'd use a new stanley blade so it's sharp and go slowly.
