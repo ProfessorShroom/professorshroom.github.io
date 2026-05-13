@@ -8,7 +8,7 @@ categories: Car
 comments: true
 ---
 
-First you need to check if you have the correct sun visors, from some research some cars have them installed already even if you don't have the lights, mine didn't. You can identify this quite easily by removing the sunvisor from the headlining and looking for these two pins here.
+First you need to check if you have the correct sun visors, from my research it seems that some cars have them installed already even if you don't have the lights, but mine didn't so I needed to source a pair. You can identify this quite easily by removing the sunvisor from the headlining and looking for these two pins here.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -30,14 +30,14 @@ Then you need the sunvisor lights and loom, the loom looks complicated but we wo
     </div>
 </div>
 <div class="caption">
-    On the left, the sunvisor lights, part number 7701207768. On the right, the loom thats needed, part number xxx.
+    On the left, the sunvisor lights, part number 7701207768. On the right, the loom thats needed for the plugs, part number 241609820R.
 </div>
 
-I want this part of the loom to be removable, so we're going to use these plugs which you can get readily from eBay or Amazon, or your local hardware store.
+I want this loom to be removable, so we're going to use these plugs which are readily available from eBay or Amazon, or your local hardware store.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_sunvisor_4.jpg" title="2 Pin Connector" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/placeholder.png" title="2 Pin Connector" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -48,24 +48,25 @@ There are a few ways you could connect this, we just need power and ground, you 
 the loom going to it, either way is fine.
 
 Here's the loom we've made, its 5 plugs in total. 2 go to each sun visor to tell the lights when to turn on and off, 2 go to the lights and then the other one is to connect this to our existing loom in the headliner where we're getting our power from.
+It's pretty simple, power comes from the dome light straight to the light, the ground wire runs through the sunvisor plug, that way it's only grounded when the sunvisor mirror is open, allowing the light to get power.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_sunvisor_5.jpg" title="Renault Megane MK3 Custom Sunvisor Light Loom" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/placeholder.png" title="Renault Megane MK3 Custom Sunvisor Light Loom" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
     Our custom sunvisor light loom.
 </div>
 
-We've done most of the work now, all that's left is to fit it all which requires cutting a small hole in the headlining for our new light. You can technically place this pretty much anywhere under the sunvisor, but I'd try to aim for the factory position, you can see the hole I cut below. I would trace around the light on a bit of paper and then cut that paper smaller than the tracing by about 5mm all the way around and then trace around that paper on the headliner. I'd use a new stanley blade so it's sharp and go slowly.
+We've done most of the work now, all that's left is to fit it all which requires cutting a small hole in the headlining for our new light, you can see the hole I cut below. Below is a picture of a Megane 3 with no headliner in, so you see the holes where the sunvisor mounts to and also the hole for the light. I would trace around the light on a bit of paper and then cut that paper smaller than the tracing by about 5mm all the way around and then trace around that paper on the headliner. I'd use a new stanley blade so it's sharp and go slowly.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/car/250_sunvisor_6.jpg" title="Renault Megane MK3 with no Headliner" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_sunvisor_7.jpg" title="Renault Megane MK3 Headliner with Hole" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/placeholder.png" title="Renault Megane MK3 Headliner with Hole" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -76,7 +77,7 @@ Now all there is to do is fit it all, I'd start with the loom, get it all into p
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_sunvisor_8.jpg" title="Renault Megane MK3 Sunvisor Lights Installed" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/placeholder.png" title="Renault Megane MK3 Sunvisor Lights Installed" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
