@@ -1,12 +1,13 @@
 ---
-layout: page
+layout: project
 title: Cardmarket Price Updater
 display_title: Cardmarket Price Updater
 description: Automatically get prices for MTG, Pokemon and Yu-Gi-Oh! cards
 img: assets/img/yugioh/cardmarket_price_updater_logo.png
 importance: 2
 category: Software
-tags:
+related_projects: [yugioh, pokemon, mtg, magic the gathering, cardmarket]
+related_posts: [yugioh, pokemon, mtg, magic the gathering, cardmarket]
 comments: true
 images:
   lightbox2: true

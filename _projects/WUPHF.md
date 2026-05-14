@@ -1,12 +1,13 @@
 ---
-layout: page
+layout: project
 title: WUPHF.co.uk
 display_title: WUPHF .co.uk
 description: The Office fan site
 img: assets/img/wuphf/wuphf.png
 importance: 2
 category: Web Projects
-tags:
+related_projects: [office]
+related_posts: [office]
 comments: false
 images:
   lightbox2: false

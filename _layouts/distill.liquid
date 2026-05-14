@@ -91,12 +91,7 @@
         {{ content }}
       </d-article>
 
-      <d-appendix>
-        <d-footnote-list></d-footnote-list>
-        <d-citation-list></d-citation-list>
-      </d-appendix>
-
-      <d-bibliography src="{{ page.bibliography | prepend: '/assets/bibliography/' | relative_url }}"></d-bibliography>
+      <d-appendix> </d-appendix>
 
       {% if site.disqus_shortname and page.disqus_comments %}{% include disqus.liquid %}{% endif %}
       {% if site.giscus.repo and page.giscus_comments %}

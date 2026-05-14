@@ -72,13 +72,139 @@ layout: default
     </div>
   </article>
   <div class="buymeabeer" style="display:flex; flex-direction:column; justify-content:center; align-items:center; gap:12px; text-align:center;">
-    <span>🍺 If this post has been helpful or you enjoy what I do and want to support me I would really appriciate it! 🔽</span>
+    <span>🍺 If this project has been helpful or you enjoy what I do and want to support me I would really appriciate it! 🔽</span>
 
     <a href="https://www.buymeacoffee.com/professorshroom" target="_blank" rel="noopener">
       <img src="/assets/img/buy-me-a-beer.png" alt="Buy me a beer" style="height:50px;">
     </a>
   </div>
 
+  {% if page.related_projects %}
+    <hr>
+
+    <div class="related-projects-title">
+      <h3>Related projects</h3>
+    </div>
+
+    <div class="related-projects">
+      {% assign related_list = '' | split: ',' %}
+
+      {% for project in site.projects %}
+        {% if project.url != page.url %}
+          {% assign match = false %}
+          {% assign importance = 999 %}
+
+          {% if project.related_projects %}
+            {% for key in project.related_projects %}
+              {% if page.related_projects contains key %}
+                {% assign match = true %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+
+          {% if match %}
+            {% if project.importance %}
+              {% assign importance = project.importance %}
+            {% endif %}
+
+            {% assign item = project | merge: {"importance": importance} %}
+            {% assign related_list = related_list | push: item %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign related_list = related_list | sort: 'importance' %}
+
+      {% assign found = false %}
+
+      {% for project in related_list %}
+        {% assign found = true %}
+
+        <a class="related-projects-card" href="{{ project.url | relative_url }}">
+          <div class="related-projects-item">
+            {% if project.img %}
+              <div class="related-projects-image">
+                <img src="{{ project.img | relative_url }}" alt="{{ project.title }}">
+              </div>
+            {% endif %}
+
+            <div class="related-projects-content">
+              <div class="related-projects-title">
+                {{ project.title }}
+              </div>
+
+              {% if project.description %}
+                <div class="related-projects-desc">
+                  {{ project.description }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+
+      {% if found == false %}
+        <p>
+          No related projects.<br>
+          Explore more projects on the <a href="/projects/">projects page</a>.
+        </p>
+      {% endif %}
+    </div>
+  {% endif %}
+  <br>
+  {% if page.tags %}
+    <div class="related-posts-title">
+      <h3>Related Posts</h3>
+    </div>
+
+    <div class="related-posts">
+      {% assign found = false %}
+
+      {% for post in site.posts %}
+        {% if post.url != page.url %}
+          {% assign match = false %}
+
+          {% for tag in post.tags %}
+            {% if page.tags contains tag %}
+              {% assign match = true %}
+            {% endif %}
+          {% endfor %}
+
+          {% if match %}
+            {% assign found = true %}
+
+            <div class="related-post-item">
+              <a href="{{ post.url | relative_url }}">
+                {{ post.title }}
+              </a>
+
+              <span class="related-post-date">
+                — {{ post.date | date: '%-d' }}
+                <sup>
+                  {%- assign d = post.date | date: '%-d' -%}
+                  {%- case d -%}
+                    {%- when '1', '21', '31' -%}
+                      st
+                    {%- when '2', '22' -%}
+                      nd
+                    {%- when '3', '23' -%}
+                      rd
+                    {%- else -%}
+                      th
+                  {%- endcase -%}
+                </sup>
+                of {{ post.date | date: '%B %Y' }}
+              </span>
+            </div>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% if found == false %}
+        <p>No related posts found.</p>
+      {% endif %}
+    </div>
+  {% endif %}
   <div id="giscus-container" style="margin-top: 40px;">
     <script
       src="https://giscus.app/client.js"
@@ -97,16 +223,6 @@ layout: default
       async
     ></script>
   </div>
-
-  {% if page.citation %}
-    {% include citation.liquid %}
-  {% endif %}
-
-  {% if site.related_blog_posts and site.related_blog_posts.enabled %}
-    {% if page.related_posts == null or page.related_posts %}
-      {% include related_posts.liquid %}
-    {% endif %}
-  {% endif %}
 
   {% if site.disqus_shortname and page.disqus_comments %}
     {% include disqus.liquid %}

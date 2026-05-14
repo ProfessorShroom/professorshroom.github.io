@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Projects
 permalink: /projects/
 description: All of my past, future and present projects!

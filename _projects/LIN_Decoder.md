@@ -1,12 +1,13 @@
 ---
-layout: page
+layout: project
 title: BMW Rear View Mirror LIN Decoder
 display_title: BMW Rear View Mirror LIN Decoder
-description: Work in progress, on hold
+description: A board to decode a LIN BMW rear view mirror. Work in progress. On hold
 img: assets/img/bmw_lin/lin.png
 importance: 10
 category: Car Projects
-tags:
+related_projects: [megane]
+related_posts: [megane]
 comments: true
 images:
   lightbox2: true

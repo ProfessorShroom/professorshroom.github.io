@@ -7,6 +7,18 @@
     font-weight: 400;
   }
 }
+/* =========================
+   BUY ME A BEER
+========================= */
 .buymeabeer {
   padding-top: 2rem;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.related-posts a:hover {
+  color: var(--global-theme-color);
+  text-decoration: underline;
 }

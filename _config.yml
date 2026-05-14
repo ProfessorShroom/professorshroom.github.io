@@ -77,8 +77,8 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
 og_image: # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
@@ -100,29 +100,18 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Posts
 # -----------------------------------------------------------------------------
 
-blog_name: Posts # blog_name will be displayed in your blog page
+blog_name: Posts
 permalink: /posts/:year/:title/
-lsi: false # produce an index for related posts
 
 # Pagination
 pagination:
   enabled: true
-
-related_blog_posts:
-  enabled: false
-  max_related: 0
 
 # -----------------------------------------------------------------------------
 # Collections
 # -----------------------------------------------------------------------------
 
 collections:
-  books:
-    output: false
-  news:
-    defaults:
-      layout: post
-    output: false
   projects:
     output: true
 
@@ -166,18 +155,6 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
-  - _pages/books.md
-  - _pages/about_einstein.md
-  - _pages/cv.md
-  - _pages/news.md
-  - _pages/profiles.md
-  - _pages/publications.md
-  - _pages/teaching.md
-  - _pages/repositories.md
-  - _news/
-  - _bibliography/
-  - _books/
-  - _pages/dropdown.md
   - _includes/resume/references.liquid
 keep_files:
   - CNAME
@@ -195,7 +172,6 @@ plugins:
   - jekyll-minifier
   - jekyll-paginate-v2
   - jekyll-regex-replace
-  - jekyll/scholar
   - jekyll-sitemap
   - jekyll-tabs
   - jekyll-terser
@@ -209,7 +185,7 @@ defaults:
   - scope:
       path: "assets"
     values:
-      sitemap: false
+      sitemap: true
 
 sass:
   style: compressed
@@ -238,11 +214,9 @@ jekyll-archives:
   posts:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
     permalinks:
-      year: "/blog/:year/"
-      tags: "/blog/:type/:name/"
-      categories: "/blog/:type/:name/"
-  books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+      year: "/posts/:year/"
+      tags: "/posts/:type/:name/"
+      categories: "/posts/:type/:name/"
 
 display_tags: [] # these tags will be displayed on the front page of your blog
 display_categories: [] # these categories will be displayed on the front page of your blog

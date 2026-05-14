@@ -4,6 +4,7 @@ title: Update Renault Megane MK3 Radio to 2.42 (Latest Update)
 date: 2018-10-22
 description: Update the Renault Megane MK3 radio/headunit to 2.42 which is the latest update
 tags: [renault, megane, radio, headunit, update, renaultsport, car]
+related_projects: [megane]
 categories: Car
 comments: true
 ---

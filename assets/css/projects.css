@@ -130,6 +130,74 @@
 }
 
 /* =========================
+   RELATED PROJECTS
+========================= */
+
+.related-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.related-projects-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.related-projects-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.related-projects-card:hover .related-projects-item {
+  transform: translateY(-2px);
+  border-color: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.related-projects-image {
+  width: 110px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.related-projects-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.related-projects-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.related-projects-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.related-projects-desc {
+  font-size: 0.9em;
+  opacity: 0.75;
+  line-height: 1.4;
+}
+
+.related-posts p {
+  margin: 0;
+  opacity: 0.7;
+}
+
+/* =========================
    RELATED POSTS
 ========================= */
 .related-posts-title {
@@ -148,11 +216,16 @@
 }
 
 /* =========================
+   BUY ME A BEER
+========================= */
+.buymeabeer {
+  padding-top: 2rem;
+}
+
+/* =========================
    LINKS
 ========================= */
-article a,
-.project-list-content a,
-.project-list-description a {
+article a {
   text-decoration: underline;
 }
 
