@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/posts/index.html";
           },
+        },{id: "nav-gallery",
+          title: "Gallery",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/gallery/";
+          },
         },{id: "post-windows-system-reserved-partition-update-error",
         
           title: "Windows System Reserved Partition Update Error",
@@ -96,7 +103,7 @@ ninja.data = [{
               window.location.href = "/projects/Cardmarket_Price_Updater/";
             },},{id: "projects-bmw-rear-view-mirror-lin-decoder",
           title: 'BMW Rear View Mirror LIN Decoder',
-          description: "A board to decode a LIN BMW rear view mirror. Work in progress. On hold",
+          description: "A board to decode a LIN BMW rear view mirror",
           section: "Projects",handler: () => {
               window.location.href = "/projects/LIN_Decoder/";
             },},{id: "projects-merecedes-w211-shifter-repair",
@@ -136,7 +143,7 @@ ninja.data = [{
               window.location.href = "/projects/WUPHF/";
             },},{id: "projects-imac-studio-display",
           title: 'iMac Studio Display',
-          description: "Convert 27&quot; iMac into a monitor (work in progress)",
+          description: "Convert a 27&quot; iMac into a monitor",
           section: "Projects",handler: () => {
               window.location.href = "/projects/iMac_Studio_Display/";
             },},{
