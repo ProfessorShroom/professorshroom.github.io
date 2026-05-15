@@ -1,0 +1,346 @@
+images_list:
+  - album: General
+    gallery: false
+    items:
+      - path: assets/img/professorshroom.png
+        image_id: "professorshroom"
+        caption: ProfessorShroom
+
+      - path: assets/img/placeholder.png
+        image_id: "placeholder"
+        caption: Placeholder Image
+
+  - album: Renault Megane RS 250
+    gallery: true
+    order: 1
+    items:
+      - path: assets/img/car/250.jpg
+        image_id: "250_1"
+        image_order: 1
+        caption: My current Megane RS 250 being collected from K-Tec racing after getting the turbo 400 kit installed.
+        title: Renault Megane RS 250 after 400 Turbo Kit Installation at K-Tec Racing
+
+      - path: assets/img/car/250_build_sheet.png
+        image_id: "250_2"
+        caption: The build sheet which lists all of the mods on the car.
+        title: Renault Megane RS 250 Build Sheet
+
+      - path: assets/img/car/250_dyno.jpg
+        image_id: "250_3"
+        caption: The dyno printout.
+        title: Renault Megane RS 250 Dyno Sheet
+
+      - path: assets/img/car/250_interior_1.jpg
+        image_id: "250_4"
+        image_order: 3
+        caption: The custom interior done by KolourKoncept and Carbon Skins.
+        title: Renault Megane RS 250 Interior
+
+      - path: assets/img/car/250_interior_2.jpg
+        image_id: "250_5"
+        image_order: 4
+        caption: The custom interior done by KolourKoncept and Carbon Skins.
+        title: Renault Megane RS 250 Interior
+
+      - path: assets/img/car/250_engine_1.jpg
+        image_id: "250_6"
+        image_order: 5
+        caption: The engine work mostly done by K-Tec Racing and myself.
+        title: Renault Megane RS 250 Engine Bay
+
+      - path: assets/img/car/250_garrett.jpg
+        image_id: "250_7"
+        image_order: 6
+        caption: The Garrett GTX2867R Gen 2 Turbo fitted as part of the K-Tec 400 kit.
+        title: Renault Megane RS 250 Garrett Turbo
+
+      - path: assets/img/car/250_rlink.jpg
+        image_id: "250_8"
+        caption: The R-Link system from the later facelift Megane's retrofit into mine.
+        title: Renault Megane RS 250 R-Link System
+
+      - path: assets/img/car/rs400_badge.jpg
+        image_id: "250_9"
+        image_order: 2
+        caption: The custom metal 3D printed R.S.400 badge.
+        title: Renault Megane R.S.400 Rear Badge
+
+      - path: assets/img/car/250_sunvisor_1.jpg
+        exclude: true
+        image_id: "sunvisor_1"
+        caption: The pins on the sunvisor that indicate if this supports the sunvisor light, if these are missing you need to replace the sunvisor.
+        title: Renault Megane MK3 Sunvisor Plug
+
+      - path: assets/img/car/250_sunvisor_2.jpg
+        exclude: true
+        image_id: "sunvisor_2"
+        caption: The sunvisor lights, part number 7701207768.
+        title: Renault Megane MK3 Sunvisor Light
+
+      - path: assets/img/car/250_sunvisor_3.jpg
+        exclude: true
+        image_id: "sunvisor_3"
+        caption: The loom thats needed for the plugs, part number 241609820R.
+        title: Renault Megane MK3 Sunvisor Light Loom
+
+      - path: assets/img/car/250_sunvisor_4.jpg
+        exclude: true
+        image_id: "sunvisor_4"
+        caption: 2 pin connector from eBay, just search '2 pin connector', there are lots to pick from and it doesn't really matter which one you pick.
+        title: 2 Pin Connector
+
+      - path: assets/img/car/250_sunvisor_5.jpg
+        exclude: true
+        image_id: "sunvisor_5"
+        caption: Our custom sunvisor light loom connected to the centre dome light, the 2 plugs not attached to anything are to plug into the sunvisors.
+        title: Renault Megane MK3 Custom Sunvisor Light Loom
+
+      - path: assets/img/car/250_sunvisor_6.jpg
+        exclude: true
+        image_id: "sunvisor_6"
+        caption: A Megane MK3 without a headliner to show you the space.
+        title: Renault Megane MK3 with no Headliner
+
+      - path: assets/img/car/250_sunvisor_7.jpg
+        image_id: "sunvisor_7"
+        caption: Finished installation of the new sunvisor lights.
+        title: Renault Megane MK3 Sunvisor Lights Installed
+
+      - path: assets/img/car/250_folding_mirror_1.jpg
+        exclude: true
+        image_id: "folding_mirror_1"
+        caption: The inner mirror cover for the Renault Megane MK3.
+        title: Renault Megane MK3 Inner Mirror Cover
+
+      - path: assets/img/car/250_folding_mirror_2.jpg
+        exclude: true
+        image_id: "folding_mirror_2"
+        caption: The inner mirror cover for the Renault Megane MK3 removed revealing the mirror plug.
+        title: Renault Megane MK3 Inner Mirror Cover Removed
+
+      - path: assets/img/car/250_folding_mirror_3.jpg
+        exclude: true
+        image_id: "folding_mirror_3"
+        caption: The drivers side loom with the needed wire circled.
+        title: Renault Megane MK3 Drivers Side Mirror Loom
+
+      - path: assets/img/car/250_folding_mirror_4.jpg
+        exclude: true
+        image_id: "folding_mirror_4"
+        caption: The passenger side loom with the needed wire circled.
+        title: Renault Megane MK3 Passenger Side Mirror Loom
+
+      - path: assets/img/car/250_folding_mirror_5.jpg
+        exclude: true
+        image_id: "folding_mirror_5"
+        caption: The Renault Megane MK3 folding mirror controls, part number is 809610009R.
+        title: Renault Megane MK3 Folding Mirror Controls
+
+      - path: assets/img/car/250_folding_mirror_6.jpg
+        exclude: true
+        image_id: "folding_mirror_6"
+        caption: The drivers side mirror plug with the needed pin circled.
+        title: Renault Megane MK3 Drivers Side Mirror Plug
+
+      - path: assets/img/car/250_folding_mirror_7.jpg
+        exclude: true
+        image_id: "folding_mirror_7"
+        caption: The passenger side mirror plug with the needed pin circled.
+        title: Renault Megane MK3 Passenger Side Mirror Plug
+
+      - path: assets/img/car/250_folding_mirror_8.jpg
+        exclude: true
+        image_id: "folding_mirror_8"
+        caption: The config for the folding mirror control in DDT4ALL.
+        title: DDT4ALL Folding Mirror Coding
+
+      - path: assets/img/placeholder.png
+        exclude: true
+        image_id: "250_drls_1"
+        caption: The Megane 250 DRLs.
+        title: Renault Megane 250 DRLs
+
+      - path: assets/img/placeholder.png
+        exclude: true
+        image_id: "265_drls_1"
+        caption: The Megane 265 DRLs.
+        title: Renault Megane 265 DRLs
+
+      - path: assets/img/car/265_drls_2.jpg
+        exclude: true
+        image_id: "265_drls_2"
+        caption: The Megane 265 DRLs, part numbers 266053123R & 266008864R.
+        title: Renault Megane 265 Day Time Running Lights
+
+      - path: assets/img/car/265_drl_blade.jpg
+        exclude: true
+        image_id: "265_drl_blade"
+        caption: The Megane 265 DRL blade, part number 620720057R, as of April 2026 this is still available through Renault although it comes unpainted.
+        title: Renault Megane 265 Day Time Running Light Blade
+
+      - path: assets/img/car/265_drl_loom.jpg
+        exclude: true
+        image_id: "265_drl_loom"
+        caption: The Megane 265 DRL loom, part number 240704181R.
+        title: Renault Megane 265 Day Time Running Lights Loom
+
+      - path: assets/img/placeholder.png
+        exclude: true
+        image_id: "250_grill_1"
+        caption: The Megane 250 grill.
+        title: Renault Megane 250 Grill
+
+      - path: assets/img/placeholder.png
+        exclude: true
+        image_id: "250_grill_2"
+        caption: The Megane 250 grill trimmed to fit the 265 DRLs.
+        title: Renault Megane 250 Grill Trimmed to fit 265 DRLs
+
+      - path: assets/img/car/265_drl_loom_plug_1.jpg
+        exclude: true
+        image_id: "265_drl_loom_plug_1"
+        caption: The standard wiring on the 265 loom.
+        title: Renault Megane 265 DRL Loom Plug
+
+      - path: assets/img/car/265_drl_loom_plug_2.jpg
+        exclude: true
+        image_id: "265_drl_loom_plug_2"
+        caption: The corrected wiring on the 265 loom to work with the 250.
+        title: Renault Megane 265 DRL Loom Plug Modified for 250
+
+  - album: Pluto
+    gallery: true
+    order: 2
+    items:
+      - path: assets/img/pluto/250_pluto.jpg
+        image_id: "pluto_1"
+        caption: Pluto sitting on the Renault Megane RS 250 seat.
+        title: Bonus Pluto!
+
+  - album: Renault Megane RS 225
+    gallery: true
+    order: 3
+    items:
+      - path: assets/img/car/225.jpg
+        image_id: "225_1"
+        caption: My old Megane RS 225.
+        title: Renault Megane RS 225 (Homer)
+
+      - path: assets/img/car/225_engine.jpg
+        image_id: "225_2"
+        caption: The engine block from the RS 225 after blowing up.
+        title: Renault Megane RS 225 Engine Block with Hole
+
+  - album: My Yu-Gi-Oh! Collection
+    gallery: false
+    order: 4
+    items:
+      - path: assets/img/yugioh/nkc1.png
+        image_id: "nkc1-en002"
+        image_order: 1
+        caption: The Nike collaboration card NKC1-EN002 that made me want to complete the Red-Eyes collection.
+        title: Red-Eyes Black Dragon Nike Promo NKC1-EN002
+
+  - album: My Software
+    gallery: true
+    order: 5
+    items:
+      - path: assets/img/installer/installer.png
+        image_id: "plutopoint_1"
+        image_order: 1
+        caption: This is what the current version of the PlutoPoint C# installer looks like.
+        title: PlutoPoint Automatic Software Installer GUI
+
+      - path: assets/img/yugioh/cardmarket_price_updater.png
+        image_id: "cardmarket_1"
+        image_order: 2
+        caption: The GUI of my Cardmarket program.
+        title: Cardmarket Price Updater
+
+      - path: assets/img/installer/installer_ps.png
+        image_id: "northpoint_1"
+        image_order: 3
+        caption: This is what the final version of the NorthPoint PowerShell installer looks like.
+        title: NorthPoint Automatic Software Installer GUI
+
+  - album: iMac Studio Display
+    gallery: false
+    items:
+      - path: assets/img/imac/imac_open.jpg
+        image_id: "imac_1"
+        caption: The iMac in it's current state with the 3D printed mounts installed.
+        title: Interior of an iMac
+
+      - path: assets/img/imac/imac_rear.jpg
+        image_id: "imac_2"
+        caption: The rear panel for the monitor controls and display ports.
+        title: Rear Panel of an iMac
+
+  - album: BMW Rear View Mirror LIN Decoder
+    gallery: false
+    items:
+      - path: assets/img/car/w211_cluster.jpg
+        image_id: "w211_1"
+        caption: My W211 cluster showing the no gear fault.
+        title: Mercedes W211 Cluster
+
+      - path: assets/img/car/w211_shifter.jpg
+        image_id: "w211_2"
+        caption: The shifter mechanism removed from the car.
+        title: Mercedes W211 Shifter
+
+      - path: assets/img/car/w211_sensor.jpg
+        image_id: "w211_3"
+        caption: The optical sensor that causes the issue.
+        title: TCPT1300 Opitcal Sensor
+
+      - path: assets/img/car/w211_shifter_board.jpg
+        image_id: "w211_4"
+        caption: The shifter board removed from the housing.
+        title: Mercedes W211 Shifter Board
+
+      - path: assets/img/car/w211_shifter_board_cleaned.jpg
+        image_id: "w211_5"
+        caption: The shifter board after removing the 4 optical sensors.
+        title: Mercedes W211 Shifter Board with Sensors Removed
+
+      - path: assets/img/car/w211_shifter_board_tape.jpg
+        image_id: "w211_6"
+        caption: The shifter board after cleaning and applying kapton tape.
+        title: Mercedes W211 Shifter Board after Applying Kapton Tape
+
+      - path: assets/img/car/w211_shifter_repaired.jpg
+        image_id: "w211_7"
+        caption: The shifter back together after the optical sensor replacement.
+        title: Mercedes W211 Shifter Repaired
+
+  - album: Cardmarket
+    gallery: false
+    items:
+      - path: assets/img/yugioh/cardmarket_excel_sheet.png
+        image_id: "cardmarket_2"
+        caption: The Excel sheet that the program will get info from and write prices to.
+        title: Cardmarket Price Updater Excel Sheet Template
+
+  - album: BMW Rear View Mirror LIN Decoder
+    gallery: false
+    items:
+      - path: assets/img/bmw_lin/m539.jpg
+        image_id: "lin_1"
+        caption: Streten's E92 M3.
+        title: M539 Restoration's E92 M3
+
+      - path: assets/img/bmw_lin/old_mirror.jpg
+        image_id: "lin_2"
+        caption: The older style BMW rear view mirror.
+        title: BMW Compass Mirror
+
+      - path: assets/img/bmw_lin/lin.jpg
+        image_id: "lin_3"
+        caption: The current PCB design which has a few issues.
+        title: BMW LIN Decoder Board
+
+      - path: assets/img/bmw_lin/mirror_mount.jpg
+        image_id: "lin_4"
+        caption: The right the mirror mount made from the original Renault and BMW mount welded together.
+        title: Renault Mount for BMW Mirror

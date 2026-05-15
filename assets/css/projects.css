@@ -163,7 +163,7 @@
 .related-projects-image {
   width: 110px;
   flex-shrink: 0;
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
   background: transparent;
 }

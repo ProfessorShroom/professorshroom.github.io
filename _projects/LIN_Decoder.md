@@ -2,7 +2,7 @@
 layout: project
 title: BMW Rear View Mirror LIN Decoder
 display_title: BMW Rear View Mirror LIN Decoder
-description: A board to decode a LIN BMW rear view mirror. Work in progress. On hold
+description: A board to decode a LIN BMW rear view mirror
 img: assets/img/bmw_lin/lin.png
 importance: 10
 category: Car Projects
@@ -13,7 +13,9 @@ images:
   lightbox2: true
 ---
 
-This project is currently a WIP and on hold as I've run into a roadblock.
+##### This project is still ongoing and currently on hold as I've hit a roadblock.
+
+<br>
 
 I was watching one of my favourite YouTubers, [M539 Restorations](https://www.youtube.com/channel/UCLLpxcworT8275nBXODXyqw), and noticed in one of his E92 M3 videos that the rear view mirror had a completely pointless yet very cool feature of a compass.
 
@@ -27,14 +29,11 @@ I did some research and found that loads of E39 (one of my favourite BMW's) owne
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/bmw_lin/m539.jpg" title="M539 Restoration's E92 M3" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="lin_1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/bmw_lin/old_mirror.jpg" title="BMW Compass Mirror" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="lin_2" %}
     </div>
-</div>
-<div class="caption">
-    On the left, Streten's E92 M3 and on the right the older style rear view mirror.
 </div>
 
 The mirror only has 4 pins, which threw me as the older E46 mirror has a lot more. I got the schematic from BMW and found there was a ground (obviously), a 12v input for power, a LIN bus line (at the time I'd never heard of LIN), and a 5v line.
@@ -61,12 +60,9 @@ The 3.0 boards came in but had some issues, when both 5v lines were powered the 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/bmw_lin/lin.jpg" title="BMW LIN Decoder Board" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="lin_3" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/bmw_lin/mirror_mount.jpg" title="Renault Mirror Mount" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="lin_4" %}
     </div>
-</div>
-<div class="caption">
-    On the left, the current PCB design which has a few issues and on the right the mirror mount made from the original Renault and BMW mount welded together.
 </div>

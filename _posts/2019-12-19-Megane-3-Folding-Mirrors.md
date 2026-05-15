@@ -7,6 +7,8 @@ tags: [renault, megane, mirrors, folding, retrofit, renaultsport, car]
 related_projects: [megane]
 categories: Car
 comments: true
+images:
+  lightbox2: true
 ---
 
 First of all, you need to check if you have the correct looms. Mine did but I'm not sure if all models do or only RS models.
@@ -14,10 +16,10 @@ Take this panel off on both sides.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_folding_mirror_1.jpg" title="Renault Megane MK3 Inner Mirror Cover" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="folding_mirror_1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_folding_mirror_2.jpg" title="Renault Megane MK3 Inner Mirror Cover Removed" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="folding_mirror_2" %}
     </div>
 </div>
 
@@ -25,39 +27,30 @@ Now you can check the loom for the correct wire.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_folding_mirror_3.jpg" title="Renault Megane MK3 Drivers Side Mirror Loom" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="folding_mirror_3" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_folding_mirror_4.jpg" title="Renault Megane MK3 Passenger Side Mirror Loom" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="folding_mirror_4" %}
     </div>
-</div>
-<div class="caption">
-    On the left, drivers side loom with the needed wire circled, and passenger side on the right.
 </div>
 
 If you have the correct loom then you just need to get new mirrors and the driver's window switch controls.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_folding_mirror_5.jpg" title="Renault Megane MK3 Folding Mirror Controls" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="folding_mirror_5" %}
     </div>
-</div>
-<div class="caption">
-    Part number is 809610009R.
 </div>
 
 I've circled the pin you need to look for on each mirror to make sure they're electric folding compared to a non-folding version.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_folding_mirror_6.jpg" title="Renault Megane MK3 Drivers Side Mirror Plug" class="img-fluid rounded z-depth-1" %}
+    {% include images.liquid id="folding_mirror_6" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_folding_mirror_7.jpg" title="Renault Megane MK3 Passenger Side Mirror Plug" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="folding_mirror_7" %}
     </div>
-</div>
-<div class="caption">
-    On the left, drivers side mirror plug with the needed pin circled, and passenger side on the right.
 </div>
 
 Once you've swapped the mirrors it will require coding with either CLIP or DDT4ALL, I've not used CLIP so the tutorial will be with DDT.
@@ -73,7 +66,7 @@ Select the correct options for your car and then press send
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_folding_mirror_8.jpg" title="DDT4ALL Folding Mirror Coding" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="folding_mirror_8" %}
     </div>
 </div>
 

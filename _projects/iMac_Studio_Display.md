@@ -2,7 +2,7 @@
 layout: project
 title: iMac Studio Display
 display_title: iMac Studio Display
-description: Convert 27" iMac into a monitor (work in progress)
+description: Convert a 27" iMac into a monitor
 img: assets/img/imac/imac_open.png
 importance: 3
 category: IT Projects
@@ -12,6 +12,10 @@ comments: true
 images:
   lightbox2: true
 ---
+
+##### This project is still ongoing.
+
+<br>
 
 I recently acquired a free 2014 iMac with a faulty motherboard, but the screen worked fine. I've seen a few people convert them into what is basically just a Apple Studio Display. These screens are 60Hz 5120x2880, and look amazing so for a second monitor/graphics monitor it's perfect.
 
@@ -35,12 +39,9 @@ Here's the repo below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/imac/imac_open.jpg" title="Interior of an iMac" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="imac_1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/imac/imac_rear.jpg" title="Rear Panel of an iMac" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="imac_2" %}
     </div>
-</div>
-<div class="caption">
-    On the left, the iMac in it's current state with the 3D printed mounts installed. On the right, the rear panel for the monitor controls and display ports.
 </div>

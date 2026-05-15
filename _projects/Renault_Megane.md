@@ -3,7 +3,7 @@ layout: project
 title: Renault Megane RS 250 (R.S.400)
 display_title: Renault Megane RS 250 (R.S.400)
 description: Modfied Renault Megane RS 250 build
-img: assets/img/car/250.jpeg
+img: assets/img/car/250.jpg
 importance: 1
 category: Car Projects
 related_projects: [megane]
@@ -19,31 +19,25 @@ Despite this I decided to buy a 2010 Renault Megane RS 250, as after watching re
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250.jpeg" title="Renault Megane RS 250 after 400 Turbo Kit Installation at K-Tec Racing" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="250_1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/225.jpg" title="Renault Megane RS 225 (Homer)" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="225_1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/225_engine.jpg" title="Renault Megane RS 225 Engine Block with Hole" class="img-fluid rounded z-depth-1" %}
+       {% include images.liquid id="225_2" %}
     </div>
-</div>
-<div class="caption">
-    On the left, my current Megane RS 250 being collected from K-Tec racing after getting the turbo 400 kit installed. Middle, My old Megane RS 225. Right, the engine after blowing up in the 225.
 </div>
 
 When I bought the car it was pretty much standard aside from a remap which took it to about 300BHP, not bad, but now it's running 400BHP. Below is the build sheet which includes all of the mods I've done to it so far.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_build_sheet.png" title="Renault Megane RS 250 Build Sheet" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="250_2" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_dyno.jpg" title="Renault Megane RS 250 Dyno Sheet" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="250_3" %}
     </div>
-</div>
-<div class="caption">
-    On the left, the build sheet which lists all of the mods and on the right the dyno printout.
 </div>
 
 Some of the mods I've done include the turbo 400 kit from [K-Tec Racing](https://k-tecracing.com/) which consists of a Garrett GTX2867R Gen 2 Turbo, 630cc injectors, de-cat (plus a sports cat lower in the system due to heat) and more supporting mods. Previously I've already added a Wagner intercooler, K-Tec induction kit, oil catch can which required a battery relocation to the boot and a custom mount for the ECU.
@@ -58,39 +52,29 @@ All of this I think makes this one of if not the nicest Renault Megane RS 250 or
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_interior_1.jpg" title="Renault Megane RS 250 Interior" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="250_4" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_interior_2.jpg" title="Renault Megane RS 250 Interior" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="250_5" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_engine_1.jpg" title="Renault Megane RS 250 Engine Bay" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="250_6" %}
     </div>
-</div>
-<div class="caption">
-    From left to right. Interior pictures of the custom interior done by KolourKoncept, the engine work mostly done by K-Tec Racing.
 </div>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_garrett.jpeg" title="Renault Megane RS 250 Garrett Turbo" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="250_7" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_rlink.jpg" title="Renault Megane RS 250 R-Link System" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="250_8" %}
     </div>
-        <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/rs400_badge.jpg" title="Renault Megane R.S.400 Rear Badge" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-3 mt-md-0">
+        {% include images.liquid id="250_9" %}
     </div>
-</div>
-<div class="caption">
-    From left to right. The engine work mostly done by K-Tec Racing and myself, the R-Link system from the facelift models, and the custom R.S.400 rear badge.
-</div>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/250_pluto.jpg" title="Pluto!" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="pluto_1" %}
     </div>
-</div>
-<div class="caption">
-    Bonus Pluto!
 </div>

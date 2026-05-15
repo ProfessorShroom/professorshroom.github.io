@@ -1,0 +1,140 @@
+---
+layout: default
+---
+{% if page._styles %}
+  <style type="text/css">
+    {{ page._styles }}
+  </style>
+{% endif %}
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="projects-title">{{ page.title }}</h1>
+    <p class="post-description">{{ page.description }}</p>
+  </header>
+
+  <article>
+    {{ content }}
+  </article>
+
+  {% if page.gallery_mode %}
+    {% assign all_items = site.data.images.images_list %}
+
+    {% assign album_list = '' | split: '' %}
+    {% assign album_order = '' | split: '' %}
+
+    {%- comment -%} STEP 1: COLLECT ALBUMS {%- endcomment -%}
+
+    {% for item in all_items %}
+      {% if item.gallery == true and item.items %}
+        {% assign has_visible = false %}
+
+        {% for image in item.items %}
+          {% if image.exclude != true %}
+            {% assign has_visible = true %}
+          {% endif %}
+        {% endfor %}
+
+        {% if has_visible %}
+          {% assign order = item.order | default: 9999 | plus: 0 %}
+
+          {% unless album_list contains item.album %}
+            {% assign album_list = album_list | push: item.album %}
+            {% assign album_order = album_order | push: order %}
+          {% endunless %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {%- comment -%} STEP 2: SORT ALBUMS {%- endcomment -%}
+
+    {% assign sorted_albums = '' | split: '' %}
+    {% assign used = '' | split: '' %}
+
+    {% assign size = album_list.size | minus: 1 %}
+
+    {% for i in (0..size) %}
+      {% assign min_index = -1 %}
+      {% assign min_value = 99999 %}
+
+      {% for j in (0..size) %}
+        {% unless used contains j %}
+          {% assign val = album_order[j] | plus: 0 %}
+
+          {% if val < min_value %}
+            {% assign min_value = val %}
+            {% assign min_index = j %}
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+
+      {% assign sorted_albums = sorted_albums | push: album_list[min_index] %}
+      {% assign used = used | push: min_index %}
+    {% endfor %}
+
+    {%- comment -%} STEP 3: RENDER ALBUMS {%- endcomment -%}
+
+    {% for album in sorted_albums %}
+      <h2 class="mt-5">{{ album }}</h2>
+
+      {% assign ordered = '' | split: '' %}
+      {% assign unordered = '' | split: '' %}
+
+      {%- comment -%} COLLECT IMAGES {%- endcomment -%}
+
+      {% for item in all_items %}
+        {% if item.gallery == true and item.items %}
+          {% if item.album == album %}
+            {% for image in item.items %}
+              {% if image.exclude != true %}
+                {% if image.image_order %}
+                  {% assign entry = image.image_order
+                    | append: '|'
+                    | append: image.path
+                    | append: '|'
+                    | append: image.caption
+                    | append: '|'
+                    | append: image.title
+                  %}
+                  {% assign ordered = ordered | push: entry %}
+                {% else %}
+                  {% assign entry = '99999|' | append: image.path | append: '|' | append: image.caption | append: '|' | append: image.title %}
+                  {% assign unordered = unordered | push: entry %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign ordered = ordered | sort %}
+      {% assign images = ordered | concat: unordered %}
+
+      <div class="row">
+        {% for img in images %}
+          {% assign parts = img | split: '|' %}
+          {% assign path = parts[1] %}
+          {% assign caption = parts[2] %}
+          {% assign title = parts[3] %}
+
+          <div class="col-sm-4 mt-3">
+            <a href="/{{ path }}" data-lightbox="{{ album }}">
+              <img
+                src="/{{ path }}"
+                class="img-fluid rounded z-depth-1"
+                alt="{{ caption }}"
+                title="{{ title }}"
+              >
+            </a>
+
+            {% if caption %}
+              <div class="caption">
+                {{ caption }}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>

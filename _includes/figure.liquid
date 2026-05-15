@@ -9,10 +9,10 @@
 >
   {% if page.images and page.images.lightbox2 %}
     <a
-      href="{% if include.url %}{{ include.url }}{% elsif include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
+      href="{% if include.url %}{{ include.url }}{% else %}{{ include.path | relative_url }}{% endif %}"
       data-lightbox="{{ page.url }}"
-      {% if include.title %}
-        data-title="{{ include.title }}"
+      {% if include.caption %}
+        data-title="{{ include.caption }}"
       {% endif %}
     >
   {% endif %}

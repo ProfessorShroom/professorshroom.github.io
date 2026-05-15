@@ -1,0 +1,24 @@
+{% assign target = include.id | append: '' %}
+{% assign found = null %}
+
+{% assign all_groups = site.data.images.images_list %}
+
+{% for album in all_groups %}
+  {% for image in album.items %}
+    {% assign img_id = image.image_id | append: '' %}
+
+    {% if img_id == target %}
+      {% assign found = image %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% if found %}
+  {%
+    include figure.liquid
+    path=found.path
+    caption=found.caption
+    title=found.title
+    class="img-fluid rounded z-depth-1"
+  %}
+{% endif %}

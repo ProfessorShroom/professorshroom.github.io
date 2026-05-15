@@ -6,8 +6,8 @@ description: Computer Repair Centre Automatic Software Installer
 img: assets/img/installer/computer_repair_centre_installer_logo.png
 importance: 1
 category: Software
-related_projects: [installer]
-related_posts: []
+related_projects: [installer, software]
+related_posts: [installer, software]
 comments: true
 images:
   lightbox2: true
@@ -33,11 +33,8 @@ I will continue to update this post and repo as I add more features.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/installer/installer.png" title="PlutoPoint Automatic Software Installer GUI" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="plutopoint_1" %}
     </div>
-</div>
-<div class="caption">
-    This is what the current version of the C# installer looks like.
 </div>
 
 ### Changelog

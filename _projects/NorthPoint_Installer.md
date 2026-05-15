@@ -6,8 +6,8 @@ description: Computer Repair Centre Automatic Software Installer depreciated by 
 img: assets/img/installer/computer_repair_centre_installer_logo_old.png
 importance: 10
 category: Software
-related_projects: [installer]
-related_posts: []
+related_projects: [installer, software]
+related_posts: [installer, software]
 comments: false
 images:
   lightbox2: true
@@ -31,11 +31,8 @@ The installer still works in its current form and I will likely continue to keep
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/installer/installer_ps.png" title="NorthPoint Automatic Software Installer GUI" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="northpoint_1" %}
     </div>
-</div>
-<div class="caption">
-    This is what the final version of the PowerShell installer looked like.
 </div>
 
 ### Changelog

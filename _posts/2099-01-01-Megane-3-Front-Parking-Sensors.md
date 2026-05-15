@@ -7,6 +7,8 @@ tags: [renault, megane, drl, day time running lights, retrofit, renaultsport, ca
 related_projects: [megane]
 categories: Car
 comments: true
+images:
+  lightbox2: true
 ---
 
 # Coming soon!

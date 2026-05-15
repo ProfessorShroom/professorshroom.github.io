@@ -23,17 +23,14 @@ If you'd like to try this yourself I will try to explain below the process, but 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/w211_cluster.jpg" title="Mercedes W211 Cluster" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="w211_1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/w211_shifter.jpg" title="Mercedes W211 Shifter" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="w211_2" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/w211_sensor.jpg" title="TCPT1300" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="w211_3" %}
     </div>
-</div>
-<div class="caption">
-    On the left, my W211 cluster showing the no gear fault. Middle, the shifter mechanism removed from the car. Right, the optical sensor that causes the issue.
 </div>
 
 First you have to remove the shifter itself from the car, there's plenty of videos on YouTube showing you how to do this, [like this one here](https://www.youtube.com/watch?v=ZiquZMIj74s).
@@ -48,17 +45,14 @@ When you have it off you can undo the 4 screws holding the plastic case together
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/w211_shifter_board.jpg" title="Mercedes W211 Shifter Board" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="w211_4" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/w211_shifter_board_cleaned.jpg" title="Mercedes W211 Shifter Board with Sensors Removed" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="w211_5" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/w211_shifter_board_tape.jpg" title="Mercedes W211 Shifter Board after Applying Kapton Tape" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="w211_6" %}
     </div>
-</div>
-<div class="caption">
-    On the left, the shifter board removed from the housing. Middle, the shifter board after removing the 4 optical sensors. Right, the shifter board after cleaning and applying kapton tape.
 </div>
 
 Above you see what the board looks like before and after removing the optical sensors. I found hot air to be the best way to remove them, just be mindful of the small components around them and also the backside of the board.
@@ -73,9 +67,6 @@ This has now been good for over 10 months so I'd say this is the definitive fix.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/car/w211_shifter_repaired.jpg" title="Mercedes W211 Shifter Repaired" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="w211_7" %}
     </div>
-</div>
-<div class="caption">
-    The shifter back together after the optical sensor replacement.
 </div>

@@ -6,8 +6,8 @@ description: Automatically get prices for MTG, Pokemon and Yu-Gi-Oh! cards
 img: assets/img/yugioh/cardmarket_price_updater_logo.png
 importance: 2
 category: Software
-related_projects: [yugioh, pokemon, mtg, magic the gathering, cardmarket]
-related_posts: [yugioh, pokemon, mtg, magic the gathering, cardmarket]
+related_projects: [yugioh, pokemon, mtg, magic the gathering, cardmarket, software]
+related_posts: [yugioh, pokemon, mtg, magic the gathering, cardmarket, software]
 comments: true
 images:
   lightbox2: true
@@ -29,10 +29,10 @@ Here's the repo below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/yugioh/cardmarket_price_updater.png" title="Cardmarket Price Updater" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="cardmarket_1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/yugioh/nkc1.png" title="NKC1-EN002" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="nkc1-en002" %}
     </div>
 </div>
 <div class="caption">
@@ -41,11 +41,8 @@ Here's the repo below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/yugioh/cardmarket_excel_sheet.png" title="Cardmarket Price Updater Excel Sheet" class="img-fluid rounded z-depth-1" %}
+        {% include images.liquid id="cardmarket_2" %}
     </div>
-</div>
-<div class="caption">
-    The Excel sheet that the program will get info from and write prices to.
 </div>
 
 ### Changelog
