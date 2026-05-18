@@ -14,13 +14,14 @@
   padding-top: 2rem;
 }
 
-.buymeabeer-postt .caption {
-  text-decoration: underline !important;
+.buymeabeer-post .caption {
+  color: inherit;
+  text-decoration-line: underline;
+  transition: text-decoration-color 0.2s ease;
 }
 
 .post .buymeabeer-post a:hover .caption {
-  text-decoration: underline !important;
-  color: var(--global-theme-color) !important;
+  text-decoration-color: var(--global-theme-color);
 }
 
 /* =========================

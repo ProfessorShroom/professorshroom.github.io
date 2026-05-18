@@ -14,6 +14,7 @@ images_list:
       - path: assets/img/placeholder.png
         image_id: "placeholder"
         caption: Placeholder Image
+        no_lightbox: true
 
   - album: Renault Megane RS 250
     gallery: true

@@ -1,11 +1,4 @@
-.buymeabeer-home img {
-  height: 70px;
-  width: auto;
-  display: block;
-  box-shadow: none !important;
-  filter: none !important;
-}
-
+.buymeabeer-home img,
 .buymeabeer-project img,
 .buymeabeer-post img {
   height: 60px !important;

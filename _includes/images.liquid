@@ -4,9 +4,7 @@
 
 {% assign all_groups = site.data.images.images_list %}
 
-{%- comment -%}
-  Find target image + placeholder image
-{%- endcomment -%}
+{%- comment -%} FIND IMAGE + PLACEHOLDER {%- endcomment -%}
 
 {% for album in all_groups %}
   {% for image in album.items %}
@@ -22,17 +20,14 @@
   {% endfor %}
 {% endfor %}
 
-{%- comment -%}
-  Validate file extension
-{%- endcomment -%}
+{%- comment -%} VALIDATE PATH {%- endcomment -%}
 
 {% assign valid_extensions = 'jpg,jpeg,png,tiff,gif,webp' | split: ',' %}
 {% assign is_valid = false %}
 
 {% if found and found.path != blank %}
-  {% assign parts = found.path | split: '.' %}
-  {% if parts.size > 1 %}
-    {% assign ext = parts.last | downcase %}
+  {% if found.path contains '.' %}
+    {% assign ext = found.path | split: '.' | last | downcase %}
 
     {% for v in valid_extensions %}
       {% if v == ext %}
@@ -42,24 +37,33 @@
   {% endif %}
 {% endif %}
 
-{%- comment -%}
-  Fallback if invalid
-{%- endcomment -%}
-
 {% unless is_valid %}
   {% assign found = placeholder %}
 {% endunless %}
 
-{%- comment -%}
-  Render
-{%- endcomment -%}
+{%- comment -%} RENDER {%- endcomment -%}
 
 {% if found %}
+  {% if page.images and page.images.lightbox2 and include.no_lightbox != true and found.no_lightbox != true %}
+    <a
+      href="{% if include.url %}{{ include.url }}{% else %}{{ found.path | relative_url }}{% endif %}"
+      data-lightbox="{{ page.url }}"
+      {% if found.caption %}
+        data-title="{{ found.caption }}"
+      {% endif %}
+    >
+  {% endif %}
+
   {%
     include figure.liquid
     path=found.path
     caption=found.caption
     title=found.title
     class="img-fluid rounded z-depth-1"
+    no_lightbox=found.no_lightbox
   %}
+
+  {% if page.images and page.images.lightbox2 and include.no_lightbox != true and found.no_lightbox != true %}
+    </a>
+  {% endif %}
 {% endif %}
