@@ -105,11 +105,17 @@ images_list:
       - path: assets/img/car/250_sunvisor_6.jpg
         exclude: true
         image_id: "sunvisor_6"
+        caption: Where to attach the 2-pin connector to the dome light.
+        title: Renault Megane MK3 Dome Light with 2-Pin Connector
+
+      - path: assets/img/car/250_sunvisor_7.jpg
+        exclude: true
+        image_id: "sunvisor_7"
         caption: A Megane MK3 without a headliner to show you the space.
         title: Renault Megane MK3 with no Headliner
 
-      - path: assets/img/car/250_sunvisor_7.jpg
-        image_id: "sunvisor_7"
+      - path: assets/img/car/250_sunvisor_8.jpg
+        image_id: "sunvisor_8"
         image_order: 9
         caption: Finished installation of the new sunvisor lights.
         title: Renault Megane MK3 Sunvisor Lights Installed

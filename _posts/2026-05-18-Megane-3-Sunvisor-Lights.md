@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Retrofit Sunvisor Lights to Renault Megane MK3
-date: 2026-05-13
+date: 2026-05-18
 description: Guide on retrofitting sunvisor lights to a Renault Megane MK3
 tags: [renault, megane, sunvisor, light, retrofit, renaultsport, car]
 related_projects: [megane]
@@ -41,11 +41,17 @@ I want this loom to be removable, so we're going to use these plugs which are re
 There are a few ways you could connect this, we just need power and ground, you could solder this directly to the dome power and ground pads, or splice it into the loom going to it, either way is fine.
 
 Here's the loom we've made, its 5 plugs in total. 2 go to each sun visor to tell the lights when to turn on and off, 2 go to the lights and then the other one is to connect this to our existing loom in the headliner where we're getting our power from.
+
 It's pretty simple, power comes from the dome light straight to the light, the ground wire runs through the sunvisor plug, that way it's only grounded when the sunvisor mirror is open, allowing the light to get power.
+
+You need to use pins 2 and 4 for the power off of the dome light. Pin 2 always gets 12v when the ignition is on, pin 4 is ground. If you use pin 1 or 3 the lights will work, but only when the dome light is on.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include images.liquid id="sunvisor_5" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include images.liquid id="sunvisor_6" %}
     </div>
 </div>
 
@@ -53,7 +59,7 @@ We've done most of the work now, all that's left is to fit it all which requires
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include images.liquid id="sunvisor_6" %}
+        {% include images.liquid id="sunvisor_7" %}
     </div>
 </div>
 
@@ -61,6 +67,6 @@ Now all there is to do is fit it all, I'd start with the loom, get it all into p
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include images.liquid id="sunvisor_7" %}
+        {% include images.liquid id="sunvisor_8" %}
     </div>
 </div>

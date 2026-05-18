@@ -48,7 +48,7 @@ I've also retrofitted a R-Link system from the facelift model which required som
 
 The front DRLs (daytime running lights) have been replaced with the facelift Megane RS 265 versions along with the front blade which allow the DRLs to stay on but dimmed when the headlights are on.
 
-All of this I think makes this one of if not the nicest Renault Megane RS 250 or 265 in the country.
+All of this I think makes this one of if not the nicest Renault Megane 3 RS in the country.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
