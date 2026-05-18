@@ -218,8 +218,17 @@
 /* =========================
    BUY ME A BEER
 ========================= */
-.buymeabeer {
+.buymeabeer-project {
   padding-top: 2rem;
+}
+
+.buymeabeer-project .caption {
+  text-decoration: underline !important;
+}
+
+.post .buymeabeer-project a:hover .caption {
+  text-decoration: underline !important;
+  color: var(--global-theme-color) !important;
 }
 
 /* =========================

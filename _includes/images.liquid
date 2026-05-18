@@ -1,7 +1,12 @@
 {% assign target = include.id | append: '' %}
 {% assign found = null %}
+{% assign placeholder = null %}
 
 {% assign all_groups = site.data.images.images_list %}
+
+{%- comment -%}
+  Find target image + placeholder image
+{%- endcomment -%}
 
 {% for album in all_groups %}
   {% for image in album.items %}
@@ -10,8 +15,44 @@
     {% if img_id == target %}
       {% assign found = image %}
     {% endif %}
+
+    {% if img_id == 'placeholder' %}
+      {% assign placeholder = image %}
+    {% endif %}
   {% endfor %}
 {% endfor %}
+
+{%- comment -%}
+  Validate file extension
+{%- endcomment -%}
+
+{% assign valid_extensions = 'jpg,jpeg,png,tiff,gif,webp' | split: ',' %}
+{% assign is_valid = false %}
+
+{% if found and found.path != blank %}
+  {% assign parts = found.path | split: '.' %}
+  {% if parts.size > 1 %}
+    {% assign ext = parts.last | downcase %}
+
+    {% for v in valid_extensions %}
+      {% if v == ext %}
+        {% assign is_valid = true %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endif %}
+
+{%- comment -%}
+  Fallback if invalid
+{%- endcomment -%}
+
+{% unless is_valid %}
+  {% assign found = placeholder %}
+{% endunless %}
+
+{%- comment -%}
+  Render
+{%- endcomment -%}
 
 {% if found %}
   {%

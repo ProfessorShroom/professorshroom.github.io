@@ -7,7 +7,7 @@
     slot="{{ include.slot }}"
   {% endif %}
 >
-  {% if page.images and page.images.lightbox2 %}
+  {% if page.images and page.images.lightbox2 and include.no_lightbox != true %}
     <a
       href="{% if include.url %}{{ include.url }}{% else %}{{ include.path | relative_url }}{% endif %}"
       data-lightbox="{{ page.url }}"
@@ -86,7 +86,7 @@
     >
   </picture>
 
-  {% if page.images and page.images.lightbox2 %}
+  {% if page.images and page.images.lightbox2 and include.no_lightbox != true %}
     </a>
   {% endif %}
 

@@ -58,20 +58,27 @@ All of this I think makes this one of if not the nicest Renault Megane RS 250 or
         {% include images.liquid id="250_5" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include images.liquid id="250_6" %}
+        {% include images.liquid id="250_8" %}
     </div>
 </div>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include images.liquid id="250_7" %}
+        {% include images.liquid id="250_6" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include images.liquid id="250_8" %}
+        {% include images.liquid id="250_7" %}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include images.liquid id="265_drls_1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include images.liquid id="250_9" %}
     </div>
+</div>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

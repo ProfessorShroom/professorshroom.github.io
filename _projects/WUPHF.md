@@ -13,10 +13,12 @@ images:
   lightbox2: false
 ---
 
-Just had a bit of fun making a WUPHF site, as whoever owns WUPHF.com never did anything with it. So I got [WUPHF.co.uk](https://wuphf.co.uk) and made a fan site.
+Just had a bit of fun making an Office fan site, WUPHF, as whoever owns WUPHF.com never did anything with it. So I got [WUPHF.co.uk](https://wuphf.co.uk) and made a fan site.
 
-<div style="text-align: center;">
-  <a href="https://wuphf.co.uk">
-    <img src="/assets/img/wuphf/wuphf.png" alt="Centered image" style="display: block; margin: 0 auto;">
+<div class="wuphf">
+  <a href="https://wuphf.co.uk" target="_blank" rel="noopener">
+    <span class="no-shadow">
+      {% include images.liquid id="wuphf" class="wuphf" %}
+    </span>
   </a>
 </div>

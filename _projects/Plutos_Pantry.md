@@ -17,14 +17,14 @@ This isn't actually my site, but my wifes, I just wanted to advertise it here fo
 
 My wife runs a pet treat and enrichment business, which is run online from Shopify and TikTok, and also at local markets so say hello if you see her!
 
-It's named after our beloved dog Pluto.
+It's named after our lovely dog Pluto!
 
 She does a great job so I just wanted to advertise it here!
 
-[plutospantry.co.uk](https://plutospantry.co.uk)
-
-<div style="text-align: center;">
-  <a href="https://plutospantry.co.uk">
-    <img src="/assets/img/pluto/plutospantry.png" alt="Centered image" style="display: block; margin: 0 auto; width: 500px; height: 500px;">
+<div class="plutospantry">
+  <a href="https://plutospantry.co.uk" target="_blank" rel="noopener">
+    <span class="no-shadow">
+      {% include images.liquid id="plutospantry" class="plutospantry" %}
+    </span>
   </a>
 </div>

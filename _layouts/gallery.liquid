@@ -50,7 +50,6 @@ layout: default
 
     {% assign sorted_albums = '' | split: '' %}
     {% assign used = '' | split: '' %}
-
     {% assign size = album_list.size | minus: 1 %}
 
     {% for i in (0..size) %}
@@ -87,28 +86,49 @@ layout: default
           {% if item.album == album %}
             {% for image in item.items %}
               {% if image.exclude != true %}
-                {% if image.image_order %}
-                  {% assign entry = image.image_order
-                    | append: '|'
-                    | append: image.path
-                    | append: '|'
-                    | append: image.caption
-                    | append: '|'
-                    | append: image.title
-                  %}
-                  {% assign ordered = ordered | push: entry %}
-                {% else %}
-                  {% assign entry = '99999|' | append: image.path | append: '|' | append: image.caption | append: '|' | append: image.title %}
-                  {% assign unordered = unordered | push: entry %}
+                {%- comment -%}
+                  FIX: zero-pad sort key so string sort works correctly
+                {%- endcomment -%}
+
+                {% assign order_num = image.image_order | default: 99999 | plus: 0 %}
+                {% assign padded = order_num | prepend: '00000' | slice: -5, 5 %}
+
+                {%- comment -%}
+                  SAFE PATH VALIDATION (NEW)
+                {%- endcomment -%}
+
+                {% assign raw_path = image.path %}
+                {% assign path = raw_path %}
+
+                {% assign valid_extensions = 'jpg,jpeg,png,tiff,gif,webp' | split: ',' %}
+                {% assign is_valid = false %}
+
+                {% if raw_path and raw_path contains '.' %}
+                  {% assign ext = raw_path | split: '.' | last | downcase %}
+
+                  {% for v in valid_extensions %}
+                    {% if v == ext %}
+                      {% assign is_valid = true %}
+                    {% endif %}
+                  {% endfor %}
                 {% endif %}
+
+                {% unless is_valid %}
+                  {% assign path = 'assets/img/placeholder.png' %}
+                {% endunless %}
+
+                {% assign entry = padded | append: '|' | append: path | append: '|' | append: image.caption | append: '|' | append: image.title %}
+
+                {% assign ordered = ordered | push: entry %}
               {% endif %}
             {% endfor %}
           {% endif %}
         {% endif %}
       {% endfor %}
 
-      {% assign ordered = ordered | sort %}
-      {% assign images = ordered | concat: unordered %}
+      {%- comment -%} RELIABLE SORT {%- endcomment -%}
+
+      {% assign images = ordered | sort %}
 
       <div class="row">
         {% for img in images %}

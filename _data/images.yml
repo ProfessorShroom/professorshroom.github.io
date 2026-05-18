@@ -6,6 +6,11 @@ images_list:
         image_id: "professorshroom"
         caption: ProfessorShroom
 
+      - path: assets/img/supportme.png
+        image_id: "supportme"
+        caption: Support Me!
+        no_lightbox: true
+
       - path: assets/img/placeholder.png
         image_id: "placeholder"
         caption: Placeholder Image
@@ -32,30 +37,31 @@ images_list:
 
       - path: assets/img/car/250_interior_1.jpg
         image_id: "250_4"
-        image_order: 3
+        image_order: 4
         caption: The custom interior done by KolourKoncept and Carbon Skins.
         title: Renault Megane RS 250 Interior
 
       - path: assets/img/car/250_interior_2.jpg
         image_id: "250_5"
-        image_order: 4
+        image_order: 5
         caption: The custom interior done by KolourKoncept and Carbon Skins.
         title: Renault Megane RS 250 Interior
 
       - path: assets/img/car/250_engine_1.jpg
         image_id: "250_6"
-        image_order: 5
+        image_order: 7
         caption: The engine work mostly done by K-Tec Racing and myself.
         title: Renault Megane RS 250 Engine Bay
 
       - path: assets/img/car/250_garrett.jpg
         image_id: "250_7"
-        image_order: 6
+        image_order: 8
         caption: The Garrett GTX2867R Gen 2 Turbo fitted as part of the K-Tec 400 kit.
         title: Renault Megane RS 250 Garrett Turbo
 
       - path: assets/img/car/250_rlink.jpg
         image_id: "250_8"
+        image_order: 6
         caption: The R-Link system from the later facelift Megane's retrofit into mine.
         title: Renault Megane RS 250 R-Link System
 
@@ -103,6 +109,7 @@ images_list:
 
       - path: assets/img/car/250_sunvisor_7.jpg
         image_id: "sunvisor_7"
+        image_order: 9
         caption: Finished installation of the new sunvisor lights.
         title: Renault Megane MK3 Sunvisor Lights Installed
 
@@ -154,16 +161,18 @@ images_list:
         caption: The config for the folding mirror control in DDT4ALL.
         title: DDT4ALL Folding Mirror Coding
 
-      - path: assets/img/placeholder.png
-        exclude: true
+      - path:
         image_id: "250_drls_1"
-        caption: The Megane 250 DRLs.
+        exclude: true
+        image_order: 10
+        caption: The original Megane 250 day time running lights.
         title: Renault Megane 250 DRLs
 
-      - path: assets/img/placeholder.png
-        exclude: true
+      - path:
         image_id: "265_drls_1"
-        caption: The Megane 265 DRLs.
+        exclude: true
+        image_order: 2
+        caption: Megane 250 fitted with Megane 265 day time running lights.
         title: Renault Megane 265 DRLs
 
       - path: assets/img/car/265_drls_2.jpg
@@ -184,13 +193,13 @@ images_list:
         caption: The Megane 265 DRL loom, part number 240704181R.
         title: Renault Megane 265 Day Time Running Lights Loom
 
-      - path: assets/img/placeholder.png
+      - path:
         exclude: true
         image_id: "250_grill_1"
         caption: The Megane 250 grill.
         title: Renault Megane 250 Grill
 
-      - path: assets/img/placeholder.png
+      - path: assets/img/car/
         exclude: true
         image_id: "250_grill_2"
         caption: The Megane 250 grill trimmed to fit the 265 DRLs.
@@ -344,3 +353,16 @@ images_list:
         image_id: "lin_4"
         caption: The right the mirror mount made from the original Renault and BMW mount welded together.
         title: Renault Mount for BMW Mirror
+
+  - album: Websites
+    gallery: false
+    items:
+      - path: assets/img/pluto/plutospantry.png
+        image_id: "plutospantry"
+        caption: PlutosPantry.co.uk
+        title: PlutosPantry.co.uk
+
+      - path: assets/img/wuphf/wuphf.png
+        image_id: "wuphf"
+        caption: WUPHF.co.uk
+        title: WUPHF.co.uk

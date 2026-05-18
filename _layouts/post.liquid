@@ -70,14 +70,18 @@ layout: default
       {% if page.comments %}
       {% endif %}
     </div>
+    <div
+      class="buymeabeer-post"
+      style="display:flex; flex-direction:column; justify-content:center; align-items:center; gap:12px; text-align:center;"
+    >
+      <span>🍺 If this post has been helpful and you enjoy what I do and want to support me I would really appriciate it! 🔽</span>
+      <a href="https://www.buymeacoffee.com/professorshroom" target="_blank" rel="noopener" style="display:inline-block;">
+        <span>
+          {% include images.liquid id="supportme" class="supportme-img" %}
+        </span>
+      </a>
+    </div>
   </article>
-  <div class="buymeabeer" style="display:flex; flex-direction:column; justify-content:center; align-items:center; gap:12px; text-align:center;">
-    <span>🍺 If this post has been helpful or you enjoy what I do and want to support me I would really appriciate it! 🔽</span>
-
-    <a href="https://www.buymeacoffee.com/professorshroom" target="_blank" rel="noopener">
-      <img src="/assets/img/buy-me-a-beer.png" alt="Buy me a beer" style="height:50px;">
-    </a>
-  </div>
 
   {% if page.related_projects %}
     <hr>
@@ -103,12 +107,7 @@ layout: default
           {% endif %}
 
           {% if match %}
-            {% if project.importance %}
-              {% assign importance = project.importance %}
-            {% endif %}
-
-            {% assign item = project | merge: {"importance": importance} %}
-            {% assign related_list = related_list | push: item %}
+            {% assign related_list = related_list | push: project %}
           {% endif %}
         {% endif %}
       {% endfor %}

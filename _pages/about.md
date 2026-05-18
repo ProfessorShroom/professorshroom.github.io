@@ -19,18 +19,16 @@ profile:
 <br>
 <br>
 
-<div class="buymeabeerhome" style="display:flex; flex-direction:column; justify-content:center; align-items:center; gap:12px; text-align:center;">
-    <span>🍺 If you enjoy what I do and want to support me I would really appriciate it! 🔽</span>
+<div class="buymeabeer-home" style="display:flex; flex-direction:column; justify-content:center; align-items:center; gap:12px; text-align:center;">
+  <span>🍺 If you enjoy what I do and want to support me I would really appreciate it! 🔽</span>
 
-    <a href="https://www.buymeacoffee.com/professorshroom" target="_blank" rel="noopener">
-      <img src="/assets/img/buy-me-a-beer.png" alt="Buy me a beer" style="height:50px;">
-    </a>
-
-  </div>
-<div>
+  <a href="https://www.buymeacoffee.com/professorshroom" target="_blank" rel="noopener" style="display:inline-block;">
+    <span class="supportme-home-img">
+      {% include images.liquid id="supportme" %}
+    </span>
+  </a>
+</div>
 
 <br>
 
 The best way to contact me is via email which you can find below.
-
-</div>

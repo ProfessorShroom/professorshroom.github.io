@@ -10,8 +10,17 @@
 /* =========================
    BUY ME A BEER
 ========================= */
-.buymeabeer {
+.buymeabeer-post {
   padding-top: 2rem;
+}
+
+.buymeabeer-postt .caption {
+  text-decoration: underline !important;
+}
+
+.post .buymeabeer-post a:hover .caption {
+  text-decoration: underline !important;
+  color: var(--global-theme-color) !important;
 }
 
 /* =========================
