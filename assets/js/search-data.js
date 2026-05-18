@@ -30,18 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/gallery/";
           },
-        },{id: "post-windows-system-reserved-partition-update-error",
-        
-          title: "Windows System Reserved Partition Update Error",
-        
-        description: "Fix the Windows 10/11 system reserved partition update error, causing Windows to not update",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/posts/2026/Windows-System-Reserved-Partition-Update-Error/";
-          
-        },
-      },{id: "post-retrofit-sunvisor-lights-to-renault-megane-mk3",
+        },{id: "post-retrofit-sunvisor-lights-to-renault-megane-mk3",
         
           title: "Retrofit Sunvisor Lights to Renault Megane MK3",
         
@@ -50,6 +39,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/posts/2026/Megane-3-Sunvisor-Lights/";
+          
+        },
+      },{id: "post-windows-system-reserved-partition-update-error",
+        
+          title: "Windows System Reserved Partition Update Error",
+        
+        description: "Fix the Windows 10/11 system reserved partition update error, causing Windows to not update",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/Windows-System-Reserved-Partition-Update-Error/";
           
         },
       },{id: "post-docker-29-api-changes",
