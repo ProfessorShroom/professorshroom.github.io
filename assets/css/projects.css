@@ -208,13 +208,18 @@
   margin-bottom: 10px;
 }
 
+.related-posts a,
+.related-projects a {
+  text-decoration-line: underline;
+  transition: text-decoration-color 0.2s ease;
+}
+
 .post-date-inline {
   font-weight: 300;
   font-size: 0.9em;
   opacity: 0.6;
   margin-left: 0.5rem;
 }
-
 /* =========================
    BUY ME A BEER
 ========================= */
