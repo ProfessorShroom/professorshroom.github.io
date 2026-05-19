@@ -211,7 +211,7 @@
 .related-posts a,
 .related-projects a {
   text-decoration-line: underline;
-  transition: text-decoration-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .post-date-inline {
