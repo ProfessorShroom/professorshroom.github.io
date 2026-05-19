@@ -4,7 +4,7 @@ title: Windows System Reserved Partition Update Error
 date: 2026-05-14
 description: Fix the Windows 10/11 system reserved partition update error, causing Windows to not update
 tags: [windows, microsoft, it, bypass, local]
-related_projects: []
+related_projects: [windows]
 categories: IT
 comments: true
 ---
