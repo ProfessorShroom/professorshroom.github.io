@@ -1,11 +1,16 @@
 
 #### Latest Update
 
+**Update 6.6.6.0**
+
+- Reworked the font system.
+- Removed rounded buttons and progress bar, moved back to a square look. Square is back in fashion.
+
+#### Older Updates
+
 **Update 6.6.5.0**
 
 - Added May the 4th.
-
-#### Older Updates
 
 **Update 6.6.4.1**
 
