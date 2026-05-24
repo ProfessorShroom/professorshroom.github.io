@@ -3,7 +3,7 @@ layout: project
 title: iMac Studio Display
 display_title: iMac Studio Display
 description: Convert a 27" iMac into a monitor
-img: assets/img/imac/imac_open.png
+img: assets/img/imac/imac_open.jpg
 importance: 3
 category: IT Projects
 related_projects: []

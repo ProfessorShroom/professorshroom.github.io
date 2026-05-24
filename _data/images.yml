@@ -279,6 +279,40 @@ images_list:
         caption: This is what the final version of the NorthPoint PowerShell installer looks like.
         title: NorthPoint Automatic Software Installer GUI
 
+  - album: Custom Yu-Gi-Oh! Binders
+    gallery: true
+    order: 6
+    items:
+      - path: assets/img/yugioh/binder_1_front.jpg
+        image_id: "binder_1_front"
+        caption: The front of my first custom Red-Eyes Black Dragon binder.
+        title: Red-Eyes Black Dragon Binder Front
+
+      - path: assets/img/yugioh/binder_2_front.jpg
+        image_id: "binder_2_front"
+        caption: The front of my custom Blue-Eyes White Dragon binder.
+        title: Blue-Eyes White Dragon Binder Front
+
+      - path: assets/img/yugioh/binder_2_rear.jpg
+        image_id: "binder_2_rear"
+        caption: The rear of my custom Blue-Eyes White Dragon binder.
+        title: Blue-Eyes White Dragon Binder Rear
+
+      - path: assets/img/yugioh/binder_3_front.jpg
+        image_id: "binder_3_front"
+        caption: The front of my custom Red-Eyes Black Dragon binder.
+        title: Red-Eyes Black Dragon Binder Front
+
+      - path: assets/img/yugioh/binder_3_rear.jpg
+        image_id: "binder_3_front"
+        caption: The front of my custom Red-Eyes Black Dragon binder.
+        title: Red-Eyes Black Dragon Binder Front
+
+      - path: assets/img/yugioh/binder_4_front.jpg
+        image_id: "binder_4_front"
+        caption: The front of my custom Blue-Eyes White Dragon binder made for UK Blue Eyes TCG.
+        title: Blue-Eyes White Dragon Binder Front
+
   - album: iMac Studio Display
     gallery: false
     items:
