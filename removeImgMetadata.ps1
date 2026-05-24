@@ -12,7 +12,7 @@ if (-not (Get-Command exiftool -ErrorAction SilentlyContinue)) {
     }
 
     # Install ExifTool via winget
-    winget install --id PhilHarvey.ExifTool -e --silent
+    winget install ExifTool -e --silent
 
     # Refresh PATH for current session (best effort)
     $env:Path += ";$env:LOCALAPPDATA\Microsoft\WindowsApps"

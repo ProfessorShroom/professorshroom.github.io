@@ -3,7 +3,7 @@ layout: project
 title: Custom Yu-Gi-Oh! Binders
 display_title: Custom Yu-Gi-Oh! Binders
 description: My custom Yu-Gi-Oh! binders that I've made for myself and others
-img: assets/img/yugioh/binder_4_front.jpg
+img: assets/img/yugioh/binder_4_front.png
 importance: 1
 category: Other Projects
 comments: true
@@ -21,7 +21,7 @@ Recently I made myself a custom Yu-Gi-Oh! binder which is below. I decided to se
         {% include images.liquid id="binder_4_front" %}
     </div>
 </div>
-<div>
+<div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include images.liquid id="binder_2_front" %}
     </div>
@@ -29,7 +29,6 @@ Recently I made myself a custom Yu-Gi-Oh! binder which is below. I decided to se
         {% include images.liquid id="binder_2_rear" %}
     </div>
 </div>
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include images.liquid id="binder_3_front" %}
