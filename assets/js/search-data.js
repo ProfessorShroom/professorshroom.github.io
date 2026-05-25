@@ -74,9 +74,9 @@ ninja.data = [{
             window.location.href = "/posts/2025/Windows-11-Local/";
           
         },
-      },{id: "post-retrofit-electric-folding-mirrors-renault-megane-mk3",
+      },{id: "post-retrofit-powerfold-mirrors-renault-megane-mk3",
         
-          title: "Retrofit Electric Folding Mirrors Renault Megane MK3",
+          title: "Retrofit Powerfold Mirrors Renault Megane MK3",
         
         description: "Guide on retrofitting electric folding mirrors to Renault Megane MK3",
         section: "Posts",
