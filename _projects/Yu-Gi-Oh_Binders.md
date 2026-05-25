@@ -6,6 +6,8 @@ description: My custom Yu-Gi-Oh! binders that I've made for myself and others
 img: assets/img/yugioh/binder_4_front.png
 importance: 1
 category: Other Projects
+related_projects: [yugioh]
+related_posts: [yugioh]
 comments: true
 images:
   lightbox2: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Retrofit Electric Folding Mirrors Renault Megane MK3
+title: Retrofit Powerfold Mirrors Renault Megane MK3
 date: 2019-12-19
 description: Guide on retrofitting electric folding mirrors to Renault Megane MK3
 tags: [renault, megane, mirrors, folding, retrofit, renaultsport, car]
