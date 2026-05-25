@@ -11,7 +11,9 @@ images:
   lightbox2: true
 ---
 
-Recently I made myself a custom Yu-Gi-Oh! binder which is below. I decided to see if anyone else would be interested in one as there are plenty of people selling a similar thing for Pokémon but none for Yu-Gi-Oh! So far I've only had a few commisions which I'll put below but I'm hoping to take some more in the future! If anyone is reading this and is interested in one please send me an email at [info@professorshroom.com](mailto:info@professorshroom.com).
+Recently I made myself a custom Yu-Gi-Oh! binder which is below. I decided to see if anyone else would be interested in one as there are plenty of people selling a similar thing for Pokémon but none for Yu-Gi-Oh! If anyone is reading this and is interested in one please send me an email at [info@professorshroom.com](mailto:info@professorshroom.com).
+
+I've had a few comissions so far which are below as well as making one for [UK Blue Eyes TCG](https://www.instagram.com/uk_blue_eyes/) which I think is my favourite so far. In my opinion using the same colour for the design as the binder like the blue Blue-Eyes and black Red-Eyes just looks the best.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
