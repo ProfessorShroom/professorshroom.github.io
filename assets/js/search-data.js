@@ -152,6 +152,13 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/iMac_Studio_Display/";
             },},{
+        id: 'social-discord',
+        title: 'Discord',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://discord.com/users/133267005619961856", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
@@ -164,6 +171,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://github.com/professorshroom", "_blank");
+        },
+      },{
+        id: 'social-instagram',
+        title: 'Instagram',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://instagram.com/professor_shroom", "_blank");
         },
       },{
         id: 'social-beer',
