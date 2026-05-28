@@ -283,41 +283,55 @@ images_list:
     gallery: true
     order: 6
     items:
-      - path: assets/img/yugioh/binder_1_front.png
-        image_id: "binder_1_front"
-        image_order: 1
-        caption: The front of my first custom Red-Eyes Black Dragon binder made for myself.
+      - path: assets/img/binders/red-eyes_binder_1.png
+        image_id: "red-eyes_binder_1"
+        image_order: 3
+        caption: The front of my first custom Red-Eyes Black Dragon binder, made for myself.
         title: Red-Eyes Black Dragon Binder Front
 
-      - path: assets/img/yugioh/binder_2_front.png
-        image_id: "binder_2_front"
-        image_order: 3
-        caption: The front of my custom Blue-Eyes White Dragon binder.
+      - path: assets/img/binders/blue-eyes_binder_1_front.png
+        image_id: "blue-eyes_binder_1_front"
+        image_order: 5
+        caption: The front of my first custom Blue-Eyes White Dragon binder.
         title: Blue-Eyes White Dragon Binder Front
 
-      - path: assets/img/yugioh/binder_2_rear.png
-        image_id: "binder_2_rear"
-        image_order: 4
-        caption: The rear of my custom Blue-Eyes White Dragon binder.
+      - path: assets/img/binders/blue-eyes_binder_1_rear.png
+        image_id: "blue-eyes_binder_1_rear"
+        image_order: 6
+        caption: The rear of my first custom Blue-Eyes White Dragon binder.
         title: Blue-Eyes White Dragon Binder Rear
 
-      - path: assets/img/yugioh/binder_3_front.png
-        image_id: "binder_3_front"
-        image_order: 5
-        caption: The front of my custom Red-Eyes Black Dragon binder.
+      - path: assets/img/binders/red-eyes_binder_2_front.png
+        image_id: "red-eyes_binder_2_front"
+        image_order: 7
+        caption: The front of my second custom Red-Eyes Black Dragon binder.
         title: Red-Eyes Black Dragon Binder Front
 
-      - path: assets/img/yugioh/binder_3_rear.png
-        image_id: "binder_3_rear"
-        image_order: 6
-        caption: The front of my custom Red-Eyes Black Dragon binder.
+      - path: assets/img/binders/red-eyes_binder_2_rear.png
+        image_id: "red-eyes_binder_2_rear"
+        image_order: 8
+        caption: The front of my second custom Red-Eyes Black Dragon binder.
         title: Red-Eyes Black Dragon Binder Front
 
-      - path: assets/img/yugioh/binder_4_front.png
-        image_id: "binder_4_front"
+      - path: assets/img/binders/blue-eyes_binder_2.png
+        image_id: "blue-eyes_binder_2"
         image_order: 2
-        caption: The front of my custom Blue-Eyes White Dragon binder made for UK Blue Eyes TCG.
+        caption: The front of my second custom Blue-Eyes White Dragon binder, made for UK Blue Eyes TCG.
         title: Blue-Eyes White Dragon Binder Front
+
+      - path: assets/img/binders/red-eyes_binder_3.png
+        image_id: "red-eyes_binder_3"
+        image_order: 1
+        exclude: true
+        caption: The front of my third custom Red-Eyes Black Dragon binder, made for myself.
+        title: Red-Eyes Black Dragon Binder Front
+
+      - path: assets/img/binders/professorshroom_binder_1.png
+        image_id: "professorshroom_binder_1"
+        image_order: 4
+        exclude: true
+        caption: The front of my custom ProfessorShroom binder, made for myself.
+        title: ProfessorShroom Binder Front
 
   - album: iMac Studio Display
     gallery: false

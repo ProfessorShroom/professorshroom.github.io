@@ -31,6 +31,13 @@ layout: default
 
         {% for image in item.items %}
           {% if image.exclude != true %}
+            {% if image.path == 'assets/img/placeholder.png' %}
+              {% continue %}
+            {% endif %}
+
+            {%- comment -%}
+              FIX: zero-pad sort key so string sort works correctly
+            {%- endcomment -%}
             {% assign has_visible = true %}
           {% endif %}
         {% endfor %}
@@ -97,28 +104,34 @@ layout: default
                   SAFE PATH VALIDATION (NEW)
                 {%- endcomment -%}
 
-                {% assign raw_path = image.path %}
-                {% assign path = raw_path %}
+                {% assign raw_path = image.path | default: '' | strip %}
 
+                {%- comment -%} STRICT VALIDATION {%- endcomment -%}
                 {% assign valid_extensions = 'jpg,jpeg,png,tiff,gif,webp' | split: ',' %}
+
                 {% assign is_valid = false %}
 
-                {% if raw_path and raw_path contains '.' %}
-                  {% assign ext = raw_path | split: '.' | last | downcase %}
+                {% if raw_path != '' and raw_path contains '.' %}
+                  {% assign filename_parts = raw_path | split: '/' %}
+                  {% assign filename = filename_parts | last %}
 
-                  {% for v in valid_extensions %}
-                    {% if v == ext %}
-                      {% assign is_valid = true %}
-                    {% endif %}
-                  {% endfor %}
+                  {% if filename contains '.' %}
+                    {% assign ext = filename | split: '.' | last | downcase %}
+
+                    {% for v in valid_extensions %}
+                      {% if v == ext %}
+                        {% assign is_valid = true %}
+                      {% endif %}
+                    {% endfor %}
+                  {% endif %}
                 {% endif %}
 
+                {%- comment -%} SKIP INVALID FILES COMPLETELY {%- endcomment -%}
                 {% unless is_valid %}
-                  {% assign path = 'assets/img/placeholder.png' %}
+                  {% continue %}
                 {% endunless %}
 
-                {% assign entry = padded | append: '|' | append: path | append: '|' | append: image.caption | append: '|' | append: image.title %}
-
+                {% assign entry = padded | append: '|' | append: raw_path | append: '|' | append: image.caption | append: '|' | append: image.title %}
                 {% assign ordered = ordered | push: entry %}
               {% endif %}
             {% endfor %}
@@ -141,9 +154,10 @@ layout: default
             <a href="/{{ path }}" data-lightbox="{{ album }}">
               <img
                 src="/{{ path }}"
-                class="img-fluid rounded z-depth-1"
+                class="img-fluid rounded image-shadow"
                 alt="{{ caption }}"
                 title="{{ title }}"
+                onerror="this.onerror=null;this.src='{{ '/assets/img/placeholder.png' | relative_url }}';"
               >
             </a>
 

@@ -20,7 +20,13 @@
   {% endfor %}
 {% endfor %}
 
-{%- comment -%} VALIDATE PATH {%- endcomment -%}
+{%- comment -%} FALLBACK IF IMAGE ENTRY NOT FOUND {%- endcomment -%}
+
+{% unless found %}
+  {% assign found = placeholder %}
+{% endunless %}
+
+{%- comment -%} VALIDATE PATH FORMAT {%- endcomment -%}
 
 {% assign valid_extensions = 'jpg,jpeg,png,tiff,gif,webp' | split: ',' %}
 {% assign is_valid = false %}
@@ -37,33 +43,48 @@
   {% endif %}
 {% endif %}
 
+{%- comment -%} FALLBACK IF INVALID EXTENSION/PATH {%- endcomment -%}
+
 {% unless is_valid %}
   {% assign found = placeholder %}
 {% endunless %}
+
+{%- comment -%} PREPARE PATHS {%- endcomment -%}
+
+{% assign image_path = found.path | relative_url %}
+{% assign placeholder_path = placeholder.path | relative_url %}
 
 {%- comment -%} RENDER {%- endcomment -%}
 
 {% if found %}
   {% if page.images and page.images.lightbox2 and include.no_lightbox != true and found.no_lightbox != true %}
     <a
-      href="{% if include.url %}{{ include.url }}{% else %}{{ found.path | relative_url }}{% endif %}"
+      href="{% if include.url %}{{ include.url }}{% else %}{{ image_path }}{% endif %}"
       data-lightbox="{{ page.url }}"
       {% if found.caption %}
         data-title="{{ found.caption }}"
       {% endif %}
     >
+      <img
+        src="{{ image_path }}"
+        alt="{{ found.title | default: found.caption | escape }}"
+        class="img-fluid rounded image-shadow"
+        onerror="this.onerror=null;this.src='{{ placeholder_path }}';"
+      >
+    </a>
+
+  {% else %}
+    <img
+      src="{{ image_path }}"
+      alt="{{ found.title | default: found.caption | escape }}"
+      class="img-fluid rounded image-shadow"
+      onerror="this.onerror=null;this.src='{{ placeholder_path }}';"
+    >
   {% endif %}
 
-  {%
-    include figure.liquid
-    path=found.path
-    caption=found.caption
-    title=found.title
-    class="img-fluid rounded z-depth-1"
-    no_lightbox=found.no_lightbox
-  %}
-
-  {% if page.images and page.images.lightbox2 and include.no_lightbox != true and found.no_lightbox != true %}
-    </a>
+  {% if found.caption %}
+    <figcaption class="caption">
+      {{ found.caption }}
+    </figcaption>
   {% endif %}
 {% endif %}
