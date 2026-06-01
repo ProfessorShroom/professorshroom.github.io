@@ -1,11 +1,15 @@
 
 #### Latest Update
 
+**Update 6.6.6.2**
+
+- Added /norestart to LibreOffice installer.
+
+#### Older Updates
+
 **Update 6.6.6.1**
 
 - Moved the progress bar down sligtly as it was slightly misaligned with the buttons.
-
-#### Older Updates
 
 **Update 6.6.6.0**
 
