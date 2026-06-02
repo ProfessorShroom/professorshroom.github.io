@@ -247,19 +247,9 @@ images_list:
         caption: The engine block from the RS 225 after blowing up.
         title: Renault Megane RS 225 Engine Block with Hole
 
-  - album: My Yu-Gi-Oh! Collection
-    gallery: false
-    order: 4
-    items:
-      - path: assets/img/yugioh/nkc1.png
-        image_id: "nkc1-en002"
-        image_order: 1
-        caption: The Nike collaboration card NKC1-EN002 that made me want to complete the Red-Eyes collection.
-        title: Red-Eyes Black Dragon Nike Promo NKC1-EN002
-
   - album: My Software
     gallery: true
-    order: 5
+    order: 4
     items:
       - path: assets/img/installer/installer.png
         image_id: "plutopoint_1"
@@ -281,7 +271,7 @@ images_list:
 
   - album: Custom Yu-Gi-Oh! Binders
     gallery: true
-    order: 6
+    order: 5
     items:
       - path: assets/img/binders/red-eyes_binder_1.png
         image_id: "red-eyes_binder_1"
@@ -331,6 +321,23 @@ images_list:
         exclude: true
         caption: The front of my custom ProfessorShroom binder, made for myself.
         title: ProfessorShroom Binder Front
+
+  - album: My Yu-Gi-Oh! Collection
+    gallery: true
+    order: 6
+    items:
+      - path: assets/img/yugioh/nkc1-en002.png
+        image_id: "nkc1-en002"
+        image_order: 1
+        exclude: true
+        caption: The Nike collaboration card NKC1-EN002 that made me want to complete the Red-Eyes collection.
+        title: Red-Eyes Black Dragon Nike Promo NKC1-EN002
+
+      - path: assets/img/yugioh/nsc1-jp001.jpg
+        image_id: "nsc1-jp001"
+        image_order: 2
+        caption: The Cup Noodles collaboration card NSC1-JP001.
+        title: Instant Fusion Cup Noodles Promo
 
   - album: iMac Studio Display
     gallery: false

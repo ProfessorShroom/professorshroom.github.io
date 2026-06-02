@@ -19,10 +19,10 @@ I've had a few comissions so far which are below as well as making one for [UK B
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include images.liquid id="red-eyes_binder_3" %}
+        {% include images.liquid id="blue-eyes_binder_2" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include images.liquid id="blue-eyes_binder_2" %}
+        {% include images.liquid id="red-eyes_binder_3" %}
     </div>
 </div>
 <div class="row">
