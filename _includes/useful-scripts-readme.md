@@ -47,7 +47,7 @@ Change ```EnvironmentFile=/home/user/nextcloud.env``` to the location of your en
 
 - [nextcloud.env](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Nextcloud/nextcloud.env) - Environment file containing your credentials <br>
 Change ```REMOTE="https://username:password@nextcloud.domain.com"``` to suit your username, password (app password if using MFA), and Nextcloud domain<br>
-I'd suggest locking it by running ```sudo chmod 600``` and ``` sudo chown root:root``` on the file after entering your credentials<br>
+I'd suggest locking it by running ```sudo chmod 600``` and ```sudo chown root:root``` on the file after entering your credentials<br>
 
 
 <h3>Windows</h3>
