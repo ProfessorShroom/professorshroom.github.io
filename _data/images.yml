@@ -322,7 +322,6 @@ images_list:
       - path: assets/img/binders/red-eyes_binder_3.png
         image_id: "red-eyes_binder_3"
         image_order: 1
-        exclude: true
         caption: The front of my third custom Red-Eyes Black Dragon binder, made for myself.
         title: Red-Eyes Black Dragon Binder Front
 
