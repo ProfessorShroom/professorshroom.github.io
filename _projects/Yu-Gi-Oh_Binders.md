@@ -30,7 +30,7 @@ I've had a few comissions so far which are below as well as making one for [UK B
         {% include images.liquid id="red-eyes_binder_1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include images.liquid id="professorshroom_binder_1" %}
+        {% include images.liquid id="dark_magician_girl_binder_1" %}
     </div>
 </div>
 <div class="row">

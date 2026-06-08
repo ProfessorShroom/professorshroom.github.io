@@ -275,7 +275,7 @@ images_list:
     items:
       - path: assets/img/binders/red-eyes_binder_1.png
         image_id: "red-eyes_binder_1"
-        image_order: 3
+        image_order: 4
         caption: The front of my first custom Red-Eyes Black Dragon binder, made for myself.
         title: Red-Eyes Black Dragon Binder Front
 
@@ -315,12 +315,11 @@ images_list:
         caption: The front of my third custom Red-Eyes Black Dragon binder, made for myself.
         title: Red-Eyes Black Dragon Binder Front
 
-      - path: assets/img/binders/professorshroom_binder_1.png
-        image_id: "professorshroom_binder_1"
-        image_order: 4
-        exclude: true
-        caption: The front of my custom ProfessorShroom binder, made for myself.
-        title: ProfessorShroom Binder Front
+      - path: assets/img/binders/dark_magician_girl_binder_1.png
+        image_id: "dark_magician_girl_binder_1"
+        image_order: 3
+        caption: The front of my custom Dark Magician Girl binder.
+        title: Dark Magician Girl Binder Front
 
   - album: My Yu-Gi-Oh! Collection
     gallery: true
