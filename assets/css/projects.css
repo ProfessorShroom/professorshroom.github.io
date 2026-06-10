@@ -229,12 +229,7 @@
 
 .buymeabeer-project .caption {
   color: inherit;
-  text-decoration-line: underline;
   transition: text-decoration-color 0.2s ease;
-}
-
-.post .buymeabeer-project a:hover .caption {
-  text-decoration-color: var(--global-theme-color);
 }
 
 /* =========================

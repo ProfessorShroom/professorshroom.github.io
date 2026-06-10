@@ -1,11 +1,25 @@
+.buymeabeer-home a,
+.buymeabeer-project a,
+.buymeabeer-post a {
+  text-decoration: none !important;
+}
+
 .buymeabeer-home img,
 .buymeabeer-project img,
 .buymeabeer-post img {
   height: 60px !important;
   width: auto;
-  display: block;
+  display: inline-block;
+  transition: 0.2s ease-in-out;
   box-shadow: none !important;
   filter: none !important;
+}
+
+.buymeabeer-home img:hover,
+.buymeabeer-project img:hover,
+.buymeabeer-post img:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
 }
 
 .wuphf,
