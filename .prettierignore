@@ -16,3 +16,4 @@ _includes/northpoint-readme.md
 _includes/cardmarket-price-updater-readme.md
 _includes/useful-scripts-readme.md
 .github/workflows/*.yml
+assets/img/favicons/site.webmanifest
