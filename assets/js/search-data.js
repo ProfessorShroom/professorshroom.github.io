@@ -126,6 +126,11 @@ ninja.data = [{
           description: "Natural pet treats and enrichment",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Plutos_Pantry/";
+            },},{id: "projects-professorshroombinders-com",
+          title: 'ProfessorShroomBinders.com',
+          description: "Custom made Yu-Gi-Oh! card binders",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ProfessorShroom_Binders/";
             },},{id: "projects-renault-megane-rs-250-r-s-400",
           title: 'Renault Megane RS 250 (R.S.400)',
           description: "Modfied Renault Megane RS 250 build",
@@ -138,7 +143,7 @@ ninja.data = [{
               window.location.href = "/projects/Useful_Scripts/";
             },},{id: "projects-wuphf-co-uk",
           title: 'WUPHF.co.uk',
-          description: "The Office fan site",
+          description: "A WUPHF fan site as seen in The Office",
           section: "Projects",handler: () => {
               window.location.href = "/projects/WUPHF/";
             },},{id: "projects-custom-yu-gi-oh-binders",
