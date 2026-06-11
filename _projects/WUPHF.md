@@ -2,7 +2,7 @@
 layout: project
 title: WUPHF.co.uk
 display_title: WUPHF .co.uk
-description: The Office fan site
+description: A WUPHF fan site as seen in The Office
 img: assets/img/wuphf/wuphf.png
 importance: 2
 category: Web Projects

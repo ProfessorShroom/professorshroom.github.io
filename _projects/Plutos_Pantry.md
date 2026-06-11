@@ -4,7 +4,7 @@ title: PlutosPantry.co.uk
 display_title: PlutosPantry .co.uk
 description: Natural pet treats and enrichment
 img: assets/img/pluto/plutospantry.png
-importance: 1
+importance: 3
 category: Web Projects
 related_projects: [dog, dogs, cats, cat, pet, pets]
 related_posts: [dog, dogs, cats, cat, pet, pets]

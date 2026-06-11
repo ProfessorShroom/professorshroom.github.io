@@ -432,3 +432,8 @@ images_list:
         image_id: "wuphf"
         caption: WUPHF.co.uk
         title: WUPHF.co.uk
+
+      - path: assets/img/yugioh/professorshroombinders.png
+        image_id: "professorshroombinders"
+        caption: ProfessorShroomBinders.com
+        title: ProfessorShroomBinders.com
