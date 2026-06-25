@@ -1,11 +1,18 @@
 
 #### Latest Update
 
+**Update 6.7.0.0 - The Sound/Class Update**
+
+- Moved most classes to their own files for easier editing and maintenance.
+- Reworked the sound system to allow for easier adding of new sounds and to allow for different sounds to be played on different events.
+- Moved from wav files to NAudio for smaller file sizes and better sound quality.
+- Reworked the way the installer checks for holidays and birthdays to allow for easier adding of new holidays and birthdays.
+
+#### Older Updates
+
 **Update 6.6.6.2**
 
 - Added /norestart to LibreOffice installer.
-
-#### Older Updates
 
 **Update 6.6.6.1**
 
@@ -72,9 +79,8 @@
 
 - Added gradient support to the rounded boxes.
 
-**Update 6.6.0.0**
+**Update 6.6.0.0 - The Gradient Update**
 
-- The Gradient Update.
 - Added gradient background.
 - Changed RichTextBox to a label within a panel to allow transparency.
 - Made all objects transparent.
