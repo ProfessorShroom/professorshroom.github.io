@@ -1,14 +1,25 @@
 
 #### Latest Update
 
+**Update 6.7.1.1**
+
+- Made the powercfg commands silent.
+
+#### Older Updates
+
+**Update 6.7.1.0**
+
+- Added Custura.
+- Added an auto-update feature to the launcher so it will update itself when a new version is released.
+- Moved working directory from the root of C:/ to %localappdata%/ComputerRepairCentre.
+- Moved OEM information to C:\ProgramData\Computer Repair Centre\OEM\.
+
 **Update 6.7.0.0 - The Sound/Class Update**
 
 - Moved most classes to their own files for easier editing and maintenance.
 - Reworked the sound system to allow for easier adding of new sounds and to allow for different sounds to be played on different events.
 - Moved from wav files to NAudio for smaller file sizes and better sound quality.
 - Reworked the way the installer checks for holidays and birthdays to allow for easier adding of new holidays and birthdays.
-
-#### Older Updates
 
 **Update 6.6.6.2**
 
