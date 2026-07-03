@@ -1,11 +1,15 @@
 
 #### Latest Update
 
+**Update 6.7.1.2**
+
+- Renamed Launcher exe.
+
+#### Older Updates
+
 **Update 6.7.1.1**
 
 - Made the powercfg commands silent.
-
-#### Older Updates
 
 **Update 6.7.1.0**
 
