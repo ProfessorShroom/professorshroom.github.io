@@ -1,11 +1,15 @@
 
 #### Latest Update
 
+**Update 6.7.2.0**
+
+- When refurb is selected, the power button function will be set to shutdown rather than sleep.
+
+#### Older Updates
+
 **Update 6.7.1.2**
 
 - Renamed Launcher exe.
-
-#### Older Updates
 
 **Update 6.7.1.1**
 
