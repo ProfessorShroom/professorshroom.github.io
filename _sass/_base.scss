@@ -898,7 +898,7 @@ figure.highlight {
 
 pre {
   color: var(--global-theme-color);
-  background-color: var(--global-code-bg-color);
+  background-color: rgba(255, 255, 255, 0.3) !important;
   border-radius: 6px;
   padding: 6px 12px;
 
