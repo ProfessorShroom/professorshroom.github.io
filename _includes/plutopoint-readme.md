@@ -1,11 +1,15 @@
 
 #### Latest Update
 
+**Update 6.7.3.0**
+
+- Removed HP Hotkey Support as its no longer used.
+
+#### Older Updates
+
 **Update 6.7.2.0**
 
 - When refurb is selected, the power button function will be set to shutdown rather than sleep.
-
-#### Older Updates
 
 **Update 6.7.1.2**
 
