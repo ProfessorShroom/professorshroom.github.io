@@ -1,9 +1,3 @@
 /* =========================
    USE THIS FILE TO OVERRIDE ANYTHING ALONG WITH !important
 ========================= */
-
-.highlight pre,
-.highlighter-rouge .highlight pre,
-figure.highlight pre {
-  background: rgba(255, 255, 255, 0.3) !important;
-}
