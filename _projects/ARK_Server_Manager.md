@@ -22,4 +22,4 @@ Below is the repo and information on how to set it up.
 
 [PlutoPoint ASE Server Manager Repository](https://github.com/ProfessorShroom/PlutoPoint-ASE-Server-Manager)
 
-{% include PlutoPoint_ASE_Server_Manager.md %}
+{% include plutopoint-ase-server-manager.md %}
