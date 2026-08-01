@@ -37,7 +37,7 @@ mkdir -p ./ARKServerManager/backup
 
    ```yaml
    services:
-     plutopoint-ase-manager:
+     plutopoint-ase-server-manager:
        image: professorshroom/plutopoint-ase-server-manager:latest
        container_name: plutopoint-ase-server-manager
        restart: unless-stopped
@@ -45,7 +45,7 @@ mkdir -p ./ARKServerManager/backup
          - "3000:3000" # WebUI Port
          - "7777:7777/udp" # ARK Game Port
          - "27015:27015/udp" # Steam Query Port
-         - "27020:27020/udp" # RCON Port
+         - "27020:27020/udp" # RCON Port (optional, if you want to use RCON)
        volumes:
          - ./ark_data:/data # Change this to your desired data directory
          - ./backup:/backup # Change this to your desired backup location
