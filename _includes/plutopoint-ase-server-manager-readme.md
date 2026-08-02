@@ -38,7 +38,9 @@ mkdir -p ./ARKServerManager/backup
    ```yaml
    services:
      plutopoint-ase-server-manager:
-       image: professorshroom/plutopoint-ase-server-manager:latest
+       image: professorshroom/plutopoint-ase-server-manager:latest # Recommended to use the latest tag for automatic updates
+       #image: professorshroom/plutopoint-ase-server-manager:stable # Use this tag if you want to use the stable version (only updated when a new stable version is released)
+       #image: professorshroom/plutopoint-ase-server-manager:beta # Use this tag if you want to use the beta version (only updated when a new beta version is released) Not recommended for production use, as beta versions may contain bugs or unfinished features.
        container_name: plutopoint-ase-server-manager
        restart: unless-stopped
        ports:
