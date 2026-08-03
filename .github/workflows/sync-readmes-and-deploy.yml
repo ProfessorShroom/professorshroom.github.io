@@ -55,12 +55,6 @@ jobs:
             | iconv -f UTF-8 -t UTF-8 -c \
             > _includes/useful-scripts-readme.md
 
-      - name: Sync PlutoPoint ASE Server Manager README
-        run: |
-          curl -sL https://raw.githubusercontent.com/ProfessorShroom/PlutoPoint-ASE-Server-Manager/main/README.md \
-            | iconv -f UTF-8 -t UTF-8 -c \
-            > _includes/plutopoint-ase-server-manager-readme.md
-
       # ---------------- Detect + Commit ----------------
       - name: Detect changes
         id: changes
@@ -91,8 +85,6 @@ jobs:
                 touch _projects/NorthPoint_Installer.md ;;
               *cardmarket-price-updater-readme.md)
                 touch _projects/Cardmarket_Price_Updater.md ;;
-              *plutopoint-ase-server-manager-readme.md)
-                touch _projects/PlutoPoint_ASE_Server_Manager.md ;;
             esac
           done
 
