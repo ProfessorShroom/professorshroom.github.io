@@ -12,37 +12,28 @@ on:
 
 jobs:
   check:
-    # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to push auto-formatted commits back to the repo
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref }} # Ensures it checks out the correct branch on PRs
+
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: Install Prettier 💾
         run: npm install --save-dev --save-exact prettier @shopify/prettier-plugin-liquid
-      - name: Prettier Check 🔎
-        id: prettier
-        run: npx prettier . --check
-      - name: Create diff 📝
-        # https://docs.github.com/en/actions/learn-github-actions/expressions#failure
-        if: ${{ failure() }}
-        run: |
-          npx prettier . --write
-          git diff -- . ':(exclude)package-lock.json' ':(exclude)package.json' > diff.txt
-          npm install -g diff2html-cli
-          diff2html -i file -s side -F diff.html -- diff.txt
-      - name: Upload html diff ⬆️
-        id: artifact-upload
-        if: ${{ failure() && steps.prettier.conclusion == 'failure' }}
-        uses: actions/upload-artifact@v4
+
+      - name: Run Prettier (Write) ✍️
+        run: npx prettier . --write
+
+      - name: Auto-commit formatted files 🚀
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          name: HTML Diff
-          path: diff.html
-          retention-days: 7
-      - name: Dispatch information to repository 🗣️
-        if: ${{ failure() && steps.prettier.conclusion == 'failure' && github.event_name == 'pull_request' }}
-        uses: peter-evans/repository-dispatch@v2
-        with:
-          event-type: prettier-failed-on-pr
-          client-payload: '{"pr_number": "${{ github.event.number }}", "artifact_url": "${{ steps.artifact-upload.outputs.artifact-url }}", "run_id": "${{ github.run_id }}"}'
+          commit_message: "style: auto-format code with Prettier"
+          branch: ${{ github.head_ref || github.ref }}
