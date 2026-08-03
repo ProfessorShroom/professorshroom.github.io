@@ -96,12 +96,7 @@ ninja.data = [{
             window.location.href = "/posts/2018/Update-Megane-3-Radio/";
           
         },
-      },{id: "projects-plutopoint-ark-survival-evolved-server-manager",
-          title: 'PlutoPoint ARK Survival Evolved Server Manager',
-          description: "Web Based Server Manager for ARK Survival Evolved",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ARK_Server_Manager/";
-            },},{id: "projects-cardmarket-price-updater",
+      },{id: "projects-cardmarket-price-updater",
           title: 'Cardmarket Price Updater',
           description: "Automatically get prices for MTG, Pokemon and Yu-Gi-Oh! cards",
           section: "Projects",handler: () => {
