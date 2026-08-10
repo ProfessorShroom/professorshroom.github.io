@@ -19,25 +19,25 @@ Open command prompt or terminal as an adminstrator and run the following command
 
 Mount the System Reserved Partition as Y:
 
-```
+```bat
 mountvol y: /s
 ```
 
 Change to the Y: partition
 
-```
+```bat
 Y:
 ```
 
 Change the current directory to the fonts directory
 
-```
+```bat
 cd EFI\Microsoft\Boot\Fonts
 ```
 
 Then delete all of the files in that directory
 
-```
+```bat
 del *.*
 ```
 
