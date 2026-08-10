@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/gallery/";
           },
-        },{id: "post-retrofit-sunvisor-lights-to-renault-megane-mk3",
+        },{id: "post-amdgpu-issues-on-kernel-7-1-6-and-7-1-7",
+        
+          title: "AMDGPU Issues on Kernel 7.1.6 and 7.1.7",
+        
+        description: "Recent 7.1.6 and 7.1.7 kernel releases caused amdgpu driver crashes. Here is how to roll back to 7.1.5 and pin it.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/Fedora-Kernel-AMDGPU/";
+          
+        },
+      },{id: "post-retrofit-sunvisor-lights-to-renault-megane-mk3",
         
           title: "Retrofit Sunvisor Lights to Renault Megane MK3",
         
