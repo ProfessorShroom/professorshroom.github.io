@@ -13,7 +13,7 @@ Since the introduction of Windows 11, Microsoft haave forced users to create or 
 
 You used to be able open command prompt by using Shift+F10 (Shift+Fn+F10 on some laptops) and type the following command.
 
-```
+```bat
 taskkill /F /IM oobenetworkconnectionflow.exe
 ```
 
@@ -21,7 +21,7 @@ Since 24H2 this no longer works, strangely I've found it works very occasionally
 
 The new method is as follows, don't connect to any wireless network, if you have ethernet then just unplug the cable. When you get to the stage of being asked for a Microsoft account, open command, press Shift+F10 (Shift+Fn+F10 on some laptops) and type the following
 
-```
+```bat
 start ms-cxh:localonly
 ```
 
