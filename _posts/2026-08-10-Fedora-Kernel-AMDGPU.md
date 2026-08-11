@@ -12,7 +12,6 @@ comments: true
 In recent Fedora kernel updates, specifically 7.1.6 and 7.1.7, regressions in the amdgpu driver broke display output and caused crashes for a lot of AMD GPU users, along with weird graphical artifacts. The best thing to do for now is boot into kernel 7.1.5, remove the broken builds, and temporarily exclude them in DNF.
 
 First, reboot your system, select 7.1.5 from the GRUB boot menu, and make sure you're running it:
-Bash
 
 ```bash
 uname -r
