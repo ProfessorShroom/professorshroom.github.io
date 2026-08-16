@@ -30,11 +30,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/gallery/";
           },
-        },{id: "post-amdgpu-issues-on-kernel-7-1-6-and-7-1-7",
+        },{id: "post-amdgpu-issues-on-kernel-7-1-6-7-1-7-and-7-1-8",
         
-          title: "AMDGPU Issues on Kernel 7.1.6 and 7.1.7",
+          title: "AMDGPU Issues on Kernel 7.1.6, 7.1.7, and 7.1.8",
         
-        description: "Recent 7.1.6 and 7.1.7 kernel releases caused amdgpu driver crashes. Here is how to roll back to 7.1.5 and pin it.",
+        description: "Recent 7.1.6, 7.1.7 and 7.1.8 kernel releases caused amdgpu driver issues. Here is how to roll back to 7.1.5 and pin it.",
         section: "Posts",
         handler: () => {
           
