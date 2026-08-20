@@ -1,11 +1,20 @@
 
 #### Latest Update
 
+**Update 6.7.4.1**
+
+- Added explorer.exe to taskbar pinning.
+
+#### Older Updates
+
+**Update 6.7.4.0**
+
+- Added taskbar pinning feature that applies on first reboot after running the installer.
+- Removed old icon files no longer being used.
+
 **Update 6.7.3.0**
 
 - Removed HP Hotkey Support as its no longer used.
-
-#### Older Updates
 
 **Update 6.7.2.0**
 
