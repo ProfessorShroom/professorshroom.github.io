@@ -1,11 +1,15 @@
 
 #### Latest Update
 
+**Update 6.7.4.2**
+
+- If LibreOffice is installed Desktop icons will be created for Writer and Calc.
+
+#### Older Updates
+
 **Update 6.7.4.1**
 
 - Added explorer.exe to taskbar pinning.
-
-#### Older Updates
 
 **Update 6.7.4.0**
 
