@@ -1,11 +1,22 @@
 
 #### Latest Update
 
+**Update 6.8.0.0 - The Class Update 2**
+
+- Taskbar layout applies cleanly on next reboot/sign-in with no visible console window, and cleans up after itself automatically.
+- Added download retry (up to 3 attempts with backoff) for app installers, so a flaky connection no longer fails the whole install outright.
+- Added an end-of-run summary showing what succeeded, what was skipped, and what failed.
+- Added persistent install logging to disk (%LocalAppData%\ComputerRepairCentre\Logs) so a completed run can be reviewed after the fact.
+- Centralised Computer Repair Centre OEM info into a single shared method — shop logo and manufacturer name no longer duplicated per location.
+- Fixed AnyDesk detection incorrectly reporting as not installed, causing unnecessary reinstalls.
+- Removed a redundant LibreOffice version check that ran on startup and blocked the UI.
+- Moved PasswordHashes, LocationHashes, DownloadUrls, FileDeletionHelper, and PasswordForm out of the main form file into their own classes under Models/ and UI/.
+
+#### Older Updates
+
 **Update 6.7.4.3**
 
 - Taskbar XML file is removed after first reboot to prevent constant app pinning.
-
-#### Older Updates
 
 **Update 6.7.4.2**
 
@@ -13,11 +24,11 @@
 
 **Update 6.7.4.1**
 
-- Added explorer.exe to taskbar pinning.
+- Added File Explorer to taskbar pinning.
 
 **Update 6.7.4.0**
 
-- Added taskbar pinning feature that applies on first reboot after running the installer.
+- Added "Pin apps to taskbar" option — dynamically pins Chrome, Firefox, Thunderbird, and LibreOffice Writer/Calc based on what was actually installed, replacing the default Windows/Edge pins.
 - Removed old icon files no longer being used.
 
 **Update 6.7.3.0**
