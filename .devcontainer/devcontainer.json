@@ -3,7 +3,7 @@
 {
   "name": "Jekyll",
   "image": "mcr.microsoft.com/devcontainers/jekyll",
-
+  "runArgs": ["--security-opt", "label=disable"]
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
@@ -11,7 +11,7 @@
     },
     "ghcr.io/devcontainers-extra/features/prettier:1": {}
   },
-
+  "postAttachCommand": "chmod +x ./bin/entry_point.sh && ./bin/entry_point.sh",
   // Optionally: run jekyll serve automatically on container entering using the Docker entrypoint
   "postAttachCommand": "./bin/entry_point.sh",
 
