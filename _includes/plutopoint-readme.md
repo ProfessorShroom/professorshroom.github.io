@@ -1,6 +1,15 @@
 
 #### Latest Update
 
+**Update 6.9.0.0 - The Winget Update**
+
+- Added winget as the first attempt for Chrome, Firefox, Thunderbird, LibreOffice, AnyDesk, Discord, Steam, VLC, and Bing Wallpaper — falls back automatically to the existing direct-download method if winget is unavailable or the install can't be verified.
+- Nvidia App and BitDefender are unaffected and continue to use their existing install methods only.
+- winget installs are independently verified afterward via winget list rather than trusting its exit code, since winget's exit codes are unreliable.
+- All required unattended-install flags are set (--accept-package-agreements, --accept-source-agreements, --disable-interactivity), so first-run license/source prompts can't hang the install on a fresh machine.
+
+#### Older Updates
+
 **Update 6.8.0.0 - The Class Update 2**
 
 - Taskbar layout applies cleanly on next reboot/sign-in with no visible console window, and cleans up after itself automatically.
@@ -11,8 +20,6 @@
 - Fixed AnyDesk detection incorrectly reporting as not installed, causing unnecessary reinstalls.
 - Removed a redundant LibreOffice version check that ran on startup and blocked the UI.
 - Moved PasswordHashes, LocationHashes, DownloadUrls, FileDeletionHelper, and PasswordForm out of the main form file into their own classes under Models/ and UI/.
-
-#### Older Updates
 
 **Update 6.7.4.3**
 
