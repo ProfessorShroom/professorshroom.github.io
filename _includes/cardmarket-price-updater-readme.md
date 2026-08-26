@@ -1,12 +1,21 @@
 
 #### Latest Update
 
+**Update 2.0.0.0**
+
+- Rewrote the GUI in Avalonia instead of WinForms, so it now runs on Linux (Ubuntu/Fedora, packaged as a Flatpak) as well as Windows, from one shared codebase.
+- Added USD ($) as a third currency alongside GBP and EUR.
+- Downloads now retry automatically with backoff instead of failing the run on one bad request.
+- Backups are now timestamped and kept in a `Backups` folder with automatic pruning, instead of a single overwritten `.bak` file.
+- Added a small JSON config file for default currency/price type and retry/backup settings, created automatically on first run.
+- Replaced AutoUpdater.NET.Official (which required WinForms and blocked a Linux build entirely) with a small built-in update checker on Windows - it now shows a "new version available" link instead of silently self-updating. Linux gets updates via `flatpak update` instead.
+
+#### Older Updates
+
 **Update 1.4.0.0**
 
 - Changed quiet mode to actually hide the CLI completely.
 - Added auto update feature.
-
-#### Older Updates
 
 **Update 1.3.0.0**
 
