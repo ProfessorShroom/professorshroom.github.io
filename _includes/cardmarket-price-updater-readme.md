@@ -1,6 +1,12 @@
 
 #### Latest Update
 
+**Update 2.0.1.0**
+
+- Flathub compliance fixes for the Flatpak packaging (metadata/manifest cleanup) - no functional changes to the app itself.
+
+#### Older Updates
+
 **Update 2.0.0.0**
 
 - Rewrote the GUI in Avalonia instead of WinForms, so it now runs on Linux (Ubuntu/Fedora, packaged as a Flatpak) as well as Windows, from one shared codebase.
@@ -9,8 +15,6 @@
 - Backups are now timestamped and kept in a `Backups` folder with automatic pruning, instead of a single overwritten `.bak` file.
 - Added a small JSON config file for default currency/price type and retry/backup settings, created automatically on first run.
 - Replaced AutoUpdater.NET.Official (which required WinForms and blocked a Linux build entirely) with a small built-in update checker on Windows - it now shows a "new version available" link instead of silently self-updating. Linux gets updates via `flatpak update` instead.
-
-#### Older Updates
 
 **Update 1.4.0.0**
 
