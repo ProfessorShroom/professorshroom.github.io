@@ -1,11 +1,24 @@
 
 #### Latest Update
 
+**Update 6.9.0.4**
+
+- Removed LibreOffice curent version get, seems LibreOffice have changed download requirements, so will stick to our cached version until I figure out a fix.
+
+#### Older Updates
+
+**Update 6.9.0.3**
+
+- Fixed Downloads.json error.
+
+**Update 6.9.0.2**
+
+- Fixed LibreOffice 500 server error during download.
+- Added Beta launcher for future testing.
+
 **Update 6.9.0.1**
 
 - Fixed hang caused by winget first-time run.
-
-#### Older Updates
 
 **Update 6.9.0.0 - The Winget Update**
 
