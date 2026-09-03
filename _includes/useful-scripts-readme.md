@@ -25,6 +25,24 @@ Sonarr
 "
 ```
 
+<h3>Fedora</h3>
+
+- [audioSwitch.sh](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Linux/audioSwitch.sh) - Toggles the default PulseAudio/PipeWire audio sink between two configured output devices (e.g., Speakers and Behringer UMC204HD interface). Dynamically transfers all active playing audio streams to the newly selected output without interrupting playback and triggers a desktop notification[cite: 1]. <br>
+  Find your audio sink names by running `pactl list short sinks` in your terminal, then update the following variables in the script:
+
+```bash
+SINK1="your_first_sink_name"
+SINK2="your_second_sink_name"
+```
+
+You can also customize the display names shown in notifications:
+```bash
+NAME1="Speakers"
+NAME2="Behringer UMC204HD"
+```
+
+- [updateSystem.sh](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Linux/updateSystem.sh) - Automates system package maintenance by upgrading Fedora system packages (`dnf upgrade`), removing orphaned dependencies (`dnf autoremove`), and updating Flatpak applications (`flatpak update`). Includes a 30-second timed pause upon completion before automatically closing the terminal window.
+
 <h3>MergerFS</h3>
 
 - [mergerFSBalance.sh](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/MergerFS/mergerFSBalance.sh) - Balances my MergerFS volume, but excludes a directory on one of the drives I do not want balanced:
@@ -108,6 +126,23 @@ sudo chown root:root
 ```
 
 on the file after entering your credentials.<br>
+
+<h3>Virtualization</h3>
+
+- [setupBridgeNetwork.sh](https://github.com/ProfessorShroom/ProfessorShroom-Scripts/blob/main/Linux/setupBridgeNetwork.sh) - Creates a NetworkManager bridge (`br0`) for `virt-manager`/`libvirt` VMs, attaches your physical network interface to it, and clones the original MAC address to prevent connection issues. <br>
+  Run the script with `sudo` privileges:
+
+```bash
+sudo ./setup-bridge.sh
+```
+
+You will be prompted to select your network interface (e.g., enp3s0).
+
+To change the default bridge name, modify the following variable in the script:
+
+```bash
+BRIDGE_NAME="br0"
+```
 
 <h3>Windows</h3>
 
