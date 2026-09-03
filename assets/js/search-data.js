@@ -193,7 +193,7 @@ ninja.data = [{
         title: 'Instagram',
         section: 'Socials',
         handler: () => {
-          window.open("https://instagram.com/professor_shroom", "_blank");
+          window.open("https://instagram.com/professorshroombinders", "_blank");
         },
       },{
         id: 'social-beer',
