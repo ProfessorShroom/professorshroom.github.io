@@ -1,24 +1,22 @@
 
 #### Latest Update
 
-**Update 6.9.0.4**
+**Update 7.0.0.0 - The .NET 8 / Avalonia Update**
 
-- Removed LibreOffice curent version get, seems LibreOffice have changed download requirements, so will stick to our cached version until I figure out a fix.
+- Migrated the whole installer from .NET Framework 4.8 to .NET 8.
+- Dropped support for Windows 7, 8, and 8.1 — .NET 8 doesn't run on them at all.
+- Rewritten the entire GUI from WinForms to Avalonia.
+- Added a dropdown to manually override which shop's OEM info gets installed, separate from the automatic IP-based location check — the automatic check still decides whether the password prompt is needed, the dropdown only affects which shop's info gets written.
+- Added a label next to Location that tells you the OS the installer is being run on.
+- The build date will now automatically be set whenever the installer is built.
 
 #### Older Updates
-
-**Update 6.9.0.3**
-
-- Fixed Downloads.json error.
-
-**Update 6.9.0.2**
-
-- Fixed LibreOffice 500 server error during download.
-- Added Beta launcher for future testing.
 
 **Update 6.9.0.1**
 
 - Fixed hang caused by winget first-time run.
+
+#### Older Updates
 
 **Update 6.9.0.0 - The Winget Update**
 
