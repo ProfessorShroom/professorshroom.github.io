@@ -245,3 +245,17 @@ article a:hover,
   color: var(--global-theme-color);
   text-decoration: underline;
 }
+
+/* =========================
+   GOOGLE PLAY
+========================= */
+
+.google-play-badge {
+  display: inline-block;
+  width: 200px;
+  height: auto;
+}
+
+.badge-wrap {
+  text-align: center;
+}
