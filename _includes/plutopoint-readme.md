@@ -1,6 +1,14 @@
 
 #### Latest Update
 
+**Update 7.0.1.0**
+
+- Added a seperate Beta launcher with auto update just like the release launcher for easier maintenance.
+- Added Beta branding to all beta builds to make them easier to identify.
+- Removed Firefox's new auto-start with Windows feature as that's just annoying.
+
+#### Older Updates
+
 **Update 7.0.0.0 - The .NET 8 / Avalonia Update**
 
 - Migrated the whole installer from .NET Framework 4.8 to .NET 8.
@@ -9,8 +17,6 @@
 - Added a dropdown to manually override which shop's OEM info gets installed, separate from the automatic IP-based location check — the automatic check still decides whether the password prompt is needed, the dropdown only affects which shop's info gets written.
 - Added a label next to Location that tells you the OS the installer is being run on.
 - The build date will now automatically be set whenever the installer is built.
-
-#### Older Updates
 
 **Update 6.9.0.1**
 
