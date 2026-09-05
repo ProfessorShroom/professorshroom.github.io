@@ -37,4 +37,5 @@ The installer still works in its current form and I will likely continue to keep
 
 ### Changelog
 
-{% include northpoint-readme.md %}
+{% capture changelog_northpoint_content %}{% include northpoint-readme.md %}{% endcapture %}
+{{ changelog_northpoint_content | markdownify }}

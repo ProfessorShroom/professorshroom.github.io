@@ -47,4 +47,5 @@ Here's the repo below.
 
 ### Changelog
 
-{% include cardmarket-price-updater-readme.md %}
+{% capture changelog_cardmarket_content %}{% include cardmarket-price-updater-readme.md %}{% endcapture %}
+{{ changelog_cardmarket_content | markdownify }}
