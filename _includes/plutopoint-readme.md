@@ -1,12 +1,13 @@
 
 #### Latest Update
 
-**Update 7.0.1.1**
+**Update 7.0.1.2 / 7.0.1.1 / 7.0.1.0**
 
-- Added a seperate Beta launcher with auto update just like the release launcher for easier maintenance.
-- Added Beta branding to all beta builds to make them easier to identify.
-- Removed Firefox's new auto-start with Windows feature as that's just annoying.
-- Version number correction.
+- **_7.0.1.2_** Made values nullable.
+- **_7.0.1.1_** Version number correction.
+- **_7.0.1.0_** Added a seperate Beta launcher with auto update just like the release launcher for easier maintenance.
+- **_7.0.1.0_** Added Beta branding to all beta builds to make them easier to identify.
+- **_7.0.1.0_** Removed Firefox's new auto-start with Windows feature as that's just annoying.
 
 #### Older Updates
 
