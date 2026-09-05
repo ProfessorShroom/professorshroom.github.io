@@ -12,7 +12,7 @@
 
 #### Older Updates
 
-<details>
+<details markdown="1">
 <summary><strong>Version 7.x - The .NET 8 / Avalonia Update</strong></summary>
 
 **Version 7.0.0.0 - The .NET 8 / Avalonia Update**
@@ -26,7 +26,7 @@
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Version 6.x - The C# Rewrite</strong></summary>
 
 **Version 6.9.0.1 / 6.9.0.0 - The Winget Update**
@@ -384,7 +384,7 @@
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Version 5.x - The Winget Update</strong></summary>
 
 **Version 5.2024.11.03.0**
@@ -676,7 +676,7 @@
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Version 4.x - The Dark Update</strong></summary>
 
 **Version 4.2022.12.19.0**
@@ -785,7 +785,7 @@
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Version 3.x - The NorthPoint Update</strong></summary>
 
 **Version 3.2022.07.02.5 / 3.2022.07.02.4 / 3.2022.07.02.3 / 3.2022.07.02.2 / 3.2022.07.02.1 / 3.2022.07.02.0**
@@ -1156,7 +1156,7 @@
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Version 2.x - The Windows Defender Fix</strong></summary>
 
 **Version 2.6.0**
@@ -1203,7 +1203,7 @@
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>Version 1.x - The Original Release (BRM / CRC Installer)</strong></summary>
 
 **Version 1.12.1 / 1.12.0**
