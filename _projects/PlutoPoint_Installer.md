@@ -39,4 +39,5 @@ I will continue to update this post and repo as I add more features.
 
 ### Changelog
 
-{% include plutopoint-readme.md %}
+{% capture changelog_content %}{% include plutopoint-readme.md %}{% endcapture %}
+{{ changelog_content | markdownify }}
