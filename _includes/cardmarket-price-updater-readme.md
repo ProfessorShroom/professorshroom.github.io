@@ -1,17 +1,20 @@
 
 #### Latest Update
 
-**Update 2.0.2.0**
+**Version 2.0.2.0**
 
 - Removed Flathub compliance, it's too strict and not worth the hassle.
 
 #### Older Updates
 
-**Update 2.0.1.0**
+<details markdown="1">
+<summary><strong>Version 2.x - The .NET 8 / Avalonia Update</strong></summary>
+
+**Version 2.0.1.0**
 
 - Flathub compliance fixes for the Flatpak packaging (metadata/manifest cleanup) - no functional changes to the app itself.
 
-**Update 2.0.0.0**
+**Version 2.0.0.0 - The .NET 8 / Avalonia Update**
 
 - Rewrote the GUI in Avalonia instead of WinForms, so it now runs on Linux (Ubuntu/Fedora, packaged as a Flatpak) as well as Windows, from one shared codebase.
 - Added USD ($) as a third currency alongside GBP and EUR.
@@ -20,17 +23,22 @@
 - Added a small JSON config file for default currency/price type and retry/backup settings, created automatically on first run.
 - Replaced AutoUpdater.NET.Official (which required WinForms and blocked a Linux build entirely) with a small built-in update checker on Windows - it now shows a "new version available" link instead of silently self-updating.
 
-**Update 1.4.0.0**
+</details>
+
+<details markdown="1">
+<summary><strong>Version 1.x - The Initial Release</strong></summary>
+
+**Version 1.4.0.0**
 
 - Changed quiet mode to actually hide the CLI completely.
 - Added auto update feature.
 
-**Update 1.3.0.0**
+**Version 1.3.0.0**
 
 - Updated GUI to a more modern look.
 - Added support to select pricing model; Trending Price, 7-Day Average Price and 30-Day Average Price. By default, it is set to 30-Day Average Price, but you can change it to Trending or 7-Day Average Price if you want a more stable price.
 
-**Update 1.2.0.0**
+**Version 1.2.0.0**
 
 - Added cmd/terminal support.
 - /f lets you specify a file.
@@ -39,15 +47,17 @@
 - /log lets you log to a file.
 - /q, /quiet, /s, /silent runs the exe silently.
 
-**Update 1.1.2.0**
+**Version 1.1.2.0**
 
 - Updated EUR to GBP conversion link.
 
-**Update 1.1.1.0**
+**Version 1.1.1.0**
 
 - Moved Version/Readme link to [professorshroom.com](https://professorshroom.com)
 
-**Update 1.1.0.0**
+**Version 1.1.0.0**
 
 - Added Game to spreadsheet to specify the card game.
 - Will now check prices against the correct game instead of checking all.
+
+</details>
