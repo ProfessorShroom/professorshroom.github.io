@@ -1,14 +1,24 @@
 
 #### Latest Update
 
-**Version 2.0.2.0**
+**Version 2.0.3.2 / 2.0.3.1 / 2.0.3.0**
 
-- Removed Flathub compliance, it's too strict and not worth the hassle.
+- **_2.0.3.2_** Fixed Flatpak crash due to missing argument in dotnot build command.
+- **_2.0.3.1_** Fixed the Linux CLI release workflow failing with a 403 - it was missing the `contents: write` permission the other two release workflows already had, so it couldn't create/attach to the release.
+- **_2.0.3.1_** Moved `update.xml` back to the repo root (pre-2.0 installs expect it there) and updated the update-checker URL, docs, and project layout references to match.
+- **_2.0.3.1_** Fixed a few leftover references to the old hyphenated repo name (`Cardmarket-Price-Updater`) in the README and update-checker URL, pointing them at the current `CardmarketPriceUpdater`.
+- **_2.0.3.0_** Added a self-contained Linux `linux-x64` CLI build, published alongside the exe and Flatpak on every release - lets headless/server users run the CLI directly with no Flatpak, GUI runtime, or display required.
+- **_2.0.3.0_** Releases are now fully automated: pushing a version tag (`vx.x.x.x`) builds and attaches the Windows exe, the Flatpak bundle, and the Linux CLI tarball to the release, no manual upload needed.
+- **_2.0.3.0_** Fixed `packaging/flatpak/io.github.professorshroom.CardmarketPriceUpdater.yml` - it was still cloning an old hyphenated repo name pinned to `v2.0.2.0` instead of building from your local checkout. It now builds from a local publish output, matching what the packaging docs always said it did.
 
 #### Older Updates
 
 <details markdown="1">
 <summary><strong>Version 2.x - The .NET 8 / Avalonia Update</strong></summary>
+
+**Version 2.0.2.0**
+
+- Removed Flathub compliance, it's too strict and not worth the hassle.
 
 **Version 2.0.1.0**
 
