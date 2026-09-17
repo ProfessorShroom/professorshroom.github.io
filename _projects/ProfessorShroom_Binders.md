@@ -15,7 +15,7 @@ images:
 
 My website for my small business ProfessorShroom Binders. I make custom card binders for Yu-Gi-Oh!
 
-If you are interested in one please go to my [website](https://professorshroombinders.com), send me an email at [binders@professorshroombinders.com](mailto:binders@professorshroombinders.com) or send me a message over on my [Instagram 📷](https://instagram.com/professor_shroom).
+If you are interested in one please go to my [website](https://professorshroombinders.com), send me an email at [binders@professorshroombinders.com](mailto:binders@professorshroombinders.com) or send me a message over on my [Instagram 📷](https://instagram.com/professorshroombinders).
 
 <div class="professorshroombinders">
   <a href="https://professorshroombinders.com" target="_blank" rel="noopener">
