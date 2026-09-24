@@ -41,7 +41,9 @@ jobs:
             exit 1
           fi
           cp _site/sitemap.xml sitemap.xml
-          rm -rf _site
+          # The Docker build runs as root, so _site is root-owned on the
+          # runner's filesystem — needs sudo to remove.
+          sudo rm -rf _site
 
       - name: Commit sitemap if changed
         run: |
