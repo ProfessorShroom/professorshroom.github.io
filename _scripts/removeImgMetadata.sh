@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# Get the directory where the script is located
-BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Get the directory where the script is located (_scripts/), then go up
+# one level to the repo root so TARGET_DIR resolves to the real assets/img.
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 TARGET_DIR="$BASE_DIR/assets/img"
 

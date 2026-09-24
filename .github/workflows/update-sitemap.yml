@@ -1,0 +1,52 @@
+name: Update Sitemap
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '_posts/**'
+      - '_projects/**'
+      - '_pages/**'
+      - 'assets/**'
+      - '_config.yml'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      # Build using the repo's own Dockerfile so the build environment
+      # (ImageMagick, Node, nbconvert, etc. required by the Jekyll plugins)
+      # exactly matches local/dev builds.
+      - name: Build site image
+        run: docker build -t site-builder .
+
+      - name: Build Jekyll site
+        run: |
+          docker run --rm \
+            -v "${{ github.workspace }}:/srv/jekyll" \
+            -e JEKYLL_ENV=production \
+            site-builder bundle exec jekyll build
+
+      - name: Sync generated sitemap.xml
+        run: |
+          if [ ! -f _site/sitemap.xml ]; then
+            echo "jekyll-sitemap did not produce _site/sitemap.xml — aborting."
+            exit 1
+          fi
+          cp _site/sitemap.xml sitemap.xml
+          rm -rf _site
+
+      - name: Commit sitemap if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git diff --cached --quiet || git commit -m "Update sitemap.xml"
+          git push
