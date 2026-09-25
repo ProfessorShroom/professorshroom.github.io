@@ -1,6 +1,16 @@
 
 #### Latest Update
 
+**Version 7.0.3.0 / 7.0.3.1**
+
+- **_7.0.3.1_** Corrected registry key used to change cursor size.
+- **_7.0.3.0_** Now resets the cursor size to the default 20, as someone keeps making cursors massive. A cursor size that Steve would like.
+
+#### Older Updates
+
+<details markdown="1">
+<summary><strong>Version 7.x - The .NET 8 / Avalonia Update</strong></summary>
+
 **Version 7.0.2.1 / 7.0.2.0**
 
 - **_7.0.2.1_** Changed Romsey opening hours on Saturdays to prepare for upcoming change.
@@ -8,11 +18,6 @@
 - **_7.0.2.0_** Beta builds now skip seasonal/holiday theming entirely, so Beta branding and holiday colours never clash.
 - Seasonal events can now update the window title too (e.g. "Merry Christmas!"), not just the install log.
 - **_7.0.2.0_** Added a per-event text colour so button and title text stays readable against lighter holiday themes — fixes washed-out white text on Pluto's Birthday, Valentine's Day, Duck Day, Dachshund Day, Pancake Day, and birthdays.
-
-#### Older Updates
-
-<details markdown="1">
-<summary><strong>Version 7.x - The .NET 8 / Avalonia Update</strong></summary>
 
 **Version 7.0.1.4 / 7.0.1.3 / 7.0.1.2 / 7.0.1.1 / 7.0.1.0**
 
