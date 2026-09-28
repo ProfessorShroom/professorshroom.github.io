@@ -275,31 +275,31 @@ images_list:
     items:
       - path: assets/img/binders/red-eyes_binder_1.png
         image_id: "red-eyes_binder_1"
-        image_order: 4
+        image_order: 5
         caption: The front of my first custom Red-Eyes Black Dragon binder, made for myself.
         title: Red-Eyes Black Dragon Binder Front
 
       - path: assets/img/binders/blue-eyes_binder_1_front.png
         image_id: "blue-eyes_binder_1_front"
-        image_order: 5
+        image_order: 6
         caption: The front of my first custom Blue-Eyes White Dragon binder.
         title: Blue-Eyes White Dragon Binder Front
 
       - path: assets/img/binders/blue-eyes_binder_1_rear.png
         image_id: "blue-eyes_binder_1_rear"
-        image_order: 6
+        image_order: 7
         caption: The rear of my first custom Blue-Eyes White Dragon binder.
         title: Blue-Eyes White Dragon Binder Rear
 
       - path: assets/img/binders/red-eyes_binder_2_front.png
         image_id: "red-eyes_binder_2_front"
-        image_order: 7
+        image_order: 8
         caption: The front of my second custom Red-Eyes Black Dragon binder.
         title: Red-Eyes Black Dragon Binder Front
 
       - path: assets/img/binders/red-eyes_binder_2_rear.png
         image_id: "red-eyes_binder_2_rear"
-        image_order: 8
+        image_order: 9
         caption: The front of my second custom Red-Eyes Black Dragon binder.
         title: Red-Eyes Black Dragon Binder Front
 
@@ -320,6 +320,12 @@ images_list:
         image_order: 3
         caption: The front of my custom Dark Magician Girl binder.
         title: Dark Magician Girl Binder Front
+
+      - path: assets/img/binders/crystal_beasts_binder_1.png
+        image_id: "cystal_beasts_binder_1"
+        image_order: 4
+        caption: The front of my custom Jesse Anderson with his Crystal Beasts binder.
+        title: Crystal Beasts Binder Front
 
   - album: My Yu-Gi-Oh! Collection
     gallery: true
