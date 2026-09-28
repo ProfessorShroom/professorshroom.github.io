@@ -15,15 +15,15 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-sitemap
+  cancel-in-progress: false
+
 jobs:
   update-sitemap:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-
-      # Build using the repo's own Dockerfile so the build environment
-      # (ImageMagick, Node, nbconvert, etc. required by the Jekyll plugins)
-      # exactly matches local/dev builds.
       - name: Build site image
         run: docker build -t site-builder .
 
@@ -50,5 +50,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add sitemap.xml
-          git diff --cached --quiet || git commit -m "Update sitemap.xml"
+          if git diff --cached --quiet; then
+            echo "sitemap.xml unchanged"
+            exit 0
+          fi
+          git commit -m "Update sitemap.xml"
+          git pull --rebase origin main
           git push
