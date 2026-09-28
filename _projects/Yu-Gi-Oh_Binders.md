@@ -27,10 +27,10 @@ I've had a few comissions so far which are below as well as making one for [UK B
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include images.liquid id="red-eyes_binder_1" %}
+        {% include images.liquid id="dark_magician_girl_binder_1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include images.liquid id="dark_magician_girl_binder_1" %}
+        {% include images.liquid id="crystal_beasts_binder_1" %}
     </div>
 </div>
 <div class="row">
@@ -47,5 +47,10 @@ I've had a few comissions so far which are below as well as making one for [UK B
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include images.liquid id="red-eyes_binder_2_rear" %}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include images.liquid id="red-eyes_binder_1" %}
     </div>
 </div>
