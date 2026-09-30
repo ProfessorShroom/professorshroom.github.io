@@ -1,6 +1,19 @@
 
 #### Latest Update
 
+**Version 2.1.0.0**
+
+- **_2.1.0.0_** The `Game` column is now optional. If a sheet has no Game column, every row uses the default game, which is Yu-Gi-Oh! unless you choose another.
+- **_2.1.0.0_** Added a game dropdown to the GUI and a `/g` flag to the CLI (`/g y` Yu-Gi-Oh!, `/g m` Magic: The Gathering, `/g p` Pokémon) to choose the default game. The choice is remembered as `defaultGame` in the config file.
+- **_2.1.0.0_** Prices are now checked against the correct game for each row instead of all three games at once, and only the price guides for games actually in your sheet are downloaded. Blank or unrecognised Game cells fall back to the default game.
+- **_2.1.0.0_** Fixed a temp file being left behind when the required column headers could not be found.
+- **_2.1.0.0_** Fixed the README config example using the wrong (PascalCase) key names.
+
+#### Older Updates
+
+<details markdown="1">
+<summary><strong>Version 2.x - The .NET 8 / Avalonia Update</strong></summary>
+
 **Version 2.0.3.2 / 2.0.3.1 / 2.0.3.0**
 
 - **_2.0.3.2_** Fixed Flatpak crash due to missing argument in dotnot build command.
@@ -10,11 +23,6 @@
 - **_2.0.3.0_** Added a self-contained Linux `linux-x64` CLI build, published alongside the exe and Flatpak on every release - lets headless/server users run the CLI directly with no Flatpak, GUI runtime, or display required.
 - **_2.0.3.0_** Releases are now fully automated: pushing a version tag (`vx.x.x.x`) builds and attaches the Windows exe, the Flatpak bundle, and the Linux CLI tarball to the release, no manual upload needed.
 - **_2.0.3.0_** Fixed `packaging/flatpak/io.github.professorshroom.CardmarketPriceUpdater.yml` - it was still cloning an old hyphenated repo name pinned to `v2.0.2.0` instead of building from your local checkout. It now builds from a local publish output, matching what the packaging docs always said it did.
-
-#### Older Updates
-
-<details markdown="1">
-<summary><strong>Version 2.x - The .NET 8 / Avalonia Update</strong></summary>
 
 **Version 2.0.2.0**
 
