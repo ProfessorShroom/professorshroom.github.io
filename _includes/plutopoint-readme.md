@@ -1,8 +1,9 @@
 
 #### Latest Update
 
-**Version 7.0.4.1 / 7.0.4.0**
+**Version 7.0.4.2 / 7.0.4.1 / 7.0.4.0**
 
+- **_7.0.4.2_** Changed Chandler's Ford's hours.
 - **_7.0.4.1_** Corrected cursor size from 20 to 32 as it's being set in decimal not hex.
 - **_7.0.4.0_** If the power box is not checked the installer will now set the screen and sleep timeout back to Windows 11 defaults rather 10 and 20 minutes respectively.
 
