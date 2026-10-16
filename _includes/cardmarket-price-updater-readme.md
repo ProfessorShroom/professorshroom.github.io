@@ -1,6 +1,18 @@
 
 #### Latest Update
 
+**Version 2.2.0.0**
+
+- **_2.2.0.0_** Added support for LibreOffice / OpenOffice spreadsheets (`.ods`) alongside `.xlsx`. Prices and the Price Updated date are written straight into the `.ods` file, and the rest of the file (styles, column widths, currency formatting, other sheets) is left untouched. No LibreOffice install is needed.
+- **_2.2.0.0_** The GUI file picker now offers `.xlsx` and `.ods` (with an "all spreadsheets" filter), and the CLI `/d` flag now picks up `.ods` files as well as `.xlsx` ones.
+- **_2.2.0.0_** CLI `/d` now matches `.xlsx`/`.ods` case-insensitively on Linux and skips Excel's temporary `~$` lock files.
+- **_2.2.0.0_** An empty sheet no longer crashes the program when it looks for the column headers.
+
+#### Older Updates
+
+<details markdown="1">
+<summary><strong>Version 2.x - The .NET 8 / Avalonia Update</strong></summary>
+
 **Version 2.1.0.0**
 
 - **_2.1.0.0_** The `Game` column is now optional. If a sheet has no Game column, every row uses the default game, which is Yu-Gi-Oh! unless you choose another.
@@ -8,11 +20,6 @@
 - **_2.1.0.0_** Prices are now checked against the correct game for each row instead of all three games at once, and only the price guides for games actually in your sheet are downloaded. Blank or unrecognised Game cells fall back to the default game.
 - **_2.1.0.0_** Fixed a temp file being left behind when the required column headers could not be found.
 - **_2.1.0.0_** Fixed the README config example using the wrong (PascalCase) key names.
-
-#### Older Updates
-
-<details markdown="1">
-<summary><strong>Version 2.x - The .NET 8 / Avalonia Update</strong></summary>
 
 **Version 2.0.3.2 / 2.0.3.1 / 2.0.3.0**
 
