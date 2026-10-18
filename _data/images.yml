@@ -334,7 +334,7 @@ images_list:
       - path: assets/img/yugioh/170681358-front.jpg
         image_id: "nkc1-en002"
         image_order: 1
-        caption: My PSA 10 Nike collaboration card NKC1-EN002 that made me want to complete the Red-Eyes collection.
+        caption: My PSA 10 Nike Collaboration Promo Red-Eyes Black Dragon.
         title: Red-Eyes Black Dragon Nike Promo NKC1-EN002 PSA 10
 
       - path: assets/img/yugioh/170681360-front.jpg
@@ -353,7 +353,7 @@ images_list:
         image_id: "lart-en019"
         image_order: 4
         caption: My PSA 9 Lost Art Promo Dark Magician Girl.
-        title: Dark Magician Girl Lost Art LART-EN019 PSA 9
+        title: Dark Magician Girl Lost Art Promo LART-EN019 PSA 9
 
       - path: assets/img/yugioh/170681359-front.jpg
         image_id: "dood-en026"

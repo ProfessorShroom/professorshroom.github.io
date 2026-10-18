@@ -19,7 +19,7 @@ I also made a companion Android app to go along with it, I won't be making an iO
 
 <div class="badge-wrap">
   <a
-    href="https://play.google.com/store/apps/details?id=com.wuphf"
+    href="https://play.google.com/store/apps/details?id=com.professorshroom.wuphf"
     target="_blank"
     class="google-play-badge"
   >

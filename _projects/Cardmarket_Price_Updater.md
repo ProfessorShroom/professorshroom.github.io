@@ -36,7 +36,7 @@ Here's the repo below.
     </div>
 </div>
 <div class="caption">
-    On the left, the GUI of my program. On the right, the Nike collaboration card NKC1-EN002 that made me want to complete the Red-Eyes collection.
+    On the left, the GUI of my program. On the right, the Nike Collaboration Promo that made me want to complete the Red-Eyes collection.
 </div>
 
 <div class="row">
