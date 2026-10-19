@@ -263,6 +263,12 @@ images_list:
         caption: The GUI of my Cardmarket program.
         title: Cardmarket Price Updater
 
+      - path: assets/img/yugioh/cardmarket_spreadsheet.png
+        image_id: "cardmarket_2"
+        exclude: true
+        caption: The spreadsheet that the program will get info from and write prices to.
+        title: Cardmarket Price Updater Spreadsheet Template
+
       - path: assets/img/installer/installer_ps.png
         image_id: "northpoint_1"
         image_order: 3
@@ -423,14 +429,6 @@ images_list:
         image_id: "w211_7"
         caption: The shifter back together after the optical sensor replacement.
         title: Mercedes W211 Shifter Repaired
-
-  - album: Cardmarket
-    gallery: false
-    items:
-      - path: assets/img/yugioh/cardmarket_excel_sheet.png
-        image_id: "cardmarket_2"
-        caption: The Excel sheet that the program will get info from and write prices to.
-        title: Cardmarket Price Updater Excel Sheet Template
 
   - album: BMW Rear View Mirror LIN Decoder
     gallery: false
