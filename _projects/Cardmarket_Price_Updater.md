@@ -29,7 +29,7 @@ Here's the repo below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include images.liquid id="cardmarket_1" %}
+        {% include images.liquid id="cardmarket_price_updater" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include images.liquid id="nkc1-en002" %}
@@ -41,7 +41,7 @@ Here's the repo below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include images.liquid id="cardmarket_2" %}
+        {% include images.liquid id="cardmarket_price_updater_spreadsheet" %}
     </div>
 </div>
 

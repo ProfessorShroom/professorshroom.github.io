@@ -31,7 +31,7 @@ The installer still works in its current form and I will likely continue to keep
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include images.liquid id="northpoint_1" %}
+        {% include images.liquid id="northpoint_installer" %}
     </div>
 </div>
 

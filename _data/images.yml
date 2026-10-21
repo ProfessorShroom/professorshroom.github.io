@@ -252,25 +252,25 @@ images_list:
     order: 4
     items:
       - path: assets/img/installer/installer.png
-        image_id: "plutopoint_1"
+        image_id: "plutopoint_installer"
         image_order: 1
         caption: This is what the current version of the PlutoPoint C# installer looks like.
         title: PlutoPoint Automatic Software Installer GUI
 
       - path: assets/img/yugioh/cardmarket_price_updater.png
-        image_id: "cardmarket_1"
+        image_id: "cardmarket_price_updater"
         image_order: 2
         caption: The GUI of my Cardmarket program.
         title: Cardmarket Price Updater
 
       - path: assets/img/yugioh/cardmarket_spreadsheet.png
-        image_id: "cardmarket_2"
+        image_id: "cardmarket_price_updater_spreadsheet"
         exclude: true
         caption: The spreadsheet that the program will get info from and write prices to.
         title: Cardmarket Price Updater Spreadsheet Template
 
-      - path: assets/img/installer/installer_ps.png
-        image_id: "northpoint_1"
+      - path: assets/img/installer/installer_powershell.png
+        image_id: "northpoint_installer"
         image_order: 3
         caption: This is what the final version of the NorthPoint PowerShell installer looks like.
         title: NorthPoint Automatic Software Installer GUI
@@ -373,11 +373,17 @@ images_list:
         caption: My PSA 8 Darkwing Blast Lady Labrynth of the Silver Caste.
         title: Lady Labrynth of the Silver Caste DABL-EN030 PSA 8
 
+      - path: assets/img/yugioh/170681355-front.jpg
+        image_id: "gfp2-en182"
+        image_order: 7
+        caption: My PSA 8 Red Dragon Archfiend.
+        title: Red Dragon Archfiend GFP2-EN182 PSA 8
+
       - path: assets/img/yugioh/nsc1-jp001.jpg
         image_id: "nsc1-jp001"
-        image_order: 7
-        caption: The Cup Noodles collaboration card NSC1-JP001.
-        title: Instant Fusion Cup Noodles Promo
+        image_order: 8
+        caption: My Cup Noodle promo card with a Cup Noodle.
+        title: Instant Fusion Cup Noodle Promo NSC1-JP001
 
   - album: iMac Studio Display
     gallery: false
