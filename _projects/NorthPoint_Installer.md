@@ -29,8 +29,8 @@ The installer still works in its current form and I will likely continue to keep
 
 [C# Based PlutoPoint Installer Repository](https://github.com/ProfessorShroom/PlutoPoint-Installer)
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-center">
+    <div class="col-sm mt-3 mt-md-0 text-center">
         {% include images.liquid id="northpoint_installer" %}
     </div>
 </div>
