@@ -17,14 +17,14 @@ jobs:
       contents: write # Required to push auto-formatted commits back to the repo
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7      
         with:
           ref: ${{ github.head_ref || github.ref }} # Ensures it checks out the correct branch on PRs
 
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Install Prettier 💾
         run: npm install --save-dev --save-exact prettier @shopify/prettier-plugin-liquid
