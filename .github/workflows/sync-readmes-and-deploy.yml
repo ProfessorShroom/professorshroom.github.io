@@ -55,6 +55,13 @@ jobs:
             | iconv -f UTF-8 -t UTF-8 -c \
             > _includes/useful-scripts-readme.md
 
+      - name: Sync VentPucvk README
+        run: |
+          curl -sL https://raw.githubusercontent.com/ProfessorShroom/VentPuck/main/README.md \
+            | iconv -f UTF-8 -t UTF-8 -c \
+            > _includes/ventpuck-readme.md
+
+
       # ---------------- Detect + Commit ----------------
       - name: Detect changes
         id: changes

@@ -6,8 +6,8 @@ description: Modfied Renault Megane RS 250 build
 img: assets/img/car/250.jpg
 importance: 1
 category: Car Projects
-related_projects: [megane]
-related_posts: [megane]
+related_projects: [renault, megane, car]
+related_posts: [renault, megane, car]
 comments: true
 images:
   lightbox2: true

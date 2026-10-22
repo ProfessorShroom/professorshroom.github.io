@@ -258,7 +258,7 @@ images_list:
         title: PlutoPoint Automatic Software Installer GUI
 
       - path: assets/img/yugioh/cardmarket_price_updater.png
-        image_id: "cardmarket_price_updater"
+        image_id: "cardmarket_price_updater_logo"
         image_order: 2
         caption: The GUI of my Cardmarket program.
         title: Cardmarket Price Updater
@@ -274,6 +274,8 @@ images_list:
         image_order: 3
         caption: This is what the final version of the NorthPoint PowerShell installer looks like.
         title: NorthPoint Automatic Software Installer GUI
+
+
 
   - album: Custom Yu-Gi-Oh! Binders
     gallery: true
@@ -337,53 +339,77 @@ images_list:
     gallery: true
     order: 6
     items:
-      - path: assets/img/yugioh/170681358-front.jpg
+      - path: assets/img/yugioh/collection/170681358-front.jpg
         image_id: "nkc1-en002"
         image_order: 1
         caption: My PSA 10 Nike Collaboration Promo Red-Eyes Black Dragon.
         title: Red-Eyes Black Dragon Nike Promo NKC1-EN002 PSA 10
 
-      - path: assets/img/yugioh/170681360-front.jpg
+      - path: assets/img/yugioh/collection/170681360-front.jpg
         image_id: "gfp2-en176"
         image_order: 2
         caption: My PSA 6 Ghosts from the Past 2 Red-Eyes Black Dragon.
         title: Red-Eyes Black Dragon GFP2-EN176 PSA 6
 
-      - path: assets/img/yugioh/170681357-front.jpg
+      - path: assets/img/yugioh/collection/170681357-front.jpg
         image_id: "sod-en035"
         image_order: 3
         caption: My PSA 6 Soul of the Duelist Master of Oz.
         title: Master of Oz SOD-EN035 PSA 6
 
-      - path: assets/img/yugioh/170681356-front.jpg
+      - path: assets/img/yugioh/collection/170681356-front.jpg
         image_id: "lart-en019"
         image_order: 4
         caption: My PSA 9 Lost Art Promo Dark Magician Girl.
         title: Dark Magician Girl Lost Art Promo LART-EN019 PSA 9
 
-      - path: assets/img/yugioh/170681359-front.jpg
+      - path: assets/img/yugioh/collection/170681359-front.jpg
         image_id: "dood-en026"
         image_order: 5
         caption: My PSA 10 Doom of Dimensions Dogmatika Fleurdelis, the Thunderbolt.
         title: Dogmatika Fleurdelis, the Thunderbolt DOOD-EN026 PSA 9
 
-      - path: assets/img/yugioh/170681354-front.jpg
+      - path: assets/img/yugioh/collection/170681354-front.jpg
         image_id: "dabl-en030"
         image_order: 6
         caption: My PSA 8 Darkwing Blast Lady Labrynth of the Silver Caste.
         title: Lady Labrynth of the Silver Caste DABL-EN030 PSA 8
 
-      - path: assets/img/yugioh/170681355-front.jpg
+      - path: assets/img/yugioh/collection/170681355-front.jpg
         image_id: "gfp2-en182"
         image_order: 7
         caption: My PSA 8 Red Dragon Archfiend.
         title: Red Dragon Archfiend GFP2-EN182 PSA 8
 
-      - path: assets/img/yugioh/nsc1-jp001.jpg
-        image_id: "nsc1-jp001"
+      - path: assets/img/yugioh/collection/mama-en104.jpg
+        image_id: "mama-en104"
         image_order: 8
-        caption: My Cup Noodle promo card with a Cup Noodle.
+        caption: My Magnificent Mavens Blue-Eyes White Dragon.
+        title: Blue-Eyes White Dragon MAMA-EN104
+
+      - path: assets/img/yugioh/collection/adc1-en001.jpg
+        image_id: "adc1-en001"
+        image_order: 9
+        caption: My Dark Magician Adidas Promo with matching trainers.
+        title: Dark Magician Adidas Promo ADC1-EN001
+
+      - path: assets/img/yugioh/collection/nsc1-jp001.jpg
+        image_id: "nsc1-jp001"
+        image_order: 10
+        caption: My Cup Noodle Promo with a Cup Noodle.
         title: Instant Fusion Cup Noodle Promo NSC1-JP001
+
+      - path: assets/img/yugioh/collection/crc1-en001.jpg
+        image_id: "CRC1-EN001"
+        image_order: 11
+        caption: My Crocodile Crocs Promo.
+        title: Instant Fusion Cup Noodle Promo CRC1-EN001
+
+      - path: assets/img/yugioh/collection/efc1.jpg
+        image_id: "efc1"
+        image_order: 12
+        caption: My Rescue Rabbit and NEYMAR JR eFootball Collaboration Promo Pair.
+        title: Rescue Rabbit & NEYMAR JR eFootball Collab EFC1
 
   - album: iMac Studio Display
     gallery: false
@@ -472,7 +498,7 @@ images_list:
         caption: WUPHF.co.uk
         title: WUPHF.co.uk
 
-      - path: assets/img/yugioh/professorshroombinders.png
+      - path: assets/img/yugioh/collection/professorshroombinders.png
         image_id: "professorshroombinders"
         caption: ProfessorShroomBinders.com
         title: ProfessorShroomBinders.com
