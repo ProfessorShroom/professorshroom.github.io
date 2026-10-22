@@ -13,6 +13,16 @@ images:
   lightbox2: true
 ---
 
+<div style="display: flex; justify-content: center; width: 100%;">
+  <div class="ventpuck_logo" style="max-width: 250px; margin: 0 auto 2rem auto;">
+    <a href="https://github.com/ProfessorShroom/VentPuck" target="_blank" rel="noopener">
+      <span class="no-shadow">
+        {% include images.liquid id="ventpuck_logo" class="ventpuck_logo" show_caption=false %}
+      </span>
+    </a>
+  </div>
+</div>
+
 I drive a Renault Megane RS and I wanted to see things like boost and oil temperature while I'm driving, without bolting a gauge pod to the dash or having a phone propped up on the vent.
 
 So I'm building [VentPuck](https://github.com/ProfessorShroom/VentPuck), a small round gauge that sits in one of the air vents and reads live data from the car.

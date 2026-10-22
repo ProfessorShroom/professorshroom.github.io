@@ -28,10 +28,10 @@ I also made a companion Android app to go along with it, I won't be making an iO
 </div>
 <br>
 
-<div class="wuphf">
+<div class="wuphf_logo" style="margin: 0 auto; text-align: center;">
   <a href="https://wuphf.co.uk" target="_blank" rel="noopener">
     <span class="no-shadow">
-      {% include images.liquid id="wuphf" class="wuphf" %}
+      {% include images.liquid id="wuphf_logo" class="wuphf_logo" %}
     </span>
   </a>
 </div>

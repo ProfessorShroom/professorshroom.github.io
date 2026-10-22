@@ -17,10 +17,10 @@ My website for my small business ProfessorShroom Binders. I make custom card bin
 
 If you are interested in one please go to my [website](https://professorshroombinders.com), send me an email at [binders@professorshroombinders.com](mailto:binders@professorshroombinders.com) or send me a message over on my [Instagram 📷](https://instagram.com/professorshroombinders).
 
-<div class="professorshroombinders">
+<div class="professorshroombinders_logo" style="margin: 0 auto; text-align: center;">
   <a href="https://professorshroombinders.com" target="_blank" rel="noopener">
     <span class="no-shadow">
-      {% include images.liquid id="professorshroombinders" class="professorshroombinders" %}
+      {% include images.liquid id="professorshroombinders_logo" class="professorshroombinders_logo" %}
     </span>
   </a>
 </div>

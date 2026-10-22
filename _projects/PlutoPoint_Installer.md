@@ -13,6 +13,16 @@ images:
   lightbox2: true
 ---
 
+<div style="display: flex; justify-content: center; width: 100%;">
+  <div class="plutopoint_installer_logo" style="max-width: 250px; margin: 0 auto 2rem auto;">
+    <a href="https://github.com/ProfessorShroom/PlutoPoint-Installer" target="_blank" rel="noopener">
+      <span class="no-shadow">
+        {% include images.liquid id="plutopoint_installer_logo" class="plutopoint_installer_logo" show_caption=false %}
+      </span>
+    </a>
+  </div>
+</div>
+
 Back in 2014 I wanted to streamline installing software on new installs of Windows, which at the time we did multiple times a day. The process at the time was having all of the installers (Firefox, Chrome, Office, etc.) on a USB stick and installing them one by one. Someone then had to update the stick weekly, or monthly to make sure we were installing a current version.
 
 I then made a PowerShell based installer which you can see the story of [here](/projects/NorthPoint_Installer/).

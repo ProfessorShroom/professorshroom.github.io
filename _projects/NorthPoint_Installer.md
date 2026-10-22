@@ -13,6 +13,16 @@ images:
   lightbox2: true
 ---
 
+<div style="display: flex; justify-content: center; width: 100%;">
+  <div class="northpoint_installer_logo" style="max-width: 250px; margin: 0 auto 2rem auto;">
+    <a href="https://github.com/ProfessorShroom/NorthPoint-Installer" target="_blank" rel="noopener">
+      <span class="no-shadow">
+        {% include images.liquid id="northpoint_installer_logo" class="northpoint_installer_logo" show_caption=false %}
+      </span>
+    </a>
+  </div>
+</div>
+
 Back in 2014 I wanted to streamline installing software on new installs of Windows, which at the time we did multiple times a day. The process at the time was having all of the installers (Firefox, Chrome, Office, etc.) on a USB stick and installing them one by one. Someone then had to update the stick weekly, or monthly to make sure we were installing a current version.
 
 We did briefly use [Ninite](https://ninite.com/) but we quickly moved on from this as we found it didn't have all of the software we needed, and we couldn't add our own.

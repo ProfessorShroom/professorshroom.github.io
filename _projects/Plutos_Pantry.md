@@ -21,10 +21,10 @@ It's named after our lovely dog Pluto!
 
 She does a great job so I just wanted to advertise it here!
 
-<div class="plutospantry">
+<div class="plutospantry_logo" style="margin: 0 auto; text-align: center;">
   <a href="https://plutospantry.co.uk" target="_blank" rel="noopener">
     <span class="no-shadow">
-      {% include images.liquid id="plutospantry" class="plutospantry" %}
+      {% include images.liquid id="plutospantry_logo" class="plutospantry_logo" %}
     </span>
   </a>
 </div>

@@ -82,7 +82,7 @@
     >
   {% endif %}
 
-  {% if found.caption %}
+  {% if found.caption and include.show_caption != false %}
     <figcaption class="caption">
       {{ found.caption }}
     </figcaption>

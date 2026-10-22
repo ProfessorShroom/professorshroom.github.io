@@ -13,6 +13,16 @@ images:
   lightbox2: true
 ---
 
+<div style="display: flex; justify-content: center; width: 100%;">
+  <div class="cardmarket_price_updater_logo" style="max-width: 250px; margin: 0 auto 2rem auto;">
+    <a href="https://github.com/ProfessorShroom/CardmarketPriceUpdater" target="_blank" rel="noopener">
+      <span class="no-shadow">
+        {% include images.liquid id="cardmarket_price_updater_logo" class="cardmarket_price_updater_logo" show_caption=false %}
+      </span>
+    </a>
+  </div>
+</div>
+
 I collect Yu-Gi-Oh! cards on and off, I have since I was a kid. I recently wanted to complete my set of every Red-Eyes Black Dragon card ever printed after getting the NKC1-EN002.
 
 So to help do that I wrote [this program](https://github.com/ProfessorShroom/Cardmarket-Price-Updater) that will get prices based on the current prices on [Cardmarket](https://cardmarket.com) which is a European version of [TCGPlayer](https://www.tcgplayer.com/).
