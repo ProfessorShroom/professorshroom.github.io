@@ -59,6 +59,7 @@ jobs:
         run: |
           curl -sL https://raw.githubusercontent.com/ProfessorShroom/VentPuck/main/README.md \
             | iconv -f UTF-8 -t UTF-8 -c \
+            | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
             > _includes/ventpuck-readme.md
 
 
