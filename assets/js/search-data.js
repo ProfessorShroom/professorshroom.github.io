@@ -152,6 +152,11 @@ ninja.data = [{
           description: "Collection of useful scripts for Windows and Linux",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Useful_Scripts/";
+            },},{id: "projects-ventpuck",
+          title: 'VentPuck',
+          description: "A round touch-screen OBD2 gauge that sits in the air vent of my Megane RS",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/VentPuck/";
             },},{id: "projects-wuphf-co-uk",
           title: 'WUPHF.co.uk',
           description: "A WUPHF fan site as seen in The Office",
