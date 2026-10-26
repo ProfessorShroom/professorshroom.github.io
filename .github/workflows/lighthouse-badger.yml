@@ -1,17 +1,40 @@
+# Lighthouse-Badger-Easy | GitHub Action Workflow
+#
+# Description: Generates, adds & updates manually/automatically Lighthouse badges & reports from one/multiple input URL(s) to the current repository & main branch with minimal settings
+# Author: Sitdisch
+# Source: https://github.com/myactionway/lighthouse-badger-workflows
+# License: MIT
+# Copyright (c) 2021 Sitdisch
+
 name: "Lighthouse Badger"
 
+########################################################################
+# DEFINE YOUR INPUTS AND TRIGGERS IN THE FOLLOWING
+########################################################################
+
+# INPUTS as Secrets (env) for not manually triggered workflows
 env:
   URLS: https://professorshroom.github.io/
-  REPO_BRANCH: "${{ github.repository }} main"
+  # If any of the following env is blank, a default value is used instead
+  REPO_BRANCH: "${{ github.repository }} main" # target repository & branch e.g. 'dummy/mytargetrepo main'
   MOBILE_LIGHTHOUSE_PARAMS: "--only-categories=performance,accessibility,best-practices,seo --throttling.cpuSlowdownMultiplier=2"
   DESKTOP_LIGHTHOUSE_PARAMS: "--only-categories=performance,accessibility,best-practices,seo --preset=desktop --throttling.cpuSlowdownMultiplier=1"
 
 # TRIGGERS
 on:
   page_build:
-  schedule:
-    - cron: '55 23 * * 0'
+  schedule: # Check your schedule here => https://crontab.guru/
+    - cron: "55 23 * * 0" # every Sunday at 23:55 UTC
   workflow_dispatch:
+
+# Lets the built-in token push the badges and reports when no personal
+# access token is set.
+permissions:
+  contents: write
+
+########################################################################
+# THAT'S IT; YOU DON'T HAVE TO DEFINE ANYTHING IN THE FOLLOWING
+########################################################################
 
 jobs:
   lighthouse-badger-easy:
@@ -29,7 +52,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           repository: ${{ env.REPOSITORY }}
-          token: ${{ secrets.LIGHTHOUSE_BADGER_TOKEN }}
+          token: ${{ secrets.LIGHTHOUSE_BADGER_TOKEN || github.token }}
           ref: ${{ env.BRANCH }}
       - uses: actions/checkout@v7
         with:
