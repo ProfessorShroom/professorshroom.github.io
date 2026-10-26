@@ -3,6 +3,11 @@ name: Prettify gh-pages
 on:
   workflow_dispatch:
 
+# Pushes to gh-pages, so queue behind the deploy workflows.
+concurrency:
+  group: readme-sync-main
+  cancel-in-progress: false
+
 jobs:
   format:
     runs-on: ubuntu-latest

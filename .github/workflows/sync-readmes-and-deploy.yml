@@ -2,7 +2,7 @@ name: Sync Project READMEs and Deploy
 
 concurrency:
   group: readme-sync-main
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 on:
   push:
@@ -62,7 +62,6 @@ jobs:
             | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
             > _includes/ventpuck-readme.md
 
-
       # ---------------- Detect + Commit ----------------
       - name: Detect changes
         id: changes
@@ -73,6 +72,17 @@ jobs:
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Decide whether to build
+        id: plan
+        run: |
+          if [ "${{ steps.changes.outputs.changed }}" = "true" ] \
+             || [ "${{ github.event_name }}" = "push" ] \
+             || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "build=true" >> $GITHUB_OUTPUT
+          else
+            echo "build=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Commit & push if changed
@@ -99,27 +109,38 @@ jobs:
           done
 
           git add _projects/*.md
-          git commit -m "Auto-sync project READMEs"
-          git pull --rebase origin main
-          git push origin main
+          git commit -m "Auto-sync project READMEs [skip ci]"
 
-      # ---------------- Build (only if changed) ----------------
+          # main can move while this runs (Prettier, sitemap, post scheduling and
+          # image stripping all commit to it), so retry the rebase + push.
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin main; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed, retrying..."
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 5))
+          done
+          echo "Could not push to main after 5 attempts"
+          exit 1
+
+      # ---------------- Build ----------------
       - name: Setup Ruby 💎
-        if: steps.changes.outputs.changed == 'true'
+        if: steps.plan.outputs.build == 'true'
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
           bundler-cache: true
 
       - name: Setup Python 🐍
-        if: steps.changes.outputs.changed == 'true'
+        if: steps.plan.outputs.build == 'true'
         uses: actions/setup-python@v7
         with:
           python-version: "3.13"
           cache: "pip"
 
       - name: Install and Build 🔧
-        if: steps.changes.outputs.changed == 'true'
+        if: steps.plan.outputs.build == 'true'
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
@@ -127,19 +148,31 @@ jobs:
           bundle exec jekyll build
 
       - name: Purge unused CSS 🧹
-        if: steps.changes.outputs.changed == 'true'
+        if: steps.plan.outputs.build == 'true'
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
 
-      # ---------------- Deploy (only if changed) ----------------
+      # ---------------- Deploy ----------------
       - name: Deploy 🚀
-        if: steps.changes.outputs.changed == 'true'
+        id: deploy
+        if: steps.plan.outputs.build == 'true'
+        continue-on-error: true
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
+
+      - name: Deploy retry 🔁
+        if: steps.plan.outputs.build == 'true' && steps.deploy.outcome == 'failure'
+        run: sleep 30
+
+      - name: Deploy (retry) 🚀
+        if: steps.plan.outputs.build == 'true' && steps.deploy.outcome == 'failure'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
 
       # ---------------- No-op log ----------------
       - name: Skip notice
-        if: steps.changes.outputs.changed != 'true'
+        if: steps.plan.outputs.build != 'true'
         run: echo "No README changes – skipping build & deploy"
