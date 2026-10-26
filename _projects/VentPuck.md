@@ -27,7 +27,7 @@ I drive a Renault Megane RS and I wanted to see things like boost and oil temper
 
 So I'm building [VentPuck](https://github.com/ProfessorShroom/VentPuck), a small round gauge that sits in one of the air vents and reads live data from the car.
 
-It's built around an ESP32-S3 with a 1.85" round touch display. The car's data comes over any Bluetooth OBD2 adapter that supports BLE, so the only wires to the gauge itself are for power. The screen shows one big reading in the middle, with oil and coolant temperature always visible at the bottom, and you swipe to change the main reading. At the moment that's coolant temp, oil temp, boost, RPM, speed and battery voltage, and I'm planning a few more like intake air temp, lambda, error codes/scanning and 0-60 times.
+It's built around an ESP32-S3 with a 1.75" AMOLED round touch display with a resolution of 466x466. The car's data comes over any Bluetooth OBD2 adapter that supports BLE, so the only wires to the gauge itself are for power. The screen shows one big reading in the middle, with oil and coolant temperature always visible at the bottom, and you swipe to change the main reading. At the moment that's coolant temp, oil temp, boost, RPM, speed and battery voltage, and I'm planning a few more like intake air temp, lambda, error codes/scanning and 0-60 times.
 
 The interface is written with LVGL. Everything that's specific to a car (the custom PIDs, the gauge ranges and the warning colours) lives in a small profile file, so it should be easy to adapt to other cars. The first profile is for the Megane RS (250/265/275).
 

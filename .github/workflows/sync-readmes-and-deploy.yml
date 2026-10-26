@@ -55,7 +55,7 @@ jobs:
             | iconv -f UTF-8 -t UTF-8 -c \
             > _includes/useful-scripts-readme.md
 
-      - name: Sync VentPucvk README
+      - name: Sync VentPuck README
         run: |
           curl -sL https://raw.githubusercontent.com/ProfessorShroom/VentPuck/main/README.md \
             | iconv -f UTF-8 -t UTF-8 -c \
@@ -93,6 +93,8 @@ jobs:
                 touch _projects/NorthPoint_Installer.md ;;
               *cardmarket-price-updater-readme.md)
                 touch _projects/Cardmarket_Price_Updater.md ;;
+              *ventpuck-readme.md)
+                touch _projects/VentPuck.md ;;
             esac
           done
 
