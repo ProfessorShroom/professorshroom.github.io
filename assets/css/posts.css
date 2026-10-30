@@ -8,6 +8,11 @@
   }
 }
 
+.hexCode {
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
 /* =========================
    BUY ME A BEER
 ========================= */
