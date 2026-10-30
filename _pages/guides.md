@@ -12,18 +12,18 @@ nav_order: 3
     <h1>Guides</h1>
   </div>
 
-  {% comment %}
-    Mirrors the Posts list, but only for posts tagged guide or guides (any capitalisation).
-    The tag / year / category line is intentionally left out.
-    Future-dated posts stay hidden, exactly like on the Posts page.
-  {% endcomment %}
-  {% assign guides = "" | split: "" %}
-  {% for post in site.posts %}
-    {% assign tags_lc = post.tags | join: "|" | downcase | split: "|" %}
-    {% if tags_lc contains "guide" or tags_lc contains "guides" %}
-      {% assign guides = guides | push: post %}
-    {% endif %}
-  {% endfor %}
+{% comment %}
+Mirrors the Posts list, but only for posts tagged guide or guides (any capitalisation).
+The tag / year / category line is intentionally left out.
+Future-dated posts stay hidden, exactly like on the Posts page.
+{% endcomment %}
+{% assign guides = "" | split: "" %}
+{% for post in site.posts %}
+{% assign tags_lc = post.tags | join: "|" | downcase | split: "|" %}
+{% if tags_lc contains "guide" or tags_lc contains "guides" %}
+{% assign guides = guides | push: post %}
+{% endif %}
+{% endfor %}
 
   <ul class="post-list">
 
