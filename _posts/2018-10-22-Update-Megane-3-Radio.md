@@ -9,11 +9,20 @@ categories: Car
 comments: true
 ---
 
-1. First you need a USB stick formatted to FAT32.
-2. Download [this file](https://cloud.howardgb.com/s/bZQyQPbrHwELDRd) and place it on the USB stick, make sure it's the only file on it.
-3. Plug the USB stick into your car and make sure the radio is on. I would start to engine to make sure the ignition doesn't turn off during the process.
-4. Switch the radio to FM mode.
-5. Open settings which is the bottom right button on the radio and navigate to Audio Settings > USB connection version > Display the software version.
-6. If it says anything other than "s2.42m2.42" then you need to update.
-7. Open settings which is the bottom right button on the radio and navigate to Audio Settings > USB connection version > Update Software.
-8. The update will take 1-2 minutes and then you're done!
+First you need a USB stick formatted to FAT32.
+
+Download [this file](https://megane3radioupdate.professorshroom.com) and place it on the USB stick, make sure it's the only file on it.
+
+Plug the USB stick into your car and make sure the radio is on. I would start the engine to make sure the ignition doesn't turn off during the process.
+
+Switch the radio into FM mode.
+
+Open settings which is the bottom right button on the radio and navigate to Audio Settings > USB connection version > Display the software version.
+
+If it says anything other than "s2.42m2.42" then you need to update.
+
+Open settings which is the bottom right button on the radio and navigate to Audio Settings > USB connection version > Update Software.
+
+The update will take 1-2 minutes and then you're done!
+
+_**Disclaimer:** This guide is provided for information only, and you follow it entirely at your own risk. Updating the firmware on your radio carries a risk of the unit failing to boot or becoming unusable if the update is interrupted, so make sure the engine is running or your battery is in good health before you start, and don't turn anything off or remove the USB stick until it has finished. I can't be held responsible for any damage to your radio, your car or your warranty._

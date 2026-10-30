@@ -55,7 +55,7 @@ I've circled the pin you need to look for on each mirror to make sure they're el
 
 Once you've swapped the mirrors it will require coding with either CLIP or DDT4ALL, I've not used CLIP so the tutorial will be with DDT.
 
-You need to get a special adapter used on Fords as Renault and Ford share a OBD2 pinout. You can get them on eBay for around a tenner. Search Ford ELM327 on eBay and you should find a USB to OBD2 adapter.
+You need to get a special adapter used on Fords as Renault and Ford share an OBD2 pinout. You can get them on eBay for around a tenner. Search Ford ELM327 on eBay and you should find a USB to OBD2 adapter.
 
 Install DDT4ALL, [link to the software and some databases](https://cloud.howardgb.com/s/RkbA9wctTQRgBcG).
 
@@ -72,4 +72,6 @@ Select the correct options for your car and then press send
 
 If you get an error that you need expert mode it's the second option along the top, the weird black and white face and make sure your ignition is on but the engine is not.
 
-I'm happy to help anyone if you can't get it working, just send me an email at [info@professorshroom.com](mailto:info@professorshroom).
+I'm happy to help anyone if you can't get it working, just send me an email at [info@professorshroom.com](mailto:info@professorshroom.com).
+
+_**Disclaimer:** This guide is provided for information only, and you follow it entirely at your own risk. Writing coding changes to your car's ECUs can cause unexpected behaviour, and I can't be held responsible for any damage to your vehicle, loss of data or warranty, or anything else that results. These steps worked for me on my own car, but that's no guarantee they'll work on yours. Always back up your original configuration before changing anything, and if you're not comfortable doing this yourself, speak to a professional._
