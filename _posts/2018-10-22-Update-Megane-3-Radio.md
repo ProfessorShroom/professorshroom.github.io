@@ -1,13 +1,15 @@
 ---
 layout: post
-title: Update Renault Megane MK3 Radio to 2.42 (Latest Update)
+title: Update Renault Megane MK3 Radio to 2.42 (Latest/Final Update)
 date: 2018-10-22
-description: Update the Renault Megane MK3 radio/headunit to 2.42 which is the latest update
+description: A guide on updating radio/headunit in a Renault Megane MK3 to 2.42 which is the latest and final update.
 tags: [renault, megane, radio, headunit, update, renaultsport, car, guide]
 related_projects: [megane]
 categories: Car
 comments: true
 ---
+
+The latest and last update for the standard Renault Megane MK3 headunit solves some issues with Bluetooth, so here's a guide on how to do that.
 
 First you need a USB stick formatted to FAT32.
 

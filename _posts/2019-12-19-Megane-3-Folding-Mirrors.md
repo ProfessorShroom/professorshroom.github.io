@@ -2,7 +2,7 @@
 layout: post
 title: Retrofit Powerfold Mirrors Renault Megane MK3
 date: 2019-12-19
-description: Guide on retrofitting electric folding mirrors to Renault Megane MK3
+description: A guide on retrofitting electric folding mirrors to Renault Megane MK3.
 tags: [renault, megane, mirrors, folding, retrofit, renaultsport, car, guide]
 related_projects: [megane]
 categories: Car
@@ -10,6 +10,8 @@ comments: true
 images:
   lightbox2: true
 ---
+
+It annoyed me that my RS didn't have folding mirrors, so I retrofit them. There isn't, or wasn't any info on doing this at the time I did it, so I decided to make a guide.
 
 First of all, you need to check if you have the correct looms. Mine did but I'm not sure if all models do or only RS models.
 Take this panel off on both sides.

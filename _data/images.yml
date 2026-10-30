@@ -224,39 +224,33 @@ images_list:
         caption: The corrected wiring on the 265 loom to work with the 250.
         title: Renault Megane 265 DRL Loom Plug Modified for 250
 
+      - path: assets/img/car/rs_drive.jpg
+        image_order: 11
+        image_id: "rs_drive"
+        caption: RS Drive 2 in RS Monitor on the R-Link infotainment system.
+        title: RS Drive 2 on RS Monitor
+
       - path: assets/img/car/elm327.png
         exclude: true
         image_id: "elm327"
         caption: The modified Ford ELM327 adapter for use with DDT4ALL.
         title: Modified ELM327 Adapter for DDT4ALL
 
-      - path: assets/img/car/ddtopen.jpg
+      - path: assets/img/car/ddt_open.png
         exclude: true
-        image_id: "ddtopen"
+        image_id: "ddt_open"
         caption: The DDT4ALL opening screen.
         title: DDT4ALL Opening Screen
 
-      - path: assets/img/car/ddtscan.jpg
+      - path: assets/img/car/ddt_scanned.png
         exclude: true
-        image_id: "ddtscan"
+        image_id: "ddt_scanned"
         caption: Scanning for ECU's in DDT4ALL.
         title: DDT4ALL Scan ECU's
 
-      - path: assets/img/car/ddtmfd.jpg
+      - path: assets/img/car/ddt_expert.png
         exclude: true
-        image_id: "ddtmfd"
-        caption: DDT4ALL scanning for the MFD v5.4 ECU.
-        title: DDT4ALL MFD ECU
-
-      - path: assets/img/car/ddtslots.jpg
-        exclude: true
-        image_id: "ddtslots"
-        caption: The RS configuration slots in DDT4ALL.
-        title: RS Configuration Slots
-
-      - path: assets/img/car/ddtexpert.jpg
-        exclude: true
-        image_id: "ddtexport"
+        image_id: "ddt_expert"
         caption: Enabling Expert mode and auto refresh in DDT4ALL.
         title: DDT4ALL Expert Mode
 

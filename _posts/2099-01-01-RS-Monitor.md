@@ -2,7 +2,7 @@
 layout: post
 title: Enabling RS Monitor on a Megane MK3
 date: 2099-01-01
-description: Guide on enabling RS Monitor on a Renault Megane MK3
+description: A guide on enabling RS Monitor on a Renault Megane MK3.
 tags: [renault, megane, rs monitor, retrofit, renaultsport, car, guide]
 related_projects: [megane]
 categories: Car

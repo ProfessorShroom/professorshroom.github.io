@@ -2,7 +2,7 @@
 layout: post
 title: Retrofit Sunvisor Lights to Renault Megane MK3
 date: 2026-05-18
-description: Guide on retrofitting sunvisor lights to a Renault Megane MK3
+description: A guide on retrofitting sunvisor lights to a Renault Megane MK3.
 tags: [renault, megane, sunvisor, light, retrofit, renaultsport, car, guide]
 related_projects: [megane]
 categories: Car
@@ -10,6 +10,8 @@ comments: true
 images:
   lightbox2: true
 ---
+
+This is pretty unnecessary, but it was the only option now missing from my car. So I decided to retrofit it and make a guide just in case anyone else wanted to do it.
 
 First you need to check if you have the correct sun visors, from my research it seems that some cars have them installed already even if you don't have the lights, my passenger side one was already correct but the driver's side was not. You can identify this quite easily by removing the sunvisor from the headlining and looking for these two pins here.
 
