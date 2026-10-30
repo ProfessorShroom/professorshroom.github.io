@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/gallery/";
           },
-        },{id: "post-amdgpu-issues-on-kernel-7-1-6-7-1-7-and-7-1-8",
+        },{id: "post-enabling-rs-drive-2-in-a-megane-mk3",
+        
+          title: "Enabling RS Drive 2 in a Megane MK3",
+        
+        description: "A guide on enabling RS Drive 2 in RS Monitor on a Renault Megane MK3 with a R-Link infotainment system.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/RS-Drive/";
+          
+        },
+      },{id: "post-amdgpu-issues-on-kernel-7-1-6-7-1-7-and-7-1-8",
         
           title: "AMDGPU Issues on Kernel 7.1.6, 7.1.7, and 7.1.8",
         
@@ -52,7 +63,7 @@ ninja.data = [{
         
           title: "Retrofit Sunvisor Lights to Renault Megane MK3",
         
-        description: "Guide on retrofitting sunvisor lights to a Renault Megane MK3",
+        description: "A guide on retrofitting sunvisor lights to a Renault Megane MK3.",
         section: "Posts",
         handler: () => {
           
@@ -96,18 +107,18 @@ ninja.data = [{
         
           title: "Retrofit Powerfold Mirrors Renault Megane MK3",
         
-        description: "Guide on retrofitting electric folding mirrors to Renault Megane MK3",
+        description: "A guide on retrofitting electric folding mirrors to Renault Megane MK3.",
         section: "Posts",
         handler: () => {
           
             window.location.href = "/posts/2019/Megane-3-Folding-Mirrors/";
           
         },
-      },{id: "post-update-renault-megane-mk3-radio-to-2-42-latest-update",
+      },{id: "post-update-renault-megane-mk3-radio-to-2-42-latest-final-update",
         
-          title: "Update Renault Megane MK3 Radio to 2.42 (Latest Update)",
+          title: "Update Renault Megane MK3 Radio to 2.42 (Latest/Final Update)",
         
-        description: "Update the Renault Megane MK3 radio/headunit to 2.42 which is the latest update",
+        description: "A guide on updating radio/headunit in a Renault Megane MK3 to 2.42 which is the latest and final update.",
         section: "Posts",
         handler: () => {
           
