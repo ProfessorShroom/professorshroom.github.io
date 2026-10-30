@@ -162,7 +162,7 @@ images_list:
         caption: The passenger side mirror plug with the needed pin circled.
         title: Renault Megane MK3 Passenger Side Mirror Plug
 
-      - path: assets/img/car/250_folding_mirror_8.jpg
+      - path: assets/img/car/250_folding_mirror_8.png
         exclude: true
         image_id: "folding_mirror_8"
         caption: The config for the folding mirror control in DDT4ALL.
