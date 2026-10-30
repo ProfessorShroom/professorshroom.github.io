@@ -74,6 +74,27 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v7
+      - name: Strip image metadata 🧼
+        run: |
+          sudo apt-get update && sudo apt-get install -y libimage-exiftool-perl
+          chmod +x _scripts/removeImgMetadata.sh
+          ./_scripts/removeImgMetadata.sh
+      - name: Commit stripped images 💾
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A assets/img
+          if git diff --cached --quiet; then
+            echo "No metadata changes"
+            exit 0
+          fi
+          git commit -m "Strip image metadata"
+          for i in 1 2 3; do
+            git pull --rebase origin ${{ github.ref_name }} && git push origin HEAD:${{ github.ref_name }} && exit 0
+            sleep 5
+          done
+          exit 1
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
