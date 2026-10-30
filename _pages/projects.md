@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 description: All of my past, future and present projects!
 nav: true
-nav_order: 3
+nav_order: 2
 display_categories: [Car Projects, IT Projects, Software, Web Projects, Other Projects]
 horizontal: false
 ---

@@ -3,7 +3,7 @@ layout: gallery
 title: Gallery
 permalink: /gallery/
 nav: true
-nav_order: 4
+nav_order: 5
 horizontal: false
 images:
   lightbox2: true

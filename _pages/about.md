@@ -4,6 +4,7 @@ title: About Me
 permalink: /
 hide_title: true
 social: true
+nav_order: 1
 profile:
   align: right
   image: professorshroom.png

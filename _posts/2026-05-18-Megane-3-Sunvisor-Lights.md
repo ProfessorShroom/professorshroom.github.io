@@ -3,7 +3,7 @@ layout: post
 title: Retrofit Sunvisor Lights to Renault Megane MK3
 date: 2026-05-18
 description: Guide on retrofitting sunvisor lights to a Renault Megane MK3
-tags: [renault, megane, sunvisor, light, retrofit, renaultsport, car]
+tags: [renault, megane, sunvisor, light, retrofit, renaultsport, car, guide]
 related_projects: [megane]
 categories: Car
 comments: true
