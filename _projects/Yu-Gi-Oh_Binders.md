@@ -3,7 +3,7 @@ layout: project
 title: Custom Yu-Gi-Oh! Binders
 display_title: Custom Yu-Gi-Oh! Binders
 description: My custom Yu-Gi-Oh! binders that I've made for myself and others
-img: assets/img/binders/blue-eyes_binder_2.png
+img: assets/img/yugioh/binders/blue-eyes_binder_2.png
 importance: 1
 category: Other Projects
 related_projects: [yugioh]
