@@ -254,13 +254,13 @@ images_list:
         caption: Enabling Expert mode and auto refresh in DDT4ALL.
         title: DDT4ALL Expert Mode
 
-      - path: assets/img/car/megane_250/rs_monitor_1.png
+      - path: assets/img/car/megane_250/rs_monitor_1.jpg
         image_order: 11
         image_id: "rs_monitor_1"
         caption: RS Monitor 2 in the R-Link infotainment system.
         title: RS Monitor 2
 
-      - path: assets/img/car/megane_250/rs_monitor_2.png
+      - path: assets/img/car/megane_250/rs_monitor_2.jpg
         image_order: 12
         image_id: "rs_monitor_2"
         caption: RS Monitor 2 showing on the home screen in the R-Link infotainment system.
@@ -272,13 +272,13 @@ images_list:
         caption: The EZP2023+ SPI programmer.
         title: EZP2023+
 
-      - path: assets/img/car/megane_250/r-link_board.png
+      - path: assets/img/car/megane_250/r-link_board.jpg
         exclude: true
         image_id: "r-link_board"
         caption: The R-Link board with the 24C64F EEPROM chip.
         title: R-Link Board
 
-      - path: assets/img/car/ezp/24c64_in_ezp.png
+      - path: assets/img/car/ezp/24c64_in_ezp.jpg
         exclude: true
         image_id: "24c64_in_ezp"
         caption: The 24C64 chip removed from the R-Link board and placed into the EZP2023+ programmer.
