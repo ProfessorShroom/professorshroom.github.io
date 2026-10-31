@@ -70,11 +70,25 @@ nav_order: 3
 
       </li>
 
-    {% else %}
-
-      <li><p>No guides yet.</p></li>
-
     {% endfor %}
+
+    {% assign coming_soon = site.data.comingSoonGuides %}
+
+    {% for guide in coming_soon %}
+      <li style="opacity: 0.6;">
+        <h3>{{ guide.title }}</h3>
+
+        {% if guide.description != blank %}
+        <p>{{ guide.description }}</p>
+        {% endif %}
+
+        <p class="post-meta">Coming soon</p>
+      </li>
+    {% endfor %}
+
+    {% if guides.size == 0 and coming_soon.size == 0 %}
+      <li><p>No guides yet.</p></li>
+    {% endif %}
 
   </ul>
 
