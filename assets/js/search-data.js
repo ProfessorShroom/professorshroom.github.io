@@ -185,11 +185,6 @@ ninja.data = [{
           description: "My custom Yu-Gi-Oh! binders that I&#39;ve made for myself and others",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Yu-Gi-Oh_Binders/";
-            },},{id: "projects-imac-studio-display",
-          title: 'iMac Studio Display',
-          description: "Convert a 27&quot; iMac into a monitor",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/iMac_Studio_Display/";
             },},{
         id: 'social-email',
         title: 'email',
