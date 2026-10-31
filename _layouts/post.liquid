@@ -204,6 +204,12 @@ layout: default
       {% endif %}
     </div>
   {% endif %}
+  {% if page.mirror_of %}
+    {% assign giscus_mapping = 'specific' %}
+    {% assign giscus_term = page.mirror_of | remove_first: '/' %}
+  {% else %}
+    {% assign giscus_mapping = 'pathname' %}
+  {% endif %}
   <div id="giscus-container" style="margin-top: 40px;">
     <script
       src="https://giscus.app/client.js"
@@ -211,7 +217,8 @@ layout: default
       data-repo-id="R_kgDOPH6XnA"
       data-category="Announcements"
       data-category-id="DIC_kwDOPH6XnM4Csjos"
-      data-mapping="pathname"
+      data-mapping="{{ giscus_mapping }}"
+      {% if giscus_term %}data-term="{{ giscus_term }}"{% endif %}
       data-strict="0"
       data-reactions-enabled="1"
       data-emit-metadata="0"

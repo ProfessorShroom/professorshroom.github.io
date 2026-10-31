@@ -12,11 +12,6 @@ nav_order: 3
     <h1>Guides</h1>
   </div>
 
-{% comment %}
-Mirrors the Posts list, but only for posts tagged guide or guides (any capitalisation).
-The tag / year / category line is intentionally left out.
-Future-dated posts stay hidden, exactly like on the Posts page.
-{% endcomment %}
 {% assign guides = "" | split: "" %}
 {% for post in site.posts %}
 {% assign tags_lc = post.tags | join: "|" | downcase | split: "|" %}
@@ -44,7 +39,7 @@ Future-dated posts stay hidden, exactly like on the Posts page.
 
             <h3>
               {% if post.redirect == blank %}
-                <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <a class="post-title" href="{{ post.guide_url | default: post.url | relative_url }}">{{ post.title }}</a>
               {% elsif post.redirect contains '://' %}
                 <a class="post-title" href="{{ post.redirect }}" target="_blank">{{ post.title }}</a>
                 <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">

@@ -33,7 +33,7 @@ images_list:
 
       - path: assets/img/car/250_dyno.jpg
         image_id: "250_3"
-        caption: The dyno printout.
+        caption: The dyno printout showing 400BHP on my Renault Megane RS 250.
         title: Renault Megane RS 250 Dyno Sheet
 
       - path: assets/img/car/250_interior_1.jpg
@@ -69,7 +69,7 @@ images_list:
       - path: assets/img/car/rs400_badge.jpg
         image_id: "250_9"
         image_order: 2
-        caption: The custom metal 3D printed R.S.400 badge.
+        caption: The custom metal 3D printed R.S.400 badge on my Renault Megane RS 250.
         title: Renault Megane R.S.400 Rear Badge
 
       - path: assets/img/car/250_sunvisor_1.jpg
@@ -200,7 +200,7 @@ images_list:
         caption: The Megane 265 DRL loom, part number 240704181R.
         title: Renault Megane 265 Day Time Running Lights Loom
 
-      - path:
+      - path: assets/img/car/
         exclude: true
         image_id: "250_grill_1"
         caption: The Megane 250 grill.
