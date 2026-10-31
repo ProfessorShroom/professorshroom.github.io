@@ -11,8 +11,10 @@ module Jekyll
 
     def generate(site)
       site.data['comingSoonGuides'] = []
-      # If future posts are being published, they already show up normally.
-      return if site.config['future']
+      if site.config['future']
+        Jekyll.logger.info 'GuideComingSoon:', 'future is true, skipping (future posts are published normally)'
+        return
+      end
 
       found = []
 
@@ -49,6 +51,8 @@ module Jekyll
       end
 
       site.data['comingSoonGuides'] = found.sort_by { |g| [g['date'], g['title'].downcase] }
+      Jekyll.logger.info 'GuideComingSoon:',
+                         "#{found.size} coming soon guide(s): #{found.map { |g| g['title'] }.join(' | ')}"
     end
   end
 end

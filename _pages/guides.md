@@ -82,7 +82,7 @@ nav_order: 3
         <p>{{ guide.description }}</p>
         {% endif %}
 
-        <p class="post-meta">Coming soon</p>
+        <p class="post-meta">Coming soon!</p>
       </li>
     {% endfor %}
 
