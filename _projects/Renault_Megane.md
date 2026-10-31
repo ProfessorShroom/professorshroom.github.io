@@ -3,7 +3,7 @@ layout: project
 title: Renault Megane RS 250 (R.S.400)
 display_title: Renault Megane RS 250 (R.S.400)
 description: Modfied Renault Megane RS 250 build
-img: assets/img/car/250.jpg
+img: assets/img/car/megane_250/megane_250.jpg
 importance: 1
 category: Car Projects
 related_projects: [renault, megane, car]

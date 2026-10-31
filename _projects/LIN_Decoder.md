@@ -3,7 +3,7 @@ layout: project
 title: BMW Rear View Mirror LIN Decoder
 display_title: BMW Rear View Mirror LIN Decoder
 description: A board to decode a LIN BMW rear view mirror
-img: assets/img/bmw_lin/lin.png
+img: assets/img/car/bmw_lin/lin.png
 importance: 10
 category: Car Projects
 related_projects: [megane]

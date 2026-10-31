@@ -3,7 +3,7 @@ layout: project
 title: Merecedes W211 Shifter Repair
 display_title: Merecedes W211 Shifter Repair
 description: Repair no gear dispaly in Mercedes W211
-img: assets/img/car/w211_cluster.jpg
+img: assets/img/car/mercedes_w211/w211_cluster.jpg
 importance: 5
 category: Car Projects
 related_projects: []
