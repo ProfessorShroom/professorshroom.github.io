@@ -5,7 +5,7 @@ display_title: WUPHF .co.uk
 description: A WUPHF fan site as seen in The Office
 img: assets/img/wuphf/wuphf.png
 importance: 2
-category: Web Projects
+category: Websites
 related_projects: [office]
 related_posts: [office]
 comments: false

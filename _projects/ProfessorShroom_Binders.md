@@ -5,7 +5,7 @@ display_title: Professor Shroom Binders.com
 description: Custom made Yu-Gi-Oh! card binders
 img: assets/img/yugioh/professorshroombinders.png
 importance: 1
-category: Web Projects
+category: Websites
 related_projects: [yugioh]
 related_posts: [yugioh]
 comments: true
