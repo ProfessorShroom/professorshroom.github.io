@@ -1,6 +1,18 @@
 
 #### Latest Update
 
+**Version 2.3.0.2 / 2.3.0.1 / 2.3.0.0**
+
+- **_2.3.0.2_** Corrected how images are download, set codes aren't always consistent. This will require more updates as I go and find additional set codes that don't work.
+- **_2.3.0.1_** Widened window as the close button was cut off.
+- **_2.3.0.1_** Stopped Cardmarket from rejecting image download requests.
+- **_2.3.0.0_** Added an image field to the spreadsheet (this is optional, but a nice touch), the software can download an image of the card from Cardmarket and please at in the first column.
+
+#### Older Updates
+
+<details markdown="1">
+<summary><strong>Version 2.x - The .NET 8 / Avalonia Update</strong></summary>
+
 **Version 2.2.0.1 / 2.2.0.1**
 
 - **_2.2.0.1_** Corrected some comments and dates.
@@ -8,11 +20,6 @@
 - **_2.2.0.0_** The GUI file picker now offers `.xlsx` and `.ods` (with an "all spreadsheets" filter), and the CLI `/d` flag now picks up `.ods` files as well as `.xlsx` ones.
 - **_2.2.0.0_** CLI `/d` now matches `.xlsx`/`.ods` case-insensitively on Linux and skips Excel's temporary `~$` lock files.
 - **_2.2.0.0_** An empty sheet no longer crashes the program when it looks for the column headers.
-
-#### Older Updates
-
-<details markdown="1">
-<summary><strong>Version 2.x - The .NET 8 / Avalonia Update</strong></summary>
 
 **Version 2.1.0.0**
 
