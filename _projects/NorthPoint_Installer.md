@@ -4,7 +4,7 @@ title: NorthPoint Installer
 display_title: NorthPoint Installer
 description: Computer Repair Centre Automatic Software Installer depreciated by PlutoPoint Installer
 img: assets/img/software/installer/computer_repair_centre_installer_logo_old.png
-importance: 10
+importance: 100
 category: Software
 related_projects: [installer, software, windows]
 related_posts: [installer, software, windows]

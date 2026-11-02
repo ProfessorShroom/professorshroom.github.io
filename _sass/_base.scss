@@ -1436,3 +1436,41 @@ figure.cover {
     color: #23212d !important;
   }
 }
+
+// Guides page: "Coming soon!" entries
+.post .post-list li.coming-soon-guide {
+  border-left: 4px solid #f89406;
+  padding-left: 1rem;
+
+  // Keep the whole entry at full strength; only the description is dimmed
+  opacity: 1 !important;
+
+  h3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    opacity: 1 !important;
+    color: var(--global-text-color) !important;
+    font-weight: 700;
+  }
+
+  .coming-soon-description {
+    opacity: 0.7;
+  }
+
+  .coming-soon-badge {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #23212d;
+    background-color: #f89406;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+}

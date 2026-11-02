@@ -75,14 +75,15 @@ nav_order: 3
     {% assign coming_soon = site.data.comingSoonGuides %}
 
     {% for guide in coming_soon %}
-      <li style="opacity: 0.6;">
-        <h3>{{ guide.title }}</h3>
+      <li class="coming-soon-guide">
+        <h3>
+          {{ guide.title }}
+          <span class="coming-soon-badge">Coming soon!</span>
+        </h3>
 
         {% if guide.description != blank %}
-        <p>{{ guide.description }}</p>
+        <p class="coming-soon-description">{{ guide.description }}</p>
         {% endif %}
-
-        <p class="post-meta">Coming soon!</p>
       </li>
     {% endfor %}
 
