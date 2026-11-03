@@ -56,10 +56,6 @@ layout: default
   </header>
 
   <article class="post-content">
-    {% comment %}
-      Auto "On this page" contents box for guides: shown when the post is tagged
-      guide/guides and has at least 3 headings (## / ###). Opt out with `toc: false`.
-    {% endcomment %}
     {% assign toc_tags_lc = page.tags | join: '|' | downcase | split: '|' %}
     {% assign show_auto_toc = false %}
     {% if page.toc == false %}
@@ -75,7 +71,6 @@ layout: default
         <ul id="postTocList"></ul>
       </details>
       <script>
-        // Builds the contents list from the post's own ## / ### headings (no plugin needed).
         document.addEventListener('DOMContentLoaded', function () {
           var box = document.getElementById('postToc');
           var list = document.getElementById('postTocList');
@@ -91,16 +86,9 @@ layout: default
             var text = (h.textContent || '').trim();
             if (!text) continue;
             if (!h.id) {
-              var base =
-                text
-                  .toLowerCase()
-                  .replace(/[^a-z0-9]+/g, '-')
-                  .replace(/^-+|-+$/g, '') || 'section';
-              var id = base,
-                n = 2;
-              while (used[id] || document.getElementById(id)) {
-                id = base + '-' + n++;
-              }
+              var base = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'section';
+              var id = base, n = 2;
+              while (used[id] || document.getElementById(id)) { id = base + '-' + n++; }
               h.id = id;
             }
             used[h.id] = true;
@@ -112,10 +100,7 @@ layout: default
             li.appendChild(a);
             if (h.tagName === 'H3' && lastTop) {
               var sub = lastTop.querySelector('ul');
-              if (!sub) {
-                sub = document.createElement('ul');
-                lastTop.appendChild(sub);
-              }
+              if (!sub) { sub = document.createElement('ul'); lastTop.appendChild(sub); }
               sub.appendChild(li);
             } else {
               list.appendChild(li);
@@ -125,24 +110,19 @@ layout: default
           if (!list.children.length) return;
           box.hidden = false;
 
-          // Open by default when there is room for the sticky sidebar
           var wide = window.matchMedia('(min-width: 1280px)');
           box.open = wide.matches;
 
-          // Highlight the section currently being read
           if ('IntersectionObserver' in window) {
             var current = null;
-            var observer = new IntersectionObserver(
-              function (entries) {
-                entries.forEach(function (entry) {
-                  if (!entry.isIntersecting || !links[entry.target.id]) return;
-                  if (current) current.classList.remove('active');
-                  current = links[entry.target.id];
-                  current.classList.add('active');
-                });
-              },
-              { rootMargin: '-80px 0px -65% 0px' }
-            );
+            var observer = new IntersectionObserver(function (entries) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting || !links[entry.target.id]) return;
+                if (current) current.classList.remove('active');
+                current = links[entry.target.id];
+                current.classList.add('active');
+              });
+            }, { rootMargin: '-80px 0px -65% 0px' });
             for (var j = 0; j < heads.length; j++) {
               if (links[heads[j].id]) observer.observe(heads[j]);
             }
