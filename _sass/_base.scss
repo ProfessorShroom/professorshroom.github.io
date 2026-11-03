@@ -1524,18 +1524,10 @@ figure.cover {
     margin-bottom: 1rem;
   }
 
-  h1 {
-    font-size: 2.1rem;
-  }
-  h2 {
-    font-size: 1.7rem;
-  }
-  h3 {
-    font-size: 1.35rem;
-  }
-  h4 {
-    font-size: 1.15rem;
-  }
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.7rem; }
+  h3 { font-size: 1.35rem; }
+  h4 { font-size: 1.15rem; }
 
   p,
   ul,
@@ -1553,10 +1545,7 @@ figure.cover {
     border: none;
     border-radius: 14px;
     background-color: rgba(255, 255, 255, 0.05);
-    transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease,
-      border-color 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 
     &:hover {
       transform: translateY(-3px);
@@ -1636,20 +1625,22 @@ html {
   }
 }
 
+// "On this page" contents (guides): plain list on narrow screens,
+// sticky sidebar in the right margin on wide screens
 .post-toc {
   margin-bottom: 2rem;
-  padding: 1rem 1.25rem;
-  border: none;
-  border-left: 4px solid var(--global-theme-color);
-  border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.05);
 
   summary {
     cursor: pointer;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
   }
 
   ul {
@@ -1659,23 +1650,46 @@ html {
 
     ul {
       margin-top: 0.25rem;
-      padding-left: 1.25rem;
+      padding-left: 1rem;
     }
   }
 
   li {
-    margin: 0.3rem 0;
-    font-size: 0.95rem;
-    line-height: 1.5;
+    margin: 0.4rem 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 
   a {
-    color: var(--global-text-color);
+    color: var(--global-text-color-light);
     text-decoration: none;
+    transition: color 0.15s ease;
 
     &:hover {
       color: var(--global-hover-color, var(--global-theme-color));
-      text-decoration: underline;
+    }
+
+    &.active {
+      color: var(--global-text-color);
+      font-weight: 700;
     }
   }
 }
+
+@media (min-width: 1280px) {
+  .post-toc {
+    float: right;
+    position: sticky;
+    top: 5.5rem;
+    width: 13rem;
+    margin: 0 -14.5rem 0 0; // pushes it into the right margin so text doesn't wrap
+    max-height: calc(100vh - 7rem);
+    overflow-y: auto;
+
+    summary {
+      cursor: default;
+      pointer-events: none; // always open on wide screens
+    }
+  }
+}
+

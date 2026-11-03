@@ -85,21 +85,15 @@ layout: default
           if (heads.length < 3) return;
           var used = {};
           var lastTop = null;
+          var links = {};
           for (var i = 0; i < heads.length; i++) {
             var h = heads[i];
             var text = (h.textContent || '').trim();
             if (!text) continue;
             if (!h.id) {
-              var base =
-                text
-                  .toLowerCase()
-                  .replace(/[^a-z0-9]+/g, '-')
-                  .replace(/^-+|-+$/g, '') || 'section';
-              var id = base,
-                n = 2;
-              while (used[id] || document.getElementById(id)) {
-                id = base + '-' + n++;
-              }
+              var base = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'section';
+              var id = base, n = 2;
+              while (used[id] || document.getElementById(id)) { id = base + '-' + n++; }
               h.id = id;
             }
             used[h.id] = true;
@@ -107,20 +101,39 @@ layout: default
             var a = document.createElement('a');
             a.href = '#' + h.id;
             a.textContent = text;
+            links[h.id] = a;
             li.appendChild(a);
             if (h.tagName === 'H3' && lastTop) {
               var sub = lastTop.querySelector('ul');
-              if (!sub) {
-                sub = document.createElement('ul');
-                lastTop.appendChild(sub);
-              }
+              if (!sub) { sub = document.createElement('ul'); lastTop.appendChild(sub); }
               sub.appendChild(li);
             } else {
               list.appendChild(li);
               lastTop = li;
             }
           }
-          if (list.children.length) box.hidden = false;
+          if (!list.children.length) return;
+          box.hidden = false;
+
+          // Open by default when there is room for the sticky sidebar
+          var wide = window.matchMedia('(min-width: 1280px)');
+          box.open = wide.matches;
+
+          // Highlight the section currently being read
+          if ('IntersectionObserver' in window) {
+            var current = null;
+            var observer = new IntersectionObserver(function (entries) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting || !links[entry.target.id]) return;
+                if (current) current.classList.remove('active');
+                current = links[entry.target.id];
+                current.classList.add('active');
+              });
+            }, { rootMargin: '-80px 0px -65% 0px' });
+            for (var j = 0; j < heads.length; j++) {
+              if (links[heads[j].id]) observer.observe(heads[j]);
+            }
+          }
         });
       </script>
     {% endif %}
