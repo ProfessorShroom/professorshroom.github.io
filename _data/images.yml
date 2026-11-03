@@ -520,7 +520,7 @@ images_list:
         caption: The older style BMW rear view mirror.
         title: BMW Compass Mirror
 
-      - path: assets/img/car/bmw_lin/lin.jpg
+      - path: assets/img/car/bmw_lin/lin_board.png
         image_id: "lin_3"
         caption: The current PCB design which has a few issues.
         title: BMW LIN Decoder Board
