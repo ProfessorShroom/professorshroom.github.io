@@ -1441,7 +1441,7 @@ figure.cover {
 
 // Guides page: "Coming soon!" entries
 .post .post-list li.coming-soon-guide {
-  border: 1px dashed #f89406;
+  border: none;
   border-left: 4px solid #f89406;
 
   // Keep the whole entry at full strength; only the description is dimmed
@@ -1524,18 +1524,10 @@ figure.cover {
     margin-bottom: 1rem;
   }
 
-  h1 {
-    font-size: 2.1rem;
-  }
-  h2 {
-    font-size: 1.7rem;
-  }
-  h3 {
-    font-size: 1.35rem;
-  }
-  h4 {
-    font-size: 1.15rem;
-  }
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.7rem; }
+  h3 { font-size: 1.35rem; }
+  h4 { font-size: 1.15rem; }
 
   p,
   ul,
@@ -1550,17 +1542,13 @@ figure.cover {
     position: relative;
     padding: 1.5rem 1.75rem;
     margin-bottom: 1.25rem;
-    border: 1px solid var(--global-divider-color);
+    border: none;
     border-radius: 14px;
-    background-color: rgba(255, 255, 255, 0.03);
-    transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease,
-      border-color 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 
     &:hover {
       transform: translateY(-3px);
-      border-color: var(--global-theme-color);
       box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
     }
 
@@ -1605,7 +1593,6 @@ figure.cover {
   li.coming-soon-guide:hover {
     transform: none;
     box-shadow: none;
-    border-color: #f89406;
   }
 }
 
@@ -1641,10 +1628,10 @@ html {
 .post-toc {
   margin-bottom: 2rem;
   padding: 1rem 1.25rem;
-  border: 1px solid var(--global-divider-color);
+  border: none;
   border-left: 4px solid var(--global-theme-color);
   border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: rgba(255, 255, 255, 0.05);
 
   summary {
     cursor: pointer;
@@ -1681,3 +1668,4 @@ html {
     }
   }
 }
+
