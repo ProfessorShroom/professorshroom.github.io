@@ -1474,3 +1474,29 @@ figure.cover {
     white-space: nowrap;
   }
 }
+
+// Category pills on posts
+.post .category-pill,
+.post-list li a.category-pill {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #ffffff;
+  background-color: var(--global-theme-color);
+  padding: 0.35rem 0.7rem;
+  margin-right: 0.35rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  text-decoration: none;
+
+  &:hover {
+    color: #ffffff;
+    filter: brightness(1.25);
+    text-decoration: none;
+  }
+}
+

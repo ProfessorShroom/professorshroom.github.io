@@ -165,11 +165,7 @@ pagination:
           {% if categories != "" %}
           &nbsp; &middot; &nbsp;
             {% for category in post.categories %}
-            <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">
-              <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a>
-              {% unless forloop.last %}
-                &nbsp;
-              {% endunless %}
+            <a class="category-pill" href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
               {% endfor %}
           {% endif %}
     </p>
@@ -235,7 +231,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const doc = new DOMParser().parseFromString(text, "text/html");
 
-      // DEBUG: confirm structure exists
       const list = doc.querySelector(".post-list");
 
       if (!list) {
