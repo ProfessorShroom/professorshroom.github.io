@@ -127,6 +127,17 @@ pagination:
 <div class="row">
           <div class="col-sm-9">
 {% endif %}
+        <p class="post-meta">
+          {% for category in post.categories %}
+          <a class="category-pill" href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
+          {% endfor %}
+          <span>
+            {{ post.date | date: '%B %d, %Y' }} &nbsp; &middot; &nbsp; {{ read_time }} min read
+            {% if post.external_source %}
+            &nbsp; &middot; &nbsp; {{ post.external_source }}
+            {% endif %}
+          </span>
+        </p>
         <h3>
         {% if post.redirect == blank %}
           <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -140,13 +151,6 @@ pagination:
         {% endif %}
       </h3>
       <p>{{ post.description }}</p>
-      <p class="post-meta">
-        {{ read_time }} min read &nbsp; &middot; &nbsp;
-        {{ post.date | date: '%B %d, %Y' }}
-        {% if post.external_source %}
-        &nbsp; &middot; &nbsp; {{ post.external_source }}
-        {% endif %}
-      </p>
       <p class="post-tags">
         <a href="{{ year | prepend: '/blog/' | relative_url }}">
           <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
@@ -162,12 +166,6 @@ pagination:
               {% endfor %}
           {% endif %}
 
-          {% if categories != "" %}
-          &nbsp; &middot; &nbsp;
-            {% for category in post.categories %}
-            <a class="category-pill" href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
-              {% endfor %}
-          {% endif %}
     </p>
 
 {% if post.thumbnail %}
@@ -231,6 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const doc = new DOMParser().parseFromString(text, "text/html");
 
+      // DEBUG: confirm structure exists
       const list = doc.querySelector(".post-list");
 
       if (!list) {

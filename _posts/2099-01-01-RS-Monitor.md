@@ -21,6 +21,8 @@ Unlike RS Drive 2, which can be switched on over OBD with DDT4ALL, [see my RS Dr
 
 There aren't any guides on this so I thought I'd make one. It isn't hard, but it does involve taking the unit apart and getting at a chip, so take your time.
 
+## What you'll need
+
 The chip we're after is a 24C64F (an 8KB I2C EEPROM) on the R-Link board. To talk to it you'll need a programmer, I'm using [the EZP2023+](https://www.amazon.co.uk/dp/B0C7G81DG7?ref=fed_asin_title). For the software I'm using [ezp2019+ by bokic on GitHub](https://github.com/bokic/ezp2019) as I run Fedora, but if you run Windows the disc provided with the programmer works fine.
 
 <div class="row">
@@ -31,6 +33,8 @@ The chip we're after is a 24C64F (an 8KB I2C EEPROM) on the R-Link board. To tal
         {% include images.liquid id="r-link_board" %}
     </div>
 </div>
+
+## Choosing a method
 
 There are 3 ways you can do this, and the difference is how the chip gets power.
 
@@ -46,6 +50,8 @@ The third is the one I'll be using. Disconnect the battery first before doing an
     </div>
 </div>
 
+## Reading the chip
+
 Whichever way you go, the next steps are the same. Read the chip and save the dump. Then read it a second time to a different file and compare the two (`sha256sum` or `cmp` will do), if they don't match then you don't have a good connection so re-seat it and try again until two reads are identical.
 
 Below is the command I used to get the dump.
@@ -57,6 +63,8 @@ ch341eeprom -s 24c64 -r rlink_original.bin
 
 **Before we go any further I highly suggest you copy and save your original dump somewhere safe just in case the edit goes wrong so you have your original data to go back to.**
 
+## Editing the dump
+
 Now open the dump in a hex editor. [ADD: what you're looking for, which offset(s) hold the RS Monitor setting, what the original bytes were, what they need to be changed to, and whether there's a checksum that needs updating afterwards.]
 
 Original bytes: **[PASTE ORIGINAL BYTES AND OFFSET]**
@@ -64,6 +72,8 @@ Original bytes: **[PASTE ORIGINAL BYTES AND OFFSET]**
 
 Modified bytes: **[PASTE MODIFIED BYTES AND OFFSET]**
 {: .hexCode}
+
+## Writing it back
 
 Save the edited file under a new name so you don't overwrite your original, then write it to the chip. Once it's written, read it back and compare it to the file you wrote to make sure the write was good.
 

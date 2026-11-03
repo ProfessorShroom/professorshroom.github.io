@@ -37,6 +37,18 @@ nav_order: 3
           <div class="col-sm-9">
         {% endif %}
 
+            <p class="post-meta">
+              {% for category in post.categories %}
+              <a class="category-pill" href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
+              {% endfor %}
+              <span>
+                {{ post.date | date: '%B %d, %Y' }} &nbsp; &middot; &nbsp; {{ read_time }} min read
+                {% if post.external_source %}
+                &nbsp; &middot; &nbsp; {{ post.external_source }}
+                {% endif %}
+              </span>
+            </p>
+
             <h3>
               {% if post.redirect == blank %}
                 <a class="post-title" href="{{ post.guide_url | default: post.url | relative_url }}">{{ post.title }}</a>
@@ -51,14 +63,6 @@ nav_order: 3
             </h3>
 
             <p>{{ post.description }}</p>
-
-            <p class="post-meta">
-              {{ read_time }} min read &nbsp; &middot; &nbsp;
-              {{ post.date | date: '%B %d, %Y' }}
-              {% if post.external_source %}
-                &nbsp; &middot; &nbsp; {{ post.external_source }}
-              {% endif %}
-            </p>
 
         {% if post.thumbnail %}
           </div>

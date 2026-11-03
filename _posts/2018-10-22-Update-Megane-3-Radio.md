@@ -11,9 +11,13 @@ comments: true
 
 The latest and last update for the standard Renault Megane MK3 headunit solves some issues with Bluetooth, so here's a guide on how to do that.
 
+## What you'll need
+
 First you need a USB stick formatted to FAT32.
 
 Download [this file](https://megane3radioupdate.professorshroom.com) and place it on the USB stick, make sure it's the only file on it.
+
+## Check your current version
 
 Plug the USB stick into your car and make sure the radio is on. I would start the engine to make sure the ignition doesn't turn off during the process.
 
@@ -22,6 +26,8 @@ Switch the radio into FM mode.
 Open settings which is the bottom right button on the radio and navigate to Audio Settings > USB connection version > Display the software version.
 
 If it says anything other than "s2.42m2.42" then you need to update.
+
+## Install the update
 
 Open settings which is the bottom right button on the radio and navigate to Audio Settings > USB connection version > Update Software.
 

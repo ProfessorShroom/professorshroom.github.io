@@ -56,6 +56,29 @@ layout: default
   </header>
 
   <article class="post-content">
+    {% comment %}
+      Auto "On this page" contents box for guides: shown when the post is tagged
+      guide/guides and has at least 3 headings (## / ###). Opt out with `toc: false`.
+    {% endcomment %}
+    {% assign toc_tags_lc = page.tags | join: '|' | downcase | split: '|' %}
+    {% assign show_auto_toc = false %}
+    {% if page.toc == false %}
+      {% assign show_auto_toc = false %}
+    {% elsif page.toc and page.toc.beginning %}
+      {% assign show_auto_toc = false %}
+    {% elsif toc_tags_lc contains 'guide' or toc_tags_lc contains 'guides' %}
+      {% assign show_auto_toc = true %}
+    {% endif %}
+    {% if show_auto_toc %}
+      {% assign auto_toc_html = content | toc_only %}
+      {% assign auto_toc_items = auto_toc_html | split: '<li' | size | minus: 1 %}
+      {% if auto_toc_items >= 3 %}
+        <details class="post-toc" open>
+          <summary>On this page</summary>
+          {{ auto_toc_html }}
+        </details>
+      {% endif %}
+    {% endif %}
     {% if page.toc and page.toc.beginning %}
       <div id="table-of-contents">
         {% toc %}

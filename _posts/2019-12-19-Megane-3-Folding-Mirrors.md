@@ -13,6 +13,8 @@ images:
 
 It annoyed me that my RS didn't have folding mirrors, so I retrofit them. There isn't, or wasn't any info on doing this at the time I did it, so I decided to make a guide.
 
+## Check your looms
+
 First of all, you need to check if you have the correct looms. Mine did but I'm not sure if all models do or only RS models.
 Take this panel off on both sides.
 
@@ -36,6 +38,8 @@ Now you can check the loom for the correct wire.
     </div>
 </div>
 
+## Parts you need
+
 If you have the correct loom then you just need to get new mirrors and the driver's window switch controls.
 
 <div class="row">
@@ -54,6 +58,8 @@ I've circled the pin you need to look for on each mirror to make sure they're el
         {% include images.liquid id="folding_mirror_7" %}
     </div>
 </div>
+
+## Coding with DDT4ALL
 
 Once you've swapped the mirrors it will require coding with either CLIP or DDT4ALL, I've not used CLIP so the tutorial will be with DDT.
 
