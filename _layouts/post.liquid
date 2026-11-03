@@ -70,14 +70,49 @@ layout: default
       {% assign show_auto_toc = true %}
     {% endif %}
     {% if show_auto_toc %}
-      {% assign auto_toc_html = content | toc_only %}
-      {% assign auto_toc_items = auto_toc_html | split: '<li' | size | minus: 1 %}
-      {% if auto_toc_items >= 3 %}
-        <details class="post-toc" open>
-          <summary>On this page</summary>
-          {{ auto_toc_html }}
-        </details>
-      {% endif %}
+      <details class="post-toc" id="postToc" hidden>
+        <summary>On this page</summary>
+        <ul id="postTocList"></ul>
+      </details>
+      <script>
+        // Builds the contents list from the post's own ## / ### headings (no plugin needed).
+        document.addEventListener('DOMContentLoaded', function () {
+          var box = document.getElementById('postToc');
+          var list = document.getElementById('postTocList');
+          var root = document.getElementById('markdown-content');
+          if (!box || !list || !root) return;
+          var heads = root.querySelectorAll('h2, h3');
+          if (heads.length < 3) return;
+          var used = {};
+          var lastTop = null;
+          for (var i = 0; i < heads.length; i++) {
+            var h = heads[i];
+            var text = (h.textContent || '').trim();
+            if (!text) continue;
+            if (!h.id) {
+              var base = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'section';
+              var id = base, n = 2;
+              while (used[id] || document.getElementById(id)) { id = base + '-' + n++; }
+              h.id = id;
+            }
+            used[h.id] = true;
+            var li = document.createElement('li');
+            var a = document.createElement('a');
+            a.href = '#' + h.id;
+            a.textContent = text;
+            li.appendChild(a);
+            if (h.tagName === 'H3' && lastTop) {
+              var sub = lastTop.querySelector('ul');
+              if (!sub) { sub = document.createElement('ul'); lastTop.appendChild(sub); }
+              sub.appendChild(li);
+            } else {
+              list.appendChild(li);
+              lastTop = li;
+            }
+          }
+          if (list.children.length) box.hidden = false;
+        });
+      </script>
     {% endif %}
     {% if page.toc and page.toc.beginning %}
       <div id="table-of-contents">
