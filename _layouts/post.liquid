@@ -86,9 +86,16 @@ layout: default
             var text = (h.textContent || '').trim();
             if (!text) continue;
             if (!h.id) {
-              var base = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'section';
-              var id = base, n = 2;
-              while (used[id] || document.getElementById(id)) { id = base + '-' + n++; }
+              var base =
+                text
+                  .toLowerCase()
+                  .replace(/[^a-z0-9]+/g, '-')
+                  .replace(/^-+|-+$/g, '') || 'section';
+              var id = base,
+                n = 2;
+              while (used[id] || document.getElementById(id)) {
+                id = base + '-' + n++;
+              }
               h.id = id;
             }
             used[h.id] = true;
@@ -100,7 +107,10 @@ layout: default
             li.appendChild(a);
             if (h.tagName === 'H3' && lastTop) {
               var sub = lastTop.querySelector('ul');
-              if (!sub) { sub = document.createElement('ul'); lastTop.appendChild(sub); }
+              if (!sub) {
+                sub = document.createElement('ul');
+                lastTop.appendChild(sub);
+              }
               sub.appendChild(li);
             } else {
               list.appendChild(li);
@@ -115,14 +125,17 @@ layout: default
 
           if ('IntersectionObserver' in window) {
             var current = null;
-            var observer = new IntersectionObserver(function (entries) {
-              entries.forEach(function (entry) {
-                if (!entry.isIntersecting || !links[entry.target.id]) return;
-                if (current) current.classList.remove('active');
-                current = links[entry.target.id];
-                current.classList.add('active');
-              });
-            }, { rootMargin: '-80px 0px -65% 0px' });
+            var observer = new IntersectionObserver(
+              function (entries) {
+                entries.forEach(function (entry) {
+                  if (!entry.isIntersecting || !links[entry.target.id]) return;
+                  if (current) current.classList.remove('active');
+                  current = links[entry.target.id];
+                  current.classList.add('active');
+                });
+              },
+              { rootMargin: '-80px 0px -65% 0px' }
+            );
             for (var j = 0; j < heads.length; j++) {
               if (links[heads[j].id]) observer.observe(heads[j]);
             }
