@@ -538,17 +538,17 @@ images_list:
         caption: ProfessorShroom
         title: ProfessorShroom
 
-      - path: assets/img/installer/computer_repair_centre_installer_logo.png
+      - path: assets/img/software/installer/computer_repair_centre_installer_logo.png
         image_id: "plutopoint_installer_logo"
         caption: Computer Repair Centre Installer
         title: Computer Repair Centre Installer
 
-      - path: assets/img/installer/computer_repair_centre_installer_logo_old.png
+      - path: assets/img/software/installer/computer_repair_centre_installer_logo_old.png
         image_id: "northpoint_installer_logo"
         caption: Old Computer Repair Centre Installer
         title: Old Computer Repair Centre Installer
 
-      - path: assets/img/yugioh/cardmarket_price_updater_logo.png
+      - path: assets/img/software/cardmarket/cardmarket_price_updater_logo.png
         image_id: "cardmarket_price_updater_logo"
         caption: Cardmarket Price Updater
         title: Cardmarket Price Updater
