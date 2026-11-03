@@ -90,9 +90,16 @@ layout: default
             var text = (h.textContent || '').trim();
             if (!text) continue;
             if (!h.id) {
-              var base = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'section';
-              var id = base, n = 2;
-              while (used[id] || document.getElementById(id)) { id = base + '-' + n++; }
+              var base =
+                text
+                  .toLowerCase()
+                  .replace(/[^a-z0-9]+/g, '-')
+                  .replace(/^-+|-+$/g, '') || 'section';
+              var id = base,
+                n = 2;
+              while (used[id] || document.getElementById(id)) {
+                id = base + '-' + n++;
+              }
               h.id = id;
             }
             used[h.id] = true;
@@ -103,7 +110,10 @@ layout: default
             li.appendChild(a);
             if (h.tagName === 'H3' && lastTop) {
               var sub = lastTop.querySelector('ul');
-              if (!sub) { sub = document.createElement('ul'); lastTop.appendChild(sub); }
+              if (!sub) {
+                sub = document.createElement('ul');
+                lastTop.appendChild(sub);
+              }
               sub.appendChild(li);
             } else {
               list.appendChild(li);
