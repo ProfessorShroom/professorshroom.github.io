@@ -20,6 +20,11 @@ nav_order: 3
 {% endif %}
 {% endfor %}
 
+  <div class="guide-filter">
+    <label class="filter-label" for="guideFilter">Filter guides</label>
+    <input type="search" id="guideFilter" placeholder="Filter guides..." autocomplete="off">
+  </div>
+
   <ul class="post-list">
 
     {% for post in guides %}
@@ -32,10 +37,8 @@ nav_order: 3
 
       <li>
 
-        {% if post.thumbnail %}
         <div class="row">
-          <div class="col-sm-9">
-        {% endif %}
+  <div class="col-sm-9">
 
             <p class="post-meta">
               {% for category in post.categories %}
@@ -64,13 +67,15 @@ nav_order: 3
 
             <p>{{ post.description }}</p>
 
-        {% if post.thumbnail %}
           </div>
-          <div class="col-sm-3">
-            <img class="card-img" src="{{ post.thumbnail | relative_url }}" style="object-fit: cover; height: 90%" alt="image">
-          </div>
-        </div>
-        {% endif %}
+  <div class="col-sm-3">
+    {% if post.thumbnail %}
+    <img class="card-img" src="{{ post.thumbnail | relative_url }}" style="object-fit: cover; height: 90%" alt="" loading="lazy" decoding="async">
+    {% else %}
+    <div class="thumb-placeholder" aria-hidden="true"><span>{{ post.categories | first | default: 'Guide' }}</span></div>
+    {% endif %}
+  </div>
+</div>
 
       </li>
 
@@ -97,4 +102,25 @@ nav_order: 3
 
   </ul>
 
+  <p class="guide-filter-empty" id="guideFilterEmpty" hidden>No guides match that search.</p>
+
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var input = document.getElementById('guideFilter');
+    var empty = document.getElementById('guideFilterEmpty');
+    var items = document.querySelectorAll('.post-list li');
+    if (!input) return;
+    input.addEventListener('input', function () {
+      var query = input.value.trim().toLowerCase();
+      var visible = 0;
+      for (var i = 0; i < items.length; i++) {
+        var match = !query || items[i].textContent.toLowerCase().indexOf(query) !== -1;
+        items[i].hidden = !match;
+        if (match) visible++;
+      }
+      if (empty) empty.hidden = visible !== 0;
+    });
+  });
+</script>

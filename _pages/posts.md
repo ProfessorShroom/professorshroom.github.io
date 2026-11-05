@@ -122,11 +122,8 @@ pagination:
 
     <li>
 
-{% if post.thumbnail %}
-
 <div class="row">
-          <div class="col-sm-9">
-{% endif %}
+  <div class="col-sm-9">
         <p class="post-meta">
           {% for category in post.categories %}
           <a class="category-pill" href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
@@ -168,15 +165,15 @@ pagination:
 
     </p>
 
-{% if post.thumbnail %}
-
-</div>
-
+  </div>
   <div class="col-sm-3">
-    <img class="card-img" src="{{ post.thumbnail | relative_url }}" style="object-fit: cover; height: 90%" alt="image">
+    {% if post.thumbnail %}
+    <img class="card-img" src="{{ post.thumbnail | relative_url }}" style="object-fit: cover; height: 90%" alt="" loading="lazy" decoding="async">
+    {% else %}
+    <div class="thumb-placeholder" aria-hidden="true"><span>{{ post.categories | first | default: 'Post' }}</span></div>
+    {% endif %}
   </div>
 </div>
-{% endif %}
     </li>
 
     {% endfor %}
