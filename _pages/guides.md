@@ -38,6 +38,7 @@ nav_order: 3
       <li>
 
         <div class="row">
+
   <div class="col-sm-9">
 
             <p class="post-meta">
@@ -68,6 +69,7 @@ nav_order: 3
             <p>{{ post.description }}</p>
 
           </div>
+
   <div class="col-sm-3">
     {% if post.thumbnail %}
     <img class="card-img" src="{{ post.thumbnail | relative_url }}" style="object-fit: cover; height: 90%" alt="" loading="lazy" decoding="async">

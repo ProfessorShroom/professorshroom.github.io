@@ -7,22 +7,24 @@
 {% endfor %}
 
 {% if home_guides.size > 0 %}
-<section class="latest-guides">
-  <h2>Latest guides</h2>
-  <ul class="post-list">
-    {% for guide in home_guides limit: 3 %}
-    <li>
-      <p class="post-meta">
-        {% for category in guide.categories %}
-        <a class="category-pill" href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
-        {% endfor %}
-        <span>{{ guide.date | date: '%B %d, %Y' }}</span>
-      </p>
-      <h3><a class="post-title" href="{{ guide.guide_url | default: guide.url | relative_url }}">{{ guide.title }}</a></h3>
-      <p>{{ guide.description }}</p>
-    </li>
-    {% endfor %}
-  </ul>
-  <a class="latest-guides-all" href="{{ '/guides/' | relative_url }}">Browse all guides &rarr;</a>
-</section>
+  <section class="latest-guides">
+    <h2>Latest guides</h2>
+    <ul class="post-list">
+      {% for guide in home_guides limit: 3 %}
+        <li>
+          <p class="post-meta">
+            {% for category in guide.categories %}
+              <a class="category-pill" href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
+            {% endfor %}
+            <span>{{ guide.date | date: '%B %d, %Y' }}</span>
+          </p>
+          <h3>
+            <a class="post-title" href="{{ guide.guide_url | default: guide.url | relative_url }}">{{ guide.title }}</a>
+          </h3>
+          <p>{{ guide.description }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+    <a class="latest-guides-all" href="{{ '/guides/' | relative_url }}">Browse all guides &rarr;</a>
+  </section>
 {% endif %}
