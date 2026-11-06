@@ -37,18 +37,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/gallery/";
           },
-        },{id: "post-enabling-rs-drive-2-in-a-megane-mk3",
-        
-          title: "Enabling RS Drive 2 in a Megane MK3",
-        
-        description: "A guide on enabling RS Drive 2 in RS Monitor on a Renault Megane MK3 with a R-Link infotainment system.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/posts/2026/RS-Drive/";
-          
-        },
-      },{id: "post-amdgpu-issues-on-kernel-7-1-6-7-1-7-and-7-1-8",
+        },{id: "post-amdgpu-issues-on-kernel-7-1-6-7-1-7-and-7-1-8",
         
           title: "AMDGPU Issues on Kernel 7.1.6, 7.1.7, and 7.1.8",
         
