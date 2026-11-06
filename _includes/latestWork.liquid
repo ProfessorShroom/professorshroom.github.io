@@ -2,11 +2,15 @@
 {% for candidate in site.posts %}
   {% assign candidate_tags = candidate.tags | join: '|' | downcase | split: '|' %}
   {% if candidate_tags contains 'guide' or candidate_tags contains 'guides' %}
+    {% unless candidate.ignore_latest %}
     {% assign latest_items = latest_items | push: candidate %}
+    {% endunless %}
   {% endif %}
 {% endfor %}
 {% for project in site.projects %}
-  {% assign latest_items = latest_items | push: project %}
+  {% unless project.ignore_latest %}
+    {% assign latest_items = latest_items | push: project %}
+  {% endunless %}
 {% endfor %}
 {% assign latest_items = latest_items | sort: 'date' | reverse %}
 

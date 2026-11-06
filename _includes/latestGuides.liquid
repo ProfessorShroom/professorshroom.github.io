@@ -2,7 +2,9 @@
 {% for candidate in site.posts %}
   {% assign candidate_tags = candidate.tags | join: '|' | downcase | split: '|' %}
   {% if candidate_tags contains 'guide' or candidate_tags contains 'guides' %}
-    {% assign home_guides = home_guides | push: candidate %}
+    {% unless candidate.ignore_latest %}
+      {% assign home_guides = home_guides | push: candidate %}
+    {% endunless %}
   {% endif %}
 {% endfor %}
 
