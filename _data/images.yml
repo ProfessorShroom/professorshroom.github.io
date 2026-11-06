@@ -530,6 +530,24 @@ images_list:
         caption: The right the mirror mount made from the original Renault and BMW mount welded together.
         title: Renault Mount for BMW Mirror
 
+  - album: WUPHF App
+    gallery: false
+    items:
+      - path: assets/img/wuphf/wuphfapp_1.png
+        image_id: "wuphfapp_1"
+        caption: A screenshot of the WUPHF Android App's homepage.
+        title: WUPHF App Homepage
+      
+      - path: assets/img/wuphf/wuphfapp_2.png
+        image_id: "wuphfapp_2"
+        caption: A screenshot of the WUPHF Android App's send page.
+        title: WUPHF App Send Page
+
+      - path: assets/img/wuphf/wuphfapp_3.png
+        image_id: "wuphfapp_3"
+        caption: A screenshot of the WUPHF Android App's trivia page.
+        title: WUPHF App Trivia Page
+
   - album: Logos
     gallery: false
     items:
