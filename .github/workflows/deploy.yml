@@ -77,8 +77,9 @@ jobs:
       - name: Strip image metadata 🧼
         run: |
           sudo apt-get update && sudo apt-get install -y libimage-exiftool-perl
-          chmod +x _scripts/removeImgMetadata.sh
-          ./_scripts/removeImgMetadata.sh
+          # run via bash instead of chmod +x, which dirties the working tree
+          # (file mode change) and makes the later `git pull --rebase` fail
+          bash _scripts/removeImgMetadata.sh
       - name: Commit stripped images 💾
         if: github.event_name != 'pull_request'
         run: |
@@ -91,7 +92,7 @@ jobs:
           fi
           git commit -m "Strip image metadata"
           for i in 1 2 3; do
-            git pull --rebase origin ${{ github.ref_name }} && git push origin HEAD:${{ github.ref_name }} && exit 0
+            git pull --rebase --autostash origin ${{ github.ref_name }} && git push origin HEAD:${{ github.ref_name }} && exit 0
             sleep 5
           done
           exit 1
