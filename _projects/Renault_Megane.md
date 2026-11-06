@@ -45,7 +45,7 @@ Some of the mods I've done include the turbo 400 kit from [K-Tec Racing](https:/
 
 Some of the cosmetic mods I've done are a complete custom interior done by [KolourKoncept](https://www.kolourkoncept.co.uk/), lightweight Hyundai i30N alloys. Lots of carbon fibre trim bits on both the exterior and interior of the car made by [Carbon Skins](https://www.facebook.com/profile.php?id=100057058466032). A completely custom 3D printed metal R.S.400 rear badge which you can see a photo of below.
 
-I've also retrofitted a R-Link system from the facelift model which required some coding and a custom loom as this option was never offered on the pre-facelift. This gives me Android Auto, Apple CarPlay, the RS monitor (which shows temps, boost, 0-60 times, lap times, service info, BHP etc.). All of the features are working including the reverse camera, parking sensors and apps from the now defunk app store.
+I've also retrofitted a R-Link system from the facelift model which required some coding and a custom loom as this option was never offered on the pre-facelift. This gives me Android Auto, Apple CarPlay, the RS monitor (which shows temps, boost, 0-60 times, lap times, service info, BHP etc.). All of the features are working including the reverse camera, parking sensors and apps from the now defunk app store. I've also enabled RS Drive 2, which allows you to change steering sensitivity, throttle mapping, and traction control in Normal, Sport and Race mode respectively.
 
 The front DRLs (daytime running lights) have been replaced with the facelift Megane RS 265 versions along with the front blade which allow the DRLs to stay on but dimmed when the headlights are on.
 
