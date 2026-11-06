@@ -125,7 +125,12 @@ ninja.data = [{
             window.location.href = "/posts/2018/Update-Megane-3-Radio/";
           
         },
-      },{id: "projects-cardmarket-price-updater",
+      },{id: "projects-ventpuck",
+          title: 'VentPuck',
+          description: "A round touch-screen OBD2 gauge that sits in the air vent of my Megane RS",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/VentPuck/";
+            },},{id: "projects-cardmarket-price-updater",
           title: 'Cardmarket Price Updater',
           description: "Automatically get prices for MTG, Pokemon and Yu-Gi-Oh! cards",
           section: "Projects",handler: () => {
@@ -140,26 +145,11 @@ ninja.data = [{
           description: "Repair no gear dispaly in Mercedes W211",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Mercedes_W211_Shifter_Repair/";
-            },},{id: "projects-northpoint-installer",
-          title: 'NorthPoint Installer',
-          description: "Computer Repair Centre Automatic Software Installer depreciated by PlutoPoint Installer",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/NorthPoint_Installer/";
             },},{id: "projects-plutopoint-installer",
           title: 'PlutoPoint Installer',
           description: "Computer Repair Centre Automatic Software Installer",
           section: "Projects",handler: () => {
               window.location.href = "/projects/PlutoPoint_Installer/";
-            },},{id: "projects-plutospantry-co-uk",
-          title: 'PlutosPantry.co.uk',
-          description: "Natural pet treats and enrichment",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Plutos_Pantry/";
-            },},{id: "projects-professorshroombinders-com",
-          title: 'ProfessorShroomBinders.com',
-          description: "Custom made Yu-Gi-Oh! card binders",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ProfessorShroom_Binders/";
             },},{id: "projects-renault-megane-rs-250-r-s-400",
           title: 'Renault Megane RS 250 (R.S.400)',
           description: "Modfied Renault Megane RS 250 build",
@@ -170,21 +160,31 @@ ninja.data = [{
           description: "Collection of useful scripts for Windows and Linux",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Useful_Scripts/";
-            },},{id: "projects-ventpuck",
-          title: 'VentPuck',
-          description: "A round touch-screen OBD2 gauge that sits in the air vent of my Megane RS",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/VentPuck/";
-            },},{id: "projects-wuphf-co-uk",
-          title: 'WUPHF.co.uk',
-          description: "A WUPHF fan site as seen in The Office",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/WUPHF/";
             },},{id: "projects-custom-yu-gi-oh-binders",
           title: 'Custom Yu-Gi-Oh! Binders',
           description: "My custom Yu-Gi-Oh! binders that I&#39;ve made for myself and others",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Yu-Gi-Oh_Binders/";
+            },},{id: "projects-plutospantry-co-uk",
+          title: 'PlutosPantry.co.uk',
+          description: "Natural pet treats and enrichment",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Plutos_Pantry/";
+            },},{id: "projects-professorshroombinders-com",
+          title: 'ProfessorShroomBinders.com',
+          description: "Custom made Yu-Gi-Oh! card binders",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ProfessorShroom_Binders/";
+            },},{id: "projects-wuphf-co-uk",
+          title: 'WUPHF.co.uk',
+          description: "A WUPHF fan site as seen in The Office",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/WUPHF/";
+            },},{id: "projects-northpoint-installer",
+          title: 'NorthPoint Installer',
+          description: "Computer Repair Centre Automatic Software Installer depreciated by PlutoPoint Installer",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/NorthPoint_Installer/";
             },},{
         id: 'social-email',
         title: 'email',
