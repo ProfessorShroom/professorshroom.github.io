@@ -537,7 +537,7 @@ images_list:
         image_id: "wuphfapp_1"
         caption: A screenshot of the WUPHF Android App's homepage.
         title: WUPHF App Homepage
-      
+
       - path: assets/img/wuphf/wuphfapp_2.png
         image_id: "wuphfapp_2"
         caption: A screenshot of the WUPHF Android App's send page.
