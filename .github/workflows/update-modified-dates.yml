@@ -1,0 +1,147 @@
+name: Update project modified dates
+
+# When a project page in _projects/ is edited, set `updated:` in its front
+# matter to today's date so it moves to the top of "Latest guides and projects".
+#
+# - Only existing files that were modified are touched (new pages are skipped).
+# - If the commit already changes the `updated:` line, your value is kept.
+# - If the only change is to `updated:`, nothing happens (no loops).
+# - Pages listed under "Skip these pages" below are never stamped.
+# - Put [no-date] in any commit message in a push to skip stamping for that
+#   whole push (handy for bulk date corrections). The site still deploys normally.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "_projects/*.md"
+
+permissions:
+  contents: write
+  actions: write # needed to trigger the deploy workflow afterwards
+
+concurrency:
+  group: update-modified-dates
+  cancel-in-progress: false
+
+jobs:
+  stamp:
+    # Ignore commits made by other workflows (Prettier, README sync, etc.)
+    if: github.actor != 'github-actions[bot]' && github.actor != 'github-actions'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Stamp updated date 🕒
+        id: stamp
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+
+          # Brand new branch / unknown previous commit: nothing to compare against
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            echo "No previous commit to compare against."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # [no-date] in any commit message of this push -> don't stamp anything
+          if git log --format=%B "$BEFORE..$AFTER" | grep -qiF '[no-date]'; then
+            echo "[no-date] found in commit message, skipping."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          TODAY=$(TZ=Europe/London date +%F)
+          cat > /tmp/set_updated.py <<'PY'
+          import re, sys
+
+          path, today = sys.argv[1], sys.argv[2]
+          raw = open(path, encoding="utf-8", newline="").read()
+          nl = "\r\n" if "\r\n" in raw else "\n"
+
+          m = re.match(r"(---\r?\n)(.*?)(\r?\n---)", raw, re.S)
+          if not m:
+              print(f"  no front matter in {path}, skipped")
+              sys.exit(0)
+
+          front = m.group(2)
+          if re.search(r"^updated:[^\r\n]*", front, re.M):
+              front = re.sub(r"^updated:[^\r\n]*", f"updated: {today}", front, count=1, flags=re.M)
+          elif re.search(r"^date:[^\r\n]*", front, re.M):
+              front = re.sub(r"(^date:[^\r\n]*)", lambda d: d.group(1) + nl + f"updated: {today}", front, count=1, flags=re.M)
+          else:
+              front = front + nl + f"updated: {today}"
+
+          open(path, "w", encoding="utf-8", newline="").write(raw[:m.start(2)] + front + raw[m.end(2):])
+          PY
+
+          changed=false
+          while IFS= read -r file; do
+            [ -n "$file" ] || continue
+
+            # Skip these pages (old/irrelevant projects): add more file names here
+            case "$file" in
+              _projects/NorthPoint_Installer.md|_projects/Plutos_Pantry.md)
+                echo "$file: on the skip list, skipping"
+                continue ;;
+            esac
+
+            diff=$(git diff -U0 "$BEFORE" "$AFTER" -- "$file")
+
+            # You set `updated:` yourself in this push -> leave it alone
+            if echo "$diff" | grep -qE '^[+-]updated:'; then
+              echo "$file: updated: edited manually, skipping"
+              continue
+            fi
+
+            # Only count real content changes
+            if ! echo "$diff" | grep -E '^[+-]' | grep -vE '^(\+\+\+|---)' | grep -q .; then
+              echo "$file: no content change, skipping"
+              continue
+            fi
+
+            echo "$file: setting updated: $TODAY"
+            python3 /tmp/set_updated.py "$file" "$TODAY"
+            changed=true
+          done < <(git diff --name-only --diff-filter=M "$BEFORE" "$AFTER" -- '_projects/*.md')
+
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push 💾
+        if: steps.stamp.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _projects/*.md
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+            exit 0
+          fi
+          git commit -m "Update modified dates [skip ci]"
+
+          # main can move while this runs (Prettier, sitemap, README sync all
+          # commit to it), so retry the rebase + push.
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed, retrying..."
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 5))
+          done
+          echo "Could not push to main after 5 attempts"
+          exit 1
+
+      # Commits pushed with the default token don't trigger other workflows,
+      # so ask the deploy workflow to rebuild the site with the new dates.
+      - name: Trigger deploy 🚀
+        if: steps.stamp.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

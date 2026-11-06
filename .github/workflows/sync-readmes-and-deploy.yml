@@ -94,17 +94,39 @@ jobs:
           # Find which READMEs changed
           changed=$(git diff --name-only --cached _includes/*.md)
 
-          # Touch corresponding project files (force Jekyll rebuild only when needed)
+          # Stamp `updated:` on the matching project page so it moves to the
+          # top of "Latest guides and projects" (NorthPoint is intentionally skipped).
+          TODAY=$(TZ=Europe/London date +%F)
+          cat > /tmp/set_updated.py <<'PY'
+          import re, sys
+
+          path, today = sys.argv[1], sys.argv[2]
+          raw = open(path, encoding="utf-8", newline="").read()
+          nl = "\r\n" if "\r\n" in raw else "\n"
+
+          m = re.match(r"(---\r?\n)(.*?)(\r?\n---)", raw, re.S)
+          if not m:
+              sys.exit(0)
+
+          front = m.group(2)
+          if re.search(r"^updated:[^\r\n]*", front, re.M):
+              front = re.sub(r"^updated:[^\r\n]*", f"updated: {today}", front, count=1, flags=re.M)
+          elif re.search(r"^date:[^\r\n]*", front, re.M):
+              front = re.sub(r"(^date:[^\r\n]*)", lambda d: d.group(1) + nl + f"updated: {today}", front, count=1, flags=re.M)
+          else:
+              front = front + nl + f"updated: {today}"
+
+          open(path, "w", encoding="utf-8", newline="").write(raw[:m.start(2)] + front + raw[m.end(2):])
+          PY
+
           for file in $changed; do
             case "$file" in
               *plutopoint-readme.md)
-                touch _projects/PlutoPoint_Installer.md ;;
-              *northpoint-readme.md)
-                touch _projects/NorthPoint_Installer.md ;;
+                python3 /tmp/set_updated.py _projects/PlutoPoint_Installer.md "$TODAY" ;;
               *cardmarket-price-updater-readme.md)
-                touch _projects/Cardmarket_Price_Updater.md ;;
+                python3 /tmp/set_updated.py _projects/Cardmarket_Price_Updater.md "$TODAY" ;;
               *ventpuck-readme.md)
-                touch _projects/VentPuck.md ;;
+                python3 /tmp/set_updated.py _projects/VentPuck.md "$TODAY" ;;
             esac
           done
 

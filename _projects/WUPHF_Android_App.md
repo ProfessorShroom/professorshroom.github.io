@@ -1,6 +1,7 @@
 ---
 layout: project
 date: 2026-11-06
+updated: 2026-11-06
 title: WUPHF Android App
 display_title: WUPHF Android App
 description: The companion Android app for the WUPHF.co.uk fan site

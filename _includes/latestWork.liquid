@@ -3,7 +3,7 @@
   {% assign candidate_tags = candidate.tags | join: '|' | downcase | split: '|' %}
   {% if candidate_tags contains 'guide' or candidate_tags contains 'guides' %}
     {% unless candidate.ignore_latest %}
-      {% assign latest_items = latest_items | push: candidate %}
+    {% assign latest_items = latest_items | push: candidate %}
     {% endunless %}
   {% endif %}
 {% endfor %}
@@ -12,13 +12,26 @@
     {% assign latest_items = latest_items | push: project %}
   {% endunless %}
 {% endfor %}
-{% assign latest_items = latest_items | sort: 'date' | reverse %}
+{% comment %}
+  Sort newest first by `updated` if set, otherwise `date`.
+  Liquid can't sort by a computed value, so build sortable keys (timestamp-index), sort those, then look the items back up by index.
+{% endcomment %}
+{% assign sort_keys = '' | split: '' %}
+{% for item in latest_items %}
+  {% assign item_stamp = item.updated | default: item.date | date: '%Y%m%d%H%M%S' %}
+  {% assign item_idx = forloop.index0 | plus: 10000 %}
+  {% capture sort_key %}{{ item_stamp }}-{{ item_idx }}{% endcapture %}
+  {% assign sort_keys = sort_keys | push: sort_key %}
+{% endfor %}
+{% assign sort_keys = sort_keys | sort | reverse %}
 
 {% if latest_items.size > 0 %}
   <section class="latest-work">
     <h2>Latest guides and projects</h2>
     <ul class="post-list">
-      {% for item in latest_items limit: 6 %}
+      {% for sort_key in sort_keys limit: 6 %}
+        {% assign item_pos = sort_key | split: '-' | last | minus: 10000 %}
+        {% assign item = latest_items[item_pos] %}
         {% if item.collection == 'projects' %}
           {% assign item_type = 'Project' %}
           {% if item.redirect %}
@@ -44,7 +57,11 @@
                 {% if item_label %}
                   <span class="category-pill">{{ item_label }}</span>
                 {% endif %}
-                <span>{{ item_type }} &nbsp; &middot; &nbsp; {{ item.date | date: '%B %d, %Y' }}</span>
+                {% if item.updated %}
+                  <span>{{ item_type }} &nbsp; &middot; &nbsp; Updated {{ item.updated | date: '%B %d, %Y' }}</span>
+                {% else %}
+                  <span>{{ item_type }} &nbsp; &middot; &nbsp; {{ item.date | date: '%B %d, %Y' }}</span>
+                {% endif %}
               </p>
               <h3>
                 <a class="post-title" href="{{ item_href }}">{{ item.title }}</a>

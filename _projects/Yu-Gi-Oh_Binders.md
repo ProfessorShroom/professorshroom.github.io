@@ -1,6 +1,7 @@
 ---
 layout: project
-date: 2026-10-31
+date: 2026-05-28
+updated: 2026-06-11
 title: Custom Yu-Gi-Oh! Binders
 display_title: Custom Yu-Gi-Oh! Binders
 description: My custom Yu-Gi-Oh! binders that I've made for myself and others
