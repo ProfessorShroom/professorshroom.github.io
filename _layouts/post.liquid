@@ -86,9 +86,16 @@ layout: default
             var text = (h.textContent || '').trim();
             if (!text) continue;
             if (!h.id) {
-              var base = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'section';
-              var id = base, n = 2;
-              while (used[id] || document.getElementById(id)) { id = base + '-' + n++; }
+              var base =
+                text
+                  .toLowerCase()
+                  .replace(/[^a-z0-9]+/g, '-')
+                  .replace(/^-+|-+$/g, '') || 'section';
+              var id = base,
+                n = 2;
+              while (used[id] || document.getElementById(id)) {
+                id = base + '-' + n++;
+              }
               h.id = id;
             }
             used[h.id] = true;
@@ -100,7 +107,10 @@ layout: default
             li.appendChild(a);
             if (h.tagName === 'H3' && lastTop) {
               var sub = lastTop.querySelector('ul');
-              if (!sub) { sub = document.createElement('ul'); lastTop.appendChild(sub); }
+              if (!sub) {
+                sub = document.createElement('ul');
+                lastTop.appendChild(sub);
+              }
               sub.appendChild(li);
             } else {
               list.appendChild(li);
@@ -115,14 +125,17 @@ layout: default
 
           if ('IntersectionObserver' in window) {
             var current = null;
-            var observer = new IntersectionObserver(function (entries) {
-              entries.forEach(function (entry) {
-                if (!entry.isIntersecting || !links[entry.target.id]) return;
-                if (current) current.classList.remove('active');
-                current = links[entry.target.id];
-                current.classList.add('active');
-              });
-            }, { rootMargin: '-80px 0px -65% 0px' });
+            var observer = new IntersectionObserver(
+              function (entries) {
+                entries.forEach(function (entry) {
+                  if (!entry.isIntersecting || !links[entry.target.id]) return;
+                  if (current) current.classList.remove('active');
+                  current = links[entry.target.id];
+                  current.classList.add('active');
+                });
+              },
+              { rootMargin: '-80px 0px -65% 0px' }
+            );
             for (var j = 0; j < heads.length; j++) {
               if (links[heads[j].id]) observer.observe(heads[j]);
             }
@@ -172,8 +185,8 @@ layout: default
         {% assign nav_index = forloop.index0 %}
       {% endif %}
     {% endfor %}
-    {% assign prev_guide = nil %}
-    {% assign next_guide = nil %}
+    {% assign prev_guide = null %}
+    {% assign next_guide = null %}
     {% if nav_index >= 0 %}
       {% if nav_index > 0 %}
         {% assign prev_index = nav_index | minus: 1 %}
@@ -186,10 +199,14 @@ layout: default
       <a class="guide-nav-back" href="{{ '/guides/' | relative_url }}">All guides</a>
       <div class="guide-nav-links">
         {% if prev_guide %}
-          <a class="guide-nav-prev" href="{{ prev_guide.guide_url | default: prev_guide.url | relative_url }}"><span>Previous guide</span>{{ prev_guide.title }}</a>
+          <a class="guide-nav-prev" href="{{ prev_guide.guide_url | default: prev_guide.url | relative_url }}"
+            ><span>Previous guide</span>{{ prev_guide.title -}}
+          </a>
         {% endif %}
         {% if next_guide %}
-          <a class="guide-nav-next" href="{{ next_guide.guide_url | default: next_guide.url | relative_url }}"><span>Next guide</span>{{ next_guide.title }}</a>
+          <a class="guide-nav-next" href="{{ next_guide.guide_url | default: next_guide.url | relative_url }}"
+            ><span>Next guide</span>{{ next_guide.title -}}
+          </a>
         {% endif %}
       </div>
     </nav>

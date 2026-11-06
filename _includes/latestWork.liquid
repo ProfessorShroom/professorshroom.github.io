@@ -11,53 +11,64 @@
 {% assign latest_items = latest_items | sort: 'date' | reverse %}
 
 {% if latest_items.size > 0 %}
-<section class="latest-work">
-  <h2>Latest guides and projects</h2>
-  <ul class="post-list">
-    {% for item in latest_items limit: 6 %}
-      {% if item.collection == 'projects' %}
-        {% assign item_type = 'Project' %}
-        {% if item.redirect %}
-          {% assign item_href = item.redirect %}
-        {% else %}
-          {% assign item_href = item.url | relative_url %}
-        {% endif %}
-        {% assign item_image = item.img %}
-        {% assign item_label = item.category %}
-        {% assign item_fit = 'contain' %}
-      {% else %}
-        {% assign item_type = 'Guide' %}
-        {% assign guide_target = item.guide_url | default: item.url %}
-        {% assign item_href = guide_target | relative_url %}
-        {% assign item_image = item.thumbnail %}
-        {% assign item_label = item.categories | first %}
-        {% assign item_fit = 'cover' %}
-      {% endif %}
-    <li>
-      <div class="row">
-        <div class="col-sm-9">
-          <p class="post-meta">
-            {% if item_label %}
-            <span class="category-pill">{{ item_label }}</span>
-            {% endif %}
-            <span>{{ item_type }} &nbsp; &middot; &nbsp; {{ item.date | date: '%B %d, %Y' }}</span>
-          </p>
-          <h3><a class="post-title" href="{{ item_href }}">{{ item.title }}</a></h3>
-          <p>{{ item.description }}</p>
-        </div>
-        <div class="col-sm-3">
-          {% if item_image %}
-          <img class="card-img" src="{{ item_image | relative_url }}" style="object-fit: {{ item_fit }}; height: 90%" alt="" loading="lazy" decoding="async">
+  <section class="latest-work">
+    <h2>Latest guides and projects</h2>
+    <ul class="post-list">
+      {% for item in latest_items limit: 6 %}
+        {% if item.collection == 'projects' %}
+          {% assign item_type = 'Project' %}
+          {% if item.redirect %}
+            {% assign item_href = item.redirect %}
           {% else %}
-          <div class="thumb-placeholder" aria-hidden="true"><span>{{ item_label | default: item_type }}</span></div>
+            {% assign item_href = item.url | relative_url %}
           {% endif %}
-        </div>
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-  <a class="latest-work-links" href="{{ '/guides/' | relative_url }}">Browse all guides &rarr;</a>
-  &nbsp;&nbsp;
-  <a class="latest-work-links" href="{{ '/projects/' | relative_url }}">See all projects &rarr;</a>
-</section>
+          {% assign item_image = item.img %}
+          {% assign item_label = item.category %}
+          {% assign item_fit = 'contain' %}
+        {% else %}
+          {% assign item_type = 'Guide' %}
+          {% assign guide_target = item.guide_url | default: item.url %}
+          {% assign item_href = guide_target | relative_url %}
+          {% assign item_image = item.thumbnail %}
+          {% assign item_label = item.categories | first %}
+          {% assign item_fit = 'cover' %}
+        {% endif %}
+        <li>
+          <div class="row">
+            <div class="col-sm-9">
+              <p class="post-meta">
+                {% if item_label %}
+                  <span class="category-pill">{{ item_label }}</span>
+                {% endif %}
+                <span>{{ item_type }} &nbsp; &middot; &nbsp; {{ item.date | date: '%B %d, %Y' }}</span>
+              </p>
+              <h3>
+                <a class="post-title" href="{{ item_href }}">{{ item.title }}</a>
+              </h3>
+              <p>{{ item.description }}</p>
+            </div>
+            <div class="col-sm-3">
+              {% if item_image %}
+                <img
+                  class="card-img"
+                  src="{{ item_image | relative_url }}"
+                  style="object-fit: {{ item_fit }}; height: 90%"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                >
+              {% else %}
+                <div class="thumb-placeholder" aria-hidden="true">
+                  <span>{{ item_label | default: item_type }}</span>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+    <a class="latest-work-links" href="{{ '/guides/' | relative_url }}">Browse all guides &rarr;</a>
+    &nbsp;&nbsp;
+    <a class="latest-work-links" href="{{ '/projects/' | relative_url }}">See all projects &rarr;</a>
+  </section>
 {% endif %}
