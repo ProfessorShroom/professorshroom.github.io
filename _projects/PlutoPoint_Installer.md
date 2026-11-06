@@ -1,5 +1,6 @@
 ---
 layout: project
+date: 2026-10-31
 title: PlutoPoint Installer
 display_title: PlutoPoint Installer
 description: Computer Repair Centre Automatic Software Installer

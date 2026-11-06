@@ -1,5 +1,6 @@
 ---
 layout: project
+date: 2026-11-01
 title: PlutosPantry.co.uk
 display_title: PlutosPantry .co.uk
 description: Natural pet treats and enrichment

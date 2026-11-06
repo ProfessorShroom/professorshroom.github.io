@@ -1,5 +1,6 @@
 ---
 layout: project
+date: 2026-11-02
 title: NorthPoint Installer
 display_title: NorthPoint Installer
 description: Computer Repair Centre Automatic Software Installer depreciated by PlutoPoint Installer

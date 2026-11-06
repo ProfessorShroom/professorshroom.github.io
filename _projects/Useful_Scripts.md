@@ -1,5 +1,6 @@
 ---
 layout: project
+date: 2026-10-31
 title: Useful Scripts
 display_title: Useful Scripts
 description: Collection of useful scripts for Windows and Linux

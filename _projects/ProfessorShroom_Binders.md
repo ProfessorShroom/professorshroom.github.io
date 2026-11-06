@@ -1,5 +1,6 @@
 ---
 layout: project
+date: 2026-11-01
 title: ProfessorShroomBinders.com
 display_title: Professor Shroom Binders.com
 description: Custom made Yu-Gi-Oh! card binders

@@ -1,5 +1,6 @@
 ---
 layout: project
+date: 2026-10-26
 title: VentPuck
 display_title: VentPuck
 description: A round touch-screen OBD2 gauge that sits in the air vent of my Megane RS

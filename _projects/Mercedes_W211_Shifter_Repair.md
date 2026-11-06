@@ -1,5 +1,6 @@
 ---
 layout: project
+date: 2026-10-31
 title: Merecedes W211 Shifter Repair
 display_title: Merecedes W211 Shifter Repair
 description: Repair no gear dispaly in Mercedes W211

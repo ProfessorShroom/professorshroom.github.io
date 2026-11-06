@@ -17,7 +17,7 @@ profile:
 
 <span style="font-size: 20px;">I often start projects for my current needs in computers or my cars. So this is a place for my current, future and past projects!</span>
 
-{% include latestGuides.liquid %}
+{% include latestWork.liquid %}
 
 <br>
 <br>

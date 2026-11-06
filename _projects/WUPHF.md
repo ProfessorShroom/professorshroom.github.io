@@ -1,5 +1,6 @@
 ---
 layout: project
+date: 2026-11-01
 title: WUPHF.co.uk
 display_title: WUPHF .co.uk
 description: A WUPHF fan site as seen in The Office

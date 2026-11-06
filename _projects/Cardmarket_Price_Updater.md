@@ -1,5 +1,6 @@
 ---
 layout: project
+date: 2026-10-31
 title: Cardmarket Price Updater
 display_title: Cardmarket Price Updater
 description: Automatically get prices for MTG, Pokemon and Yu-Gi-Oh! cards
