@@ -1,15 +1,11 @@
 ---
-layout: project
-date: 2025-07-11
-updated: 2025-07-31
+layout: post
 title: Merecedes W211 Shifter Repair
-display_title: Merecedes W211 Shifter Repair
-description: Repair no gear dispaly in Mercedes W211
-img: assets/img/car/mercedes_w211/w211_cluster.jpg
-importance: 5
-category: Car Projects
-related_projects: []
-related_posts: []
+date: 2025-07-31
+description: Repair no gear dispaly in Mercedes W/S211
+tags: [car, mercedes]
+related_projects: [car, mercedes]
+categories: Car
 comments: true
 images:
   lightbox2: true
