@@ -92,6 +92,17 @@ ninja.data = [{
             window.location.href = "/posts/2025/Docker-29/";
           
         },
+      },{id: "post-merecedes-w211-shifter-repair",
+        
+          title: "Merecedes W211 Shifter Repair",
+        
+        description: "Repair no gear dispaly in Mercedes W/S211",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2025/Mercedes_W211_Shifter_Repair/";
+          
+        },
       },{id: "post-bypass-windows-11-microsoft-account-requirement",
         
           title: "Bypass Windows 11 Microsoft Account Requirement",
@@ -155,11 +166,6 @@ ninja.data = [{
           description: "A WUPHF fan site as seen in The Office",
           section: "Projects",handler: () => {
               window.location.href = "/projects/WUPHF/";
-            },},{id: "projects-merecedes-w211-shifter-repair",
-          title: 'Merecedes W211 Shifter Repair',
-          description: "Repair no gear dispaly in Mercedes W211",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Mercedes_W211_Shifter_Repair/";
             },},{id: "projects-cardmarket-price-updater",
           title: 'Cardmarket Price Updater',
           description: "Automatically get prices for MTG, Pokemon and Yu-Gi-Oh! cards",
