@@ -78,7 +78,7 @@ All of this I think makes this one of if not the nicest Renault Megane 3 RS in t
         {% include images.liquid id="265_drls_1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include images.liquid id="250_9" %}
+        {% include images.liquid id="rs400_badge" %}
     </div>
 </div>
 

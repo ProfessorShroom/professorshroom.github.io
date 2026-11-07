@@ -6,13 +6,13 @@ title: WUPHF Android App
 display_title: WUPHF Android App
 description: The companion Android app for the WUPHF.co.uk fan site
 img: assets/img/wuphf/wuphf.png
-importance: 4
+importance: 6
 category: Software
 related_projects: [office, android, software]
 related_posts: [office, android, software]
-comments: false
+comments: true
 images:
-  lightbox2: false
+  lightbox2: true
 ---
 
 <div style="display: flex; justify-content: center; width: 100%;">

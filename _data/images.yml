@@ -67,7 +67,7 @@ images_list:
         title: Renault Megane RS 250 R-Link System
 
       - path: assets/img/car/megane_250/rs400_badge.jpg
-        image_id: "250_9"
+        image_id: "rs400_badge"
         image_order: 2
         caption: The custom metal 3D printed R.S.400 badge on my Renault Megane RS 250.
         title: Renault Megane R.S.400 Rear Badge
