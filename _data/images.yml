@@ -394,7 +394,7 @@ images_list:
         title: Red-Eyes Black Dragon Binder Front
 
   - album: My Yu-Gi-Oh! Collection
-    gallery: true
+    gallery: false
     order: 6
     items:
       - path: assets/img/yugioh/collection/170681358-front.jpg
