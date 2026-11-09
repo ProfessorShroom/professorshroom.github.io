@@ -92,11 +92,11 @@ ninja.data = [{
             window.location.href = "/posts/2025/Docker-29/";
           
         },
-      },{id: "post-merecedes-w211-shifter-repair",
+      },{id: "post-repairing-the-gear-display-on-a-mercedes-w211-s211-shifter",
         
-          title: "Merecedes W211 Shifter Repair",
+          title: "Repairing the Gear Display on a Mercedes W211 / S211 Shifter",
         
-        description: "Repair no gear dispaly in Mercedes W/S211",
+        description: "A guide on repairing the missing P/R/N/D gear display and stuck-in-first-gear fault on a Mercedes-Benz W211/S211 E-Class by replacing the optical switches in the automatic shifter.",
         section: "Posts",
         handler: () => {
           
