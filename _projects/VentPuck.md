@@ -1,7 +1,7 @@
 ---
 layout: project
 date: 2026-10-22
-updated: 2026-11-02
+updated: 2026-11-09
 title: VentPuck
 display_title: VentPuck
 description: A round touch-screen OBD2 gauge that sits in the air vent of my Megane RS
@@ -29,11 +29,15 @@ I drive a Renault Megane RS and I wanted to see things like boost and oil temper
 
 So I'm building [VentPuck](https://github.com/ProfessorShroom/VentPuck), a small round gauge that sits in one of the air vents and reads live data from the car.
 
-It's built around an ESP32-S3 with a 1.75" AMOLED round touch display with a resolution of 466x466. The car's data comes over any Bluetooth OBD2 adapter that supports BLE, so the only wires to the gauge itself are for power. The screen shows one big reading in the middle, with oil and coolant temperature always visible at the bottom, and you swipe to change the main reading. At the moment that's coolant temp, oil temp, boost, RPM, speed and battery voltage, and I'm planning a few more like intake air temp, lambda, error codes/scanning and 0-60 times.
+It's built around an ESP32-S3 with a 1.75" AMOLED round touch display with a resolution of 466x466. The car's data comes over any Bluetooth OBD2 adapter that supports BLE, so the only wires to the gauge itself are for power. The home screen shows four readings you choose, and you swipe between single reading screens for coolant temp, oil temp, boost, RPM, speed and battery voltage, with oil and coolant temperature always visible at the bottom. There is also a 0-60 timer that saves your best time, and a fault codes screen that can scan and clear codes.
 
-The interface is written with LVGL. Everything that's specific to a car (the custom PIDs, the gauge ranges and the warning colours) lives in a small profile file, so it should be easy to adapt to other cars. The first profile is for the Megane RS (250/265/275).
+The interface is written with LVGL, with a smooth slide between screens, a dark mode with a choice of accent colours, and a boot animation that can use your own logo. Press and hold on any screen for the settings menu, where you can change the car, units, brightness and more.
 
-It's still a work in progress. The standard readings like coolant, boost, RPM and voltage work on any OBD2 car, but oil temperature isn't a standard PID on Renaults, so I'm still working out the right request for my ECU.
+Everything that's specific to a car lives in a vehicle setting, so it's easy to adapt to other cars. The Megane 3 RS is the first, and it reads oil temperature, boost, battery voltage and barometric pressure straight from the engine ECU. A generic OBD2 mode works on other cars, and the BMW E8x, Clio 4 RS and Megane 4 RS are in as well while people test them.
+
+VentPuck can also update itself over Wi-Fi from the GitHub releases, with a Release channel and a Beta channel for test builds, so anyone testing doesn't have to keep flashing it over USB.
+
+It's still a work in progress, and I'm planning a few more things like intake air temp and fault code descriptions.
 
 All the code is on the repo page.
 
