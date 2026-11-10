@@ -395,7 +395,7 @@ images_list:
 
   - album: My Yu-Gi-Oh! Collection
     gallery: false
-    order: 6
+    order: 7
     items:
       - path: assets/img/yugioh/collection/170681358-front.jpg
         image_id: "nkc1-en002"
@@ -590,3 +590,12 @@ images_list:
         image_id: "ventpuck_logo"
         caption: VentPuck
         title: VentPuck
+
+  - album: VentPuck
+    gallery: true
+    order: 6
+    items:
+      - path: assets/img/ventpuck/ventpuck_screens.png
+        image_id: "ventpuck_screens"
+        caption: Example screens from VentPuck.
+        title: VentPuck Screens

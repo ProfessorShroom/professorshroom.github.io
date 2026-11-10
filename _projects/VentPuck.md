@@ -1,7 +1,7 @@
 ---
 layout: project
 date: 2026-10-22
-updated: 2026-11-09
+updated: 2026-11-10
 title: VentPuck
 display_title: VentPuck
 description: A round touch-screen OBD2 gauge that sits in the air vent of my Megane RS
@@ -29,15 +29,21 @@ I drive a Renault Megane RS and I wanted to see things like boost and oil temper
 
 So I'm building [VentPuck](https://github.com/ProfessorShroom/VentPuck), a small round gauge that sits in one of the air vents and reads live data from the car.
 
-It's built around an ESP32-S3 with a 1.75" AMOLED round touch display with a resolution of 466x466. The car's data comes over any Bluetooth OBD2 adapter that supports BLE, so the only wires to the gauge itself are for power. The home screen shows four readings you choose, and you swipe between single reading screens for coolant temp, oil temp, boost, RPM, speed and battery voltage, with oil and coolant temperature always visible at the bottom. There is also a 0-60 timer that saves your best time, and a fault codes screen that can scan and clear codes.
+It's built around an ESP32-S3 with a 1.75" AMOLED round touch display with a resolution of 466x466. The car's data comes over any Bluetooth OBD2 adapter that supports BLE, so the only wires to the gauge itself are for power. The home screen shows four readings you choose, and you swipe between the other screens: boost, a big oil and coolant temperature screen, intake air temperature, RPM, speed, battery voltage, and a screen showing engine load and throttle position together. Most of them keep oil and coolant temperature visible at the bottom. There is also a 0-60 timer that saves your best time, and a fault codes screen that can scan and clear codes. If the car reports the outside air temperature, it is shown small in the corner of every screen, and it simply isn't there if the car doesn't have it.
 
 The interface is written with LVGL, with a smooth slide between screens, a dark mode with a choice of accent colours, and a boot animation that can use your own logo. Press and hold on any screen for the settings menu, where you can change the car, units, brightness and more.
 
-Everything that's specific to a car lives in a vehicle setting, so it's easy to adapt to other cars. The Megane 3 RS is the first, and it reads oil temperature, boost, battery voltage and barometric pressure straight from the engine ECU. A generic OBD2 mode works on other cars, and the BMW E8x, Clio 4 RS and Megane 4 RS are in as well while people test them.
+<div style="display: flex; justify-content: center; width: 100%;">
+  <div class="ventpuck_screens" style="max-width: 900px; margin: 1.5rem auto 2rem auto;">
+    {% include images.liquid id="ventpuck_screens" class="ventpuck_screens" show_caption=false %}
+  </div>
+</div>
+
+Everything that's specific to a car lives in a vehicle setting, so it's easy to adapt to other cars. The Megane 3 RS is the first, and it reads oil temperature, boost, battery voltage and barometric pressure straight from the engine ECU. A generic OBD2 mode works on other cars. The BMW E8x, Clio 4 RS and Megane 4 RS are in as well while people test them: the Clio 4 RS and Megane 4 RS use the same engine ECU requests as the Megane 3 RS, and the BMW has an experimental oil temperature request that tries several ways of talking to the engine computer and uses whichever one answers.
 
 VentPuck can also update itself over Wi-Fi from the GitHub releases, with a Release channel and a Beta channel for test builds, so anyone testing doesn't have to keep flashing it over USB.
 
-It's still a work in progress, and I'm planning a few more things like intake air temp and fault code descriptions.
+It's still a work in progress, and I'm planning a few more things like fault code descriptions and more car specific readings as people test it on other cars.
 
 All the code is on the repo page.
 
