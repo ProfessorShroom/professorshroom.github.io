@@ -19,7 +19,7 @@ permissions:
 
 jobs:
   sync-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout 🛎️
@@ -164,7 +164,7 @@ jobs:
       - name: Install and Build 🔧
         if: steps.plan.outputs.build == 'true'
         run: |
-          sudo apt-get update && sudo apt-get install -y imagemagick
+          sudo apt-get -o Acquire::Retries=5 update && sudo apt-get -o Acquire::Retries=5 install -y imagemagick
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build

@@ -70,13 +70,13 @@ concurrency:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v7
       - name: Strip image metadata 🧼
         run: |
-          sudo apt-get update && sudo apt-get install -y libimage-exiftool-perl
+          sudo apt-get -o Acquire::Retries=5 update && sudo apt-get -o Acquire::Retries=5 install -y libimage-exiftool-perl
           # run via bash instead of chmod +x, which dirties the working tree
           # (file mode change) and makes the later `git pull --rebase` fail
           bash _scripts/removeImgMetadata.sh
@@ -115,7 +115,7 @@ jobs:
           value: ${{ github.repository }}
       - name: Install and Build 🔧
         run: |
-          sudo apt-get update && sudo apt-get install -y imagemagick
+          sudo apt-get -o Acquire::Retries=5 update && sudo apt-get -o Acquire::Retries=5 install -y imagemagick
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
