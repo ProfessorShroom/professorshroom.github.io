@@ -1,6 +1,7 @@
 ---
 layout: project
 date: 2024-11-05
+updated: 2026-11-11
 update: 2026-11-05
 title: PlutoPoint Installer
 display_title: PlutoPoint Installer

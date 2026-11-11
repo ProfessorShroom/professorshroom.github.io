@@ -1,6 +1,48 @@
 
 #### Latest Update
 
+**Version 7.1.0.2 / 7.1.0.1 / 7.1.0.0**
+
+- **_7.1.0.2_** Now deletes the beta launcher too.
+- **_7.1.0.1_** Organised all software alphabetically.
+- **_7.1.0.0_** Beta launcher now picks the newest installer from GitHub, whether that's a beta or a full release.
+- **_7.1.0.0_** If a full release has the same or a higher version than the latest beta, the beta launcher downloads the release instead, so it can be used as a main launcher.
+- **_7.1.0.0_** Both launchers shows which version they're downloading.
+- **_7.1.0.0_** If GitHub can't be reached, the beta launcher falls back to the latest release instead of failing.
+- **_7.1.0.0_** Beta launcher no longer uses the crcinstallerbeta.professorshroom.com link.
+- **_7.1.0.0_** Betas are now tagged like v7.1.0.0b1 and published as GitHub pre-releases, so the standard launcher never downloads them.
+- **_7.1.0.0_** Launcher releases and the installer-latest release no longer take GitHub's "Latest" label from the current installer release.
+- **_7.1.0.0_** Fixed the release badge in the README picking up launcher releases.
+
+
+#### Older Updates
+
+<details markdown="1">
+<summary><strong>Version 7.x - The .NET 8 / Avalonia Update</strong></summary>
+
+**Version 7.0.8.3 / 7.0.8.2 / 7.0.8.1 / 7.0.8.0**
+
+- **_7.0.8.3_** Expanded the Window as now there's two extra icons it needs more space.
+- **_7.0.8.2_** Fixed crash caused by .ico files instead of .png.
+- **_7.0.8.1_** Added a crash handler.
+- **_7.0.8.0_** Added AMD Chipset Drivers as an install option, ticked automatically when an AMD CPU is detected.
+- **_7.0.8.0_** AMD Chipset Drivers download the latest version from AMD, with backup links if it can't be found, and install silently.
+- **_7.0.8.0_** Added AMD Software: Adrenalin Edition as an install option, ticked automatically when an AMD GPU is detected (including Radeon graphics built into Ryzen CPUs).
+- **_7.0.8.0_** AMD Software: Adrenalin Edition uses AMD's auto-detect installer, so it picks the right driver for the graphics card. It's skipped if the download link can't be found.
+- **_7.0.8.0_** AMD downloads now send the right headers so AMD's site allows them, and anything that isn't a real installer is rejected.
+- **_7.0.8.0_** AMD options are skipped on ARM devices.
+- **_7.0.8.0_** AMD GPU detection now only matches AMD graphics hardware, not AMD chipset devices.
+
+**Version 7.0.7.0**
+
+- **_7.0.7.0_** Fixed Nvidia GPUs not being detected on laptops and fresh installs without an Nvidia driver. Detection now uses PCI vendor IDs instead of adapter names.
+- **_7.0.7.0_** Intel and AMD GPU detection now use the same vendor ID check, so they no longer give false matches on names like "Core" or "Xe".
+- **_7.0.7.0_** Fixed "Could not find Nvidia App download link". The installer now looks like a browser to Nvidia's site and checks several Nvidia pages for the link.
+- **_7.0.7.0_** Added a backup Nvidia App download link to Downloads.json, so it can be updated without a new release.
+- **_7.0.7.0_** The Nvidia App installer now downloads straight to disk instead of into memory.
+- **_7.0.7.0_** A failed Nvidia App download no longer stops the rest of the install. It's marked as failed and the other apps carry on.
+- **_7.0.7.0_** Nvidia App is only marked as installed if the installer finishes successfully.
+
 **Version 7.0.6.3 / 7.0.6.2 / 7.0.6.1 / 7.0.6.0**
 
 - **_7.0.6.3_** Winget now puts two files on the Desktop, both .lock files, so the installer deletes them afterwards.
@@ -11,11 +53,6 @@
 - **_7.0.6.0_** Added Microsoft Office 2024 Pro Plus as an install option (requires product key).
 - **_7.0.6.0_** If Microsoft Office 2024 is selected it skips LibreOffice (if ticked) and uninstalls LibreOffice if it's already installed.
 - **_7.0.6.0_** If Microsoft Office 2024 is installed it will place desktop and taskbar icons.
-
-#### Older Updates
-
-<details markdown="1">
-<summary><strong>Version 7.x - The .NET 8 / Avalonia Update</strong></summary>
 
 **Version 7.0.5.0**
 
