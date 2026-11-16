@@ -2,6 +2,7 @@
 layout: post
 title: Enabling RS Monitor on a Megane MK3 with R-Link 1
 date: 2099-01-01
+thumbnail: assets/img/car/megane_250/rs_monitor_1.jpg
 description: A guide on enabling RS Monitor on a Renault Megane MK3 with an R-Link 1 infotainment system by editing the screen's EEPROM.
 tags: [renault, megane, rs monitor, r-link, retrofit, renaultsport, car, guide]
 related_projects: [megane]

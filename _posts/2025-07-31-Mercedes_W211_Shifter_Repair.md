@@ -2,6 +2,7 @@
 layout: post
 title: Repairing the Gear Display on a Mercedes W211 / S211 Shifter
 date: 2025-07-31
+thumbnail: assets/img/car/mercedes_w211/w211_cluster.jpg
 description: A guide on repairing the missing P/R/N/D gear display and stuck-in-first-gear fault on a Mercedes-Benz W211/S211 E-Class by replacing the optical switches in the automatic shifter.
 tags: [mercedes, w211, s211, e-class, shifter, repair, soldering, car, guide]
 related_projects: [car, mercedes]

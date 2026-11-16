@@ -168,14 +168,20 @@ images_list:
         caption: The config for the folding mirror control in DDT4ALL.
         title: DDT4ALL Folding Mirror Coding
 
-      - path: ssets/img/car/megane_250/
+      - path: assets/img/car/megane_250/250_carbon_mirrors.jpg
+        image_id: "carbon_mirrors"
+        image_order: 14
+        caption: The finished power folding mirrors with carbon mirror covers.
+        title: Renault Megane MK3 Power Folding Carbon Mirrors
+
+      - path: assets/img/car/megane_250/250_drls_1.jpg
         image_id: "250_drls_1"
         exclude: true
         image_order: 10
         caption: The original Megane 250 day time running lights.
         title: Renault Megane 250 DRLs
 
-      - path: ssets/img/car/megane_250/
+      - path: assets/img/car/megane_250/265_drls_1.jpg
         image_id: "265_drls_1"
         exclude: true
         image_order: 2
