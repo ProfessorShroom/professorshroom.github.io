@@ -1,0 +1,95 @@
+{% comment %}
+  Related projects + related posts, shared by the post and project layouts.
+
+  Usage:
+    {% include related.liquid projects=page.related_projects tags=page.tags %}
+
+  - projects: keys matched against each project's `related_projects`.
+  - tags: matched against each post's `tags`. Posts are ranked by how many
+    tags they share (newest first on ties). Broad tags in `ignore_tags` are
+    skipped so e.g. every guide isn't "related" to every other guide.
+{% endcomment %}
+{% assign related_limit = 4 %}
+{% assign ignore_tags = 'guide,guides' | split: ',' %}
+
+{% if include.projects %}
+  <hr>
+
+  <div class="related-projects-title">
+    <h3>Related projects</h3>
+  </div>
+
+  {% assign related_projects = '' | split: ',' %}
+  {% for project in site.projects %}
+    {% if project.url != page.url and project.related_projects %}
+      {% assign match = false %}
+      {% for key in project.related_projects %}
+        {% if include.projects contains key %}
+          {% assign match = true %}
+        {% endif %}
+      {% endfor %}
+      {% if match %}
+        {% assign related_projects = related_projects | push: project %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  {% assign related_projects = related_projects | sort: 'importance', 'last' %}
+
+  {% if related_projects.size > 0 %}
+    <ul class="post-list related-list">
+      {% for project in related_projects limit: related_limit %}
+        {% include relatedItem.liquid item=project %}
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="related-empty">
+      No related projects.<br>
+      Explore more projects on the <a href="{{ '/projects/' | relative_url }}">projects page</a>.
+    </p>
+  {% endif %}
+{% endif %}
+
+{% if include.tags %}
+  <br>
+  <div class="related-posts-title">
+    <h3>Related posts</h3>
+  </div>
+
+  {% assign wanted_tags = include.tags | join: '|' | downcase | split: '|' %}
+  {% assign sort_keys = '' | split: ',' %}
+  {% for post in site.posts %}
+    {% if post.url != page.url %}
+      {% assign shared = 0 %}
+      {% for tag in post.tags %}
+        {% assign t = tag | downcase %}
+        {% unless ignore_tags contains t %}
+          {% if wanted_tags contains t %}
+            {% assign shared = shared | plus: 1 %}
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+      {% if shared > 0 %}
+        {% assign shared_padded = shared | prepend: '000' | slice: -3, 3 %}
+        {% assign post_idx = forloop.index0 | plus: 10000 %}
+        {% capture sort_key %}{{ shared_padded }}-{{ post.date | date: '%Y%m%d%H%M%S' }}-{{ post_idx }}{% endcapture %}
+        {% assign sort_keys = sort_keys | push: sort_key %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  {% assign sort_keys = sort_keys | sort | reverse %}
+
+  {% if sort_keys.size > 0 %}
+    <ul class="post-list related-list">
+      {% for sort_key in sort_keys limit: related_limit %}
+        {% assign post_pos = sort_key | split: '-' | last | minus: 10000 %}
+        {% assign related_post = site.posts[post_pos] %}
+        {% include relatedItem.liquid item=related_post %}
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="related-empty">
+      No related posts.<br>
+      Explore more posts on the <a href="{{ '/posts/' | relative_url }}">posts page</a>.
+    </p>
+  {% endif %}
+{% endif %}

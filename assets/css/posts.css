@@ -24,12 +24,3 @@
   color: inherit;
   transition: text-decoration-color 0.2s ease;
 }
-
-/* =========================
-   LINKS
-========================= */
-
-.related-posts a:hover {
-  color: var(--global-theme-color);
-  text-decoration: underline;
-}

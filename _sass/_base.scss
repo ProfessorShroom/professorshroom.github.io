@@ -620,6 +620,7 @@ footer.sticky-bottom {
 
       &:hover {
         color: var(--global-theme-color);
+        text-decoration: none;
       }
     }
 
@@ -1921,6 +1922,18 @@ input:focus-visible,
     display: inline-block;
     margin-top: 0.5rem;
     font-weight: 700;
+  }
+}
+
+.related-list {
+  .card-img {
+    width: 100%;
+    height: 8rem !important;
+  }
+
+  .thumb-placeholder {
+    height: 8rem;
+    aspect-ratio: auto;
   }
 }
 

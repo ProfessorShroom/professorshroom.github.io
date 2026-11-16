@@ -1,0 +1,63 @@
+{% comment %}
+  Renders one related post/project card in the same style as the home page "Latest" list.
+  Usage: {% include relatedItem.liquid item=post %}
+{% endcomment %}
+{% assign ri = include.item %}
+{% if ri.collection == 'projects' %}
+  {% assign ri_type = 'Project' %}
+  {% if ri.redirect %}
+    {% assign ri_href = ri.redirect %}
+  {% else %}
+    {% assign ri_href = ri.url | relative_url %}
+  {% endif %}
+  {% assign ri_image = ri.img %}
+  {% assign ri_label = ri.category %}
+  {% assign ri_fit = 'contain' %}
+{% else %}
+  {% assign ri_type = 'Post' %}
+  {% assign ri_target = ri.guide_url | default: ri.url %}
+  {% assign ri_href = ri_target | relative_url %}
+  {% assign ri_image = ri.thumbnail %}
+  {% assign ri_label = ri.categories | first %}
+  {% assign ri_fit = 'cover' %}
+{% endif %}
+<li>
+  <div class="row">
+    <div class="col-sm-9">
+      <p class="post-meta">
+        {% if ri_label %}
+          <span class="category-pill">{{ ri_label }}</span>
+        {% endif %}
+        {% if ri.updated %}
+          <span>{{ ri_type }} &nbsp; &middot; &nbsp; Updated {{ ri.updated | date: '%B %d, %Y' }}</span>
+        {% elsif ri.date %}
+          <span>{{ ri_type }} &nbsp; &middot; &nbsp; {{ ri.date | date: '%B %d, %Y' }}</span>
+        {% else %}
+          <span>{{ ri_type }}</span>
+        {% endif %}
+      </p>
+      <h3>
+        <a class="post-title" href="{{ ri_href }}">{{ ri.title }}</a>
+      </h3>
+      {% if ri.description %}
+        <p>{{ ri.description }}</p>
+      {% endif %}
+    </div>
+    <div class="col-sm-3">
+      {% if ri_image %}
+        <img
+          class="card-img"
+          src="{{ ri_image | relative_url }}"
+          style="object-fit: {{ ri_fit }}"
+          alt=""
+          loading="lazy"
+          decoding="async"
+        >
+      {% else %}
+        <div class="thumb-placeholder" aria-hidden="true">
+          <span>{{ ri_label | default: ri_type }}</span>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</li>
