@@ -34,4 +34,4 @@ profile:
 
 <br>
 
-The best way to contact me is via email or Instagram which you can find below.
+<p class="text-center">The best way to contact me is via email or Instagram which you can find below.</p>
