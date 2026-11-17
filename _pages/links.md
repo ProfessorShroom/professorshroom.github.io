@@ -9,7 +9,7 @@ nav_order: 6
 
 <div class="links-page">
   <header class="links-header">
-    {% include figure.liquid loading="eager" path="assets/img/professorshroom.png" class="links-avatar rounded-circle z-depth-1" sizes="128px" alt="ProfessorShroom" width="128" height="128" %}
+    {% include figure.liquid loading="eager" path="assets/img/professorshroom.png" class="links-avatar rounded-circle" sizes="128px" alt="ProfessorShroom" width="128" height="128" %}
     <h1>{{ site.title }}</h1>
     <p>{{ page.description }}</p>
   </header>
