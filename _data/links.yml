@@ -1,0 +1,41 @@
+# Links shown on /links/, in this order.
+#
+# Each item needs a `title` and `url`, plus an icon from one of:
+#   image:   path to a PNG/JPG already in assets/img (resized to WebP automatically)
+#   project: a _projects file name (without .md) — uses that project's `img`
+#   fa:      a Font Awesome class, e.g. "fa-brands fa-github"
+# Optional: `description` (a short second line under the title).
+
+- section: Tip Me
+  items:
+    - title: Buy Me a Beer
+      url: https://coff.ee/professorshroom
+      fa: fa-solid fa-beer-mug-empty
+      style: beer
+
+- section: Socials
+  items:
+    - title: GitHub
+      url: https://github.com/professorshroom
+      fa: fa-brands fa-github
+    - title: Instagram
+      url: https://instagram.com/professorshroombinders
+      fa: fa-brands fa-instagram
+
+- section: My Projects
+  items:
+    - title: PlutoPoint Installer
+      url: /projects/PlutoPoint_Installer/
+      project: PlutoPoint_Installer
+    - title: ProfessorShroom Binders
+      url: https://professorshroombinders.com
+      project: ProfessorShroom_Binders
+    - title: VentPuck
+      url: https://ventpuck.co.uk
+      project: VentPuck
+    - title: WUPHF
+      url: https://wuphf.co.uk
+      project: WUPHF
+    - title: Cardmarket Price Updater
+      url: /projects/Cardmarket_Price_Updater/
+      project: Cardmarket_Price_Updater

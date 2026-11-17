@@ -1,331 +1,147 @@
-/*
-* LittleLink
-* https://littlelink.io
-* Free to use under the MIT license
-* http://www.opensource.org/licenses/mit-license.php
-*/
+/* =========================
+   LINKS PAGE (/links/)
+========================= */
+.links-page {
+  max-width: 560px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+}
 
-/* Grid
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 37.5rem; /* 600px */
+.links-header {
   text-align: center;
-  margin: 0 auto;
-  padding: var(--spacing-xl) var(--spacing-m) 0 var(--spacing-m);
-  box-sizing: border-box;
-}
-.container-left {
-  position: relative;
-  width: 100%;
-  max-width: 37.5rem;
-  text-align: left;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  box-sizing: border-box;
-}
-.container-left p {
-  margin-bottom: 1rem; /* 16px space between paragraphs */
-}
-.column {
-  width: 100%;
-  box-sizing: border-box;
-}
-/* For devices larger than 400px */
-@media (min-width: 25rem) {
-  /* 400px */
-  .container {
-    width: 85%;
-  }
-} /* For devices larger than 550px */
-@media (min-width: 34.375rem) {
-  /* 550px */
-  .container {
-    width: 80%;
-  }
+  margin-bottom: 2rem;
 }
 
-/* Base Styles
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-body {
+.links-header figure {
+  margin: 0 auto 1rem;
+  width: 128px;
+}
+
+.links-header h1 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.links-header p {
+  color: var(--global-text-color-light);
+  margin: 0;
+}
+
+.links-section {
+  margin-bottom: 1.75rem;
+}
+
+.links-section h2 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+  margin: 0 0 0.6rem 0.25rem;
+}
+
+.links-section ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #1a1a1a;
-  font-family: "Open Sans", system-ui;
-  font-weight: 400;
-  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
-/* Base Typography Settings
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Base size - 16px browser default */
-:root {
-  font-size: 16px; /* Using a 1.25 modular scale for typography */
-  --scale-0: 1rem; /* 16px */
-  --scale-1: 1.25rem; /* 20px */
-  --scale-2: 1.563rem; /* 25px */
-  --scale-3: 1.953rem; /* 31px */
-  --scale-4: 2.441rem; /* 39px */
-  --scale-5: 3.052rem; /* 49px */
-
-  /* Spacing units */
-  --spacing-xs: 0.5rem; /* 8px */
-  --spacing-s: 1rem; /* 16px */
-  --spacing-m: 1.5rem; /* 24px */
-  --spacing-l: 2rem; /* 32px */
-  --spacing-xl: 3rem; /* 48px */
-  --spacing-xxl: 4rem; /* 64px */
+.links-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: var(--global-card-tint);
+  border: 1px solid var(--global-divider-color);
+  color: var(--global-text-color) !important;
+  text-decoration: none !important;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 }
 
-/* Avatar */
-.avatar {
-  width: 8rem; /* 128px */
-  height: 8rem;
-  border-radius: 50%;
-  object-fit: cover;
-  background-position: center;
-  margin-bottom: var(--spacing-l);
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+.links-item:hover,
+.links-item:focus-visible {
+  transform: translateY(-2px);
+  background: var(--global-tint-strong);
+  border-color: var(--global-hover-color);
+  box-shadow: var(--global-card-shadow);
 }
 
-/* Typography Scale */
-h1 {
-  margin: 0 0 var(--spacing-m) 0;
-  font-size: var(--scale-5); /* ~49px */
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto; /* Delete this to remove automatic hyphen on line break */
-}
-body {
-  font-size: var(--scale-1); /* 20px */
-  line-height: 1.6;
-}
-.container p {
-  margin: 0 0 var(--spacing-xl) 0;
-  font-size: var(--scale-1);
-  line-height: 1.6;
-}
-
-/* Footer */
-footer {
-  margin: var(--spacing-xxl) 0; /* 4rem (64px) top and bottom */
-  font-size: var(--scale-0);
-}
-
-/* Responsive adjustments */
-@media (max-width: 34.375rem) {
-  /* 550px */
-  h1 {
-    font-size: 2rem;
-  }
-  body {
-    font-size: var(--scale-0);
-  }
-  .container p {
-    font-size: var(--scale-0);
-  }
-  .avatar {
-    margin-bottom: var(--spacing-m);
-  }
-  footer {
-    margin: var(--spacing-xl) 0; /* 3rem (48px) top and bottom */
-  }
-}
-
-/* Links
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-a {
-  color: #2457f5;
-  text-decoration: underline;
-}
-a:hover {
-  color: #083bda;
-}
-
-/* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button,
-button {
-  display: inline-flex;
+.links-icon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 18.75rem; /* 300px */
-  min-height: 3rem; /* 48px */
-  padding: 0.75rem 1rem; /* 12px ; 16px */
-  font-size: 1.125rem; /* 18px */
-  font-weight: 700;
-  text-decoration: none;
-  white-space: normal;
-  background-color: var(--button-background, transparent);
-  color: var(--button-text, #000000);
-  border: var(--button-border, none);
-  border-radius: 0.5rem;
-  cursor: pointer;
-  box-sizing: border-box;
-  hyphens: auto; /* Delete this to remove automatic hyphen on line break */
-  margin-bottom: 1rem;
-  text-align: center;
-  line-height: 1.3;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 1.6rem;
 }
 
-/* Icons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.icon {
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-right: 0.5rem;
-  flex-shrink: 0;
+.links-icon figure {
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
-/* Avatar Modifiers
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Modifier for no avatar rounding */
-.avatar--none {
-  border-radius: 0%;
+.links-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-/* Modifier for rounded avatar */
-.avatar--rounded {
-  border-radius: 50%;
+.links-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Modifier for slightly rounded corners */
-.avatar--soft {
-  border-radius: 0.5rem; /* 8px rounded corners */
+.links-title {
+  font-weight: 500;
+  font-size: 1.05rem;
 }
 
-/* Theme System
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Light theme is default above */
-
-/* Light theme (forced) */
-:root.theme-light {
-  color-scheme: light;
+.links-description {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  opacity: 0.8;
 }
 
-/* Dark theme */
-:root.theme-dark {
-  color-scheme: dark;
-}
-:root.theme-dark :focus-visible {
-  outline: 2px solid #4899f7;
-  outline-offset: 2px;
-}
-:root.theme-dark body {
-  background-color: #121212;
-  color: #ffffff;
-}
-:root.theme-dark a:not(.button) {
-  color: #4899f7;
-}
-:root.theme-dark a:not(.button):hover {
-  color: #7ab8ff;
+.links-arrow {
+  flex: 0 0 auto;
+  opacity: 0.4;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
-/* Auto theme */
-:root.theme-auto {
-  color-scheme: light dark;
-}
-@media (prefers-color-scheme: dark) {
-  :root.theme-auto body {
-    background-color: #121212;
-    color: #ffffff;
-  }
-  :root.theme-auto :focus-visible {
-    outline: 2px solid #4899f7;
-    outline-offset: 2px;
-  }
-  :root.theme-auto a:not(.button) {
-    color: #4899f7;
-  }
-  :root.theme-auto a:not(.button):hover {
-    color: #7ab8ff;
-  }
+.links-item:hover .links-arrow,
+.links-item:focus-visible .links-arrow {
+  opacity: 1;
+  transform: translateX(3px);
 }
 
-/* Button Text Color Override
-    –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button:hover,
-button:hover {
-  color: var(--button-text, #000000);
+.links-item--beer {
+  background: rgba(255, 221, 0, 0.12);
+  border-color: rgba(255, 221, 0, 0.45);
 }
 
-/* Privacy Page Styles
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.container-left nav {
-  margin: var(--spacing-l) 0;
-  text-align: left;
-}
-section {
-  margin: var(--spacing-xl) 0;
-  text-align: left;
-}
-h2 {
-  font-size: var(--scale-3);
-  font-weight: 700;
-  margin-bottom: var(--spacing-m);
-}
-h3 {
-  font-size: var(--scale-2);
-  font-weight: 600;
-  margin: var(--spacing-l) 0 var(--spacing-s) 0;
-}
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 var(--spacing-m) 0;
-}
-ul li {
-  margin-bottom: var(--spacing-xs);
+.links-item--beer .links-icon {
+  color: #ffdd00;
 }
 
-/* Privacy page specific responsive adjustments */
-@media (max-width: 34.375rem) {
-  h2 {
-    font-size: var(--scale-2);
-  }
-  h3 {
-    font-size: var(--scale-1);
-  }
-  section {
-    margin: var(--spacing-l) 0;
-  }
-}
-
-/* Font Face Definitions
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@font-face {
-  font-display: swap;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2") format("woff2");
-}
-@font-face {
-  font-display: swap;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff2") format("woff2");
-}
-@font-face {
-  font-display: swap;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff2") format("woff2");
-}
-@font-face {
-  font-display: swap;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 800;
-  src: url("../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff2") format("woff2");
+.links-item--beer:hover,
+.links-item--beer:focus-visible {
+  background: rgba(255, 221, 0, 0.2);
+  border-color: #ffdd00;
 }
