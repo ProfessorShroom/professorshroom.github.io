@@ -1,6 +1,6 @@
 ---
-layout: about
-title: About Me
+layout: home
+title: Home
 permalink: /
 hide_title: true
 social: true
