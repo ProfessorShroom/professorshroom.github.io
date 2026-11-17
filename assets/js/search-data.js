@@ -37,6 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/gallery/";
           },
+        },{id: "nav-links",
+          title: "Links",
+          description: "Hey, I’m ProfessorShroom! 🍄 I’m a computer technician, gamer, car enthusiast, collector, occasional designer and coder.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/links/";
+          },
         },{id: "post-enabling-rs-drive-2-in-a-megane-mk3",
         
           title: "Enabling RS Drive 2 in a Megane MK3",
