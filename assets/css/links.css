@@ -57,21 +57,18 @@
   padding: 0.75rem 1rem;
   border-radius: 12px;
   background: var(--global-card-tint);
-  border: 1px solid var(--global-divider-color);
   color: var(--global-text-color) !important;
   text-decoration: none !important;
   transition:
     transform 0.2s ease,
     background-color 0.2s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
+    box-shadow 0.2s ease;
 }
 
 .links-item:hover,
 .links-item:focus-visible {
   transform: translateY(-2px);
   background: var(--global-tint-strong);
-  border-color: var(--global-hover-color);
   box-shadow: var(--global-card-shadow);
 }
 
@@ -133,7 +130,6 @@
 
 .links-item--beer {
   background: rgba(255, 221, 0, 0.12);
-  border-color: rgba(255, 221, 0, 0.45);
 }
 
 .links-item--beer .links-icon {
@@ -143,5 +139,4 @@
 .links-item--beer:hover,
 .links-item--beer:focus-visible {
   background: rgba(255, 221, 0, 0.2);
-  border-color: #ffdd00;
 }
