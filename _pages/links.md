@@ -14,43 +14,43 @@ nav_order: 6
     <p>{{ page.description }}</p>
   </header>
 
-  {% for group in site.data.links %}
-    <section class="links-section">
-      <h2>{{ group.section }}</h2>
-      <ul>
-        {% for link in group.items %}
-          {% assign link_image = link.image %}
-          {% assign link_description = link.description %}
-          {% if link.project %}
-            {% assign project = site.projects | where: 'slug', link.project | first %}
-            {% assign link_image = link_image | default: project.img %}
-            {% assign link_description = link_description | default: project.description %}
-          {% endif %}
-          {% if link.url contains '://' %}
-            {% assign link_href = link.url %}
-          {% else %}
-            {% assign link_href = link.url | relative_url %}
-          {% endif %}
-          <li>
-            <a class="links-item{% if link.style %} links-item--{{ link.style }}{% endif %}" href="{{ link_href }}">
-              <span class="links-icon" aria-hidden="true">
-                {% if link_image %}
-                  {% include figure.liquid path=link_image sizes="48px" alt="" width="48" height="48" %}
-                {% elsif link.fa %}
-                  <i class="{{ link.fa }}"></i>
-                {% endif %}
-              </span>
-              <span class="links-text">
-                <span class="links-title">{{ link.title }}</span>
-                {% if link_description %}
-                  <span class="links-description">{{ link_description }}</span>
-                {% endif %}
-              </span>
-              <i class="fa-solid fa-arrow-right links-arrow" aria-hidden="true"></i>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
-  {% endfor %}
+{% for group in site.data.links %}
+<section class="links-section">
+<h2>{{ group.section }}</h2>
+<ul>
+{% for link in group.items %}
+{% assign link_image = link.image %}
+{% assign link_description = link.description %}
+{% if link.project %}
+{% assign project = site.projects | where: 'slug', link.project | first %}
+{% assign link_image = link_image | default: project.img %}
+{% assign link_description = link_description | default: project.description %}
+{% endif %}
+{% if link.url contains '://' %}
+{% assign link_href = link.url %}
+{% else %}
+{% assign link_href = link.url | relative_url %}
+{% endif %}
+<li>
+<a class="links-item{% if link.style %} links-item--{{ link.style }}{% endif %}" href="{{ link_href }}">
+<span class="links-icon" aria-hidden="true">
+{% if link_image %}
+{% include figure.liquid path=link_image sizes="48px" alt="" width="48" height="48" %}
+{% elsif link.fa %}
+<i class="{{ link.fa }}"></i>
+{% endif %}
+</span>
+<span class="links-text">
+<span class="links-title">{{ link.title }}</span>
+{% if link_description %}
+<span class="links-description">{{ link_description }}</span>
+{% endif %}
+</span>
+<i class="fa-solid fa-arrow-right links-arrow" aria-hidden="true"></i>
+</a>
+</li>
+{% endfor %}
+</ul>
+</section>
+{% endfor %}
 </div>
