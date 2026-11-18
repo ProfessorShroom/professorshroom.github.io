@@ -4,6 +4,8 @@
     <div class="container">
       {% if page.permalink != '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
+          <img class="brand-mark" src="{{ '/assets/img/favicons/android-chrome-192x192.png' | relative_url }}" alt="" width="40" height="40">
+          <span>
           {% if site.title == 'blank' %}
             {% if site.first_name %}
               <span class="font-weight-bold">{{ site.first_name }}</span>
@@ -17,6 +19,7 @@
           {% else %}
             {{ site.title }}
           {% endif %}
+          </span>
         </a>
       {% endif %}
 
@@ -120,25 +123,23 @@
           {% endfor %}
 
           {% if site.search_enabled %}
-            {% if site.search_enabled %}
-              <!-- Search -->
-              <li class="nav-item">
-                <button id="search-toggle" title="Search" onclick="openSearchModal()">
-                  <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
-                </button>
-              </li>
-            {% endif %}
-            </ul>
-            </div>
-            </div>
-            </nav>
-            {% if site.enable_progressbar %}
-              <!-- Scrolling Progress Bar -->
-              <progress id="progress" value="0">
-                <div class="progress-container">
-                  <span class="progress-bar"></span>
-                </div>
-              </progress>
-            {% endif %}
-            </header>
+            <!-- Search -->
+            <li class="nav-item">
+              <button id="search-toggle" title="Search" onclick="openSearchModal()">
+                <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
+              </button>
+            </li>
           {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {% if site.enable_progressbar %}
+    <!-- Scrolling Progress Bar -->
+    <progress id="progress" value="0">
+      <div class="progress-container">
+        <span class="progress-bar"></span>
+      </div>
+    </progress>
+  {% endif %}
+</header>
