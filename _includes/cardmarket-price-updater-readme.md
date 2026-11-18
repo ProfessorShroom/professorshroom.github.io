@@ -13,7 +13,7 @@
 <details markdown="1">
 <summary><strong>Version 2.x - The .NET 8 / Avalonia Update</strong></summary>
 
-**Version 2.2.0.1 / 2.2.0.1**
+**Version 2.2.0.1 / 2.2.0.0**
 
 - **_2.2.0.1_** Corrected some comments and dates.
 - **_2.2.0.0_** Added support for LibreOffice / OpenOffice spreadsheets (`.ods`) alongside `.xlsx`. Prices and the Price Updated date are written straight into the `.ods` file, and the rest of the file (styles, column widths, currency formatting, other sheets) is left untouched. No LibreOffice install is needed.
@@ -41,20 +41,20 @@
 
 **Version 2.0.2.0**
 
-- Removed Flathub compliance, it's too strict and not worth the hassle.
+- **_2.0.2.0_** Removed Flathub compliance, it's too strict and not worth the hassle.
 
 **Version 2.0.1.0**
 
-- Flathub compliance fixes for the Flatpak packaging (metadata/manifest cleanup) - no functional changes to the app itself.
+- **_2.0.1.0_** Flathub compliance fixes for the Flatpak packaging (metadata/manifest cleanup) - no functional changes to the app itself.
 
 **Version 2.0.0.0 - The .NET 8 / Avalonia Update**
 
-- Rewrote the GUI in Avalonia instead of WinForms, so it now runs on Linux (Ubuntu/Fedora, packaged as a Flatpak) as well as Windows, from one shared codebase.
-- Added USD ($) as a third currency alongside GBP and EUR.
-- Downloads now retry automatically with backoff instead of failing the run on one bad request.
-- Backups are now timestamped and kept in a `Backups` folder with automatic pruning, instead of a single overwritten `.bak` file.
-- Added a small JSON config file for default currency/price type and retry/backup settings, created automatically on first run.
-- Replaced AutoUpdater.NET.Official (which required WinForms and blocked a Linux build entirely) with a small built-in update checker on Windows - it now shows a "new version available" link instead of silently self-updating.
+- **_2.0.0.0_** Rewrote the GUI in Avalonia instead of WinForms, so it now runs on Linux (Ubuntu/Fedora, packaged as a Flatpak) as well as Windows, from one shared codebase.
+- **_2.0.0.0_** Added USD ($) as a third currency alongside GBP and EUR.
+- **_2.0.0.0_** Downloads now retry automatically with backoff instead of failing the run on one bad request.
+- **_2.0.0.0_** Backups are now timestamped and kept in a `Backups` folder with automatic pruning, instead of a single overwritten `.bak` file.
+- **_2.0.0.0_** Added a small JSON config file for default currency/price type and retry/backup settings, created automatically on first run.
+- **_2.0.0.0_** Replaced AutoUpdater.NET.Official (which required WinForms and blocked a Linux build entirely) with a small built-in update checker on Windows - it now shows a "new version available" link instead of silently self-updating.
 
 </details>
 
@@ -63,34 +63,34 @@
 
 **Version 1.4.0.0**
 
-- Changed quiet mode to actually hide the CLI completely.
-- Added auto update feature.
+- **_1.4.0.0_** Changed quiet mode to actually hide the CLI completely.
+- **_1.4.0.0_** Added auto update feature.
 
 **Version 1.3.0.0**
 
-- Updated GUI to a more modern look.
-- Added support to select pricing model; Trending Price, 7-Day Average Price and 30-Day Average Price. By default, it is set to 30-Day Average Price, but you can change it to Trending or 7-Day Average Price if you want a more stable price.
+- **_1.3.0.0_** Updated GUI to a more modern look.
+- **_1.3.0.0_** Added support to select pricing model; Trending Price, 7-Day Average Price and 30-Day Average Price. By default, it is set to 30-Day Average Price, but you can change it to Trending or 7-Day Average Price if you want a more stable price.
 
 **Version 1.2.0.0**
 
-- Added cmd/terminal support.
-- /f lets you specify a file.
-- /d lets you specify a directory.
-- /c lets you specify a currency.
-- /log lets you log to a file.
-- /q, /quiet, /s, /silent runs the exe silently.
+- **_1.2.0.0_** Added cmd/terminal support.
+- **_1.2.0.0_** /f lets you specify a file.
+- **_1.2.0.0_** /d lets you specify a directory.
+- **_1.2.0.0_** /c lets you specify a currency.
+- **_1.2.0.0_** /log lets you log to a file.
+- **_1.2.0.0_** /q, /quiet, /s, /silent runs the exe silently.
 
 **Version 1.1.2.0**
 
-- Updated EUR to GBP conversion link.
+- **_1.1.2.0_** Updated EUR to GBP conversion link.
 
 **Version 1.1.1.0**
 
-- Moved Version/Readme link to [professorshroom.com](https://professorshroom.com)
+- **_1.1.1.0_** Moved Version/Readme link to [professorshroom.com](https://professorshroom.com)
 
 **Version 1.1.0.0**
 
-- Added Game to spreadsheet to specify the card game.
-- Will now check prices against the correct game instead of checking all.
+- **_1.1.0.0_** Added Game to spreadsheet to specify the card game.
+- **_1.1.0.0_** Will now check prices against the correct game instead of checking all.
 
 </details>
