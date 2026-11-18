@@ -1,21 +1,21 @@
-# this file uses prebuilt image in dockerhub
+# Local preview: docker compose up --build, then open http://localhost:4000
 services:
-  jekyll:
+  site:
     build: .
-    # uncomment these if you are having this issue with the build:
-    # /usr/local/bundle/gems/jekyll-4.3.4/lib/jekyll/site.rb:509:in `initialize': Permission denied @ rb_sysopen - /srv/jekyll/.jekyll-cache/.gitignore (Errno::EACCES)
-    # and fill the args values with the output of the commands on the right
-    # build:
-    #   args:
-    #     GROUPID: # id -g
-    #     GROUPNAME: # id -gn
-    #     USERID: # id -u
-    #     USERNAME: # echo $USER
+    image: professorshroom-site
+    # Run as your user so nothing in the project folder ends up owned by root
+    user: "${UID:-1000}:${GID:-1000}"
     ports:
-      - 4000:8080
-      - 35729:35729
+      - "4000:4000"
+      - "35729:35729"
     volumes:
-      - .:/srv/jekyll
+      # :z relabels the folder for SELinux (Fedora) so the container can read it
+      - .:/srv/jekyll:z
     environment:
-      - JEKYLL_ENV=development
-    command: ["sh", "-c", "chmod +x /tmp/entry_point.sh && /tmp/entry_point.sh"]
+      JEKYLL_ENV: development
+      HOME: /tmp
+    # Bypasses bin/entry_point.sh, which deletes Gemfile.lock when it isn't tracked by git
+    command: >
+      bundle exec jekyll serve --host 0.0.0.0 --port 4000
+      --livereload --force_polling
+      --destination /tmp/site --disable-disk-cache

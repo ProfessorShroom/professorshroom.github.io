@@ -18,6 +18,22 @@ body {
   }
 }
 
+// Dark mode: plain dark page, only the navbar keeps the gradient
+html.mode-dark body {
+  background: var(--global-bg-color);
+}
+
+// The black tint used on the gradient vanishes on a dark page, so use solid cards instead
+html.mode-dark .project-category-block {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-card-tint);
+}
+
+// The dark purple name is hard to read on dark grey, so lighten it
+html.mode-dark .highlight-name {
+  color: #a06bff;
+}
+
 body.fixed-top-nav {
   // Add some padding for the nav-bar.
   padding-top: 64px;
