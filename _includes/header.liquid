@@ -6,19 +6,19 @@
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
           <img class="brand-mark" src="{{ '/assets/img/favicons/android-chrome-192x192.png' | relative_url }}" alt="" width="40" height="40">
           <span>
-          {% if site.title == 'blank' %}
-            {% if site.first_name %}
-              <span class="font-weight-bold">{{ site.first_name }}</span>
+            {% if site.title == 'blank' %}
+              {% if site.first_name %}
+                <span class="font-weight-bold">{{ site.first_name }}</span>
+              {% endif %}
+              {% if site.middle_name %}
+                {{ site.middle_name }}
+              {% endif %}
+              {% if site.last_name %}
+                {{ site.last_name }}
+              {% endif %}
+            {% else %}
+              {{ site.title }}
             {% endif %}
-            {% if site.middle_name %}
-              {{ site.middle_name }}
-            {% endif %}
-            {% if site.last_name %}
-              {{ site.last_name }}
-            {% endif %}
-          {% else %}
-            {{ site.title }}
-          {% endif %}
           </span>
         </a>
       {% endif %}
