@@ -4,14 +4,12 @@ concurrency:
   group: readme-sync-main
   cancel-in-progress: false
 
+# Triggered by the project repos (PlutoPoint-Installer, NorthPoint-Installer,
+# Cardmarket-Price-Updater, ProfessorShroom-Scripts, VentPuck) whenever their
+# README.md changes, via their notify-website.yml workflow. Can also be run by hand.
 on:
-  push:
-    branches: [main]
-    paths:
-      - "_includes/*.md"
-      - "_projects/*.md"
-  schedule:
-    - cron: "0 * * * *"
+  repository_dispatch:
+    types: [readme-updated]
   workflow_dispatch:
 
 permissions:
@@ -78,7 +76,6 @@ jobs:
         id: plan
         run: |
           if [ "${{ steps.changes.outputs.changed }}" = "true" ] \
-             || [ "${{ github.event_name }}" = "push" ] \
              || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "build=true" >> $GITHUB_OUTPUT
           else
@@ -197,4 +194,4 @@ jobs:
       # ---------------- No-op log ----------------
       - name: Skip notice
         if: steps.plan.outputs.build != 'true'
-        run: echo "No README changes – skipping build & deploy"
+        run: echo "No README changes (triggered by ${{ github.event.client_payload.repo || github.event_name }}) – skipping build & deploy"
