@@ -6,8 +6,7 @@ concurrency:
 
 # Triggered by the project repos (PlutoPoint-Installer, NorthPoint-Installer,
 # Cardmarket-Price-Updater, ProfessorShroom-Scripts, VentPuck) whenever their
-# README.md changes, via their notify-website.yml workflow (PlutoPoint's screenshot.yml
-# also sends it when the installer GUI screenshot changes). Can also be run by hand.
+# README.md changes, via their notify-website.yml workflow. Can also be run by hand.
 on:
   repository_dispatch:
     types: [readme-updated]
@@ -33,15 +32,6 @@ jobs:
             | iconv -f UTF-8 -t UTF-8 -c \
             | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
             > _includes/plutopoint-readme.md
-
-      # Rendered by PlutoPoint-Installer's screenshot.yml whenever its GUI changes.
-      - name: Sync PlutoPoint screenshot
-        run: |
-          if curl -sfL https://raw.githubusercontent.com/ProfessorShroom/PlutoPoint-Installer/main/images/installer.png -o /tmp/installer.png; then
-            cp /tmp/installer.png assets/img/software/installer/installer.png
-          else
-            echo "No PlutoPoint screenshot available - keeping current image"
-          fi
 
       - name: Sync NorthPoint README
         run: |
@@ -70,11 +60,28 @@ jobs:
             | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
             > _includes/ventpuck-readme.md
 
+      # ---------------- Sync screenshots ----------------
+      - name: Sync screenshots
+        run: |
+          sync() {
+            if curl -sfL "https://raw.githubusercontent.com/ProfessorShroom/$1" -o /tmp/screenshot.png; then
+              cp /tmp/screenshot.png "$2"
+            else
+              echo "No screenshot at $1 - keeping $2"
+            fi
+          }
+          sync PlutoPoint-Installer/main/images/installer.png assets/img/software/installer/installer.png
+          sync Cardmarket-Price-Updater/main/images/cardmarketPriceUpdater.png assets/img/software/cardmarket/cardmarket_price_updater.png
+          sync VentPuck/main/images/ventpuckScreens.png assets/img/ventpuck/ventpuck_screens.png
+
       # ---------------- Detect + Commit ----------------
       - name: Detect changes
         id: changes
         run: |
-          git add _includes/*.md assets/img/software/installer/installer.png
+          git add _includes/*.md \
+            assets/img/software/installer/installer.png \
+            assets/img/software/cardmarket/cardmarket_price_updater.png \
+            assets/img/ventpuck/ventpuck_screens.png
 
           if git diff --cached --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
@@ -99,7 +106,7 @@ jobs:
           git config user.email "github-actions@github.com"
 
           # Find which READMEs changed
-          changed=$(git diff --name-only --cached _includes/*.md assets/img/software/installer/installer.png)
+          changed=$(git diff --name-only --cached)
 
           # Stamp `updated:` on the matching project page so it moves to the
           # top of "Latest guides and projects" (NorthPoint is intentionally skipped).
@@ -130,9 +137,9 @@ jobs:
             case "$file" in
               *plutopoint-readme.md|*installer/installer.png)
                 python3 /tmp/set_updated.py _projects/PlutoPoint_Installer.md "$TODAY" ;;
-              *cardmarket-price-updater-readme.md)
+              *cardmarket-price-updater-readme.md|*cardmarket/cardmarket_price_updater.png)
                 python3 /tmp/set_updated.py _projects/Cardmarket_Price_Updater.md "$TODAY" ;;
-              *ventpuck-readme.md)
+              *ventpuck-readme.md|*ventpuck/ventpuck_screens.png)
                 python3 /tmp/set_updated.py _projects/VentPuck.md "$TODAY" ;;
             esac
           done
