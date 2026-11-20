@@ -6,7 +6,8 @@ concurrency:
 
 # Triggered by the project repos (PlutoPoint-Installer, NorthPoint-Installer,
 # Cardmarket-Price-Updater, ProfessorShroom-Scripts, VentPuck) whenever their
-# README.md changes, via their notify-website.yml workflow. Can also be run by hand.
+# README.md changes, via their notify-website.yml workflow (PlutoPoint's screenshot.yml
+# also sends it when the installer GUI screenshot changes). Can also be run by hand.
 on:
   repository_dispatch:
     types: [readme-updated]
@@ -32,6 +33,15 @@ jobs:
             | iconv -f UTF-8 -t UTF-8 -c \
             | awk 'BEGIN{IGNORECASE=1} /Changelog/{flag=1; next} flag' \
             > _includes/plutopoint-readme.md
+
+      # Rendered by PlutoPoint-Installer's screenshot.yml whenever its GUI changes.
+      - name: Sync PlutoPoint screenshot
+        run: |
+          if curl -sfL https://raw.githubusercontent.com/ProfessorShroom/PlutoPoint-Installer/main/images/installer.png -o /tmp/installer.png; then
+            cp /tmp/installer.png assets/img/software/installer/installer.png
+          else
+            echo "No PlutoPoint screenshot available - keeping current image"
+          fi
 
       - name: Sync NorthPoint README
         run: |
@@ -64,7 +74,7 @@ jobs:
       - name: Detect changes
         id: changes
         run: |
-          git add _includes/*.md
+          git add _includes/*.md assets/img/software/installer/installer.png
 
           if git diff --cached --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
@@ -89,7 +99,7 @@ jobs:
           git config user.email "github-actions@github.com"
 
           # Find which READMEs changed
-          changed=$(git diff --name-only --cached _includes/*.md)
+          changed=$(git diff --name-only --cached _includes/*.md assets/img/software/installer/installer.png)
 
           # Stamp `updated:` on the matching project page so it moves to the
           # top of "Latest guides and projects" (NorthPoint is intentionally skipped).
@@ -118,7 +128,7 @@ jobs:
 
           for file in $changed; do
             case "$file" in
-              *plutopoint-readme.md)
+              *plutopoint-readme.md|*installer/installer.png)
                 python3 /tmp/set_updated.py _projects/PlutoPoint_Installer.md "$TODAY" ;;
               *cardmarket-price-updater-readme.md)
                 python3 /tmp/set_updated.py _projects/Cardmarket_Price_Updater.md "$TODAY" ;;
@@ -128,7 +138,7 @@ jobs:
           done
 
           git add _projects/*.md
-          git commit -m "Auto-sync project READMEs [skip ci]"
+          git commit -m "Auto-sync project READMEs and screenshots [skip ci]"
 
           # main can move while this runs (Prettier, sitemap, post scheduling and
           # image stripping all commit to it), so retry the rebase + push.
@@ -194,4 +204,4 @@ jobs:
       # ---------------- No-op log ----------------
       - name: Skip notice
         if: steps.plan.outputs.build != 'true'
-        run: echo "No README changes (triggered by ${{ github.event.client_payload.repo || github.event_name }}) – skipping build & deploy"
+        run: echo "No README or screenshot changes (triggered by ${{ github.event.client_payload.repo || github.event_name }}) – skipping build & deploy"
